@@ -25,7 +25,10 @@ export async function generateMetadata({ params }: PageProps<"/juego/[slug]">): 
   await connection();
   const juego = await db.juego.findUnique({ where: { slug }, select: { titulo: true } }).catch(() => null);
   return juego
-    ? { title: juego.titulo, description: `¿Dónde conviene comprar ${juego.titulo}? Comparativa en pesos entre eShops y métodos de pago.` }
+    ? {
+        title: juego.titulo,
+        description: `¿Dónde conviene comprar ${juego.titulo}? Comparativa en pesos entre eShops y métodos de pago.`,
+      }
     : { title: "Juego no encontrado" };
 }
 
@@ -50,13 +53,19 @@ async function Ficha({ params }: { params: Promise<{ slug: string }> }) {
 
   return (
     <article className="space-y-8">
-      <nav aria-label="Migas de pan" className="text-sm text-muted-foreground">
-        <Link href="/" className="hover:text-primary">Inicio</Link> / <Link href="/buscar" className="hover:text-primary">Juegos</Link> /{" "}
-        <span aria-current="page">{juego.titulo}</span>
+      <nav aria-label="Migas de pan" className="text-muted-foreground text-sm">
+        <Link href="/" className="hover:text-primary">
+          Inicio
+        </Link>{" "}
+        /{" "}
+        <Link href="/buscar" className="hover:text-primary">
+          Juegos
+        </Link>{" "}
+        / <span aria-current="page">{juego.titulo}</span>
       </nav>
 
       <header className="grid gap-5 sm:grid-cols-[180px_1fr]">
-        <div className="aspect-square w-40 overflow-hidden rounded-lg bg-muted sm:w-full">
+        <div className="bg-muted aspect-square w-40 overflow-hidden rounded-lg sm:w-full">
           <Portada src={juego.imagenUrl} alt={`Portada de ${juego.titulo}`} />
         </div>
         <div className="space-y-3">
@@ -66,7 +75,7 @@ async function Ficha({ params }: { params: Promise<{ slug: string }> }) {
             {juego.origen === "demo" && <Badge variant="warning">Datos de demostración</Badge>}
           </div>
           <h1 className="text-3xl leading-tight font-extrabold">{juego.titulo}</h1>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             {juego.editor && <>{juego.editor} · </>}
             {juego.lanzamiento ? `Lanzamiento: ${formatearFecha(juego.lanzamiento)}` : "Fecha de lanzamiento sin datos"}
           </p>
@@ -81,10 +90,11 @@ async function Ficha({ params }: { params: Promise<{ slug: string }> }) {
         <Card className="border-warning">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <AlertTriangle className="size-5 text-warning" aria-hidden="true" /> No podemos calcular en pesos todavía
+              <AlertTriangle className="text-warning size-5" aria-hidden="true" /> No podemos calcular en pesos todavía
             </CardTitle>
             <CardDescription>
-              Faltan cotizaciones ({ficha.faltanCotizaciones.join(", ")}). Abajo están los precios en la moneda de cada eShop.
+              Faltan cotizaciones ({ficha.faltanCotizaciones.join(", ")}). Abajo están los precios en la moneda de cada
+              eShop.
             </CardDescription>
           </CardHeader>
         </Card>
@@ -97,23 +107,38 @@ async function Ficha({ params }: { params: Promise<{ slug: string }> }) {
         {precios.length === 0 ? (
           <p className="text-muted-foreground">No tenemos precios de este producto en ninguna eShop configurada.</p>
         ) : (
-          <div className="overflow-x-auto rounded-lg border border-border bg-card">
+          <div className="border-border bg-card overflow-x-auto rounded-lg border">
             <table className="tabular w-full min-w-[480px] text-sm">
-              <caption className="sr-only">Precio en la moneda de cada eShop, mínimo histórico y fecha de actualización</caption>
+              <caption className="sr-only">
+                Precio en la moneda de cada eShop, mínimo histórico y fecha de actualización
+              </caption>
               <thead className="bg-muted text-left">
                 <tr>
-                  <th scope="col" className="px-3 py-2">eShop</th>
-                  <th scope="col" className="px-3 py-2">Precio</th>
-                  <th scope="col" className="px-3 py-2">Mínimo histórico</th>
-                  <th scope="col" className="px-3 py-2">Actualizado</th>
+                  <th scope="col" className="px-3 py-2">
+                    eShop
+                  </th>
+                  <th scope="col" className="px-3 py-2">
+                    Precio
+                  </th>
+                  <th scope="col" className="px-3 py-2">
+                    Mínimo histórico
+                  </th>
+                  <th scope="col" className="px-3 py-2">
+                    Actualizado
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {precios.map((p) => (
-                  <tr key={p.pais} className="border-t border-border">
+                  <tr key={p.pais} className="border-border border-t">
                     <th scope="row" className="px-3 py-2 text-left font-bold">
                       {p.url ? (
-                        <a href={p.url} target="_blank" rel="noopener noreferrer nofollow" className="inline-flex items-center gap-1 hover:text-primary">
+                        <a
+                          href={p.url}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className="hover:text-primary inline-flex items-center gap-1"
+                        >
                           {nombrePais(p.pais)} <ExternalLink className="size-3.5" aria-hidden="true" />
                           <span className="sr-only">(abre la eShop)</span>
                         </a>
@@ -126,7 +151,11 @@ async function Ficha({ params }: { params: Promise<{ slug: string }> }) {
                         <>
                           <strong>{formatearMoneda(p.oferta, p.moneda)}</strong>{" "}
                           <s className="text-muted-foreground">{formatearMoneda(p.regular, p.moneda)}</s>
-                          {p.ofertaHasta && <div className="text-xs text-muted-foreground">hasta {formatearFechaHora(p.ofertaHasta)}</div>}
+                          {p.ofertaHasta && (
+                            <div className="text-muted-foreground text-xs">
+                              hasta {formatearFechaHora(p.ofertaHasta)}
+                            </div>
+                          )}
                         </>
                       ) : (
                         formatearMoneda(p.regular, p.moneda)
@@ -140,7 +169,7 @@ async function Ficha({ params }: { params: Promise<{ slug: string }> }) {
                         </Badge>
                       )}
                     </td>
-                    <td className="px-3 py-2 text-muted-foreground">
+                    <td className="text-muted-foreground px-3 py-2">
                       <time dateTime={p.actualizado} title={formatearFechaHora(p.actualizado)}>
                         {haceCuanto(p.actualizado)}
                       </time>
@@ -157,14 +186,16 @@ async function Ficha({ params }: { params: Promise<{ slug: string }> }) {
         <h2 id="titulo-historial" className="text-xl font-extrabold">
           Historial de precios en pesos
         </h2>
-        <p className="text-sm text-muted-foreground">
-          Precio de cada región convertido con la cotización de ese día, sin impuestos. En Europa se toma el país más barato.
+        <p className="text-muted-foreground text-sm">
+          Precio de cada región convertido con la cotización de ese día, sin impuestos. En Europa se toma el país más
+          barato.
         </p>
         {(["oficial", "blue"] as const).map((t) => {
           const m = ficha.minimoHistoricoArs[t];
           return m ? (
             <p key={t} className="text-sm">
-              Mínimo histórico ({t}): <strong>{formatearArs(m.valor)}</strong> en {NOMBRE_REGION[m.region]} el {formatearFecha(`${m.dia}T12:00:00Z`)}.
+              Mínimo histórico ({t}): <strong>{formatearArs(m.valor)}</strong> en {NOMBRE_REGION[m.region]} el{" "}
+              {formatearFecha(`${m.dia}T12:00:00Z`)}.
             </p>
           ) : null;
         })}
@@ -186,7 +217,7 @@ async function Ficha({ params }: { params: Promise<{ slug: string }> }) {
         </Card>
       </section>
 
-      <p className="text-xs text-muted-foreground">
+      <p className="text-muted-foreground text-xs">
         Precios orientativos. PixelPeso no está afiliado a Nintendo ni a las tiendas: verificá el precio final antes de
         comprar. Cotizaciones usadas:{" "}
         {ficha.cotizaciones

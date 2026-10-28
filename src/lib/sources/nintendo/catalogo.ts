@@ -20,7 +20,11 @@ export function tipoDesdeTitulo(titulo: string, base: TipoProducto): TipoProduct
     return /expansion pass|pase de expansi[oó]n|season pass|pase de temporada/.test(t) ? "PASE_EXPANSION" : "DLC";
   }
   if (/bundle|pack|lote/.test(t) && base === "JUEGO") return "BUNDLE";
-  if (/deluxe edition|complete edition|edici[oó]n (deluxe|completa|especial|definitiva)|gold edition|ultimate edition/.test(t)) {
+  if (
+    /deluxe edition|complete edition|edici[oó]n (deluxe|completa|especial|definitiva)|gold edition|ultimate edition/.test(
+      t,
+    )
+  ) {
     return "EDICION_ESPECIAL";
   }
   return base;

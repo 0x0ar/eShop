@@ -1,0 +1,62 @@
+# docker compose up  →  Postgres + esquema + app (http://localhost:3000) + worker
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: pixelpeso
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pixelpeso}
+      POSTGRES_DB: pixelpeso
+    volumes:
+      - datos-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pixelpeso -d pixelpeso"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  # Crea/actualiza las tablas y termina.
+  esquema:
+    build: .
+    image: pixelpeso:latest
+    command: ["npx", "prisma", "db", "push"]
+    env_file:
+      - path: .env
+        required: false
+    environment: &entorno
+      DATABASE_URL: postgresql://pixelpeso:${POSTGRES_PASSWORD:-pixelpeso}@db:5432/pixelpeso
+    depends_on:
+      db:
+        condition: service_healthy
+
+  app:
+    image: pixelpeso:latest
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      <<: *entorno
+      SITE_URL: ${SITE_URL:-http://localhost:3000}
+    ports:
+      - "${PUERTO:-3000}:3000"
+    depends_on:
+      esquema:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  worker:
+    image: pixelpeso:latest
+    command: ["npm", "run", "worker"]
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      <<: *entorno
+      SITE_URL: ${SITE_URL:-http://localhost:3000}
+    depends_on:
+      esquema:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+volumes:
+  datos-db:

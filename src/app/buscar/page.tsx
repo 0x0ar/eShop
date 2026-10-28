@@ -66,7 +66,11 @@ async function Resultados({ searchParams }: { searchParams: Promise<Params> }) {
 
   return (
     <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
-      <form action="/buscar" className="h-fit space-y-4 rounded-lg border border-border bg-card p-4" aria-label="Filtros de búsqueda">
+      <form
+        action="/buscar"
+        className="border-border bg-card h-fit space-y-4 rounded-lg border p-4"
+        aria-label="Filtros de búsqueda"
+      >
         <div className="space-y-1.5">
           <Label htmlFor="f-q">Título</Label>
           <Input id="f-q" name="q" type="search" defaultValue={f.q} placeholder="Ej: zelda" />
@@ -93,8 +97,22 @@ async function Resultados({ searchParams }: { searchParams: Promise<Params> }) {
         <fieldset className="space-y-1.5">
           <legend className="text-sm font-bold">Precio en ARS (mejor opción, dólar oficial)</legend>
           <div className="flex gap-2">
-            <Input name="min" inputMode="numeric" pattern="\d*" placeholder="Mín." defaultValue={f.min} aria-label="Precio mínimo en pesos" />
-            <Input name="max" inputMode="numeric" pattern="\d*" placeholder="Máx." defaultValue={f.max} aria-label="Precio máximo en pesos" />
+            <Input
+              name="min"
+              inputMode="numeric"
+              pattern="\d*"
+              placeholder="Mín."
+              defaultValue={f.min}
+              aria-label="Precio mínimo en pesos"
+            />
+            <Input
+              name="max"
+              inputMode="numeric"
+              pattern="\d*"
+              placeholder="Máx."
+              defaultValue={f.max}
+              aria-label="Precio máximo en pesos"
+            />
           </div>
         </fieldset>
         <Checkbox name="oferta" value="1" defaultChecked={f.oferta} label="Solo en oferta" />
@@ -124,12 +142,10 @@ async function Resultados({ searchParams }: { searchParams: Promise<Params> }) {
         {r == null ? (
           <p className="text-muted-foreground">No pudimos buscar en este momento. Probá de nuevo en un rato.</p>
         ) : r.total === 0 ? (
-          <p className="text-muted-foreground">
-            No encontramos juegos{f.q ? ` para “${f.q}”` : ""} con esos filtros.
-          </p>
+          <p className="text-muted-foreground">No encontramos juegos{f.q ? ` para “${f.q}”` : ""} con esos filtros.</p>
         ) : (
           <>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               {r.total.toLocaleString("es-AR")} resultado{r.total === 1 ? "" : "s"}
               {f.q ? ` para “${f.q}”` : ""}
             </p>

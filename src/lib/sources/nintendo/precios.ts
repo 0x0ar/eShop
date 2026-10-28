@@ -58,7 +58,10 @@ function fecha(s: string | undefined): Date | null {
  * Normaliza la respuesta. Productos sin `regular_price` (no a la venta en ese
  * país: `not_found`, `unreleased` sin precio, etc.) se devuelven en `sinPrecio`.
  */
-export function parsearPrecios(json: unknown): { precios: PrecioNintendo[]; sinPrecio: { nsuid: string; estado: string }[] } {
+export function parsearPrecios(json: unknown): {
+  precios: PrecioNintendo[];
+  sinPrecio: { nsuid: string; estado: string }[];
+} {
   const r = respuestaPreciosSchema.parse(json);
   const precios: PrecioNintendo[] = [];
   const sinPrecio: { nsuid: string; estado: string }[] = [];

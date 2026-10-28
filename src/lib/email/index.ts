@@ -30,7 +30,9 @@ function remitente() {
 }
 
 function headers(e: Email): Record<string, string> {
-  return e.urlBaja ? { "List-Unsubscribe": `<${e.urlBaja}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" } : {};
+  return e.urlBaja
+    ? { "List-Unsubscribe": `<${e.urlBaja}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" }
+    : {};
 }
 
 export async function enviarEmail(e: Email): Promise<EmailEnviado> {
@@ -42,13 +44,27 @@ export async function enviarEmail(e: Email): Promise<EmailEnviado> {
       secure: process.env.SMTP_SECURE === "true",
       auth: process.env.SMTP_USER ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS } : undefined,
     });
-    const r = await transporte.sendMail({ from: remitente(), to: e.para, subject: e.asunto, html: e.html, text: e.texto, headers: headers(e) });
+    const r = await transporte.sendMail({
+      from: remitente(),
+      to: e.para,
+      subject: e.asunto,
+      html: e.html,
+      text: e.texto,
+      headers: headers(e),
+    });
     return { proveedor, id: r.messageId };
   }
   if (proveedor === "resend") {
     if (!process.env.RESEND_API_KEY) throw new Error("Falta RESEND_API_KEY");
     const resend = new Resend(process.env.RESEND_API_KEY);
-    const r = await resend.emails.send({ from: remitente(), to: e.para, subject: e.asunto, html: e.html, text: e.texto, headers: headers(e) });
+    const r = await resend.emails.send({
+      from: remitente(),
+      to: e.para,
+      subject: e.asunto,
+      html: e.html,
+      text: e.texto,
+      headers: headers(e),
+    });
     if (r.error) throw new Error(`Resend: ${r.error.message}`);
     return { proveedor, id: r.data?.id };
   }

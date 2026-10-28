@@ -23,7 +23,11 @@ const suscribir = () => () => {};
 export function GraficoHistorial({ puntos }: { puntos: PuntoHistorial[] }) {
   const [tipo, setTipo] = useState<TipoCotizacion>("oficial");
   const { resolvedTheme } = useTheme();
-  const montado = useSyncExternalStore(suscribir, () => true, () => false);
+  const montado = useSyncExternalStore(
+    suscribir,
+    () => true,
+    () => false,
+  );
   const modo = montado && resolvedTheme === "dark" ? "dark" : "light";
   const ejes = modo === "dark" ? { texto: "#b4b6c2", grilla: "#33364a" } : { texto: "#55555f", grilla: "#e4e2dd" };
 
@@ -48,7 +52,11 @@ export function GraficoHistorial({ puntos }: { puntos: PuntoHistorial[] }) {
 
   return (
     <div className="space-y-3">
-      <div role="radiogroup" aria-label="Cotización del gráfico" className="inline-flex rounded-full bg-muted p-1 text-sm font-bold">
+      <div
+        role="radiogroup"
+        aria-label="Cotización del gráfico"
+        className="bg-muted inline-flex rounded-full p-1 text-sm font-bold"
+      >
         {(["oficial", "blue"] as const).map((t) => (
           <button
             key={t}
@@ -62,7 +70,11 @@ export function GraficoHistorial({ puntos }: { puntos: PuntoHistorial[] }) {
           </button>
         ))}
       </div>
-      <div className="h-72 w-full" role="img" aria-label={`Evolución del precio en pesos por región, cotización ${tipo}. La tabla debajo tiene los mismos datos.`}>
+      <div
+        className="h-72 w-full"
+        role="img"
+        aria-label={`Evolución del precio en pesos por región, cotización ${tipo}. La tabla debajo tiene los mismos datos.`}
+      >
         {montado && (
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={datos} margin={{ top: 8, right: 16, bottom: 0, left: 8 }}>
@@ -84,11 +96,23 @@ export function GraficoHistorial({ puntos }: { puntos: PuntoHistorial[] }) {
               />
               <Tooltip
                 cursor={{ stroke: ejes.texto, strokeWidth: 1 }}
-                contentStyle={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, color: "var(--foreground)" }}
+                contentStyle={{
+                  background: "var(--card)",
+                  border: "1px solid var(--border)",
+                  borderRadius: 12,
+                  color: "var(--foreground)",
+                }}
                 labelFormatter={(d) => formatearFecha(`${d}T12:00:00Z`)}
-                formatter={(v, nombre) => [formatearArs(Number(v)), NOMBRE_REGION[nombre as RegionComparacion] ?? nombre]}
+                formatter={(v, nombre) => [
+                  formatearArs(Number(v)),
+                  NOMBRE_REGION[nombre as RegionComparacion] ?? nombre,
+                ]}
               />
-              <Legend formatter={(r: string) => <span style={{ color: "var(--foreground)" }}>{NOMBRE_REGION[r as RegionComparacion]}</span>} />
+              <Legend
+                formatter={(r: string) => (
+                  <span style={{ color: "var(--foreground)" }}>{NOMBRE_REGION[r as RegionComparacion]}</span>
+                )}
+              />
               {regiones.map((r) => (
                 <Line
                   key={r}
@@ -108,13 +132,15 @@ export function GraficoHistorial({ puntos }: { puntos: PuntoHistorial[] }) {
         )}
       </div>
       <details className="text-sm">
-        <summary className="cursor-pointer font-bold text-primary">Ver los datos como tabla</summary>
-        <div className="mt-2 max-h-72 overflow-auto rounded-md border border-border">
+        <summary className="text-primary cursor-pointer font-bold">Ver los datos como tabla</summary>
+        <div className="border-border mt-2 max-h-72 overflow-auto rounded-md border">
           <table className="tabular w-full">
             <caption className="sr-only">Precio en pesos por día y región, cotización {tipo}, sin impuestos</caption>
-            <thead className="sticky top-0 bg-muted">
+            <thead className="bg-muted sticky top-0">
               <tr>
-                <th scope="col" className="px-2 py-1 text-left">Día</th>
+                <th scope="col" className="px-2 py-1 text-left">
+                  Día
+                </th>
                 {regiones.map((r) => (
                   <th key={r} scope="col" className="px-2 py-1 text-right">
                     {NOMBRE_REGION[r]}
@@ -124,7 +150,7 @@ export function GraficoHistorial({ puntos }: { puntos: PuntoHistorial[] }) {
             </thead>
             <tbody>
               {[...puntos].reverse().map((p) => (
-                <tr key={p.dia} className="border-t border-border">
+                <tr key={p.dia} className="border-border border-t">
                   <th scope="row" className="px-2 py-1 text-left font-normal">
                     {formatearFecha(`${p.dia}T12:00:00Z`)}
                   </th>

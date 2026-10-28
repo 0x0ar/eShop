@@ -21,12 +21,12 @@ Implementación: `src/lib/domain/` (tests en `tests/unit/`).
 
 ## Fórmulas
 
-| Método | Fórmula |
-|---|---|
-| Tarjeta argentina | `ARS = convertir(P) × C × (1 + IVA)` |
-| Tarjeta del exterior | `ARS = convertir(P) × C` |
-| Gift card | `ARS = Σ (precio de cada tarjeta comprada, convertido a ARS)` (+ impuestos si `gift_card` está en `aplicaA`) |
-| Key en Instant Gaming | `ARS = convertir(P_IG) × C` (+ impuestos si `key_ig` está en `aplicaA`) |
+| Método                | Fórmula                                                                                                      |
+| --------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Tarjeta argentina     | `ARS = convertir(P) × C × (1 + IVA)`                                                                         |
+| Tarjeta del exterior  | `ARS = convertir(P) × C`                                                                                     |
+| Gift card             | `ARS = Σ (precio de cada tarjeta comprada, convertido a ARS)` (+ impuestos si `gift_card` está en `aplicaA`) |
+| Key en Instant Gaming | `ARS = convertir(P_IG) × C` (+ impuestos si `key_ig` está en `aplicaA`)                                      |
 
 Cada fórmula se calcula dos veces: con `C` oficial y con `C` blue.
 

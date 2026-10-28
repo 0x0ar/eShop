@@ -11,7 +11,9 @@ async function confirmar(formData: FormData) {
   "use server";
   const token = String(formData.get("token") ?? "");
   const alerta = await confirmarAlerta(token);
-  redirect(alerta ? `/alertas/confirmar?ok=1&juego=${encodeURIComponent(alerta.juego.slug)}` : "/alertas/confirmar?ok=0");
+  redirect(
+    alerta ? `/alertas/confirmar?ok=1&juego=${encodeURIComponent(alerta.juego.slug)}` : "/alertas/confirmar?ok=0",
+  );
 }
 
 export default function PaginaConfirmar({ searchParams }: PageProps<"/alertas/confirmar">) {

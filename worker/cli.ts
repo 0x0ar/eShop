@@ -15,7 +15,9 @@ async function main() {
   if (args.length === 0 || args.includes("--lista") || args.includes("--help")) {
     console.log("Jobs disponibles:\n");
     for (const [nombre, def] of Object.entries(JOBS)) {
-      console.log(`  ${nombre.padEnd(14)} ${def.descripcion}${def.despues ? ` (después: ${def.despues.join(", ")})` : ""}`);
+      console.log(
+        `  ${nombre.padEnd(14)} ${def.descripcion}${def.despues ? ` (después: ${def.despues.join(", ")})` : ""}`,
+      );
     }
     console.log(`  ${"todo".padEnd(14)} Carga completa: ${SECUENCIA_TODO.join(" → ")}`);
     console.log("\nUso: npm run job -- <nombre> [<nombre>…]");

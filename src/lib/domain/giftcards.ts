@@ -133,7 +133,12 @@ function esMejor<T>(a: CombinacionGiftCards<T>, b: CombinacionGiftCards<T>): boo
   return a.cantidadTarjetas < b.cantidadTarjetas;
 }
 
-function reconstruir<T>(s: number, ultima: number[], unidades: number[], unicas: TarjetaDisponible<T>[]): LineaCompra<T>[] {
+function reconstruir<T>(
+  s: number,
+  ultima: number[],
+  unidades: number[],
+  unicas: TarjetaDisponible<T>[],
+): LineaCompra<T>[] {
   const cuenta = new Map<number, number>();
   while (s > 0) {
     const i = ultima[s];

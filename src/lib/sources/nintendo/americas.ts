@@ -112,7 +112,9 @@ async function recorrerRango(
 ): Promise<void> {
   if (limite && todos.size >= limite) return;
   const numericFilters = [`price.finalPrice>=${min}`, `price.finalPrice<${max}`];
-  const conteo = parsearPaginaAmericas(await consultar({ query: "", filters: filtros, numericFilters, hitsPerPage: 0 }));
+  const conteo = parsearPaginaAmericas(
+    await consultar({ query: "", filters: filtros, numericFilters, hitsPerPage: 0 }),
+  );
   if (conteo.total === 0) return;
   if (conteo.total > fuentes.nintendoAmericas.limitePaginacion && max - min > 0.02) {
     const medio = Math.round(((min + max) / 2) * 100) / 100;

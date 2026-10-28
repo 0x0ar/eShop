@@ -3,7 +3,7 @@ import { Logo } from "./logo";
 
 export function Pie() {
   return (
-    <footer className="mt-16 border-t border-border bg-card">
+    <footer className="border-border bg-card mt-16 border-t">
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 text-sm sm:grid-cols-[2fr_1fr]">
         <div className="space-y-2">
           <Logo className="text-base" />
@@ -13,9 +13,15 @@ export function Pie() {
           </p>
         </div>
         <nav aria-label="Pie de página" className="flex flex-col gap-1.5">
-          <Link href="/como-calculamos" className="hover:text-primary">Cómo calculamos</Link>
-          <Link href="/cotizaciones" className="hover:text-primary">Cotizaciones</Link>
-          <Link href="/legal" className="hover:text-primary">Aviso legal y privacidad</Link>
+          <Link href="/como-calculamos" className="hover:text-primary">
+            Cómo calculamos
+          </Link>
+          <Link href="/cotizaciones" className="hover:text-primary">
+            Cotizaciones
+          </Link>
+          <Link href="/legal" className="hover:text-primary">
+            Aviso legal y privacidad
+          </Link>
         </nav>
       </div>
     </footer>

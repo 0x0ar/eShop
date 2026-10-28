@@ -37,7 +37,9 @@ export async function agregarOverride(formData: FormData) {
   if ((!a && !e) || (a && !NSUID.test(a)) || (e && !NSUID.test(e))) redirect("/admin/estado?error=nsuid");
   const existente = await db.matchOverride.findFirst({ where: { nsuidAmericas: a, nsuidEuropa: e } });
   if (!existente) {
-    await db.matchOverride.create({ data: { nsuidAmericas: a, nsuidEuropa: e, nota: String(formData.get("nota") ?? "").slice(0, 200) || null } });
+    await db.matchOverride.create({
+      data: { nsuidAmericas: a, nsuidEuropa: e, nota: String(formData.get("nota") ?? "").slice(0, 200) || null },
+    });
   }
   await correrJob("rematchear");
   revalidatePath("/admin/estado");

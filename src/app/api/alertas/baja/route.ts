@@ -11,5 +11,7 @@ export async function POST(req: Request) {
 /** Si alguien abre el link en el navegador, va a la página de baja. */
 export async function GET(req: Request) {
   const url = new URL(req.url);
-  return NextResponse.redirect(new URL(`/alertas/baja?token=${encodeURIComponent(url.searchParams.get("token") ?? "")}`, url));
+  return NextResponse.redirect(
+    new URL(`/alertas/baja?token=${encodeURIComponent(url.searchParams.get("token") ?? "")}`, url),
+  );
 }

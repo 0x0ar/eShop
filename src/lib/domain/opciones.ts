@@ -108,7 +108,10 @@ function celdaGiftCard(
 ): CeldaDTO | null {
   const precio = precioVigente(p);
   const compatibles = ofertas.filter(
-    (o) => o.disponible && o.monedaTarjeta === p.moneda && (REGIONES_GIFTCARD[o.regionTarjeta]?.paises ?? []).includes(p.pais),
+    (o) =>
+      o.disponible &&
+      o.monedaTarjeta === p.moneda &&
+      (REGIONES_GIFTCARD[o.regionTarjeta]?.paises ?? []).includes(p.pais),
   );
   if (compatibles.length === 0) return null;
 
@@ -213,7 +216,10 @@ function celdaKey(
       throw e;
     }
     const conImp = aplicarImpuestos(conv.ars, "key_ig", impuestos);
-    const requisitos: Requisito[] = [{ tipo: "cuenta", paises }, { tipo: "key_region", region: k.regionActivacion }];
+    const requisitos: Requisito[] = [
+      { tipo: "cuenta", paises },
+      { tipo: "key_region", region: k.regionActivacion },
+    ];
     if (k.esMarketplace) requisitos.push({ tipo: "marketplace", tiendas: [k.nombreProveedor] });
     celdas.push({
       region,

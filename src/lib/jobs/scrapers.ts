@@ -2,7 +2,13 @@ import { db } from "@/lib/db";
 import { similitud, slugificar } from "@/lib/domain/texto";
 import { proveedoresActivos } from "@/lib/giftcards";
 import { BloqueadoPorRobotsError, pedirPagina } from "@/lib/sources/http";
-import { limpiarTituloKey, parsearListado, parsearRegionProducto, regionActivacion, urlListado } from "@/lib/sources/instantGaming";
+import {
+  limpiarTituloKey,
+  parsearListado,
+  parsearRegionProducto,
+  regionActivacion,
+  urlListado,
+} from "@/lib/sources/instantGaming";
 import { cacheHttpDb, registrarError, registrarExito, type ContextoJob, type FuncionJob } from "./runner";
 
 const MAX_PAGINAS_KEYS = Number(process.env.INSTANT_GAMING_MAX_PAGINAS ?? 40);
@@ -67,7 +73,11 @@ interface CandidatoJuego {
 }
 
 /** Busca el juego del catálogo que corresponde al título de una key. */
-export function matchearKey(tituloKey: string, juegos: CandidatoJuego[], indice: Map<string, CandidatoJuego[]>): string | null {
+export function matchearKey(
+  tituloKey: string,
+  juegos: CandidatoJuego[],
+  indice: Map<string, CandidatoJuego[]>,
+): string | null {
   const limpio = limpiarTituloKey(tituloKey);
   if (!limpio) return null;
   const primera = limpio.split(" ")[0];

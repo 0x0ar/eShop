@@ -10,17 +10,17 @@ nada: compara, recomienda y enlaza.
 
 ## Comandos
 
-| Comando | Qué hace |
-|---|---|
-| `npm run dev` | App en http://localhost:3000 (SQLite por defecto) |
-| `npm run worker` | Worker con node-cron (todos los jobs programados) |
-| `npm run job -- <nombre>` | Corre un job a mano (`npm run job -- --lista` para verlos) |
-| `npm run db:setup` | Crea/actualiza la base (`prisma db push`) y genera el cliente |
-| `npm test` | Tests unitarios y de parsers (Vitest) |
-| `npm run test:e2e` | Test end-to-end (Playwright) con datos de prueba |
-| `npm run lint` / `npm run format:check` / `npm run typecheck` | Calidad |
-| `npm run fixtures:capturar` | Baja respuestas reales de cada fuente a `tests/fixtures/` |
-| `docker compose up` | App + worker + Postgres |
+| Comando                                                       | Qué hace                                                      |
+| ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `npm run dev`                                                 | App en http://localhost:3000 (SQLite por defecto)             |
+| `npm run worker`                                              | Worker con node-cron (todos los jobs programados)             |
+| `npm run job -- <nombre>`                                     | Corre un job a mano (`npm run job -- --lista` para verlos)    |
+| `npm run db:setup`                                            | Crea/actualiza la base (`prisma db push`) y genera el cliente |
+| `npm test`                                                    | Tests unitarios y de parsers (Vitest)                         |
+| `npm run test:e2e`                                            | Test end-to-end (Playwright) con datos de prueba              |
+| `npm run lint` / `npm run format:check` / `npm run typecheck` | Calidad                                                       |
+| `npm run fixtures:capturar`                                   | Baja respuestas reales de cada fuente a `tests/fixtures/`     |
+| `docker compose up`                                           | App + worker + Postgres                                       |
 
 ## Estructura
 
@@ -35,7 +35,11 @@ nada: compara, recomienda y enlaza.
 - `src/lib/giftcards/` — proveedores de gift cards intercambiables (interfaz
   `ProveedorGiftCards`).
 - `src/lib/data/` — consultas a la base que usa la app.
-- `worker/` — jobs (`worker/jobs/*`), scheduler (`worker/index.ts`) y CLI.
+- `src/lib/jobs/` — los jobs (los usan el worker, la CLI, `/api/cron/[job]` y
+  `/admin/estado`). `src/lib/alertas/` y `src/lib/email/` — alertas y envío.
+- `worker/` — scheduler con node-cron (`worker/index.ts`) y CLI (`worker/cli.ts`).
+- `scripts/` — captura de fixtures reales y seed de demostración (datos ficticios).
+- `e2e/` — Playwright (levanta su propia base `e2e.db` con la demo).
 - `prisma/schema.prisma` — schema único; `prisma.config.ts` deriva la versión
   Postgres si `DATABASE_URL` es `postgres://…`.
 - `docs/` — fuentes, cálculos, decisiones y plan.
@@ -53,3 +57,7 @@ nada: compara, recomienda y enlaza.
 - No usar logos, tipografías ni marcas de Nintendo. Las portadas se enlazan por
   URL, no se re-alojan.
 - Decisiones no obvias → `docs/decisiones.md`.
+- `connection()` solo en páginas/componentes: las funciones de `src/lib/data` y
+  `src/lib/jobs` también corren en el worker, fuera de Next.
+- Componentes de `src/components/ui` escritos a mano siguiendo shadcn/ui
+  (`components.json` está configurado para `npx shadcn add`).

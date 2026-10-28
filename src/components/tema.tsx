@@ -21,7 +21,11 @@ const suscribir = () => () => {};
 export function BotonTema() {
   const { theme, setTheme } = useTheme();
   // Evita el desajuste de hidratación: en el servidor no se conoce el tema.
-  const montado = useSyncExternalStore(suscribir, () => true, () => false);
+  const montado = useSyncExternalStore(
+    suscribir,
+    () => true,
+    () => false,
+  );
   const actual = (montado ? theme : "system") as (typeof ORDEN)[number];
   const siguiente = ORDEN[(ORDEN.indexOf(actual) + 1) % ORDEN.length];
   const Icono = actual === "dark" ? Moon : actual === "light" ? Sun : Monitor;
@@ -29,7 +33,7 @@ export function BotonTema() {
     <button
       type="button"
       onClick={() => setTheme(siguiente)}
-      className="inline-flex size-10 items-center justify-center rounded-full hover:bg-muted"
+      className="hover:bg-muted inline-flex size-10 items-center justify-center rounded-full"
       aria-label={`${ETIQUETA[actual]}. Cambiar a ${ETIQUETA[siguiente].toLowerCase()}`}
       title={ETIQUETA[actual]}
     >

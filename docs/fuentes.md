@@ -30,8 +30,13 @@ entorno (`config/fuentes.ts`, `.env.example`).
         "title_id": 70010000000001,
         "sales_status": "onsale",
         "regular_price": { "amount": "$59.99", "currency": "USD", "raw_value": "59.99" },
-        "discount_price": { "amount": "$41.99", "currency": "USD", "raw_value": "41.99",
-                            "start_datetime": "…", "end_datetime": "…" }
+        "discount_price": {
+          "amount": "$41.99",
+          "currency": "USD",
+          "raw_value": "41.99",
+          "start_datetime": "…",
+          "end_datetime": "…"
+        }
       },
       { "title_id": 70010000000002, "sales_status": "not_found" }
     ]
@@ -130,13 +135,13 @@ entorno (`config/fuentes.ts`, `.env.example`).
 Implementadas como proveedores intercambiables (`src/lib/giftcards/`,
 interfaz `ProveedorGiftCards`, habilitados con `GIFTCARD_PROVEEDORES`).
 
-| Tienda | Estado | Notas |
-|---|---|---|
-| Instant Gaming | Implementado (a verificar) | Tienda propia, no marketplace |
-| Carga manual (`config/giftcards-manual.json`) | Implementado | Para cualquier tienda sin datos accesibles. Cada entrada declara si es marketplace |
-| Eneba | No implementado | Marketplace. Sin API pública documentada para precios; front con protección anti-bots. Candidato a investigar |
-| Kinguin | No implementado | Marketplace. Tiene API para afiliados (requiere clave) |
-| Amazon (US/ES/UK) | No implementado | Venta a valor nominal; requiere cuenta del país y bloquea scraping. Se puede cargar a mano |
+| Tienda                                        | Estado                     | Notas                                                                                                         |
+| --------------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Instant Gaming                                | Implementado (a verificar) | Tienda propia, no marketplace                                                                                 |
+| Carga manual (`config/giftcards-manual.json`) | Implementado               | Para cualquier tienda sin datos accesibles. Cada entrada declara si es marketplace                            |
+| Eneba                                         | No implementado            | Marketplace. Sin API pública documentada para precios; front con protección anti-bots. Candidato a investigar |
+| Kinguin                                       | No implementado            | Marketplace. Tiene API para afiliados (requiere clave)                                                        |
+| Amazon (US/ES/UK)                             | No implementado            | Venta a valor nominal; requiere cuenta del país y bloquea scraping. Se puede cargar a mano                    |
 
 No se pudo investigar precios ni accesibilidad de estas tiendas por el bloqueo
 de red.

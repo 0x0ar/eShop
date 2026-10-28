@@ -161,10 +161,14 @@ export interface FiltrosBusqueda {
 
 export const POR_PAGINA = 24;
 
-export async function buscarJuegos(f: FiltrosBusqueda): Promise<{ resultados: JuegoResumen[]; total: number; pagina: number; paginas: number }> {
+export async function buscarJuegos(
+  f: FiltrosBusqueda,
+): Promise<{ resultados: JuegoResumen[]; total: number; pagina: number; paginas: number }> {
   const { fuse, filas } = await obtenerIndice();
   const q = normalizarTexto(f.q ?? "");
-  let lista: (FilaResumen & { busqueda: string })[] = q ? fuse.search(q, { limit: 2000 }).map((r) => r.item) : [...filas];
+  let lista: (FilaResumen & { busqueda: string })[] = q
+    ? fuse.search(q, { limit: 2000 }).map((r) => r.item)
+    : [...filas];
 
   const min = f.min ? dec(f.min) : null;
   const max = f.max ? dec(f.max) : null;

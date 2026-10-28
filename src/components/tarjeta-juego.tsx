@@ -8,12 +8,16 @@ import { BotonWishlist } from "./wishlist";
 
 export function TarjetaJuego({ juego }: { juego: JuegoResumen }) {
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-shadow focus-within:ring-2 focus-within:ring-ring hover:shadow-md">
-      <div className="relative aspect-square bg-muted">
+    <article className="group border-border bg-card focus-within:ring-ring relative flex flex-col overflow-hidden rounded-lg border shadow-sm transition-shadow focus-within:ring-2 hover:shadow-md">
+      <div className="bg-muted relative aspect-square">
         <Portada src={juego.imagenUrl} alt="" />
         <div className="absolute top-2 left-2 flex flex-wrap gap-1">
           {juego.descuentoMax > 0 && <Badge>-{juego.descuentoMax}%</Badge>}
-          {juego.plataforma !== "SWITCH" && <Badge variant="outline" className="bg-card">{NOMBRE_PLATAFORMA[juego.plataforma]}</Badge>}
+          {juego.plataforma !== "SWITCH" && (
+            <Badge variant="outline" className="bg-card">
+              {NOMBRE_PLATAFORMA[juego.plataforma]}
+            </Badge>
+          )}
         </div>
         <div className="absolute top-2 right-2 z-10">
           <BotonWishlist slug={juego.slug} titulo={juego.titulo} />
@@ -25,15 +29,15 @@ export function TarjetaJuego({ juego }: { juego: JuegoResumen }) {
             {juego.titulo}
           </Link>
         </h3>
-        <p className="text-xs text-muted-foreground">{NOMBRE_TIPO[juego.tipo] ?? juego.tipo}</p>
+        <p className="text-muted-foreground text-xs">{NOMBRE_TIPO[juego.tipo] ?? juego.tipo}</p>
         <div className="mt-auto pt-2">
           {juego.mejorArsOficial ? (
             <>
-              <p className="text-xs text-muted-foreground">Desde</p>
-              <p className="tabular text-lg font-extrabold text-primary">{formatearArs(juego.mejorArsOficial, 0)}</p>
+              <p className="text-muted-foreground text-xs">Desde</p>
+              <p className="tabular text-primary text-lg font-extrabold">{formatearArs(juego.mejorArsOficial, 0)}</p>
             </>
           ) : (
-            <p className="text-sm text-muted-foreground">Sin precio</p>
+            <p className="text-muted-foreground text-sm">Sin precio</p>
           )}
         </div>
       </div>

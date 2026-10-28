@@ -6,7 +6,7 @@ export function Input({ className, ...props }: React.ComponentProps<"input">) {
     <input
       data-slot="input"
       className={cn(
-        "h-10 w-full rounded-full border-2 border-input bg-card px-4 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-primary",
+        "border-input bg-card text-foreground placeholder:text-muted-foreground focus-visible:border-primary h-10 w-full rounded-full border-2 px-4 text-sm",
         className,
       )}
       {...props}
@@ -19,7 +19,7 @@ export function Select({ className, ...props }: React.ComponentProps<"select">) 
     <select
       data-slot="select"
       className={cn(
-        "h-10 rounded-full border-2 border-input bg-card px-3 text-sm text-foreground focus-visible:border-primary",
+        "border-input bg-card text-foreground focus-visible:border-primary h-10 rounded-full border-2 px-3 text-sm",
         className,
       )}
       {...props}

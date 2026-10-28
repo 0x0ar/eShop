@@ -31,18 +31,111 @@ interface JuegoDemo {
 }
 
 const JUEGOS: JuegoDemo[] = [
-  { titulo: "Aventura del Reino Pixelado", plataforma: "SWITCH", tipo: "JUEGO", editor: "Estudio Demo", base: 59.99, descuento: 30, popularidad: 100, key: { precio: 38.5, region: "EU" } },
-  { titulo: "Carreras Turbo Kart Demo", plataforma: "SWITCH2", tipo: "JUEGO", editor: "Estudio Demo", base: 79.99, popularidad: 95 },
-  { titulo: "Granja Tranquila", plataforma: "SWITCH", tipo: "JUEGO", editor: "Indie Ficticio", base: 14.99, descuento: 50, popularidad: 90, key: { precio: 9.2, region: "EU" } },
-  { titulo: "Caballero de las Cavernas", plataforma: "SWITCH", tipo: "JUEGO", editor: "Indie Ficticio", base: 24.99, popularidad: 85 },
-  { titulo: "Fiesta de Minijuegos Deluxe", plataforma: "AMBAS", tipo: "EDICION_ESPECIAL", editor: "Estudio Demo", base: 59.99, descuento: 20, popularidad: 80 },
-  { titulo: "Aventura del Reino Pixelado – Pase de Expansión", plataforma: "SWITCH", tipo: "PASE_EXPANSION", editor: "Estudio Demo", base: 29.99, popularidad: 60 },
-  { titulo: "Escuadrón Galáctico", plataforma: "SWITCH", tipo: "JUEGO", editor: "Otro Editor Demo", base: 39.99, descuento: 40, popularidad: 75, key: { precio: 21.9, region: "US" } },
-  { titulo: "Detective de Bolsillo", plataforma: "SWITCH", tipo: "JUEGO", editor: "Indie Ficticio", base: 19.99, popularidad: 70 },
-  { titulo: "Ritmo Salvaje – Switch 2 Edition", plataforma: "SWITCH2", tipo: "SWITCH2_EDITION", editor: "Otro Editor Demo", base: 69.99, descuento: 15, popularidad: 65 },
-  { titulo: "Plataformas Infinitas", plataforma: "SWITCH", tipo: "JUEGO", editor: "Indie Ficticio", base: 9.99, popularidad: 55 },
-  { titulo: "Liga de Fútbol Arcade", plataforma: "SWITCH", tipo: "JUEGO", editor: "Otro Editor Demo", base: 49.99, descuento: 60, popularidad: 50 },
-  { titulo: "Ciudad de Bloques", plataforma: "AMBAS", tipo: "JUEGO", editor: "Estudio Demo", base: 29.99, popularidad: 45 },
+  {
+    titulo: "Aventura del Reino Pixelado",
+    plataforma: "SWITCH",
+    tipo: "JUEGO",
+    editor: "Estudio Demo",
+    base: 59.99,
+    descuento: 30,
+    popularidad: 100,
+    key: { precio: 38.5, region: "EU" },
+  },
+  {
+    titulo: "Carreras Turbo Kart Demo",
+    plataforma: "SWITCH2",
+    tipo: "JUEGO",
+    editor: "Estudio Demo",
+    base: 79.99,
+    popularidad: 95,
+  },
+  {
+    titulo: "Granja Tranquila",
+    plataforma: "SWITCH",
+    tipo: "JUEGO",
+    editor: "Indie Ficticio",
+    base: 14.99,
+    descuento: 50,
+    popularidad: 90,
+    key: { precio: 9.2, region: "EU" },
+  },
+  {
+    titulo: "Caballero de las Cavernas",
+    plataforma: "SWITCH",
+    tipo: "JUEGO",
+    editor: "Indie Ficticio",
+    base: 24.99,
+    popularidad: 85,
+  },
+  {
+    titulo: "Fiesta de Minijuegos Deluxe",
+    plataforma: "AMBAS",
+    tipo: "EDICION_ESPECIAL",
+    editor: "Estudio Demo",
+    base: 59.99,
+    descuento: 20,
+    popularidad: 80,
+  },
+  {
+    titulo: "Aventura del Reino Pixelado – Pase de Expansión",
+    plataforma: "SWITCH",
+    tipo: "PASE_EXPANSION",
+    editor: "Estudio Demo",
+    base: 29.99,
+    popularidad: 60,
+  },
+  {
+    titulo: "Escuadrón Galáctico",
+    plataforma: "SWITCH",
+    tipo: "JUEGO",
+    editor: "Otro Editor Demo",
+    base: 39.99,
+    descuento: 40,
+    popularidad: 75,
+    key: { precio: 21.9, region: "US" },
+  },
+  {
+    titulo: "Detective de Bolsillo",
+    plataforma: "SWITCH",
+    tipo: "JUEGO",
+    editor: "Indie Ficticio",
+    base: 19.99,
+    popularidad: 70,
+  },
+  {
+    titulo: "Ritmo Salvaje – Switch 2 Edition",
+    plataforma: "SWITCH2",
+    tipo: "SWITCH2_EDITION",
+    editor: "Otro Editor Demo",
+    base: 69.99,
+    descuento: 15,
+    popularidad: 65,
+  },
+  {
+    titulo: "Plataformas Infinitas",
+    plataforma: "SWITCH",
+    tipo: "JUEGO",
+    editor: "Indie Ficticio",
+    base: 9.99,
+    popularidad: 55,
+  },
+  {
+    titulo: "Liga de Fútbol Arcade",
+    plataforma: "SWITCH",
+    tipo: "JUEGO",
+    editor: "Otro Editor Demo",
+    base: 49.99,
+    descuento: 60,
+    popularidad: 50,
+  },
+  {
+    titulo: "Ciudad de Bloques",
+    plataforma: "AMBAS",
+    tipo: "JUEGO",
+    editor: "Estudio Demo",
+    base: 29.99,
+    popularidad: 45,
+  },
 ];
 
 /** País → [moneda, factor sobre el precio base]. Solo para que haya diferencias. */
@@ -122,7 +215,8 @@ async function cargar() {
       // Algunos juegos no están en todas las eShops, para ver ese caso.
       if (i % 5 === 4 && pais === "AR") continue;
       const regular = new D(j.base).mul(factor).toDecimalPlaces(2);
-      const oferta = j.descuento && pais !== "US" ? regular.mul(new D(100 - j.descuento).div(100)).toDecimalPlaces(2) : null;
+      const oferta =
+        j.descuento && pais !== "US" ? regular.mul(new D(100 - j.descuento).div(100)).toDecimalPlaces(2) : null;
       await db.precioActual.create({
         data: {
           juegoId: juego.id,

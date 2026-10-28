@@ -34,8 +34,16 @@ export const JOBS: Record<string, DefinicionJob> = {
   catalogo: { descripcion: "Catálogos de América y Europa + matcheo entre regiones", fn: jobCatalogo },
   rematchear: { descripcion: "Rehace el matcheo con lo guardado (tras cargar overrides)", fn: rematchear },
   precios: { descripcion: "Precios de todas las eShops configuradas", fn: jobPrecios, despues: ["resumen", "alertas"] },
-  populares: { descripcion: "Precios solo de los juegos más populares (POPULARES_CANTIDAD)", fn: jobPopulares(), despues: ["resumen", "alertas"] },
-  scrapers: { descripcion: "Keys y gift cards (Instant Gaming y demás proveedores)", fn: jobScrapers, despues: ["resumen"] },
+  populares: {
+    descripcion: "Precios solo de los juegos más populares (POPULARES_CANTIDAD)",
+    fn: jobPopulares(),
+    despues: ["resumen", "alertas"],
+  },
+  scrapers: {
+    descripcion: "Keys y gift cards (Instant Gaming y demás proveedores)",
+    fn: jobScrapers,
+    despues: ["resumen"],
+  },
   resumen: { descripcion: "Recalcula el mejor precio en ARS de cada juego", fn: jobResumen },
   alertas: { descripcion: "Revisa alertas y manda avisos", fn: jobAlertas },
   limpieza: { descripcion: "Borra caché HTTP vieja, logs viejos y alertas sin confirmar", fn: jobLimpieza },

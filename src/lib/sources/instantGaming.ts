@@ -46,13 +46,17 @@ function monedaDeTexto(texto: string): string {
 }
 
 /** Extrae los productos de una página de listado/búsqueda. */
-export function parsearListado(html: string, base = fuentes.instantGaming.baseUrl()): { items: ItemListado[]; haySiguiente: boolean } {
+export function parsearListado(
+  html: string,
+  base = fuentes.instantGaming.baseUrl(),
+): { items: ItemListado[]; haySiguiente: boolean } {
   const $ = cheerio.load(html);
   const items: ItemListado[] = [];
   const vistos = new Set<string>();
   $(SELECTORES.item).each((_, el) => {
     const nodo = $(el);
-    const titulo = nodo.find(SELECTORES.titulo).first().text().trim() || nodo.find("img").first().attr("alt")?.trim() || "";
+    const titulo =
+      nodo.find(SELECTORES.titulo).first().text().trim() || nodo.find("img").first().attr("alt")?.trim() || "";
     const precioNodo = nodo.find(SELECTORES.precio).first();
     const textoPrecio = (precioNodo.attr("content") ?? precioNodo.text()).trim();
     const href = nodo.find(SELECTORES.enlace).first().attr("href");
@@ -123,7 +127,8 @@ export interface GiftCardParseada {
 
 /** Interpreta "Nintendo eShop Card 25 EUR", "Tarjeta Nintendo eShop 50€", "Nintendo eShop £15 UK", "$20 USD". */
 export function parsearTituloGiftCard(titulo: string): GiftCardParseada | null {
-  if (!/e-?shop|nintendo/i.test(titulo) || !/card|tarjeta|gift|saldo|cr[eé]dito|prepaid|prepago/i.test(titulo)) return null;
+  if (!/e-?shop|nintendo/i.test(titulo) || !/card|tarjeta|gift|saldo|cr[eé]dito|prepaid|prepago/i.test(titulo))
+    return null;
   const patrones: [RegExp, GiftCardParseada["moneda"]][] = [
     [/(\d+(?:[.,]\d{1,2})?)\s*(?:€|eur\b|euros?\b)/i, "EUR"],
     [/(?:€)\s*(\d+(?:[.,]\d{1,2})?)/i, "EUR"],

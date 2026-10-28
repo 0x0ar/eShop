@@ -17,14 +17,20 @@ function marcaTiempo() {
  * Corre un job registrando inicio, fin, ítems y error en EjecucionJob, con
  * logs prefijados por el nombre del job.
  */
-export async function ejecutarJob(nombre: string, fn: FuncionJob): Promise<{ ok: boolean; mensaje: string; items: number }> {
+export async function ejecutarJob(
+  nombre: string,
+  fn: FuncionJob,
+): Promise<{ ok: boolean; mensaje: string; items: number }> {
   const log = (m: string) => console.log(`[${marcaTiempo()}] [${nombre}] ${m}`);
   let items = 0;
   const ejecucion = await db.ejecucionJob.create({ data: { job: nombre, estado: "corriendo" } });
   log("inicio");
   try {
     const mensaje = (await fn({ log, contar: (n = 1) => (items += n) })) ?? "ok";
-    await db.ejecucionJob.update({ where: { id: ejecucion.id }, data: { estado: "ok", fin: new Date(), items, mensaje } });
+    await db.ejecucionJob.update({
+      where: { id: ejecucion.id },
+      data: { estado: "ok", fin: new Date(), items, mensaje },
+    });
     log(`fin: ${mensaje} (${items} ítems)`);
     return { ok: true, mensaje, items };
   } catch (e) {
@@ -64,6 +70,10 @@ export const cacheHttpDb: CacheHttp = {
   },
   async guardar(url, estado, cuerpo) {
     const obtenido = new Date();
-    await db.httpCache.upsert({ where: { url }, create: { url, estado, cuerpo, obtenido }, update: { estado, cuerpo, obtenido } });
+    await db.httpCache.upsert({
+      where: { url },
+      create: { url, estado, cuerpo, obtenido },
+      update: { estado, cuerpo, obtenido },
+    });
   },
 };

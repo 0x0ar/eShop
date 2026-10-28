@@ -2,7 +2,13 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { PAISES, paisesEuropa } from "@config/regiones";
 import { db } from "@/lib/db";
-import { matchearCatalogos, type OverrideMatcheo, type Plataforma, type ProductoRegional, type TipoProducto } from "@/lib/domain/matcheo";
+import {
+  matchearCatalogos,
+  type OverrideMatcheo,
+  type Plataforma,
+  type ProductoRegional,
+  type TipoProducto,
+} from "@/lib/domain/matcheo";
 import { normalizarTitulo, slugificar } from "@/lib/domain/texto";
 import { descargarCatalogoAmericas } from "@/lib/sources/nintendo/americas";
 import type { ProductoCatalogo } from "@/lib/sources/nintendo/catalogo";
@@ -24,7 +30,10 @@ export function paisesDeCatalogo(catalogo: Catalogo): string[] {
 
 async function guardarProductos(catalogo: Catalogo, productos: ProductoCatalogo[], ctx: ContextoJob) {
   const existentes = new Map(
-    (await db.productoRegional.findMany({ where: { catalogo }, select: { nsuid: true, urls: true } })).map((p) => [p.nsuid, p.urls]),
+    (await db.productoRegional.findMany({ where: { catalogo }, select: { nsuid: true, urls: true } })).map((p) => [
+      p.nsuid,
+      p.urls,
+    ]),
   );
   for (const p of productos) {
     const urlsPrevias = (existentes.get(p.nsuid) as Record<string, string> | null | undefined) ?? {};
@@ -84,11 +93,12 @@ function datosJuego(g: Grupo) {
   // Título en español si existe (catálogo europeo, núcleo ES); si no, el de América.
   const principal = g.e ?? g.a!;
   const otro = g.e && g.a ? g.a : undefined;
-  const plataforma =
-    g.a && g.e && g.a.plataforma !== g.e.plataforma ? "AMBAS" : principal.plataforma;
+  const plataforma = g.a && g.e && g.a.plataforma !== g.e.plataforma ? "AMBAS" : principal.plataforma;
   return {
     titulo: principal.titulo,
-    tituloNormalizado: [normalizarTitulo(principal.titulo), otro ? normalizarTitulo(otro.titulo) : ""].filter(Boolean).join(" | "),
+    tituloNormalizado: [normalizarTitulo(principal.titulo), otro ? normalizarTitulo(otro.titulo) : ""]
+      .filter(Boolean)
+      .join(" | "),
     editor: principal.editor ?? otro?.editor ?? null,
     plataforma,
     tipo: principal.tipo,
@@ -118,8 +128,14 @@ async function moverProducto(prod: FilaProducto, haciaJuegoId: string) {
     if (desde) {
       await tx.precioActual.deleteMany({ where: { juegoId: haciaJuegoId, pais: { in: paises } } });
       await tx.precioHistorico.deleteMany({ where: { juegoId: haciaJuegoId, pais: { in: paises } } });
-      await tx.precioActual.updateMany({ where: { juegoId: desde, pais: { in: paises } }, data: { juegoId: haciaJuegoId } });
-      await tx.precioHistorico.updateMany({ where: { juegoId: desde, pais: { in: paises } }, data: { juegoId: haciaJuegoId } });
+      await tx.precioActual.updateMany({
+        where: { juegoId: desde, pais: { in: paises } },
+        data: { juegoId: haciaJuegoId },
+      });
+      await tx.precioHistorico.updateMany({
+        where: { juegoId: desde, pais: { in: paises } },
+        data: { juegoId: haciaJuegoId },
+      });
     }
     await tx.productoRegional.update({ where: { id: prod.id }, data: { juegoId: haciaJuegoId } });
   });
@@ -136,7 +152,9 @@ async function reconciliar(grupos: Grupo[], ctx: ContextoJob) {
   let creados = 0;
   let movidos = 0;
   for (const g of grupos) {
-    const candidatos = [g.a?.juegoId, g.e?.juegoId].filter((id): id is string => Boolean(id) && juegos.has(id!) && !reclamados.has(id!));
+    const candidatos = [g.a?.juegoId, g.e?.juegoId].filter(
+      (id): id is string => Boolean(id) && juegos.has(id!) && !reclamados.has(id!),
+    );
     const datos = datosJuego(g);
     let juegoId = candidatos[0];
     if (!juegoId) {
@@ -176,7 +194,9 @@ export async function rematchear(ctx: ContextoJob) {
     leerOverrides(),
   ]);
   const r = matchearCatalogos(filasA.map(aDominio), filasE.map(aDominio), overrides);
-  ctx.log(`Matcheo: ${r.pares.length} pares, ${r.sinMatchAmericas.length} solo América, ${r.sinMatchEuropa.length} solo Europa`);
+  ctx.log(
+    `Matcheo: ${r.pares.length} pares, ${r.sinMatchAmericas.length} solo América, ${r.sinMatchEuropa.length} solo Europa`,
+  );
 
   const enPar = new Set<string>();
   const grupos: Grupo[] = r.pares.map((p) => {
@@ -191,8 +211,18 @@ export async function rematchear(ctx: ContextoJob) {
   // Registro de productos sin matcheo para revisar en /admin/estado.
   await db.sinMatcheo.deleteMany({});
   const sinMatch = [
-    ...r.sinMatchAmericas.map((x) => ({ catalogo: "AMERICAS", nsuid: x.producto.nsuid, titulo: x.producto.titulo, motivo: x.motivo })),
-    ...r.sinMatchEuropa.map((x) => ({ catalogo: "EUROPA", nsuid: x.producto.nsuid, titulo: x.producto.titulo, motivo: x.motivo })),
+    ...r.sinMatchAmericas.map((x) => ({
+      catalogo: "AMERICAS",
+      nsuid: x.producto.nsuid,
+      titulo: x.producto.titulo,
+      motivo: x.motivo,
+    })),
+    ...r.sinMatchEuropa.map((x) => ({
+      catalogo: "EUROPA",
+      nsuid: x.producto.nsuid,
+      titulo: x.producto.titulo,
+      motivo: x.motivo,
+    })),
   ];
   for (let i = 0; i < sinMatch.length; i += 500) {
     await db.sinMatcheo.createMany({ data: sinMatch.slice(i, i + 500) });

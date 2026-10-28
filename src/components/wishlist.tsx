@@ -54,7 +54,17 @@ export function useWishlist(): string[] {
   return useSyncExternalStore(suscribir, leer, () => VACIA);
 }
 
-export function BotonWishlist({ slug, titulo, conTexto = false, className }: { slug: string; titulo: string; conTexto?: boolean; className?: string }) {
+export function BotonWishlist({
+  slug,
+  titulo,
+  conTexto = false,
+  className,
+}: {
+  slug: string;
+  titulo: string;
+  conTexto?: boolean;
+  className?: string;
+}) {
   const lista = useWishlist();
   const esta = lista.includes(slug);
   return (
@@ -68,7 +78,9 @@ export function BotonWishlist({ slug, titulo, conTexto = false, className }: { s
       }}
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-full font-bold transition-colors",
-        conTexto ? "h-10 border-2 border-border px-4 text-sm hover:border-primary" : "size-9 bg-card/90 shadow hover:text-primary",
+        conTexto
+          ? "border-border hover:border-primary h-10 border-2 px-4 text-sm"
+          : "bg-card/90 hover:text-primary size-9 shadow",
         esta && "text-primary",
         className,
       )}
@@ -83,7 +95,7 @@ export function ContadorWishlist() {
   const n = useWishlist().length;
   if (n === 0) return null;
   return (
-    <span className="absolute -top-0.5 -right-0.5 inline-flex min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-bold text-primary-foreground">
+    <span className="bg-primary text-primary-foreground absolute -top-0.5 -right-0.5 inline-flex min-w-5 items-center justify-center rounded-full px-1 text-[10px] font-bold">
       {n}
       <span className="sr-only"> juegos</span>
     </span>

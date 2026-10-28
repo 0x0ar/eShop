@@ -58,8 +58,16 @@ async function main() {
     const url = `https://${cfg.appId().toLowerCase()}-dsn.algolia.net/1/indexes/${cfg.indice()}/query`;
     const { cuerpo } = await pedir(url, {
       metodo: "POST",
-      cuerpo: JSON.stringify({ query: "", hitsPerPage: 30, filters: "platformCode:NINTENDO_SWITCH_2 OR platformCode:NINTENDO_SWITCH" }),
-      headers: { "Content-Type": "application/json", "X-Algolia-Application-Id": cfg.appId(), "X-Algolia-API-Key": cfg.apiKey() },
+      cuerpo: JSON.stringify({
+        query: "",
+        hitsPerPage: 30,
+        filters: "platformCode:NINTENDO_SWITCH_2 OR platformCode:NINTENDO_SWITCH",
+      }),
+      headers: {
+        "Content-Type": "application/json",
+        "X-Algolia-Application-Id": cfg.appId(),
+        "X-Algolia-API-Key": cfg.apiKey(),
+      },
     });
     await guardar("americas-algolia.json", json(cuerpo));
     for (const h of JSON.parse(cuerpo).hits) if (h.nsuid) nsuidsAmericas.push(String(h.nsuid));

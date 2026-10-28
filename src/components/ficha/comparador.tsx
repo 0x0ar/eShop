@@ -24,7 +24,8 @@ function nombreOpcion(c: Pick<CeldaDTO, "region" | "pais" | "metodo">) {
 
 function enlace(c: CeldaDTO): { url: string; texto: string } | null {
   if (c.key) return { url: c.key.url, texto: `Ver key en ${c.key.nombreProveedor}` };
-  if (c.giftcards?.lineas[0]?.url) return { url: c.giftcards.lineas[0].url, texto: `Ver gift card en ${c.giftcards.lineas[0].nombreProveedor}` };
+  if (c.giftcards?.lineas[0]?.url)
+    return { url: c.giftcards.lineas[0].url, texto: `Ver gift card en ${c.giftcards.lineas[0].nombreProveedor}` };
   if (c.url) return { url: c.url, texto: `Ir a la eShop de ${nombrePais(c.pais)}` };
   return null;
 }
@@ -32,17 +33,18 @@ function enlace(c: CeldaDTO): { url: string; texto: string } | null {
 // ─── Filtros de perfil ─────────────────────────────────────────────────
 
 function FiltrosPerfil({ perfil, cambiar }: { perfil: PerfilUI; cambiar: (p: PerfilUI) => void }) {
-  const set = (k: keyof PerfilUI) => (e: React.ChangeEvent<HTMLInputElement>) => cambiar({ ...perfil, [k]: e.target.checked });
+  const set = (k: keyof PerfilUI) => (e: React.ChangeEvent<HTMLInputElement>) =>
+    cambiar({ ...perfil, [k]: e.target.checked });
   const completo = Object.keys(PERFIL_UI_COMPLETO).every((k) => perfil[k as keyof PerfilUI]);
   return (
-    <details className="group rounded-lg border border-border bg-card" open={!completo}>
+    <details className="group border-border bg-card rounded-lg border" open={!completo}>
       <summary className="flex cursor-pointer list-none items-center justify-between gap-2 p-4 font-extrabold">
         <span>
-          ¿Qué tenés? <span className="font-normal text-muted-foreground">Ajustá la recomendación a tu caso</span>
+          ¿Qué tenés? <span className="text-muted-foreground font-normal">Ajustá la recomendación a tu caso</span>
         </span>
         <ChevronDown className="size-5 transition-transform group-open:rotate-180" aria-hidden="true" />
       </summary>
-      <div className="grid gap-4 border-t border-border p-4 sm:grid-cols-3">
+      <div className="border-border grid gap-4 border-t p-4 sm:grid-cols-3">
         <fieldset className="space-y-2">
           <legend className="mb-1 text-sm font-bold">Cuentas de Nintendo</legend>
           <Checkbox label="Argentina" checked={perfil.cuentaAR} onChange={set("cuentaAR")} className="flex" />
@@ -52,17 +54,36 @@ function FiltrosPerfil({ perfil, cambiar }: { perfil: PerfilUI; cambiar: (p: Per
         </fieldset>
         <fieldset className="space-y-2">
           <legend className="mb-1 text-sm font-bold">Medios de pago</legend>
-          <Checkbox label="Tarjeta argentina" checked={perfil.tarjetaArgentina} onChange={set("tarjetaArgentina")} className="flex" />
-          <Checkbox label="Tarjeta del exterior" checked={perfil.tarjetaExterior} onChange={set("tarjetaExterior")} className="flex" />
+          <Checkbox
+            label="Tarjeta argentina"
+            checked={perfil.tarjetaArgentina}
+            onChange={set("tarjetaArgentina")}
+            className="flex"
+          />
+          <Checkbox
+            label="Tarjeta del exterior"
+            checked={perfil.tarjetaExterior}
+            onChange={set("tarjetaExterior")}
+            className="flex"
+          />
         </fieldset>
         <fieldset className="space-y-2">
           <legend className="mb-1 text-sm font-bold">Acepto comprar</legend>
           <Checkbox label="Gift cards" checked={perfil.giftCards} onChange={set("giftCards")} className="flex" />
           <Checkbox label="Keys" checked={perfil.keys} onChange={set("keys")} className="flex" />
-          <Checkbox label="En marketplaces de terceros" checked={perfil.marketplaces} onChange={set("marketplaces")} className="flex" />
+          <Checkbox
+            label="En marketplaces de terceros"
+            checked={perfil.marketplaces}
+            onChange={set("marketplaces")}
+            className="flex"
+          />
         </fieldset>
         {!completo && (
-          <button type="button" className="text-left text-sm font-bold text-primary hover:underline sm:col-span-3" onClick={() => cambiar(PERFIL_UI_COMPLETO)}>
+          <button
+            type="button"
+            className="text-primary text-left text-sm font-bold hover:underline sm:col-span-3"
+            onClick={() => cambiar(PERFIL_UI_COMPLETO)}
+          >
             Mostrar todas las opciones
           </button>
         )}
@@ -78,7 +99,7 @@ function Requisitos({ celda }: { celda: CeldaDTO }) {
     <ul className="space-y-1 text-sm">
       {celda.requisitos.map((r, i) => (
         <li key={i} className="flex gap-2">
-          <Check className="mt-0.5 size-4 shrink-0 text-success" aria-hidden="true" />
+          <Check className="text-success mt-0.5 size-4 shrink-0" aria-hidden="true" />
           {textoRequisito(r)}
         </li>
       ))}
@@ -86,14 +107,22 @@ function Requisitos({ celda }: { celda: CeldaDTO }) {
   );
 }
 
-function TarjetaRecomendacion({ opciones, perfil }: { opciones: OpcionDTO[]; perfil: ReturnType<typeof aPerfilUsuario> }) {
+function TarjetaRecomendacion({
+  opciones,
+  perfil,
+}: {
+  opciones: OpcionDTO[];
+  perfil: ReturnType<typeof aPerfilUsuario>;
+}) {
   const rec = useMemo(() => recomendar(opciones, perfil), [opciones, perfil]);
   if (!rec.mejor) {
     return (
       <Card className="border-warning">
         <CardHeader>
           <CardTitle>No hay opciones para tu perfil</CardTitle>
-          <CardDescription>Con las cuentas y medios de pago que marcaste no encontramos dónde comprarlo. Probá habilitar más opciones.</CardDescription>
+          <CardDescription>
+            Con las cuentas y medios de pago que marcaste no encontramos dónde comprarlo. Probá habilitar más opciones.
+          </CardDescription>
         </CardHeader>
       </Card>
     );
@@ -102,40 +131,49 @@ function TarjetaRecomendacion({ opciones, perfil }: { opciones: OpcionDTO[]; per
   const link = enlace(m);
   const ahorro = rec.ahorroArs ? new D(rec.ahorroArs) : null;
   return (
-    <Card className="border-2 border-primary" data-testid="recomendacion">
+    <Card className="border-primary border-2" data-testid="recomendacion">
       <CardHeader>
-        <p className="flex items-center gap-2 text-sm font-bold text-primary">
+        <p className="text-primary flex items-center gap-2 text-sm font-bold">
           <Trophy className="size-4" aria-hidden="true" /> La opción más barata para vos
         </p>
         <CardTitle className="text-xl">{nombreOpcion(m)}</CardTitle>
         <CardDescription>Con cotización {m.tipo === "oficial" ? "oficial" : "blue"}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
-        <p className="tabular text-4xl font-extrabold text-primary">{formatearArs(m.ars)}</p>
+        <p className="tabular text-primary text-4xl font-extrabold">{formatearArs(m.ars)}</p>
         {ahorro && rec.referencia && ahorro.gt(0) ? (
-          <p className="rounded-md bg-success-soft p-3 text-sm font-bold text-success">
-            Ahorrás {formatearArs(ahorro)} ({formatearPorcentaje(rec.ahorroPorcentaje!)}) frente a la eShop argentina con
-            tarjeta argentina ({formatearArs(rec.referencia.ars)}).
+          <p className="bg-success-soft text-success rounded-md p-3 text-sm font-bold">
+            Ahorrás {formatearArs(ahorro)} ({formatearPorcentaje(rec.ahorroPorcentaje!)}) frente a la eShop argentina
+            con tarjeta argentina ({formatearArs(rec.referencia.ars)}).
           </p>
         ) : rec.referencia && m.region === "AR" && m.metodo === "tarjeta_ar" ? (
-          <p className="text-sm text-muted-foreground">Comprar en la eShop argentina con tarjeta argentina es lo más conveniente.</p>
+          <p className="text-muted-foreground text-sm">
+            Comprar en la eShop argentina con tarjeta argentina es lo más conveniente.
+          </p>
         ) : !rec.referencia ? (
-          <p className="text-sm text-muted-foreground">No está a la venta en la eShop argentina, así que no hay referencia para calcular el ahorro.</p>
+          <p className="text-muted-foreground text-sm">
+            No está a la venta en la eShop argentina, así que no hay referencia para calcular el ahorro.
+          </p>
         ) : null}
         <Requisitos celda={m} />
         {link && (
-          <a href={link.url} target="_blank" rel="noopener noreferrer nofollow" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground hover:bg-primary-hover">
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="bg-primary text-primary-foreground hover:bg-primary-hover inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold"
+          >
             {link.texto} <ExternalLink className="size-4" aria-hidden="true" />
           </a>
         )}
-        <dl className="grid grid-cols-2 gap-3 border-t border-border pt-3 text-sm">
+        <dl className="border-border grid grid-cols-2 gap-3 border-t pt-3 text-sm">
           {(["oficial", "blue"] as TipoCotizacion[]).map((t) => {
             const c = rec.mejorPorTipo[t];
             return (
               <div key={t}>
                 <dt className="text-muted-foreground">Mejor con {t}</dt>
                 <dd className="tabular font-bold">{c ? formatearArs(c.ars) : "—"}</dd>
-                {c && <dd className="text-xs text-muted-foreground">{nombreOpcion(c)}</dd>}
+                {c && <dd className="text-muted-foreground text-xs">{nombreOpcion(c)}</dd>}
               </div>
             );
           })}
@@ -149,7 +187,17 @@ function TarjetaRecomendacion({ opciones, perfil }: { opciones: OpcionDTO[]; per
 
 type Orden = { por: "opcion" | TipoCotizacion; asc: boolean };
 
-function Celda({ op, tipo, perfil, esMejor }: { op: OpcionDTO; tipo: TipoCotizacion; perfil: ReturnType<typeof aPerfilUsuario>; esMejor: boolean }) {
+function Celda({
+  op,
+  tipo,
+  perfil,
+  esMejor,
+}: {
+  op: OpcionDTO;
+  tipo: TipoCotizacion;
+  perfil: ReturnType<typeof aPerfilUsuario>;
+  esMejor: boolean;
+}) {
   const viable = mejorCeldaViable(op, tipo, perfil);
   const c = viable ?? op.candidatos[tipo][0];
   if (!c) return <span className="text-muted-foreground">—</span>;
@@ -163,12 +211,12 @@ function Celda({ op, tipo, perfil, esMejor }: { op: OpcionDTO; tipo: TipoCotizac
           </Badge>
         )}
       </div>
-      <div className="text-xs text-muted-foreground">
+      <div className="text-muted-foreground text-xs">
         {op.region === "EU" && `${nombrePais(c.pais)} · `}
         {formatearMoneda(c.precio, c.moneda)}
         {c.enOferta && " · en oferta"}
       </div>
-      {!viable && <div className="text-xs font-bold text-warning">No disponible con tu perfil</div>}
+      {!viable && <div className="text-warning text-xs font-bold">No disponible con tu perfil</div>}
     </div>
   );
 }
@@ -196,24 +244,32 @@ function Detalle({ op, perfil }: { op: OpcionDTO; perfil: ReturnType<typeof aPer
                       Marketplace
                     </Badge>
                   )}{" "}
-                  a {formatearMoneda(l.precio, l.monedaPrecio)} = {formatearArs(new D(l.costoArsUnitario).mul(l.cantidad))}
+                  a {formatearMoneda(l.precio, l.monedaPrecio)} ={" "}
+                  {formatearArs(new D(l.costoArsUnitario).mul(l.cantidad))}
                 </li>
               ))}
             </ul>
             <p>
-              Cargás {formatearMoneda(c.giftcards.valorTotal, c.giftcards.moneda)} para un juego de {formatearMoneda(c.precio, c.moneda)}.{" "}
+              Cargás {formatearMoneda(c.giftcards.valorTotal, c.giftcards.moneda)} para un juego de{" "}
+              {formatearMoneda(c.precio, c.moneda)}.{" "}
               <strong>Te sobran {formatearMoneda(c.giftcards.sobrante, c.giftcards.moneda)} de saldo.</strong>
             </p>
             {new D(c.giftcards.restante).gt(0) && (
               <p>
-                El resto ({formatearMoneda(c.giftcards.restante, c.giftcards.moneda)}) se paga con tarjeta: {formatearArs(c.giftcards.costoRestanteArs)}.
+                El resto ({formatearMoneda(c.giftcards.restante, c.giftcards.moneda)}) se paga con tarjeta:{" "}
+                {formatearArs(c.giftcards.costoRestanteArs)}.
               </p>
             )}
           </>
         ) : (
           <p>
             {formatearMoneda(c.precio, c.moneda)}
-            {c.moneda !== "ARS" && <> × {formatearArs(c.cotizacion)} ({c.monedaPuente === c.moneda ? c.moneda : `vía ${c.monedaPuente}`})</>}
+            {c.moneda !== "ARS" && (
+              <>
+                {" "}
+                × {formatearArs(c.cotizacion)} ({c.monedaPuente === c.moneda ? c.moneda : `vía ${c.monedaPuente}`})
+              </>
+            )}
             {" = "}
             {formatearArs(c.arsSinImpuestos)}
             {c.impuestos.map((i) => (
@@ -235,7 +291,12 @@ function Detalle({ op, perfil }: { op: OpcionDTO; perfil: ReturnType<typeof aPer
           Precio actualizado {formatearFechaHora(c.actualizado)} ({haceCuanto(c.actualizado)})
         </p>
         {link && (
-          <a href={link.url} target="_blank" rel="noopener noreferrer nofollow" className="inline-flex items-center gap-1 font-bold text-primary hover:underline">
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-primary inline-flex items-center gap-1 font-bold hover:underline"
+          >
             {link.texto} <ExternalLink className="size-3.5" aria-hidden="true" />
           </a>
         )}
@@ -277,11 +338,14 @@ function TablaComparativa({ opciones, perfil }: { opciones: OpcionDTO[]; perfil:
       <th scope="col" aria-sort={activo ? (orden.asc ? "ascending" : "descending") : "none"} className="p-0 text-left">
         <button
           type="button"
-          className="flex w-full items-center gap-1 px-2 py-2.5 sm:px-3 font-extrabold hover:text-primary"
+          className="hover:text-primary flex w-full items-center gap-1 px-2 py-2.5 font-extrabold sm:px-3"
           onClick={() => setOrden({ por, asc: activo ? !orden.asc : true })}
         >
           {texto}
-          <ArrowDownUp className={cn("size-3.5", activo ? "text-primary" : "text-muted-foreground")} aria-hidden="true" />
+          <ArrowDownUp
+            className={cn("size-3.5", activo ? "text-primary" : "text-muted-foreground")}
+            aria-hidden="true"
+          />
           <span className="sr-only">, ordenar</span>
         </button>
       </th>
@@ -289,7 +353,7 @@ function TablaComparativa({ opciones, perfil }: { opciones: OpcionDTO[]; perfil:
   };
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-border bg-card">
+    <div className="border-border bg-card overflow-x-auto rounded-lg border">
       <table className="w-full text-xs sm:text-sm" data-testid="tabla-comparativa">
         <caption className="sr-only">
           Costo final en pesos por región y método de pago, con cotización oficial y blue. La más barata está resaltada.
@@ -314,13 +378,13 @@ function TablaComparativa({ opciones, perfil }: { opciones: OpcionDTO[]; perfil:
             const destacada = esMejor("oficial") || esMejor("blue");
             return (
               <Fragment key={op.id}>
-                <tr className={cn("border-t border-border align-top", destacada && "bg-success-soft")}>
-                  <th scope="row" className="px-2 py-2.5 sm:px-3 text-left font-bold">
+                <tr className={cn("border-border border-t align-top", destacada && "bg-success-soft")}>
+                  <th scope="row" className="px-2 py-2.5 text-left font-bold sm:px-3">
                     <div>{op.region === "EU" ? "Europa" : NOMBRE_REGION[op.region]}</div>
-                    <div className="text-xs font-normal text-muted-foreground">{NOMBRE_METODO[op.metodo]}</div>
+                    <div className="text-muted-foreground text-xs font-normal">{NOMBRE_METODO[op.metodo]}</div>
                   </th>
                   {vacia ? (
-                    <td colSpan={2} className="px-2 py-2.5 sm:px-3 text-muted-foreground">
+                    <td colSpan={2} className="text-muted-foreground px-2 py-2.5 sm:px-3">
                       {op.motivoNoDisponible ?? "Sin datos"}
                     </td>
                   ) : (
@@ -337,7 +401,7 @@ function TablaComparativa({ opciones, perfil }: { opciones: OpcionDTO[]; perfil:
                     {!vacia && (
                       <button
                         type="button"
-                        className="inline-flex size-8 items-center justify-center rounded-full hover:bg-muted"
+                        className="hover:bg-muted inline-flex size-8 items-center justify-center rounded-full"
                         aria-expanded={abierta === op.id}
                         aria-controls={`detalle-${op.id}`}
                         onClick={() => setAbierta(abierta === op.id ? null : op.id)}
@@ -351,7 +415,7 @@ function TablaComparativa({ opciones, perfil }: { opciones: OpcionDTO[]; perfil:
                   </td>
                 </tr>
                 {abierta === op.id && (
-                  <tr id={`detalle-${op.id}`} className="border-t border-border bg-background">
+                  <tr id={`detalle-${op.id}`} className="border-border bg-background border-t">
                     <td colSpan={4} className="px-3 py-4">
                       <Detalle op={op} perfil={perfil} />
                     </td>
@@ -377,7 +441,7 @@ export function Comparador({ opciones, paisesEuropa }: { opciones: OpcionDTO[]; 
         <h2 id="titulo-tabla" className="text-xl font-extrabold">
           Comparativa completa
         </h2>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           4 regiones × 4 métodos de pago, en pesos. Tocá el ícono de información para ver requisitos y el cálculo.
         </p>
         <TablaComparativa opciones={opciones} perfil={perfil} />

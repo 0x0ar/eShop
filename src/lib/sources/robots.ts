@@ -64,7 +64,9 @@ function coincide(patron: string, ruta: string): boolean {
 function grupoPara(reglas: ReglasRobots, userAgent: string): Grupo | null {
   const ua = userAgent.toLowerCase();
   const token = ua.split("/")[0];
-  const especifico = reglas.grupos.find((g) => g.agentes.some((a) => a !== "*" && (token.includes(a) || a.includes(token))));
+  const especifico = reglas.grupos.find((g) =>
+    g.agentes.some((a) => a !== "*" && (token.includes(a) || a.includes(token))),
+  );
   return especifico ?? reglas.grupos.find((g) => g.agentes.includes("*")) ?? null;
 }
 

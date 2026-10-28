@@ -29,7 +29,8 @@ export function urlsBaja(tokenBaja: string) {
 
 const token = () => randomBytes(24).toString("base64url");
 
-const escapar = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
+const escapar = (s: string) =>
+  s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 
 export const perfilSchema = z.object({
   cuentas: z.array(z.string().max(3)).max(20).nullable(),
@@ -71,7 +72,10 @@ ${urlBaja ? `<p style="font-size:12px;color:#666"><a href="${urlBaja}">Darme de 
  */
 export async function crearAlerta(entrada: NuevaAlerta): Promise<{ estado: "pendiente" | "activa" }> {
   const datos = nuevaAlertaSchema.parse(entrada);
-  const juego = await db.juego.findUnique({ where: { id: datos.juegoId }, select: { id: true, titulo: true, slug: true } });
+  const juego = await db.juego.findUnique({
+    where: { id: datos.juegoId },
+    select: { id: true, titulo: true, slug: true },
+  });
   if (!juego) throw new Error("Juego inexistente");
 
   const existente = await db.alerta.findFirst({
@@ -116,7 +120,10 @@ export async function crearAlerta(entrada: NuevaAlerta): Promise<{ estado: "pend
 
 export async function confirmarAlerta(tokenConfirmacion: string) {
   if (!tokenConfirmacion || tokenConfirmacion.length > 100) return null;
-  const alerta = await db.alerta.findUnique({ where: { tokenConfirmacion }, include: { juego: { select: { titulo: true, slug: true } } } });
+  const alerta = await db.alerta.findUnique({
+    where: { tokenConfirmacion },
+    include: { juego: { select: { titulo: true, slug: true } } },
+  });
   if (!alerta || alerta.estado === "baja") return null;
   if (alerta.estado === "pendiente") {
     await db.alerta.update({ where: { id: alerta.id }, data: { estado: "activa", confirmada: new Date() } });
@@ -126,7 +133,10 @@ export async function confirmarAlerta(tokenConfirmacion: string) {
 
 export async function darDeBaja(tokenBaja: string) {
   if (!tokenBaja || tokenBaja.length > 100) return null;
-  const alerta = await db.alerta.findUnique({ where: { tokenBaja }, include: { juego: { select: { titulo: true, slug: true } } } });
+  const alerta = await db.alerta.findUnique({
+    where: { tokenBaja },
+    include: { juego: { select: { titulo: true, slug: true } } },
+  });
   if (!alerta) return null;
   if (alerta.estado !== "baja") await db.alerta.update({ where: { id: alerta.id }, data: { estado: "baja" } });
   return alerta;
@@ -187,7 +197,10 @@ export async function revisarAlertas(log: (m: string) => void = console.log): Pr
           urlBaja,
         ),
       });
-      await db.alerta.update({ where: { id: a.id }, data: { ultimoAviso: new Date(), ultimoPrecioAvisado: precio.toFixed() } });
+      await db.alerta.update({
+        where: { id: a.id },
+        data: { ultimoAviso: new Date(), ultimoPrecioAvisado: precio.toFixed() },
+      });
       enviados++;
     } catch (e) {
       log(`No se pudo avisar a la alerta ${a.id}: ${(e as Error).message}`);

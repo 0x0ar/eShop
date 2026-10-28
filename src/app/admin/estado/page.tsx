@@ -28,14 +28,22 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
   await connection();
   const p = await searchParams;
   if (!adminHabilitado()) {
-    return <p>El panel está deshabilitado. Definí la variable <code>ADMIN_TOKEN</code> (12 caracteres o más) para usarlo.</p>;
+    return (
+      <p>
+        El panel está deshabilitado. Definí la variable <code>ADMIN_TOKEN</code> (12 caracteres o más) para usarlo.
+      </p>
+    );
   }
   if (!(await esAdmin())) {
     return (
       <form action={entrar} className="max-w-sm space-y-3">
         <Label htmlFor="token">Token de administración</Label>
         <Input id="token" name="token" type="password" required autoComplete="current-password" />
-        {p.error && <p className="text-sm font-bold text-primary">{p.error === "limite" ? "Demasiados intentos." : "Token incorrecto."}</p>}
+        {p.error && (
+          <p className="text-primary text-sm font-bold">
+            {p.error === "limite" ? "Demasiados intentos." : "Token incorrecto."}
+          </p>
+        )}
         <Button type="submit">Entrar</Button>
       </form>
     );
@@ -68,7 +76,9 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
   return (
     <div className="space-y-6">
       <form action={salir}>
-        <Button variant="ghost" size="sm" type="submit">Salir</Button>
+        <Button variant="ghost" size="sm" type="submit">
+          Salir
+        </Button>
       </form>
 
       <Card>
@@ -103,7 +113,7 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
         </CardHeader>
         <CardContent className="overflow-x-auto">
           <table className="w-full min-w-[640px] text-sm">
-            <thead className="text-left text-muted-foreground">
+            <thead className="text-muted-foreground text-left">
               <tr>
                 <th className="py-1">Fuente</th>
                 <th className="py-1">Estado</th>
@@ -114,22 +124,26 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
             <tbody>
               {fuentes.length === 0 && (
                 <tr>
-                  <td colSpan={4} className="py-2 text-muted-foreground">Todavía no corrió ningún job.</td>
+                  <td colSpan={4} className="text-muted-foreground py-2">
+                    Todavía no corrió ningún job.
+                  </td>
                 </tr>
               )}
               {fuentes.map((f) => {
                 const ok = f.ultimoExito && (!f.ultimoError || f.ultimoExito > f.ultimoError);
                 return (
-                  <tr key={f.fuente} className="border-t border-border align-top">
+                  <tr key={f.fuente} className="border-border border-t align-top">
                     <td className="py-2 font-bold">{f.fuente}</td>
-                    <td className="py-2">{ok ? <Badge variant="success">OK</Badge> : <Badge variant="warning">Con error</Badge>}</td>
+                    <td className="py-2">
+                      {ok ? <Badge variant="success">OK</Badge> : <Badge variant="warning">Con error</Badge>}
+                    </td>
                     <td className="py-2">
                       {f.ultimoExito ? `${formatearFechaHora(f.ultimoExito)} (${haceCuanto(f.ultimoExito)})` : "—"}
-                      {f.detalle && <div className="text-xs text-muted-foreground">{f.detalle}</div>}
+                      {f.detalle && <div className="text-muted-foreground text-xs">{f.detalle}</div>}
                     </td>
                     <td className="py-2">
                       {f.ultimoError ? formatearFechaHora(f.ultimoError) : "—"}
-                      {f.error && <div className="text-xs break-all text-muted-foreground">{f.error}</div>}
+                      {f.error && <div className="text-muted-foreground text-xs break-all">{f.error}</div>}
                     </td>
                   </tr>
                 );
@@ -142,7 +156,9 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
       <Card>
         <CardHeader>
           <CardTitle>Jobs</CardTitle>
-          <CardDescription>Los jobs largos (catálogo, precios, scrapers) se corren desde el worker o con <code>npm run job</code>.</CardDescription>
+          <CardDescription>
+            Los jobs largos (catálogo, precios, scrapers) se corren desde el worker o con <code>npm run job</code>.
+          </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex flex-wrap gap-2">
@@ -157,7 +173,7 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
           </div>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[640px] text-sm">
-              <thead className="text-left text-muted-foreground">
+              <thead className="text-muted-foreground text-left">
                 <tr>
                   <th className="py-1">Job</th>
                   <th className="py-1">Inicio</th>
@@ -169,15 +185,19 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
               </thead>
               <tbody>
                 {ultimasEjecuciones.map((e) => (
-                  <tr key={e.id} className="border-t border-border align-top">
+                  <tr key={e.id} className="border-border border-t align-top">
                     <td className="py-1.5 font-bold">{e.job}</td>
                     <td className="py-1.5">{formatearFechaHora(e.inicio)}</td>
-                    <td className="py-1.5">{e.fin ? `${Math.round((e.fin.getTime() - e.inicio.getTime()) / 1000)} s` : "—"}</td>
                     <td className="py-1.5">
-                      <Badge variant={e.estado === "ok" ? "success" : e.estado === "error" ? "warning" : "muted"}>{e.estado}</Badge>
+                      {e.fin ? `${Math.round((e.fin.getTime() - e.inicio.getTime()) / 1000)} s` : "—"}
+                    </td>
+                    <td className="py-1.5">
+                      <Badge variant={e.estado === "ok" ? "success" : e.estado === "error" ? "warning" : "muted"}>
+                        {e.estado}
+                      </Badge>
                     </td>
                     <td className="py-1.5">{e.items}</td>
-                    <td className="py-1.5 text-xs break-all text-muted-foreground">{e.mensaje}</td>
+                    <td className="text-muted-foreground py-1.5 text-xs break-all">{e.mensaje}</td>
                   </tr>
                 ))}
               </tbody>
@@ -202,17 +222,24 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
             </div>
             <div className="space-y-1">
               <Label htmlFor="sm-cat">Catálogo</Label>
-              <select id="sm-cat" name="catalogo" defaultValue={catalogo ?? ""} className="h-10 rounded-full border-2 border-input bg-card px-3 text-sm">
+              <select
+                id="sm-cat"
+                name="catalogo"
+                defaultValue={catalogo ?? ""}
+                className="border-input bg-card h-10 rounded-full border-2 px-3 text-sm"
+              >
                 <option value="">Ambos</option>
                 <option value="AMERICAS">América</option>
                 <option value="EUROPA">Europa</option>
               </select>
             </div>
-            <Button type="submit" variant="outline">Filtrar</Button>
+            <Button type="submit" variant="outline">
+              Filtrar
+            </Button>
           </form>
           <div className="max-h-96 overflow-auto">
             <table className="w-full text-sm">
-              <thead className="sticky top-0 bg-card text-left text-muted-foreground">
+              <thead className="bg-card text-muted-foreground sticky top-0 text-left">
                 <tr>
                   <th className="py-1">Catálogo</th>
                   <th className="py-1">nsuid</th>
@@ -222,11 +249,11 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
               </thead>
               <tbody>
                 {sinMatch.map((s) => (
-                  <tr key={s.id} className="border-t border-border align-top">
+                  <tr key={s.id} className="border-border border-t align-top">
                     <td className="py-1">{s.catalogo === "AMERICAS" ? "América" : "Europa"}</td>
                     <td className="py-1 font-mono text-xs">{s.nsuid}</td>
                     <td className="py-1">{s.titulo}</td>
-                    <td className="py-1 text-xs text-muted-foreground">{s.motivo}</td>
+                    <td className="text-muted-foreground py-1 text-xs">{s.motivo}</td>
                   </tr>
                 ))}
               </tbody>
@@ -239,8 +266,8 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
         <CardHeader>
           <CardTitle>Overrides de matcheo</CardTitle>
           <CardDescription>
-            Uní un producto de América con uno de Europa, o dejá uno de los dos vacío para forzar “sin match”. Al guardar
-            se rehace el matcheo. También se pueden versionar en <code>config/match-overrides.json</code>.
+            Uní un producto de América con uno de Europa, o dejá uno de los dos vacío para forzar “sin match”. Al
+            guardar se rehace el matcheo. También se pueden versionar en <code>config/match-overrides.json</code>.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -259,7 +286,9 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
             </div>
             <Button type="submit">Guardar</Button>
           </form>
-          {p.error === "nsuid" && <p className="text-sm font-bold text-primary">Los nsuid tienen 14 dígitos; completá al menos uno.</p>}
+          {p.error === "nsuid" && (
+            <p className="text-primary text-sm font-bold">Los nsuid tienen 14 dígitos; completá al menos uno.</p>
+          )}
           <ul className="space-y-1 text-sm">
             {overrides.map((o) => (
               <li key={o.id} className="flex flex-wrap items-center gap-2">
@@ -269,7 +298,9 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
                 {o.nota && <span className="text-muted-foreground">{o.nota}</span>}
                 <form action={borrarOverride}>
                   <input type="hidden" name="id" value={o.id} />
-                  <Button type="submit" variant="link" size="sm">Borrar</Button>
+                  <Button type="submit" variant="link" size="sm">
+                    Borrar
+                  </Button>
                 </form>
               </li>
             ))}

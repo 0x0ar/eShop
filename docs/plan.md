@@ -2,14 +2,14 @@
 
 Cada etapa termina con `npm run lint`, `npm test` y `npm run build` limpios.
 
-| # | Etapa | Estado |
-|---|---|---|
-| 0 | Esqueleto Next.js 16 + TS estricto, config centralizada (`config/`), CLAUDE.md, docs | Hecha |
-| 1 | Dominio puro + tests: dinero decimal, conversión, IVA, gift cards óptimas, opciones, recomendación, matcheo | Hecha |
-| 2 | Prisma (SQLite/Postgres), clientes y parsers de fuentes, worker con node-cron + CLI | Hecha (parsers sin fixtures reales, ver abajo) |
-| 3 | UI: inicio, búsqueda, ficha con tabla y recomendación filtrable, historial, wishlist, cotizaciones, "Cómo calculamos", legales | Hecha |
-| 4 | Alertas por email con doble opt-in, `/admin/estado`, cron de Vercel, Docker, README, e2e | Hecha |
-| 5 | **Verificación de fuentes reales**: capturar fixtures, ajustar parsers, cargar ≥ 50 juegos y revisar la comparativa | **Bloqueada**: la red del entorno de desarrollo no llega a las fuentes |
+| #   | Etapa                                                                                                                          | Estado                                                                 |
+| --- | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
+| 0   | Esqueleto Next.js 16 + TS estricto, config centralizada (`config/`), CLAUDE.md, docs                                           | Hecha                                                                  |
+| 1   | Dominio puro + tests: dinero decimal, conversión, IVA, gift cards óptimas, opciones, recomendación, matcheo                    | Hecha                                                                  |
+| 2   | Prisma (SQLite/Postgres), clientes y parsers de fuentes, worker con node-cron + CLI                                            | Hecha (parsers sin fixtures reales, ver abajo)                         |
+| 3   | UI: inicio, búsqueda, ficha con tabla y recomendación filtrable, historial, wishlist, cotizaciones, "Cómo calculamos", legales | Hecha                                                                  |
+| 4   | Alertas por email con doble opt-in, `/admin/estado`, cron de Vercel, Docker, README, e2e                                       | Hecha                                                                  |
+| 5   | **Verificación de fuentes reales**: capturar fixtures, ajustar parsers, cargar ≥ 50 juegos y revisar la comparativa            | **Bloqueada**: la red del entorno de desarrollo no llega a las fuentes |
 
 ## Etapa 5 — qué falta y cómo retomarla
 

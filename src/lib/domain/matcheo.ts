@@ -2,13 +2,7 @@ import { normalizarEditor, normalizarTitulo, similitud } from "./texto";
 
 export type Plataforma = "SWITCH" | "SWITCH2" | "AMBAS";
 export type TipoProducto =
-  | "JUEGO"
-  | "DLC"
-  | "PASE_EXPANSION"
-  | "EDICION_ESPECIAL"
-  | "SWITCH2_EDITION"
-  | "UPGRADE"
-  | "BUNDLE";
+  "JUEGO" | "DLC" | "PASE_EXPANSION" | "EDICION_ESPECIAL" | "SWITCH2_EDITION" | "UPGRADE" | "BUNDLE";
 
 /** Producto tal como lo devuelve un catálogo regional, ya normalizado. */
 export interface ProductoRegional {
@@ -50,7 +44,13 @@ function plataformasCompatibles(a: Plataforma, b: Plataforma): boolean {
 function tiposCompatibles(a: TipoProducto, b: TipoProducto): boolean {
   if (a === b) return true;
   const grupo = (t: TipoProducto) =>
-    t === "DLC" || t === "PASE_EXPANSION" ? "dlc" : t === "UPGRADE" || t === "SWITCH2_EDITION" ? "s2" : t === "JUEGO" || t === "EDICION_ESPECIAL" || t === "BUNDLE" ? "juego" : t;
+    t === "DLC" || t === "PASE_EXPANSION"
+      ? "dlc"
+      : t === "UPGRADE" || t === "SWITCH2_EDITION"
+        ? "s2"
+        : t === "JUEGO" || t === "EDICION_ESPECIAL" || t === "BUNDLE"
+          ? "juego"
+          : t;
   return grupo(a) === grupo(b);
 }
 
@@ -113,7 +113,9 @@ export function matchearCatalogos<A extends ProductoRegional, E extends Producto
   // Índice por primera palabra significativa del título para no comparar todo contra todo.
   const indice = new Map<string, E[]>();
   const claves = (t: string) => {
-    const palabras = normalizarTitulo(t).split(" ").filter((p) => p.length > 2 && p !== "the");
+    const palabras = normalizarTitulo(t)
+      .split(" ")
+      .filter((p) => p.length > 2 && p !== "the");
     return palabras.slice(0, 2);
   };
   for (const e of europa) {
@@ -142,7 +144,12 @@ export function matchearCatalogos<A extends ProductoRegional, E extends Producto
     puntajes.sort((x, y) => y.puntaje - x.puntaje);
     const [primero, segundo] = puntajes;
     if (!primero || primero.puntaje < UMBRAL_MATCH) {
-      sinMatchAmericas.push({ producto: a, motivo: primero ? `Mejor candidato con puntaje bajo (${primero.puntaje.toFixed(2)}): ${primero.e.titulo}` : "Sin candidatos en Europa" });
+      sinMatchAmericas.push({
+        producto: a,
+        motivo: primero
+          ? `Mejor candidato con puntaje bajo (${primero.puntaje.toFixed(2)}): ${primero.e.titulo}`
+          : "Sin candidatos en Europa",
+      });
       continue;
     }
     if (segundo && primero.puntaje - segundo.puntaje < MARGEN_AMBIGUEDAD) {
@@ -155,7 +162,10 @@ export function matchearCatalogos<A extends ProductoRegional, E extends Producto
   mejores.sort((x, y) => y.puntaje - x.puntaje);
   for (const m of mejores) {
     if (usadosE.has(m.e.nsuid)) {
-      sinMatchAmericas.push({ producto: m.a, motivo: `El candidato "${m.e.titulo}" ya está matcheado con otro producto` });
+      sinMatchAmericas.push({
+        producto: m.a,
+        motivo: `El candidato "${m.e.titulo}" ya está matcheado con otro producto`,
+      });
       continue;
     }
     usadosE.add(m.e.nsuid);

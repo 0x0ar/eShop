@@ -24,7 +24,7 @@ export async function WidgetCotizaciones() {
     .pop();
   if (!ultima) {
     return (
-      <Link href="/cotizaciones" className="text-xs text-muted-foreground hover:text-primary">
+      <Link href="/cotizaciones" className="text-muted-foreground hover:text-primary text-xs">
         Cotizaciones sin datos
       </Link>
     );
@@ -32,7 +32,7 @@ export async function WidgetCotizaciones() {
   return (
     <Link
       href="/cotizaciones"
-      className="tabular flex items-center gap-3 rounded-full bg-muted px-3 py-1 text-xs hover:ring-2 hover:ring-primary"
+      className="tabular bg-muted hover:ring-primary flex items-center gap-3 rounded-full px-3 py-1 text-xs hover:ring-2"
       aria-label="Ver panel de cotizaciones"
     >
       {items.map(([simbolo, oficial, blue]) => (
@@ -42,7 +42,7 @@ export async function WidgetCotizaciones() {
           {formatearArs(v(blue)?.venta, 0)}
         </span>
       ))}
-      <span className="hidden text-muted-foreground lg:inline">{haceCuanto(ultima)}</span>
+      <span className="text-muted-foreground hidden lg:inline">{haceCuanto(ultima)}</span>
     </Link>
   );
 }

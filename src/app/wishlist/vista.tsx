@@ -12,10 +12,15 @@ import type { JuegoResumen } from "@/lib/data/juegos";
 export function VistaWishlist() {
   const propia = useWishlist();
   const parametro = useSearchParams().get("juegos");
-  const compartida = useMemo(() => (parametro ? parametro.split(",").filter(Boolean).slice(0, 200) : null), [parametro]);
+  const compartida = useMemo(
+    () => (parametro ? parametro.split(",").filter(Boolean).slice(0, 200) : null),
+    [parametro],
+  );
   const slugs = compartida ?? propia;
   const clave = slugs.join(",");
-  const [datos, setDatos] = useState<{ clave: string; juegos: JuegoResumen[] } | { clave: string; error: true } | null>(null);
+  const [datos, setDatos] = useState<{ clave: string; juegos: JuegoResumen[] } | { clave: string; error: true } | null>(
+    null,
+  );
   const [copiado, setCopiado] = useState(false);
 
   useEffect(() => {
@@ -35,7 +40,10 @@ export function VistaWishlist() {
   if (slugs.length === 0) {
     return (
       <p className="text-muted-foreground">
-        Todavía no agregaste juegos. Tocá el corazón en cualquier juego para seguirlo. <Link href="/buscar" className="font-bold text-primary hover:underline">Buscar juegos</Link>
+        Todavía no agregaste juegos. Tocá el corazón en cualquier juego para seguirlo.{" "}
+        <Link href="/buscar" className="text-primary font-bold hover:underline">
+          Buscar juegos
+        </Link>
       </p>
     );
   }
@@ -46,7 +54,9 @@ export function VistaWishlist() {
       <div className="flex flex-wrap gap-2">
         {compartida ? (
           <>
-            <p className="w-full text-sm font-bold">Estás viendo una wishlist compartida ({compartida.length} juegos).</p>
+            <p className="w-full text-sm font-bold">
+              Estás viendo una wishlist compartida ({compartida.length} juegos).
+            </p>
             <Button onClick={() => guardarWishlist([...propia, ...compartida])}>
               <Save aria-hidden="true" /> Sumar a mi wishlist
             </Button>

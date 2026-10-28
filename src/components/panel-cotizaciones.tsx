@@ -26,12 +26,12 @@ function Valor({ c }: { c: CotizacionGuardada | undefined }) {
   return (
     <dl className="tabular grid grid-cols-2 gap-2">
       <div>
-        <dt className="text-xs text-muted-foreground">Compra</dt>
+        <dt className="text-muted-foreground text-xs">Compra</dt>
         <dd className="text-lg font-extrabold">{c.compra ? formatearArs(c.compra) : "—"}</dd>
       </div>
       <div>
-        <dt className="text-xs text-muted-foreground">Venta</dt>
-        <dd className="text-lg font-extrabold text-primary">{formatearArs(c.venta)}</dd>
+        <dt className="text-muted-foreground text-xs">Venta</dt>
+        <dd className="text-primary text-lg font-extrabold">{formatearArs(c.venta)}</dd>
       </div>
     </dl>
   );
@@ -77,7 +77,7 @@ export async function PanelCotizaciones({ compacto = false }: { compacto?: boole
       </div>
 
       {compacto ? (
-        <Link href="/cotizaciones" className="inline-block text-sm font-bold text-primary hover:underline">
+        <Link href="/cotizaciones" className="text-primary inline-block text-sm font-bold hover:underline">
           Ver tipos de cambio cruzados y estado de las fuentes
         </Link>
       ) : (
@@ -97,18 +97,26 @@ export async function PanelCotizaciones({ compacto = false }: { compacto?: boole
                 <table className="tabular w-full text-sm">
                   <caption className="sr-only">Tipos de cambio cruzados con base euro</caption>
                   <thead>
-                    <tr className="text-left text-muted-foreground">
-                      <th scope="col" className="py-1 font-bold">Par</th>
-                      <th scope="col" className="py-1 font-bold">Valor</th>
-                      <th scope="col" className="py-1 font-bold">Fecha</th>
+                    <tr className="text-muted-foreground text-left">
+                      <th scope="col" className="py-1 font-bold">
+                        Par
+                      </th>
+                      <th scope="col" className="py-1 font-bold">
+                        Valor
+                      </th>
+                      <th scope="col" className="py-1 font-bold">
+                        Fecha
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
                     {cruzadas.map((c) => (
-                      <tr key={c.clave} className="border-t border-border">
+                      <tr key={c.clave} className="border-border border-t">
                         <td className="py-1.5 font-bold">{c.clave.slice(3)}/EUR</td>
                         <td className="py-1.5">{formatearNumero(c.venta, 4)}</td>
-                        <td className="py-1.5 text-muted-foreground">{formatearFechaHora(c.fechaFuente ?? c.registrado)}</td>
+                        <td className="text-muted-foreground py-1.5">
+                          {formatearFechaHora(c.fechaFuente ?? c.registrado)}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -137,7 +145,8 @@ export async function PanelCotizaciones({ compacto = false }: { compacto?: boole
                       )}
                       {conError && (
                         <Badge variant="warning">
-                          <AlertTriangle className="size-3" aria-hidden="true" /> falló {haceCuanto(f!.ultimoError!)}: se muestra el último dato conocido
+                          <AlertTriangle className="size-3" aria-hidden="true" /> falló {haceCuanto(f!.ultimoError!)}:
+                          se muestra el último dato conocido
                         </Badge>
                       )}
                     </li>
@@ -149,7 +158,7 @@ export async function PanelCotizaciones({ compacto = false }: { compacto?: boole
         </>
       )}
       {datos.faltantes.length > 0 && (
-        <p className="text-sm text-warning">
+        <p className="text-warning text-sm">
           Faltan cotizaciones ({datos.faltantes.join(", ")}): sin ellas no podemos calcular precios en pesos.
         </p>
       )}

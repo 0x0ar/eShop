@@ -16,7 +16,9 @@ function p(nsuid: string, titulo: string, extra: Partial<ProductoRegional> = {})
 
 describe("normalización", () => {
   it("quita tildes, marcas y puntuación", () => {
-    expect(normalizarTitulo("The Legend of Zelda™: Tears of the Kingdom")).toBe("the legend of zelda tears of the kingdom");
+    expect(normalizarTitulo("The Legend of Zelda™: Tears of the Kingdom")).toBe(
+      "the legend of zelda tears of the kingdom",
+    );
     expect(normalizarTitulo("Pokémon™ Escarlata")).toBe("pokemon escarlata");
     expect(normalizarTitulo("Mario & Luigi: Brothership")).toBe("mario and luigi brothership");
   });
@@ -56,8 +58,14 @@ describe("puntaje de matcheo", () => {
 
 describe("matcheo entre catálogos", () => {
   it("matchea por título, editor y fecha", () => {
-    const americas = [p("A1", "Super Mario Odyssey", { lanzamiento: new Date("2017-10-27") }), p("A2", "Celeste", { editor: "Matt Makes Games" })];
-    const europa = [p("E1", "Celeste", { editor: "Matt Makes Games Inc." }), p("E2", "Super Mario Odyssey™", { lanzamiento: new Date("2017-10-27") })];
+    const americas = [
+      p("A1", "Super Mario Odyssey", { lanzamiento: new Date("2017-10-27") }),
+      p("A2", "Celeste", { editor: "Matt Makes Games" }),
+    ];
+    const europa = [
+      p("E1", "Celeste", { editor: "Matt Makes Games Inc." }),
+      p("E2", "Super Mario Odyssey™", { lanzamiento: new Date("2017-10-27") }),
+    ];
     const r = matchearCatalogos(americas, europa);
     expect(r.pares.map((x) => [x.americas.nsuid, x.europa.nsuid]).sort()).toEqual([
       ["A1", "E2"],
@@ -76,7 +84,10 @@ describe("matcheo entre catálogos", () => {
 
   it("registra los ambiguos en lugar de adivinar", () => {
     const americas = [p("A1", "Pac-Man World", { editor: null, lanzamiento: null })];
-    const europa = [p("E1", "PAC-MAN World", { editor: null, lanzamiento: null }), p("E2", "Pac Man World", { editor: null, lanzamiento: null })];
+    const europa = [
+      p("E1", "PAC-MAN World", { editor: null, lanzamiento: null }),
+      p("E2", "Pac Man World", { editor: null, lanzamiento: null }),
+    ];
     const r = matchearCatalogos(americas, europa);
     expect(r.pares).toHaveLength(0);
     expect(r.sinMatchAmericas[0].motivo).toMatch(/Ambiguo/);
@@ -95,7 +106,10 @@ describe("matcheo entre catálogos", () => {
   });
 
   it("no asigna el mismo producto europeo a dos americanos", () => {
-    const americas = [p("A1", "Tetris 99"), p("A2", "Tetris 99", { editor: "Otro", lanzamiento: new Date("2010-01-01") })];
+    const americas = [
+      p("A1", "Tetris 99"),
+      p("A2", "Tetris 99", { editor: "Otro", lanzamiento: new Date("2010-01-01") }),
+    ];
     const europa = [p("E1", "Tetris 99")];
     const r = matchearCatalogos(americas, europa);
     expect(r.pares).toHaveLength(1);

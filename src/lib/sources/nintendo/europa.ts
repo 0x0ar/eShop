@@ -74,11 +74,19 @@ export function parsearDocumentoEuropa(doc: z.infer<typeof docSchema>, pais: str
 
 export function parsearPaginaEuropa(json: unknown, pais: string) {
   const r = respuestaEuropaSchema.parse(json);
-  const productos = r.response.docs.map((d) => parsearDocumentoEuropa(d, pais)).filter((p): p is ProductoCatalogo => p !== null);
+  const productos = r.response.docs
+    .map((d) => parsearDocumentoEuropa(d, pais))
+    .filter((p): p is ProductoCatalogo => p !== null);
   return { total: r.response.numFound, productos };
 }
 
-export function urlBusquedaEuropa(nucleo: string, tipo: "GAME" | "DLC", start: number, filas: number, campos?: string[]): string {
+export function urlBusquedaEuropa(
+  nucleo: string,
+  tipo: "GAME" | "DLC",
+  start: number,
+  filas: number,
+  campos?: string[],
+): string {
   const u = new URL(`${fuentes.nintendoEuropa.baseUrl()}/${nucleo}/select`);
   u.searchParams.set("q", "*");
   u.searchParams.set("fq", `type:${tipo} AND nsuid_txt:*`);
@@ -94,7 +102,9 @@ export function urlBusquedaEuropa(nucleo: string, tipo: "GAME" | "DLC", start: n
  * Descarga el catálogo europeo completo desde el núcleo del país dado (por
  * defecto España, para tener títulos en español).
  */
-export async function descargarCatalogoEuropa(opciones: { pais?: string; limite?: number; alPaginar?: (n: number, total: number) => void } = {}) {
+export async function descargarCatalogoEuropa(
+  opciones: { pais?: string; limite?: number; alPaginar?: (n: number, total: number) => void } = {},
+) {
   const pais = opciones.pais ?? "ES";
   const nucleo = PAISES[pais]?.nucleoBusquedaEuropa ?? "es";
   const filas = fuentes.nintendoEuropa.filasPorPagina();

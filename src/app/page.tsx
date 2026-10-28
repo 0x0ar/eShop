@@ -10,13 +10,13 @@ import { ofertasDestacadas, juegosPopulares } from "@/lib/data/juegos";
 export default function Inicio() {
   return (
     <div className="space-y-10">
-      <section className="rounded-lg bg-primary px-5 py-8 text-primary-foreground sm:px-10 sm:py-12">
+      <section className="bg-primary text-primary-foreground rounded-lg px-5 py-8 sm:px-10 sm:py-12">
         <h1 className="max-w-2xl text-3xl leading-tight font-extrabold sm:text-4xl">
           ¿Dónde te sale más barato ese juego de Switch?
         </h1>
         <p className="mt-3 max-w-2xl text-base opacity-95 sm:text-lg">
-          Comparamos la eShop de Argentina, España, Europa y Estados Unidos con tarjeta argentina, tarjeta del
-          exterior, gift cards y keys. Todo en pesos, con dólar oficial y blue.
+          Comparamos la eShop de Argentina, España, Europa y Estados Unidos con tarjeta argentina, tarjeta del exterior,
+          gift cards y keys. Todo en pesos, con dólar oficial y blue.
         </p>
         <Buscador className="mt-6 max-w-2xl" grande />
       </section>
@@ -26,7 +26,10 @@ export default function Inicio() {
           <h2 id="titulo-ofertas" className="text-2xl font-extrabold">
             Ofertas destacadas
           </h2>
-          <Link href="/buscar?oferta=1&orden=descuento" className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">
+          <Link
+            href="/buscar?oferta=1&orden=descuento"
+            className="text-primary inline-flex items-center gap-1 text-sm font-bold hover:underline"
+          >
             Ver todas <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
         </div>
@@ -80,7 +83,7 @@ function EsqueletoGrilla() {
   return (
     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4" aria-hidden="true">
       {Array.from({ length: 4 }, (_, i) => (
-        <div key={i} className="aspect-[3/4] animate-pulse rounded-lg bg-muted" />
+        <div key={i} className="bg-muted aspect-[3/4] animate-pulse rounded-lg" />
       ))}
     </div>
   );

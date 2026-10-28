@@ -92,7 +92,14 @@ describe("catálogos de Nintendo (formato documentado)", () => {
 describe("cotizaciones (formato documentado)", () => {
   it("parsea DolarAPI", () => {
     const c = parsearDolarApi(
-      { moneda: "USD", casa: "blue", nombre: "Blue", compra: 1000, venta: 1020.5, fechaActualizacion: "2026-10-28T12:00:00.000Z" },
+      {
+        moneda: "USD",
+        casa: "blue",
+        nombre: "Blue",
+        compra: 1000,
+        venta: 1020.5,
+        fechaActualizacion: "2026-10-28T12:00:00.000Z",
+      },
       "USD:blue",
     );
     expect(c.venta.toFixed()).toBe("1020.5");

@@ -28,7 +28,8 @@ export async function POST(req: Request) {
   } catch (e) {
     if (e instanceof ZodError) {
       const campo = e.issues[0]?.path[0];
-      const mensaje = campo === "email" ? "Revisá el email" : campo === "precioObjetivo" ? "Revisá el precio" : "Datos inválidos";
+      const mensaje =
+        campo === "email" ? "Revisá el email" : campo === "precioObjetivo" ? "Revisá el precio" : "Datos inválidos";
       return NextResponse.json({ error: mensaje }, { status: 400 });
     }
     const mensaje = (e as Error).message;

@@ -87,7 +87,12 @@ export function aPerfilUsuario(p: PerfilUI, paisesEuropa: string[]): PerfilUsuar
   const todas = p.cuentaAR && p.cuentaES && p.cuentaUS && p.cuentaEU;
   const cuentas = todas
     ? null
-    : [...(p.cuentaAR ? ["AR"] : []), ...(p.cuentaES ? ["ES"] : []), ...(p.cuentaUS ? ["US"] : []), ...(p.cuentaEU ? paisesEuropa : [])];
+    : [
+        ...(p.cuentaAR ? ["AR"] : []),
+        ...(p.cuentaES ? ["ES"] : []),
+        ...(p.cuentaUS ? ["US"] : []),
+        ...(p.cuentaEU ? paisesEuropa : []),
+      ];
   return {
     cuentas,
     tarjetaArgentina: p.tarjetaArgentina,

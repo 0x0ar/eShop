@@ -17,7 +17,13 @@ function precio(pais: string, moneda: string, regular: string, oferta?: string):
   };
 }
 
-function gift(region: string, moneda: string, valor: string, precioEur: string, extra: Partial<OfertaGiftCard> = {}): OfertaGiftCard {
+function gift(
+  region: string,
+  moneda: string,
+  valor: string,
+  precioEur: string,
+  extra: Partial<OfertaGiftCard> = {},
+): OfertaGiftCard {
   return {
     proveedor: "ig",
     nombreProveedor: "Instant Gaming",
@@ -47,7 +53,8 @@ const key: OfertaKey = {
   actualizado: FECHA,
 };
 
-const buscar = (ops: OpcionDTO[], region: string, metodo: string) => ops.find((o) => o.region === region && o.metodo === metodo)!;
+const buscar = (ops: OpcionDTO[], region: string, metodo: string) =>
+  ops.find((o) => o.region === region && o.metodo === metodo)!;
 
 describe("cálculo de opciones", () => {
   const anterior = process.env.EUROPA_PAISES;
@@ -101,7 +108,11 @@ describe("cálculo de opciones", () => {
     expect(buscar(o, "AR", "gift_card").candidatos.oficial).toEqual([]);
     expect(buscar(o, "AR", "gift_card").motivoNoDisponible).toMatch(/gift cards/);
     // Tarjeta de GBP solo sirve en GB, no en PL
-    expect(buscar(o, "EU", "gift_card").candidatos.oficial.map((c) => c.pais).sort()).toEqual(["DE", "GB"]);
+    expect(
+      buscar(o, "EU", "gift_card")
+        .candidatos.oficial.map((c) => c.pais)
+        .sort(),
+    ).toEqual(["DE", "GB"]);
   });
 
   it("ofrece la key en las regiones donde se activa", () => {

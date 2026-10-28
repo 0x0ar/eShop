@@ -6,9 +6,18 @@ import { Button } from "@/components/ui/button";
 import { Input, Label, Select } from "@/components/ui/input";
 import { aPerfilUsuario, usePerfil } from "./perfil";
 
-type Estado = { tipo: "inicial" } | { tipo: "enviando" } | { tipo: "ok"; mensaje: string } | { tipo: "error"; mensaje: string };
+type Estado =
+  { tipo: "inicial" } | { tipo: "enviando" } | { tipo: "ok"; mensaje: string } | { tipo: "error"; mensaje: string };
 
-export function FormAlerta({ juegoId, paisesEuropa, sugerido }: { juegoId: string; paisesEuropa: string[]; sugerido: string | null }) {
+export function FormAlerta({
+  juegoId,
+  paisesEuropa,
+  sugerido,
+}: {
+  juegoId: string;
+  paisesEuropa: string[];
+  sugerido: string | null;
+}) {
   const [perfilUI] = usePerfil();
   const [estado, setEstado] = useState<Estado>({ tipo: "inicial" });
 
@@ -45,14 +54,21 @@ export function FormAlerta({ juegoId, paisesEuropa, sugerido }: { juegoId: strin
 
   return (
     <form onSubmit={enviar} className="space-y-3" aria-describedby="alerta-ayuda">
-      <p id="alerta-ayuda" className="text-sm text-muted-foreground">
+      <p id="alerta-ayuda" className="text-muted-foreground text-sm">
         Te avisamos por email cuando la opción más barata baje del precio que elijas. Solo guardamos tu email, y cada
         mail trae un link para darte de baja.
       </p>
       <div className="grid gap-3 sm:grid-cols-2">
         <div className="space-y-1.5">
           <Label htmlFor="alerta-email">Email</Label>
-          <Input id="alerta-email" name="email" type="email" required autoComplete="email" placeholder="vos@ejemplo.com" />
+          <Input
+            id="alerta-email"
+            name="email"
+            type="email"
+            required
+            autoComplete="email"
+            placeholder="vos@ejemplo.com"
+          />
         </div>
         <div className="space-y-1.5">
           <Label htmlFor="alerta-precio">Avisame por debajo de ($)</Label>
@@ -83,7 +99,11 @@ export function FormAlerta({ juegoId, paisesEuropa, sugerido }: { juegoId: strin
       <Button type="submit" disabled={estado.tipo === "enviando"}>
         <BellRing aria-hidden="true" /> {estado.tipo === "enviando" ? "Creando…" : "Crear alerta"}
       </Button>
-      <p role="status" aria-live="polite" className={estado.tipo === "error" ? "text-sm font-bold text-primary" : "text-sm font-bold text-success"}>
+      <p
+        role="status"
+        aria-live="polite"
+        className={estado.tipo === "error" ? "text-primary text-sm font-bold" : "text-success text-sm font-bold"}
+      >
         {estado.tipo === "ok" || estado.tipo === "error" ? estado.mensaje : ""}
       </p>
     </form>

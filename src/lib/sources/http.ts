@@ -70,9 +70,12 @@ function conCausa(e: unknown, url: string): unknown {
   if (!(e instanceof Error) || e instanceof ErrorHttp) return e;
   // undici anida causas (DOMException → RequestAbortedError…): se toma la más profunda.
   let causa: unknown = (e as Error & { cause?: unknown }).cause;
-  while (causa instanceof Error && (causa as Error & { cause?: unknown }).cause) causa = (causa as Error & { cause?: unknown }).cause;
+  while (causa instanceof Error && (causa as Error & { cause?: unknown }).cause)
+    causa = (causa as Error & { cause?: unknown }).cause;
   const detalle = causa instanceof Error ? causa.message : causa ? String(causa) : null;
-  return new Error(`${e.name === "TimeoutError" ? "Timeout" : e.message}${detalle ? ` (${detalle})` : ""} en ${new URL(url).host}`);
+  return new Error(
+    `${e.name === "TimeoutError" ? "Timeout" : e.message}${detalle ? ` (${detalle})` : ""} en ${new URL(url).host}`,
+  );
 }
 
 export async function pedir(url: string, op: OpcionesPedido = {}): Promise<{ estado: number; cuerpo: string }> {
@@ -139,7 +142,11 @@ async function reglasRobots(origen: string): Promise<ReglasRobots> {
  * GET para scraping: verifica robots.txt, usa la caché persistente si es
  * reciente y espera el intervalo de scraping entre pedidos al mismo host.
  */
-export async function pedirPagina(url: string, cache: CacheHttp | null, ttlMs = fuentes.scraping.ttlCacheMs()): Promise<string> {
+export async function pedirPagina(
+  url: string,
+  cache: CacheHttp | null,
+  ttlMs = fuentes.scraping.ttlCacheMs(),
+): Promise<string> {
   if (cache) {
     const guardada = await cache.leer(url);
     if (guardada && Date.now() - guardada.obtenido.getTime() < ttlMs && guardada.estado < 400) return guardada.cuerpo;

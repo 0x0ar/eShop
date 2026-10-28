@@ -11,7 +11,7 @@ import { D } from "@/lib/domain/dinero";
 export const metadata: Metadata = { title: "Cómo calculamos" };
 
 function Formula({ children }: { children: React.ReactNode }) {
-  return <code className="block rounded-md bg-muted px-3 py-2 font-mono text-sm">{children}</code>;
+  return <code className="bg-muted block rounded-md px-3 py-2 font-mono text-sm">{children}</code>;
 }
 
 export default function ComoCalculamos() {
@@ -31,7 +31,8 @@ export default function ComoCalculamos() {
         <CardContent className="space-y-4 text-sm">
           <p>
             <strong>P</strong> es el precio vigente en la moneda de la eShop (el de oferta si hay una activa).{" "}
-            <strong>C</strong> es la cotización a pesos de DolarAPI (valor de {PUNTA_COTIZACION}): dólar o euro, oficial o blue.
+            <strong>C</strong> es la cotización a pesos de DolarAPI (valor de {PUNTA_COTIZACION}): dólar o euro, oficial
+            o blue.
           </p>
           <div className="space-y-1.5">
             <h3 className="font-bold">{NOMBRE_METODO.tarjeta_ar}</h3>
@@ -66,7 +67,7 @@ export default function ComoCalculamos() {
               </li>
             ))}
           </ul>
-          <p className="mt-2 text-muted-foreground">
+          <p className="text-muted-foreground mt-2">
             Si pagás gift cards o keys con tarjeta argentina, en la práctica también pagás IVA: tenelo en cuenta.
           </p>
         </CardContent>
@@ -78,8 +79,8 @@ export default function ComoCalculamos() {
         </CardHeader>
         <CardContent className="space-y-2 text-sm">
           <p>
-            Los precios en dólares usan el dólar y los precios en euros usan el euro. Las demás monedas pasan primero a su
-            “moneda puente” con el tipo de cambio cruzado de Frankfurter (datos del Banco Central Europeo):
+            Los precios en dólares usan el dólar y los precios en euros usan el euro. Las demás monedas pasan primero a
+            su “moneda puente” con el tipo de cambio cruzado de Frankfurter (datos del Banco Central Europeo):
           </p>
           <ul className="list-disc pl-5">
             {Object.entries(MONEDA_PUENTE)
@@ -114,9 +115,9 @@ export default function ComoCalculamos() {
         </CardHeader>
         <CardContent className="space-y-2 text-sm">
           <p>
-            Las gift cards vienen en montos fijos. Buscamos la combinación (pueden repetirse) que cubre el precio al menor
-            costo total; si hay empate, la que deja menos saldo sobrante y después la de menos tarjetas. Te mostramos qué
-            tarjetas comprar, cuánto cuestan en pesos y cuánto saldo te sobra.
+            Las gift cards vienen en montos fijos. Buscamos la combinación (pueden repetirse) que cubre el precio al
+            menor costo total; si hay empate, la que deja menos saldo sobrante y después la de menos tarjetas. Te
+            mostramos qué tarjetas comprar, cuánto cuestan en pesos y cuánto saldo te sobra.
           </p>
           <p>
             Asumimos que la eShop no te deja pagar una parte con saldo y el resto con tarjeta, así que las gift cards
@@ -139,19 +140,23 @@ export default function ComoCalculamos() {
         </CardHeader>
         <CardContent className="space-y-2 text-sm">
           <p>
-            Entre todas las combinaciones que podés usar (según las cuentas y medios de pago que marques), elegimos la más
-            barata. El ahorro se compara contra comprar en la eShop argentina con tarjeta argentina, con la misma
+            Entre todas las combinaciones que podés usar (según las cuentas y medios de pago que marques), elegimos la
+            más barata. El ahorro se compara contra comprar en la eShop argentina con tarjeta argentina, con la misma
             cotización.
           </p>
           <p>
-            Cada opción muestra sus requisitos: qué cuenta de Nintendo necesitás, qué tarjeta, en qué región se activa una
-            key o si la tienda es un marketplace de terceros.
+            Cada opción muestra sus requisitos: qué cuenta de Nintendo necesitás, qué tarjeta, en qué región se activa
+            una key o si la tienda es un marketplace de terceros.
           </p>
         </CardContent>
       </Card>
 
-      <p className="text-sm text-muted-foreground">
-        ¿Querés ver las cotizaciones que estamos usando? <Link href="/cotizaciones" className="font-bold text-primary hover:underline">Panel de cotizaciones</Link>.
+      <p className="text-muted-foreground text-sm">
+        ¿Querés ver las cotizaciones que estamos usando?{" "}
+        <Link href="/cotizaciones" className="text-primary font-bold hover:underline">
+          Panel de cotizaciones
+        </Link>
+        .
       </p>
     </div>
   );

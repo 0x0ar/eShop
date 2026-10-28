@@ -78,6 +78,24 @@ Decisiones tomadas ante ambigüedades del pedido. Cada una indica cómo cambiarl
   el test e2e. Están marcados con `origen = "demo"`, el sitio muestra un aviso
   cuando hay datos de demo y el seed se niega a correr con `NODE_ENV=production`.
 
+- **shadcn/ui escrito a mano**: el CLI de shadcn necesita bajar el registro y
+  la red del entorno no lo permitía. Los componentes de `src/components/ui`
+  siguen sus convenciones (cva + `cn` + radix) y `components.json` queda listo
+  para sumar más con `npx shadcn add`.
+- **SQLite como dependencia opcional**: `better-sqlite3` se compila nativo; para
+  que la imagen Docker (Postgres) no necesite toolchain, el adapter de SQLite
+  está en `optionalDependencies` y se carga solo si `DATABASE_URL` es `file:`.
+- **Docker**: una sola imagen para app, worker y el paso `esquema`
+  (`prisma db push`). Se mantiene `node_modules` completo en la imagen porque el
+  worker corre con `tsx` sobre el código fuente; es más grande pero evita un
+  segundo build. Se probó `docker compose up` desde cero con Postgres el
+  2026-10-28.
+- **Confirmación y baja con botón** (POST), no con solo abrir el link: los
+  antivirus de correo abren links y confirmarían alertas solos. La baja
+  one-click (RFC 8058) va por `POST /api/alertas/baja`.
+- **Reaviso de alertas**: se avisa al cruzar el objetivo y de nuevo solo si
+  pasan 7 días o el precio baja más de 2 % respecto del último aviso.
+
 ## Pendiente de verificar (bloqueado)
 
 El 2026-10-28 la red del entorno de desarrollo rechazó (403 de la política de
