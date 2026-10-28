@@ -24,12 +24,10 @@ const entradaSchema = z.object({
 
 export const archivoManualSchema = z.object({ ofertas: z.array(entradaSchema) });
 
-export const RUTA_MANUAL = path.join(process.cwd(), "config", "giftcards-manual.json");
-
-export async function leerOfertasManuales(ruta = RUTA_MANUAL) {
+export async function leerOfertasManuales() {
   let texto: string;
   try {
-    texto = await readFile(ruta, "utf8");
+    texto = await readFile(path.join(process.cwd(), "config", "giftcards-manual.json"), "utf8");
   } catch {
     return [];
   }

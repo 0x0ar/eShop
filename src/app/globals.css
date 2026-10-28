@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Tokens de color. Rojo vivo como primario (propio, no el de ninguna marca),
+ * fondos claros cálidos y un modo oscuro azulado. Contraste AA verificado para
+ * texto normal sobre background y card.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f6f4;
+  --foreground: #16161a;
+  --card: #ffffff;
+  --card-foreground: #16161a;
+  --muted: #eeedea;
+  --muted-foreground: #55555f;
+  --border: #dcdad5;
+  --input: #cfccc6;
+  --primary: #d61f3a;
+  --primary-hover: #b8162f;
+  --primary-foreground: #ffffff;
+  --primary-soft: #fde8eb;
+  --primary-soft-foreground: #9c1027;
+  --secondary: #1f6feb;
+  --secondary-foreground: #ffffff;
+  --success: #0f7b3f;
+  --success-soft: #def5e7;
+  --warning: #8a5a00;
+  --warning-soft: #fff1cc;
+  --ring: #d61f3a;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: #111218;
+  --foreground: #f1f1f4;
+  --card: #1b1d26;
+  --card-foreground: #f1f1f4;
+  --muted: #252834;
+  --muted-foreground: #b4b6c2;
+  --border: #33364a;
+  --input: #3d4157;
+  --primary: #ff4d63;
+  --primary-hover: #ff6b7e;
+  --primary-foreground: #16161a;
+  --primary-soft: #3a1820;
+  --primary-soft-foreground: #ffb3bd;
+  --secondary: #6aa5ff;
+  --secondary-foreground: #0d1220;
+  --success: #4ade80;
+  --success-soft: #133222;
+  --warning: #fbbf24;
+  --warning-soft: #3a2c08;
+  --ring: #ff4d63;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-soft-foreground: var(--primary-soft-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-sm: calc(var(--radius) - 8px);
+  --font-sans: "Nunito Variable", ui-rounded, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+*:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
 }

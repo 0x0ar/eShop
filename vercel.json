@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "prisma generate && next build",
+  "crons": [
+    { "path": "/api/cron/cotizaciones", "schedule": "*/30 * * * *" },
+    { "path": "/api/cron/populares", "schedule": "15 9,21 * * *" },
+    { "path": "/api/cron/limpieza", "schedule": "0 6 * * 0" }
+  ]
+}

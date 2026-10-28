@@ -1,69 +1,87 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Suspense } from "react";
+import { connection } from "next/server";
+import { ArrowRight } from "lucide-react";
+import { Buscador } from "@/components/buscador";
+import { PanelCotizaciones } from "@/components/panel-cotizaciones";
+import { GrillaJuegos } from "@/components/tarjeta-juego";
+import { ofertasDestacadas, juegosPopulares } from "@/lib/data/juegos";
 
-export default function Home() {
+export default function Inicio() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="space-y-10">
+      <section className="rounded-lg bg-primary px-5 py-8 text-primary-foreground sm:px-10 sm:py-12">
+        <h1 className="max-w-2xl text-3xl leading-tight font-extrabold sm:text-4xl">
+          ¿Dónde te sale más barato ese juego de Switch?
+        </h1>
+        <p className="mt-3 max-w-2xl text-base opacity-95 sm:text-lg">
+          Comparamos la eShop de Argentina, España, Europa y Estados Unidos con tarjeta argentina, tarjeta del
+          exterior, gift cards y keys. Todo en pesos, con dólar oficial y blue.
+        </p>
+        <Buscador className="mt-6 max-w-2xl" grande />
+      </section>
+
+      <section aria-labelledby="titulo-ofertas" className="space-y-4">
+        <div className="flex items-end justify-between gap-4">
+          <h2 id="titulo-ofertas" className="text-2xl font-extrabold">
+            Ofertas destacadas
+          </h2>
+          <Link href="/buscar?oferta=1&orden=descuento" className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">
+            Ver todas <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+        <Suspense fallback={<EsqueletoGrilla />}>
+          <Ofertas />
+        </Suspense>
+      </section>
+
+      <section aria-labelledby="titulo-cotizaciones" className="space-y-4">
+        <h2 id="titulo-cotizaciones" className="text-2xl font-extrabold">
+          Cotizaciones
+        </h2>
+        <Suspense fallback={<p className="text-muted-foreground">Cargando cotizaciones…</p>}>
+          <PanelCotizaciones compacto />
+        </Suspense>
+      </section>
+
+      <section aria-labelledby="titulo-populares" className="space-y-4">
+        <h2 id="titulo-populares" className="text-2xl font-extrabold">
+          Populares
+        </h2>
+        <Suspense fallback={<EsqueletoGrilla />}>
+          <Populares />
+        </Suspense>
+      </section>
+    </div>
+  );
+}
+
+async function Ofertas() {
+  await connection();
+  const juegos = await ofertasDestacadas(8).catch(() => null);
+  if (juegos == null) return <SinDatos />;
+  if (juegos.length === 0) return <p className="text-muted-foreground">No hay ofertas cargadas todavía.</p>;
+  return <GrillaJuegos juegos={juegos} />;
+}
+
+async function Populares() {
+  await connection();
+  const juegos = await juegosPopulares(8).catch(() => null);
+  if (juegos == null) return <SinDatos />;
+  if (juegos.length === 0) return <p className="text-muted-foreground">Todavía no se cargó el catálogo.</p>;
+  return <GrillaJuegos juegos={juegos} />;
+}
+
+function SinDatos() {
+  return <p className="text-muted-foreground">No pudimos leer los datos en este momento. Probá de nuevo en un rato.</p>;
+}
+
+function EsqueletoGrilla() {
+  return (
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4" aria-hidden="true">
+      {Array.from({ length: 4 }, (_, i) => (
+        <div key={i} className="aspect-[3/4] animate-pulse rounded-lg bg-muted" />
+      ))}
     </div>
   );
 }
