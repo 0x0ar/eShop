@@ -1,0 +1,9 @@
+node_modules
+.next
+src/generated
+tests/fixtures
+coverage
+playwright-report
+test-results
+*.db
+package-lock.json
