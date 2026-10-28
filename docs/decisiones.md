@@ -16,7 +16,7 @@ Decisiones tomadas ante ambigüedades del pedido. Cada una indica cómo cambiarl
   comprar la divisa. Se cambia en `config/monedas.ts`.
 - **Moneda puente**: USD y monedas americanas → dólar; EUR, GBP, PLN y demás
   europeas → euro. Es lo más cercano a cómo se paga en la práctica.
-- **Moneda de la eShop argentina: no se asume.** La moneda se lee de la
+- **Moneda de la eShop argentina: no se asume** (resultó ser ARS). La moneda se lee de la
   respuesta de la API de precios (`regular_price.currency`). Si viniera en ARS,
   no se convierte.
 - **Catálogos regionales**: EE. UU. y Argentina comparten nsuid (catálogo
@@ -109,10 +109,13 @@ Decisiones tomadas ante ambigüedades del pedido. Cada una indica cómo cambiarl
   `window.countriesAvailability`), en lugar de una región deducida del título.
 - **Popularidad europea** con `downloads_rank_i` (el campo `popularity` viene
   vacío).
-- **Catálogo de América deshabilitable** (`NINTENDO_AMERICAS_HABILITADO`): el
-  sistema de permisos del entorno de desarrollo bloqueó el uso de la clave de
-  búsqueda de Algolia de Nintendo, y nintendo.com bloquea a los agentes de
-  Claude en robots.txt, así que no se desarrolló una alternativa por scraping
-  desde acá. Queda como decisión del dueño del proyecto.
+- **Catálogo de Argentina, no "de América"**: el catálogo base de la región
+  americana es el de la tienda argentina (`store_all_products_es_ar`): títulos
+  en español, URLs `/es-ar/` y solo productos que se venden en Argentina. EE.
+  UU. usa los mismos nsuid; un juego que solo exista en EE. UU. no aparece (el
+  sitio es para compradores argentinos). El uso de la clave de búsqueda de
+  nintendo.com lo autorizó el dueño del proyecto.
+- **Argentina en pesos**: la eShop argentina devuelve ARS; no se convierte y el
+  IVA se aplica sobre el precio en pesos para tarjeta argentina.
 - **Juegos gratuitos**: la API devuelve precio 0; se muestran con costo 0 y sin
   opción de gift card.

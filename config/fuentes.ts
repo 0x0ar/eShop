@@ -18,14 +18,19 @@ export const fuentes = {
     baseUrl: () => env("NINTENDO_EU_SEARCH_URL", "https://searching.nintendo-europe.com"),
     filasPorPagina: () => Number(env("NINTENDO_EU_ROWS", "1000")),
   },
-  nintendoAmericas: {
-    /** Permite apagar el catálogo de América (por ejemplo, si la fuente no está disponible). */
-    habilitado: () => env("NINTENDO_AMERICAS_HABILITADO", "1") !== "0",
+  nintendoArgentina: {
+    /** Permite apagar el catálogo de Argentina (por ejemplo, si la fuente no está disponible). */
+    habilitado: () => env("NINTENDO_ARGENTINA_HABILITADO", "1") !== "0",
     appId: () => env("NINTENDO_ALGOLIA_APP_ID", "U3B6GR4UA3"),
     apiKey: () => env("NINTENDO_ALGOLIA_API_KEY", "a29c6927638bfd8cee23993e51e721c9"),
-    indice: () => env("NINTENDO_ALGOLIA_INDEX", "store_game_en_us"),
+    /** Índice de la tienda argentina de nintendo.com (juegos, DLC, packs; precios en ARS). */
+    indice: () => env("NINTENDO_ALGOLIA_INDEX", "store_all_products_es_ar"),
     /** Algolia no deja paginar más allá de este número de resultados por consulta. */
     limitePaginacion: 1000,
+    /** El índice usa `distinct`: hitsPerPage × distinct no puede pasar de 1000. */
+    resultadosPorPagina: 500,
+    /** Tope superior (en ARS) del recorrido por rangos de precio. */
+    precioMaximo: () => Number(env("NINTENDO_AR_PRECIO_MAXIMO", "100000000")),
   },
   dolarApi: {
     baseUrl: () => env("DOLARAPI_URL", "https://dolarapi.com"),

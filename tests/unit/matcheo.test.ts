@@ -58,7 +58,7 @@ describe("puntaje de matcheo", () => {
 
 describe("matcheo entre catálogos", () => {
   it("matchea por título, editor y fecha", () => {
-    const americas = [
+    const argentina = [
       p("A1", "Super Mario Odyssey", { lanzamiento: new Date("2017-10-27") }),
       p("A2", "Celeste", { editor: "Matt Makes Games" }),
     ];
@@ -66,54 +66,54 @@ describe("matcheo entre catálogos", () => {
       p("E1", "Celeste", { editor: "Matt Makes Games Inc." }),
       p("E2", "Super Mario Odyssey™", { lanzamiento: new Date("2017-10-27") }),
     ];
-    const r = matchearCatalogos(americas, europa);
-    expect(r.pares.map((x) => [x.americas.nsuid, x.europa.nsuid]).sort()).toEqual([
+    const r = matchearCatalogos(argentina, europa);
+    expect(r.pares.map((x) => [x.argentina.nsuid, x.europa.nsuid]).sort()).toEqual([
       ["A1", "E2"],
       ["A2", "E1"],
     ]);
-    expect(r.sinMatchAmericas).toEqual([]);
+    expect(r.sinMatchArgentina).toEqual([]);
   });
 
   it("no matchea juegos distintos con nombres parecidos de distinta plataforma", () => {
-    const americas = [p("A1", "Mario Kart World", { plataforma: "SWITCH2" })];
+    const argentina = [p("A1", "Mario Kart World", { plataforma: "SWITCH2" })];
     const europa = [p("E1", "Mario Kart 8 Deluxe")];
-    const r = matchearCatalogos(americas, europa);
+    const r = matchearCatalogos(argentina, europa);
     expect(r.pares).toHaveLength(0);
-    expect(r.sinMatchAmericas[0].producto.nsuid).toBe("A1");
+    expect(r.sinMatchArgentina[0].producto.nsuid).toBe("A1");
   });
 
   it("registra los ambiguos en lugar de adivinar", () => {
-    const americas = [p("A1", "Pac-Man World", { editor: null, lanzamiento: null })];
+    const argentina = [p("A1", "Pac-Man World", { editor: null, lanzamiento: null })];
     const europa = [
       p("E1", "PAC-MAN World", { editor: null, lanzamiento: null }),
       p("E2", "Pac Man World", { editor: null, lanzamiento: null }),
     ];
-    const r = matchearCatalogos(americas, europa);
+    const r = matchearCatalogos(argentina, europa);
     expect(r.pares).toHaveLength(0);
-    expect(r.sinMatchAmericas[0].motivo).toMatch(/Ambiguo/);
+    expect(r.sinMatchArgentina[0].motivo).toMatch(/Ambiguo/);
   });
 
   it("aplica overrides manuales, incluso para forzar 'sin match'", () => {
-    const americas = [p("A1", "Juego X"), p("A2", "Juego Y")];
+    const argentina = [p("A1", "Juego X"), p("A2", "Juego Y")];
     const europa = [p("E1", "Otro nombre totalmente distinto"), p("E2", "Juego Y")];
-    const r = matchearCatalogos(americas, europa, [
-      { nsuidAmericas: "A1", nsuidEuropa: "E1" },
-      { nsuidAmericas: "A2", nsuidEuropa: null },
+    const r = matchearCatalogos(argentina, europa, [
+      { nsuidArgentina: "A1", nsuidEuropa: "E1" },
+      { nsuidArgentina: "A2", nsuidEuropa: null },
     ]);
     expect(r.pares).toHaveLength(1);
-    expect(r.pares[0]).toMatchObject({ origen: "override", americas: { nsuid: "A1" }, europa: { nsuid: "E1" } });
+    expect(r.pares[0]).toMatchObject({ origen: "override", argentina: { nsuid: "A1" }, europa: { nsuid: "E1" } });
     expect(r.sinMatchEuropa.map((x) => x.producto.nsuid)).toEqual(["E2"]);
   });
 
   it("no asigna el mismo producto europeo a dos americanos", () => {
-    const americas = [
+    const argentina = [
       p("A1", "Tetris 99"),
       p("A2", "Tetris 99", { editor: "Otro", lanzamiento: new Date("2010-01-01") }),
     ];
     const europa = [p("E1", "Tetris 99")];
-    const r = matchearCatalogos(americas, europa);
+    const r = matchearCatalogos(argentina, europa);
     expect(r.pares).toHaveLength(1);
-    expect(r.pares[0].americas.nsuid).toBe("A1");
-    expect(r.sinMatchAmericas.map((x) => x.producto.nsuid)).toEqual(["A2"]);
+    expect(r.pares[0].argentina.nsuid).toBe("A1");
+    expect(r.sinMatchArgentina.map((x) => x.producto.nsuid)).toEqual(["A2"]);
   });
 });

@@ -32,13 +32,13 @@ const NSUID = /^\d{14}$/;
 
 export async function agregarOverride(formData: FormData) {
   if (!(await esAdmin())) redirect("/admin/estado");
-  const a = String(formData.get("nsuidAmericas") ?? "").trim() || null;
+  const a = String(formData.get("nsuidArgentina") ?? "").trim() || null;
   const e = String(formData.get("nsuidEuropa") ?? "").trim() || null;
   if ((!a && !e) || (a && !NSUID.test(a)) || (e && !NSUID.test(e))) redirect("/admin/estado?error=nsuid");
-  const existente = await db.matchOverride.findFirst({ where: { nsuidAmericas: a, nsuidEuropa: e } });
+  const existente = await db.matchOverride.findFirst({ where: { nsuidArgentina: a, nsuidEuropa: e } });
   if (!existente) {
     await db.matchOverride.create({
-      data: { nsuidAmericas: a, nsuidEuropa: e, nota: String(formData.get("nota") ?? "").slice(0, 200) || null },
+      data: { nsuidArgentina: a, nsuidEuropa: e, nota: String(formData.get("nota") ?? "").slice(0, 200) || null },
     });
   }
   await correrJob("rematchear");

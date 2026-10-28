@@ -3,7 +3,7 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { parsearPrecios } from "@/lib/sources/nintendo/precios";
 import { parsearPaginaEuropa } from "@/lib/sources/nintendo/europa";
-import { parsearPaginaAmericas } from "@/lib/sources/nintendo/americas";
+import { parsearPaginaArgentina } from "@/lib/sources/nintendo/argentina";
 import { parsearDolarApi, parsearFrankfurter } from "@/lib/sources/cotizaciones";
 import {
   enlacesFichas,
@@ -37,10 +37,29 @@ describe("fixtures reales", () => {
     }
   });
 
-  it.skipIf(!hay("americas-algolia.json"))("parsea el catálogo de América", () => {
-    const r = parsearPaginaAmericas(leerJson("americas-algolia.json"));
+  it.skipIf(!hay("argentina-algolia.json"))("parsea el catálogo de Argentina", () => {
+    const r = parsearPaginaArgentina(leerJson("argentina-algolia.json"));
+    expect(r.total).toBeGreaterThan(10_000);
     expect(r.productos.length).toBeGreaterThan(0);
-    expect(r.productos.some((p) => p.urls.US)).toBe(true);
+    for (const p of r.productos) {
+      expect(p.nsuid).toMatch(/^\d{14}$/);
+      expect(p.urls.AR).toMatch(/^https:\/\/www\.nintendo\.com\/es-ar\/store\/products\//);
+      expect(p.urls.US).toMatch(/\/us\/store\/products\//);
+    }
+    expect(r.productos.some((p) => p.plataforma === "SWITCH2")).toBe(true);
+    expect(r.productos.some((p) => p.tipo === "SWITCH2_EDITION")).toBe(true);
+  });
+
+  it.skipIf(!hay("argentina-algolia-dlc.json"))("clasifica DLC y pases de mejora reales de Argentina", () => {
+    const r = parsearPaginaArgentina(leerJson("argentina-algolia-dlc.json"));
+    expect(r.productos.length).toBeGreaterThan(0);
+    expect(r.productos.every((p) => p.tipo !== "JUEGO")).toBe(true);
+  });
+
+  it.skipIf(!hay("precios-AR.json"))("la eShop argentina cobra en pesos", () => {
+    const { precios } = parsearPrecios(leerJson("precios-AR.json"));
+    expect(precios.length).toBeGreaterThan(0);
+    expect(new Set(precios.map((p) => p.moneda))).toEqual(new Set(["ARS"]));
   });
 
   for (const pais of ["AR", "US", "ES", "GB", "PL"]) {

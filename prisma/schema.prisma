@@ -11,7 +11,7 @@ datasource db {
   provider = "sqlite"
 }
 
-/// Producto canónico que ve el usuario (une el producto de América y el de Europa).
+/// Producto canónico que ve el usuario (une el producto de Argentina y el de Europa).
 model Juego {
   id                 String    @id @default(cuid())
   slug               String    @unique
@@ -49,10 +49,10 @@ model Juego {
   @@index([popularidad])
 }
 
-/// Producto tal como figura en un catálogo regional (AMERICAS o EUROPA).
+/// Producto tal como figura en un catálogo regional (ARGENTINA o EUROPA).
 model ProductoRegional {
   id          String    @id @default(cuid())
-  /// AMERICAS | EUROPA
+  /// ARGENTINA | EUROPA
   catalogo    String
   nsuid       String
   titulo      String
@@ -210,12 +210,12 @@ model EstadoFuente {
 /// Corrección manual del matcheo. nsuidEuropa = null fuerza "sin match" para ese producto americano (y viceversa).
 model MatchOverride {
   id            String   @id @default(cuid())
-  nsuidAmericas String?
+  nsuidArgentina String?
   nsuidEuropa   String?
   nota          String?
   creado        DateTime @default(now())
 
-  @@unique([nsuidAmericas, nsuidEuropa])
+  @@unique([nsuidArgentina, nsuidEuropa])
 }
 
 model SinMatcheo {

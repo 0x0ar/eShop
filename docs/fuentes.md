@@ -6,14 +6,14 @@ entorno (`config/fuentes.ts`, `.env.example`). Las respuestas reales están en
 
 ## Estado de verificación (2026-10-28)
 
-| Fuente                         | Estado                        | Notas                                                                 |
-| ------------------------------ | ----------------------------- | --------------------------------------------------------------------- |
-| Precios de la eShop (Nintendo) | **Verificada** (ES, GB, PL)   | AR y US sin probar: falta el catálogo de América para tener sus nsuid |
-| Catálogo Europa (Solr)         | **Verificada**                | `popularity` viene vacío: se usa `downloads_rank_i`                   |
-| Catálogo América (Algolia)     | **Sin verificar — bloqueada** | Ver sección 3                                                         |
-| DolarAPI                       | **Verificada**                | No publica euro blue (404): se deriva                                 |
-| Frankfurter                    | **Verificada**                | Se mudó a `api.frankfurter.dev/v1` (el dominio viejo redirige)        |
-| Instant Gaming                 | **Verificada, con límites**   | robots.txt prohíbe la búsqueda: cobertura de keys parcial (sección 6) |
+| Fuente                         | Estado                              | Notas                                                                 |
+| ------------------------------ | ----------------------------------- | --------------------------------------------------------------------- |
+| Precios de la eShop (Nintendo) | **Verificada** (AR, US, ES, GB, PL) | Argentina cobra en **pesos (ARS)**; EE. UU. en USD                    |
+| Catálogo Europa (Solr)         | **Verificada**                      | `popularity` viene vacío: se usa `downloads_rank_i`                   |
+| Catálogo Argentina (Algolia)   | **Verificada**                      | Índice de la tienda argentina; EE. UU. usa los mismos nsuid           |
+| DolarAPI                       | **Verificada**                      | No publica euro blue (404): se deriva                                 |
+| Frankfurter                    | **Verificada**                      | Se mudó a `api.frankfurter.dev/v1` (el dominio viejo redirige)        |
+| Instant Gaming                 | **Verificada, con límites**         | robots.txt prohíbe la búsqueda: cobertura de keys parcial (sección 6) |
 
 ## 1. Precios de la eShop (Nintendo)
 
@@ -41,9 +41,12 @@ entorno (`config/fuentes.ts`, `.env.example`). Las respuestas reales están en
   productos sin precio en ese país no traen `regular_price`.
 - **Monedas verificadas**: ES → EUR, GB → GBP, PL → PLN. Hay productos
   gratuitos con `raw_value: "0"` (se muestran como gratis, sin gift cards).
-- **Moneda de la eShop argentina**: **sin verificar** (hace falta un nsuid del
-  catálogo de América). El código no asume nada: toma `currency` de la
-  respuesta; si viniera ARS no convierte.
+- **Moneda de la eShop argentina: ARS, verificado.** Ejemplo real: Mario
+  Kart World `{"amount":"$120.999,00","currency":"ARS","raw_value":"120999"}`
+  (en EE. UU., mismo nsuid: USD 79,99). Como el precio ya está en pesos, no se
+  convierte (C = 1) y oficial/blue dan lo mismo para Argentina. Con tarjeta
+  argentina se suma el IVA configurado (21 %). **A confirmar**: si el precio
+  que publica la eShop ya incluye algún impuesto argentino.
 - **Rate limit**: no documentado. Usamos 250 ms entre requests al mismo host
   (`API_MIN_INTERVAL_MS`) y reintentos con backoff ante 429/5xx.
 - **Riesgos**: API no oficial, puede cambiar o bloquearse sin aviso.
@@ -67,27 +70,34 @@ entorno (`config/fuentes.ts`, `.env.example`). Las respuestas reales están en
   pública que usa el propio sitio de Nintendo.
 - **Riesgos**: el núcleo polaco no está identificado; se usa `en`.
 
-## 3. Catálogo América (Algolia de nintendo.com) — BLOQUEADA
+## 3. Catálogo Argentina (Algolia de nintendo.com/es-ar)
 
-- **Endpoint**: `POST https://{APP_ID}-dsn.algolia.net/1/indexes/{índice}/query`
-  con headers `X-Algolia-Application-Id` y `X-Algolia-API-Key` (credenciales
-  de solo búsqueda embebidas en nintendo.com).
-- **Lo que se verificó**: el índice `store_game_en_us` responde. El filtro
-  `platformCode:…` que usaba el código **no existe** (0 resultados); los hits
-  traen otros campos (`categoryIds`, `availability`, `collectionPriceRange`,
-  `contentRating`…). Hay que reescribir `src/lib/sources/nintendo/americas.ts`
-  con un hit real.
-- **Por qué está bloqueada**: el sistema de permisos del entorno de
-  desarrollo no dejó seguir usando la clave de búsqueda de Nintendo (es una
-  credencial de un tercero). Es una decisión del dueño del proyecto (ver
-  README, "Pendientes").
-- **Alternativas evaluadas**: el sitemap de la tienda de EE. UU.
-  (`/us/store/sitemap.xml`) lista productos y `robots.txt` permite el
-  User-Agent genérico, pero **nintendo.com bloquea explícitamente a los
-  agentes de Claude** (`Claude-Web`, `Claudebot`: `Disallow: /`), así que no
-  se desarrolló ni probó desde acá.
-- Mientras tanto se puede apagar con `NINTENDO_AMERICAS_HABILITADO=0`: el sitio
-  funciona con España y Europa, y Argentina/EE. UU. muestran "sin datos".
+- **Endpoint**: `POST https://u3b6gr4ua3-dsn.algolia.net/1/indexes/store_all_products_es_ar/query`
+  con headers `X-Algolia-Application-Id` y `X-Algolia-API-Key`
+  (credenciales públicas de solo búsqueda que usa nintendo.com; uso
+  autorizado por el dueño del proyecto el 2026-10-28). También existe
+  `store_game_es_ar` (solo juegos).
+- **Tamaño verificado**: ~26 870 productos (25 029 Switch, 1 835 Switch 2 y 5
+  apps de celular, que se descartan).
+- **Estados Unidos comparte los nsuid**: el mismo id devuelve precio con
+  `country=US`. Los enlaces a la tienda de EE. UU. se arman cambiando
+  `/es-ar/` por `/us/` en la URL.
+- **Límite**: 1000 resultados por consulta y el índice usa `distinct` (hay
+  que pedir como máximo 500 por página). Se recorre por plataforma
+  (`platform:"Nintendo Switch"` / `"Nintendo Switch 2"`) y por rangos de
+  `price.finalPrice` (en ARS), partiendo cada rango hasta que tenga ≤ 1000.
+  Los gratuitos (precio 0, ~950 en Switch) entran en el primer rango.
+- **Campos usados (verificados)**: `title`, `nsuid`, `url`
+  (`/es-ar/store/products/…`), `productImageSquare` / `productImage`,
+  `softwarePublisher`, `releaseDate`, `platform`, `corePlatforms`, `dlcType`
+  (`Individual` = DLC, `Paquete` = pase de expansión o pack de DLC,
+  `ROM Bundle` = juego + DLC), `isUpgrade` (pase de mejora para Switch 2),
+  `editions`, `popularityRank` (1 = más popular), `description`.
+- **robots.txt de nintendo.com**: bloquea a los agentes de Claude, pero esto
+  no lee páginas de nintendo.com sino la API de búsqueda; el sitio en sí no se
+  scrapea.
+- Se puede apagar con `NINTENDO_ARGENTINA_HABILITADO=0` (entonces Argentina y
+  EE. UU. muestran "sin datos").
 
 ## 4. DolarAPI
 
@@ -161,7 +171,7 @@ Proveedores intercambiables (`src/lib/giftcards/`, interfaz
 ## Fixtures
 
 `npm run fixtures:capturar` guarda en `tests/fixtures/real/`: catálogo europeo
-(juegos y DLC), precios de ES/GB/PL (AR/US cuando haya catálogo de América),
+(juegos y DLC), catálogo argentino (juegos y DLC), precios de AR/US/ES/GB/PL,
 prueba de 51 ids, DolarAPI (5 endpoints), Frankfurter, robots.txt, una
 categoría, la página de tarjetas regalo y una ficha de key y de gift card de
 Instant Gaming (solo rutas permitidas por robots), más `_capturado.json`.

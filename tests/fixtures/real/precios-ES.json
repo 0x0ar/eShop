@@ -20,24 +20,6 @@
       }
     },
     {
-      "title_id": 70010000130793,
-      "sales_status": "preorder",
-      "is_download_ready": false,
-      "regular_price": {
-        "amount": "59,99 €",
-        "currency": "EUR",
-        "raw_value": "59.99"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
       "title_id": 70070000038713,
       "sales_status": "onsale",
       "regular_price": {
@@ -55,84 +37,63 @@
       }
     },
     {
-      "title_id": 70010000095548,
+      "title_id": 70070000036431,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "79,99 €",
+        "currency": "EUR",
+        "raw_value": "79.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000096802,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "79,99 €",
+        "currency": "EUR",
+        "raw_value": "79.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000110906,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "29,99 €",
+        "currency": "EUR",
+        "raw_value": "29.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000126930,
       "sales_status": "onsale",
       "regular_price": {
         "amount": "69,99 €",
         "currency": "EUR",
         "raw_value": "69.99"
-      },
-      "discount_price": {
-        "amount": "27,99 €",
-        "currency": "EUR",
-        "raw_value": "27.99",
-        "start_datetime": "2026-10-19T13:00:00Z",
-        "end_datetime": "2026-11-02T22:59:59Z"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000062277,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "59,99 €",
-        "currency": "EUR",
-        "raw_value": "59.99"
-      },
-      "discount_price": {
-        "amount": "5,99 €",
-        "currency": "EUR",
-        "raw_value": "5.99",
-        "start_datetime": "2026-10-23T13:00:00Z",
-        "end_datetime": "2026-11-11T22:59:59Z"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000033557,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "39,99 €",
-        "currency": "EUR",
-        "raw_value": "39.99"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000112775,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "49,99 €",
-        "currency": "EUR",
-        "raw_value": "49.99"
-      },
-      "discount_price": {
-        "amount": "24,99 €",
-        "currency": "EUR",
-        "raw_value": "24.99",
-        "start_datetime": "2026-10-21T13:00:00Z",
-        "end_datetime": "2026-11-16T22:59:59Z"
       },
       "gold_point": {
         "basic_gift_gp": "0",
@@ -161,135 +122,12 @@
       }
     },
     {
-      "title_id": 70070000040668,
+      "title_id": 70010000000126,
       "sales_status": "onsale",
       "regular_price": {
-        "amount": "69,99 €",
+        "amount": "59,99 €",
         "currency": "EUR",
-        "raw_value": "69.99"
-      },
-      "discount_price": {
-        "amount": "62,99 €",
-        "currency": "EUR",
-        "raw_value": "62.99",
-        "start_datetime": "2026-10-22T16:00:00Z",
-        "end_datetime": "2026-11-04T22:59:59Z"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000052340,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "0,00 €",
-        "currency": "EUR",
-        "raw_value": "0"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000107422,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "69,99 €",
-        "currency": "EUR",
-        "raw_value": "69.99"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000003621,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "29,99 €",
-        "currency": "EUR",
-        "raw_value": "29.99"
-      },
-      "discount_price": {
-        "amount": "4,49 €",
-        "currency": "EUR",
-        "raw_value": "4.49",
-        "start_datetime": "2026-10-02T13:00:00Z",
-        "end_datetime": "2026-10-30T22:59:59Z"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000119631,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "0,00 €",
-        "currency": "EUR",
-        "raw_value": "0"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000047974,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "24,99 €",
-        "currency": "EUR",
-        "raw_value": "24.99"
-      },
-      "discount_price": {
-        "amount": "9,99 €",
-        "currency": "EUR",
-        "raw_value": "9.99",
-        "start_datetime": "2026-10-22T13:00:00Z",
-        "end_datetime": "2026-11-01T22:59:59Z"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000110984,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "19,99 €",
-        "currency": "EUR",
-        "raw_value": "19.99"
+        "raw_value": "59.99"
       },
       "gold_point": {
         "basic_gift_gp": "0",
@@ -318,12 +156,12 @@
       }
     },
     {
-      "title_id": 70010000096800,
+      "title_id": 70010000084609,
       "sales_status": "onsale",
       "regular_price": {
-        "amount": "0,00 €",
+        "amount": "59,99 €",
         "currency": "EUR",
-        "raw_value": "0"
+        "raw_value": "59.99"
       },
       "gold_point": {
         "basic_gift_gp": "0",
@@ -335,7 +173,24 @@
       }
     },
     {
-      "title_id": 70070000026749,
+      "title_id": 70010000128693,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "59,99 €",
+        "currency": "EUR",
+        "raw_value": "59.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000049932,
       "sales_status": "onsale",
       "regular_price": {
         "amount": "39,99 €",
@@ -352,12 +207,12 @@
       }
     },
     {
-      "title_id": 70010000113744,
+      "title_id": 70010000107422,
       "sales_status": "onsale",
       "regular_price": {
-        "amount": "19,99 €",
+        "amount": "69,99 €",
         "currency": "EUR",
-        "raw_value": "19.99"
+        "raw_value": "69.99"
       },
       "gold_point": {
         "basic_gift_gp": "0",
@@ -369,24 +224,7 @@
       }
     },
     {
-      "title_id": 70010000010190,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "0,00 €",
-        "currency": "EUR",
-        "raw_value": "0"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000000963,
+      "title_id": 70010000067527,
       "sales_status": "onsale",
       "regular_price": {
         "amount": "29,99 €",
@@ -403,20 +241,12 @@
       }
     },
     {
-      "title_id": 70010000102603,
-      "sales_status": "preorder",
-      "is_download_ready": false,
+      "title_id": 70010000116852,
+      "sales_status": "onsale",
       "regular_price": {
-        "amount": "39,99 €",
-        "currency": "EUR",
-        "raw_value": "39.99"
-      },
-      "discount_price": {
         "amount": "29,99 €",
         "currency": "EUR",
-        "raw_value": "29.99",
-        "start_datetime": "2026-10-20T00:00:00Z",
-        "end_datetime": "2026-12-03T22:59:59Z"
+        "raw_value": "29.99"
       },
       "gold_point": {
         "basic_gift_gp": "0",
@@ -428,23 +258,12 @@
       }
     },
     {
-      "title_id": 70010000122029,
-      "sales_status": "unreleased"
-    },
-    {
-      "title_id": 70070000033664,
+      "title_id": 70010000122498,
       "sales_status": "onsale",
       "regular_price": {
-        "amount": "99,00 €",
+        "amount": "49,99 €",
         "currency": "EUR",
-        "raw_value": "99"
-      },
-      "discount_price": {
-        "amount": "3,99 €",
-        "currency": "EUR",
-        "raw_value": "3.99",
-        "start_datetime": "2026-10-01T22:00:00Z",
-        "end_datetime": "2026-10-30T22:59:59Z"
+        "raw_value": "49.99"
       },
       "gold_point": {
         "basic_gift_gp": "0",
@@ -456,77 +275,12 @@
       }
     },
     {
-      "title_id": 70010000095204,
+      "title_id": 70010000118032,
       "sales_status": "onsale",
       "regular_price": {
-        "amount": "39,99 €",
+        "amount": "49,99 €",
         "currency": "EUR",
-        "raw_value": "39.99"
-      },
-      "discount_price": {
-        "amount": "15,99 €",
-        "currency": "EUR",
-        "raw_value": "15.99",
-        "start_datetime": "2026-10-02T13:00:00Z",
-        "end_datetime": "2026-10-30T22:59:59Z"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70070000013132,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "59,99 €",
-        "currency": "EUR",
-        "raw_value": "59.99"
-      },
-      "discount_price": {
-        "amount": "19,79 €",
-        "currency": "EUR",
-        "raw_value": "19.79",
-        "start_datetime": "2026-10-21T13:00:00Z",
-        "end_datetime": "2026-11-16T22:59:59Z"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000110118,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "59,99 €",
-        "currency": "EUR",
-        "raw_value": "59.99"
-      },
-      "gold_point": {
-        "basic_gift_gp": "0",
-        "basic_gift_rate": "0",
-        "consume_gp": "0",
-        "extra_gold_points": [],
-        "gift_gp": "0",
-        "gift_rate": "0"
-      }
-    },
-    {
-      "title_id": 70010000126930,
-      "sales_status": "onsale",
-      "regular_price": {
-        "amount": "69,99 €",
-        "currency": "EUR",
-        "raw_value": "69.99"
+        "raw_value": "49.99"
       },
       "gold_point": {
         "basic_gift_gp": "0",
@@ -562,12 +316,206 @@
       }
     },
     {
-      "title_id": 70010000116852,
+      "title_id": 70010000114443,
       "sales_status": "onsale",
       "regular_price": {
-        "amount": "29,99 €",
+        "amount": "39,99 €",
         "currency": "EUR",
-        "raw_value": "29.99"
+        "raw_value": "39.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000062277,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "59,99 €",
+        "currency": "EUR",
+        "raw_value": "59.99"
+      },
+      "discount_price": {
+        "amount": "5,99 €",
+        "currency": "EUR",
+        "raw_value": "5.99",
+        "start_datetime": "2026-10-23T13:00:00Z",
+        "end_datetime": "2026-11-11T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000012331,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "69,99 €",
+        "currency": "EUR",
+        "raw_value": "69.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000006412,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "59,99 €",
+        "currency": "EUR",
+        "raw_value": "59.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000000127,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "59,99 €",
+        "currency": "EUR",
+        "raw_value": "59.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000068689,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "59,99 €",
+        "currency": "EUR",
+        "raw_value": "59.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000040244,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "69,99 €",
+        "currency": "EUR",
+        "raw_value": "69.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000014382,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "89,99 €",
+        "currency": "EUR",
+        "raw_value": "89.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000118614,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "19,99 €",
+        "currency": "EUR",
+        "raw_value": "19.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000096818,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "79,99 €",
+        "currency": "EUR",
+        "raw_value": "79.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000027620,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "59,99 €",
+        "currency": "EUR",
+        "raw_value": "59.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000039946,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "59,99 €",
+        "currency": "EUR",
+        "raw_value": "59.99"
       },
       "gold_point": {
         "basic_gift_gp": "0",

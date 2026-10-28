@@ -12,7 +12,7 @@ export const REGIONES_COMPARACION = ["AR", "ES", "EU", "US"] as const;
 export type RegionComparacion = (typeof REGIONES_COMPARACION)[number];
 
 /** Catálogo al que pertenece una eShop. El nsuid es compartido dentro de cada catálogo. */
-export type CatalogoRegional = "AMERICAS" | "EUROPA";
+export type CatalogoRegional = "ARGENTINA" | "EUROPA";
 
 export interface PaisTienda {
   codigo: string;
@@ -27,8 +27,8 @@ export interface PaisTienda {
 }
 
 export const PAISES: Record<string, PaisTienda> = {
-  AR: { codigo: "AR", nombre: "Argentina", idiomaPrecios: "es", catalogo: "AMERICAS", localeSitio: "es-ar" },
-  US: { codigo: "US", nombre: "Estados Unidos", idiomaPrecios: "en", catalogo: "AMERICAS", localeSitio: "us" },
+  AR: { codigo: "AR", nombre: "Argentina", idiomaPrecios: "es", catalogo: "ARGENTINA", localeSitio: "es-ar" },
+  US: { codigo: "US", nombre: "Estados Unidos", idiomaPrecios: "en", catalogo: "ARGENTINA", localeSitio: "us" },
   ES: {
     codigo: "ES",
     nombre: "España",

@@ -6,7 +6,7 @@
       "q": "*",
       "start": "0",
       "fq": "type:DLC AND nsuid_txt:*",
-      "sort": "popularity asc",
+      "sort": "def(downloads_rank_i,999999) asc",
       "rows": "10",
       "wt": "json"
     }
@@ -16,6 +16,176 @@
     "start": 0,
     "numFoundExact": true,
     "docs": [
+      {
+        "fs_id": "2964452",
+        "change_date": "2025-11-14T15:02:22Z",
+        "url": "/es-es/Contenido-descargable/Leyendas-Pokemon-Z-A-Contenido-descargable-Megadimension--2964452.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2025-10-16T00:00:00Z"
+        ],
+        "price_has_discount_b": false,
+        "pretty_date_s": "16-10-2025",
+        "game_series_txt": [
+          "pokemon"
+        ],
+        "related_nsuids_txt": [
+          "70070000030754"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Leyendas Pokémon: Z-A – Contenido descargable «Megadimensión»",
+        "sorting_title": "Leyendas Pokémon: Z-A – Contenido descargable «Megadimensión»",
+        "related_game_id_s": "2533423",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "0100f43008c44000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Pokémon Legends: Z-A – Mega Dimension DLC",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/pokemonlegendsza/1x1_NSwitch2_PokemonLegendsZA_KV_ES_es_image500w.jpg",
+        "price_regular_f": 29.99,
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Conteúdos adicionais Pokémon Legends: Z-A – Mega Dimension",
+          "Leggende Pokémon: Z-A – DLC Megadimensione",
+          "Leyendas Pokémon: Z-A – Contenido descargable «Megadimensión»",
+          "Légendes Pokémon : Z-A – Méga-Dimension",
+          "Pokémon Legends: Z-A – Mega Dimension DLC",
+          "Pokémon-Legenden: Z-A – Mega-Dimension",
+          "Leyendas Pokémon: Z-A"
+        ],
+        "dlc_type_s": "bundleDlcOnly",
+        "price_sorting_f": 29.99,
+        "price_lowest_f": 29.99,
+        "publisher": "Nintendo",
+        "related_game_title_s": "Leyendas Pokémon: Z-A",
+        "excerpt": "Contenido descargable de Leyendas Pokémon: Z-A para Nintendo Switch.",
+        "nsuid_txt": [
+          "70070000030754"
+        ],
+        "date_from": "2025-10-16T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 44,
+        "_version_": 1880304439408984000
+      },
+      {
+        "fs_id": "3135528",
+        "change_date": "2026-07-08T05:31:06Z",
+        "url": "/es-es/Contenido-descargable/Disney-Dreamlight-Valley-Honeyglow-Woods-3135528.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2026-07-08T00:00:00Z"
+        ],
+        "price_has_discount_b": false,
+        "pretty_date_s": "08-07-2026",
+        "related_nsuids_txt": [
+          "70050000071465"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Disney Dreamlight Valley: Honeyglow Woods",
+        "sorting_title": "Disney Dreamlight Valley: Honeyglow Woods",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_image500w.jpg",
+        "related_game_id_s": "2232608",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "0100d39012c1a000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Disney Dreamlight Valley: Honeyglow Woods",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/1x1_DisneyDreamlightValley16_image500w.jpg",
+        "price_regular_f": 16.99,
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Disney Dreamlight Valley: Honeyglow Woods",
+          "Disney Dreamlight Valley"
+        ],
+        "dlc_type_s": "dlc",
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 16.99,
+        "datasize_readable_txt": [
+          "3,15 MB"
+        ],
+        "price_lowest_f": 16.99,
+        "publisher": "Gameloft",
+        "related_game_title_s": "Disney Dreamlight Valley",
+        "age_rating_value": "3",
+        "excerpt": "¡Explora el Bosque de Luz Melífera y reúnete con Winnie the Pooh, Ígor y Piglet de Disney en un nuevo paquete de aventuras!",
+        "nsuid_txt": [
+          "70050000071465"
+        ],
+        "date_from": "2026-07-08T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 90,
+        "_version_": 1880304439386964000
+      },
+      {
+        "fs_id": "2062849",
+        "change_date": "2025-11-20T10:50:33Z",
+        "url": "/es-es/Contenido-descargable/Animal-Crossing-New-Horizons-Happy-Home-Paradise-2062849.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2021-11-05T00:00:00Z"
+        ],
+        "price_has_discount_b": false,
+        "pretty_date_s": "05-11-2021",
+        "game_series_txt": [
+          "animal_crossing"
+        ],
+        "related_nsuids_txt": [
+          "70050000030743"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Animal Crossing: New Horizons – Happy Home Paradise",
+        "sorting_title": "Animal Crossing: New Horizons – Happy Home Paradise",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_AnimalCrossingNewHorizons_image500w.jpg",
+        "related_game_id_s": "1438623",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "01006f8002326000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Animal Crossing: New Horizons – Happy Home Paradise",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_AnimalCrossingNewHorizons_image500w.jpg",
+        "price_regular_f": 24.99,
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Animal Crossing: New Horizons – Happy Home Paradise",
+          "Animal Crossing: New Horizons"
+        ],
+        "dlc_type_s": "dlc",
+        "age_rating_type": "pegi",
+        "price_sorting_f": 24.99,
+        "datasize_readable_txt": [
+          "627,05 MB"
+        ],
+        "price_lowest_f": 24.99,
+        "publisher": "Nintendo",
+        "related_game_title_s": "Animal Crossing: New Horizons",
+        "age_rating_value": "3",
+        "excerpt": "¡Archipiélago Paraíso te necesita!",
+        "nsuid_txt": [
+          "70050000030743"
+        ],
+        "date_from": "2021-11-05T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 123,
+        "_version_": 1880304440563466200
+      },
       {
         "fs_id": "2968760",
         "change_date": "2025-11-20T04:48:28Z",
@@ -79,21 +249,21 @@
         "_version_": 1880304439386964000
       },
       {
-        "fs_id": "3135528",
-        "change_date": "2026-07-08T05:31:06Z",
-        "url": "/es-es/Contenido-descargable/Disney-Dreamlight-Valley-Honeyglow-Woods-3135528.html",
+        "fs_id": "2491770",
+        "change_date": "2024-11-27T14:24:42Z",
+        "url": "/es-es/Contenido-descargable/Disney-Dreamlight-Valley-A-Rift-in-Time-2491770.html",
         "type": "DLC",
         "dates_released_dts": [
-          "2026-07-08T00:00:00Z"
+          "2023-12-05T00:00:00Z"
         ],
         "price_has_discount_b": false,
-        "pretty_date_s": "08-07-2026",
+        "pretty_date_s": "05-12-2023",
         "related_nsuids_txt": [
-          "70050000071465"
+          "70050000044334"
         ],
         "price_discount_percentage_f": 0,
-        "title": "Disney Dreamlight Valley: Honeyglow Woods",
-        "sorting_title": "Disney Dreamlight Valley: Honeyglow Woods",
+        "title": "Disney Dreamlight Valley: A Rift in Time",
+        "sorting_title": "Disney Dreamlight Valley: A Rift in Time",
         "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_image500w.jpg",
         "related_game_id_s": "2232608",
         "pretty_dlc_type_s": "Contenido descargable",
@@ -101,15 +271,15 @@
         "deprioritise_b": false,
         "hits_i": 300,
         "pg_s": "DLC",
-        "title_master_s": "Disney Dreamlight Valley: Honeyglow Woods",
+        "title_master_s": "Disney Dreamlight Valley: A Rift in Time",
         "required_system_txt": [
           "Nintendo Switch"
         ],
         "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/1x1_DisneyDreamlightValley16_image500w.jpg",
-        "price_regular_f": 16.99,
+        "price_regular_f": 29.99,
         "originally_for_t": "HAC",
         "title_extras_txt": [
-          "Disney Dreamlight Valley: Honeyglow Woods",
+          "Disney Dreamlight Valley: A Rift in Time",
           "Disney Dreamlight Valley"
         ],
         "dlc_type_s": "dlc",
@@ -117,23 +287,75 @@
           "pegi_in_game_purchases"
         ],
         "age_rating_type": "pegi",
-        "price_sorting_f": 16.99,
+        "price_sorting_f": 29.99,
         "datasize_readable_txt": [
           "3,15 MB"
         ],
-        "price_lowest_f": 16.99,
+        "price_lowest_f": 29.99,
         "publisher": "Gameloft",
         "related_game_title_s": "Disney Dreamlight Valley",
         "age_rating_value": "3",
-        "excerpt": "¡Explora el Bosque de Luz Melífera y reúnete con Winnie the Pooh, Ígor y Piglet de Disney en un nuevo paquete de aventuras!",
+        "excerpt": "Expande tu viaje a la Isla de la Eternidad, ¡donde te esperan más aventuras!",
         "nsuid_txt": [
-          "70050000071465"
+          "70050000044334"
         ],
-        "date_from": "2026-07-08T00:00:00Z",
+        "date_from": "2023-12-05T00:00:00Z",
         "boost_add": 0,
         "boost_mult": 1,
-        "downloads_rank_i": 90,
-        "_version_": 1880304439386964000
+        "downloads_rank_i": 170,
+        "_version_": 1880304439390109700
+      },
+      {
+        "fs_id": "1858208",
+        "change_date": "2022-07-19T14:42:22Z",
+        "url": "/es-es/Contenido-descargable/Fighters-Pass-Vol-2-1858208.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2020-01-29T00:00:00Z"
+        ],
+        "price_has_discount_b": false,
+        "pretty_date_s": "29-01-2020",
+        "game_series_txt": [
+          "super_smash_bros"
+        ],
+        "related_nsuids_txt": [
+          "70070000009787"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Fighters Pass Vol. 2",
+        "sorting_title": "Fighters Pass Vol. 2",
+        "related_game_id_s": "1395713",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "01006a800016e000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Fighters Pass Vol. 2",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_SuperSmashBrosUltimate_FightersPassVol2_Logo_image500w.jpg",
+        "price_regular_f": 29.99,
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Fighters Pass Vol. 2",
+          "Super Smash Bros. Ultimate"
+        ],
+        "dlc_type_s": "bundleDlcOnly",
+        "image_url_h2x1_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperSmashBrosUltimate_FightersPassVol2_Logo_image500w.jpg",
+        "price_sorting_f": 29.99,
+        "price_lowest_f": 29.99,
+        "publisher": "Nintendo",
+        "related_game_title_s": "Super Smash Bros. Ultimate",
+        "excerpt": "Contenido descargable de Super Smash Bros. Ultimate para Nintendo Switch.",
+        "nsuid_txt": [
+          "70070000009787"
+        ],
+        "date_from": "2020-01-29T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 201,
+        "_version_": 1880304440564514800
       },
       {
         "fs_id": "2968756",
@@ -193,251 +415,6 @@
         "_version_": 1880304439386964000
       },
       {
-        "fs_id": "3213533",
-        "change_date": "2026-10-02T07:38:10Z",
-        "url": "/es-es/Contenido-descargable/Just-Dance-Decades-of-Hits-3213533.html",
-        "type": "DLC",
-        "dates_released_dts": [
-          "2026-10-13T00:00:00Z"
-        ],
-        "pretty_date_s": "13-10-2026",
-        "related_nsuids_txt": [
-          "70050000074841"
-        ],
-        "price_discount_percentage_f": 0,
-        "title": "Just Dance: Decades of Hits",
-        "sorting_title": "Just Dance: Decades of Hits",
-        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/16x9_JustDanceDecadesOfHits_Standard_image500w.jpg",
-        "related_game_id_s": "2403686",
-        "pretty_dlc_type_s": "Contenido descargable",
-        "application_id_s": "0100bee017fc0000",
-        "deprioritise_b": false,
-        "hits_i": 300,
-        "pg_s": "DLC",
-        "title_master_s": "Just Dance: Decades of Hits",
-        "required_system_txt": [
-          "Nintendo Switch"
-        ],
-        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/1x1_JustDanceDecadesOfHits_Standard_image500w.jpg",
-        "originally_for_t": "HAC",
-        "title_extras_txt": [
-          "Just Dance: Decades of Hits",
-          "Just Dance: Decades of Hits",
-          "Just Dance : Decades of Hits",
-          "Just Dance®"
-        ],
-        "dlc_type_s": "dlc",
-        "age_rating_descriptors_txt": [
-          "pegi_in_game_purchases"
-        ],
-        "age_rating_type": "pegi",
-        "price_sorting_f": 999999,
-        "datasize_readable_txt": [
-          "3,15 MB"
-        ],
-        "price_lowest_f": -1,
-        "publisher": "Ubisoft",
-        "related_game_title_s": "Just Dance®",
-        "age_rating_value": "3",
-        "excerpt": "UNA EXPERIENCIA INMERSIVA QUE ABARCA 6 DÉCADAS",
-        "nsuid_txt": [
-          "70050000074841"
-        ],
-        "date_from": "2026-10-13T00:00:00Z",
-        "boost_add": 0,
-        "boost_mult": 1,
-        "_version_": 1880304439386964000
-      },
-      {
-        "fs_id": "2491770",
-        "change_date": "2024-11-27T14:24:42Z",
-        "url": "/es-es/Contenido-descargable/Disney-Dreamlight-Valley-A-Rift-in-Time-2491770.html",
-        "type": "DLC",
-        "dates_released_dts": [
-          "2023-12-05T00:00:00Z"
-        ],
-        "price_has_discount_b": false,
-        "pretty_date_s": "05-12-2023",
-        "related_nsuids_txt": [
-          "70050000044334"
-        ],
-        "price_discount_percentage_f": 0,
-        "title": "Disney Dreamlight Valley: A Rift in Time",
-        "sorting_title": "Disney Dreamlight Valley: A Rift in Time",
-        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_image500w.jpg",
-        "related_game_id_s": "2232608",
-        "pretty_dlc_type_s": "Contenido descargable",
-        "application_id_s": "0100d39012c1a000",
-        "deprioritise_b": false,
-        "hits_i": 300,
-        "pg_s": "DLC",
-        "title_master_s": "Disney Dreamlight Valley: A Rift in Time",
-        "required_system_txt": [
-          "Nintendo Switch"
-        ],
-        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/1x1_DisneyDreamlightValley16_image500w.jpg",
-        "price_regular_f": 29.99,
-        "originally_for_t": "HAC",
-        "title_extras_txt": [
-          "Disney Dreamlight Valley: A Rift in Time",
-          "Disney Dreamlight Valley"
-        ],
-        "dlc_type_s": "dlc",
-        "age_rating_descriptors_txt": [
-          "pegi_in_game_purchases"
-        ],
-        "age_rating_type": "pegi",
-        "price_sorting_f": 29.99,
-        "datasize_readable_txt": [
-          "3,15 MB"
-        ],
-        "price_lowest_f": 29.99,
-        "publisher": "Gameloft",
-        "related_game_title_s": "Disney Dreamlight Valley",
-        "age_rating_value": "3",
-        "excerpt": "Expande tu viaje a la Isla de la Eternidad, ¡donde te esperan más aventuras!",
-        "nsuid_txt": [
-          "70050000044334"
-        ],
-        "date_from": "2023-12-05T00:00:00Z",
-        "boost_add": 0,
-        "boost_mult": 1,
-        "downloads_rank_i": 170,
-        "_version_": 1880304439390109700
-      },
-      {
-        "fs_id": "2825888",
-        "change_date": "2025-05-12T15:07:35Z",
-        "url": "/es-es/Contenido-descargable/Hogwarts-Legacy-Pack-de-las-Artes-Oscuras-2825888.html",
-        "type": "DLC",
-        "dates_released_dts": [
-          "2025-06-05T00:00:00Z"
-        ],
-        "price_has_discount_b": true,
-        "pretty_date_s": "05-06-2025",
-        "related_nsuids_txt": [
-          "70050000057045"
-        ],
-        "price_discount_percentage_f": 60,
-        "title": "Hogwarts Legacy: Pack de las Artes Oscuras",
-        "sorting_title": "Hogwarts Legacy: Pack de las Artes Oscuras",
-        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/hogwartslegacy/2x1_NSwitch2_HogwartsLegacy_image500w.jpg",
-        "related_game_id_s": "2797135",
-        "pretty_dlc_type_s": "Contenido descargable",
-        "application_id_s": "04009570209f8000",
-        "deprioritise_b": false,
-        "hits_i": 300,
-        "pg_s": "DLC",
-        "title_master_s": "Hogwarts Legacy: Dark Arts Pack",
-        "required_system_txt": [
-          "Nintendo Switch 2"
-        ],
-        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/hogwartslegacy/1x1_NSwitch2_HogwartsLegacy_image500w.jpg",
-        "price_regular_f": 19.99,
-        "originally_for_t": "BEE",
-        "title_extras_txt": [
-          "Hogwarts Legacy: Dark Arts Pack",
-          "Hogwarts Legacy: Pacchetto delle Arti Oscure",
-          "Hogwarts Legacy: Pack de las Artes Oscuras",
-          "Hogwarts Legacy: Pacote Artes das Trevas",
-          "Hogwarts Legacy: Paket der Dunklen Künste",
-          "Hogwarts Legacy: Zwarte-Kunstenpakket",
-          "Hogwarts Legacy : L'Héritage de Poudlard : Pack Magie noire",
-          "Hogwarts Legacy"
-        ],
-        "dlc_type_s": "dlc",
-        "price_discounted_f": 7.99,
-        "age_rating_descriptors_txt": [
-          "pegi_violence",
-          "pegi_language",
-          "pegi_in_game_purchases"
-        ],
-        "age_rating_type": "pegi",
-        "price_sorting_f": 7.99,
-        "datasize_readable_txt": [
-          "3,15 MB"
-        ],
-        "price_lowest_f": 7.99,
-        "publisher": "WB Games",
-        "related_game_title_s": "Hogwarts Legacy",
-        "age_rating_value": "12",
-        "excerpt": "Contenido descargable de Hogwarts Legacy para Nintendo Switch 2.",
-        "nsuid_txt": [
-          "70050000057045"
-        ],
-        "date_from": "2025-06-05T00:00:00Z",
-        "boost_add": 0,
-        "boost_mult": 1,
-        "downloads_rank_i": 1607,
-        "_version_": 1880304439391158300
-      },
-      {
-        "fs_id": "2467013",
-        "change_date": "2023-10-17T12:50:03Z",
-        "url": "/es-es/Contenido-descargable/Hogwarts-Legacy-Pack-de-las-Artes-Oscuras-2467013.html",
-        "type": "DLC",
-        "dates_released_dts": [
-          "2023-11-14T00:00:00Z"
-        ],
-        "price_has_discount_b": true,
-        "pretty_date_s": "14-11-2023",
-        "related_nsuids_txt": [
-          "70050000044036"
-        ],
-        "price_discount_percentage_f": 90,
-        "title": "Hogwarts Legacy: Pack de las Artes Oscuras",
-        "sorting_title": "Hogwarts Legacy: Pack de las Artes Oscuras",
-        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_HogwartsLegacy_image500w.jpg",
-        "related_game_id_s": "2466200",
-        "pretty_dlc_type_s": "Contenido descargable",
-        "application_id_s": "0100f7e00c70e000",
-        "deprioritise_b": false,
-        "hits_i": 300,
-        "pg_s": "DLC",
-        "title_master_s": "Hogwarts Legacy: Dark Arts Pack",
-        "required_system_txt": [
-          "Nintendo Switch"
-        ],
-        "image_url": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_NSwitch_HogwartsLegacy_image500w.jpg",
-        "price_regular_f": 19.99,
-        "originally_for_t": "HAC",
-        "title_extras_txt": [
-          "Hogwarts Legacy: Dark Arts Pack",
-          "Hogwarts Legacy: Pacchetto Arti Oscure",
-          "Hogwarts Legacy: Pack de las Artes Oscuras",
-          "Hogwarts Legacy: Pacote Artes das Trevas",
-          "Hogwarts Legacy: Paket der Dunklen Künste",
-          "Hogwarts Legacy: Zwarte-Kunstenpakket",
-          "Hogwarts Legacy : L'Héritage de Poudlard : Pack Magie noire",
-          "Hogwarts Legacy"
-        ],
-        "dlc_type_s": "dlc",
-        "price_discounted_f": 1.99,
-        "age_rating_descriptors_txt": [
-          "pegi_violence",
-          "pegi_in_game_purchases",
-          "pegi_language"
-        ],
-        "age_rating_type": "pegi",
-        "price_sorting_f": 1.99,
-        "datasize_readable_txt": [
-          "3,15 MB"
-        ],
-        "price_lowest_f": 1.99,
-        "publisher": "WB Games",
-        "related_game_title_s": "Hogwarts Legacy",
-        "age_rating_value": "12",
-        "excerpt": "Contenido descargable de Hogwarts Legacy para Nintendo Switch.",
-        "nsuid_txt": [
-          "70050000044036"
-        ],
-        "date_from": "2023-11-14T00:00:00Z",
-        "boost_add": 0,
-        "boost_mult": 1,
-        "downloads_rank_i": 1485,
-        "_version_": 1880304439392206800
-      },
-      {
         "fs_id": "2706459",
         "change_date": "2024-11-21T01:01:08Z",
         "url": "/es-es/Contenido-descargable/Disney-Dreamlight-Valley-The-Storybook-Vale-2706459.html",
@@ -495,65 +472,55 @@
         "_version_": 1880304439393255400
       },
       {
-        "fs_id": "2936312",
-        "change_date": "2025-10-11T02:38:11Z",
-        "url": "/es-es/Contenido-descargable/JUST-DANCE-2026-EDITION-JUEGO-COMPLETO-2936312.html",
+        "fs_id": "1525170",
+        "change_date": "2022-01-21T16:33:31Z",
+        "url": "/es-es/Contenido-descargable/Fighters-Pass-1525170.html",
         "type": "DLC",
         "dates_released_dts": [
-          "2025-10-14T00:00:00Z"
+          "2018-12-07T00:00:00Z"
         ],
-        "pretty_date_s": "14-10-2025",
+        "price_has_discount_b": false,
+        "pretty_date_s": "07-12-2018",
+        "game_series_txt": [
+          "super_smash_bros"
+        ],
         "related_nsuids_txt": [
-          "70050000058722"
+          "70070000003681"
         ],
         "price_discount_percentage_f": 0,
-        "title": "JUST DANCE 2026 EDITION - JUEGO COMPLETO",
-        "sorting_title": "JUST DANCE 2026 EDITION - JUEGO COMPLETO",
-        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/16x9_JustDanceDecadesOfHits_Standard_image500w.jpg",
-        "related_game_id_s": "2403686",
+        "title": "Fighters Pass",
+        "sorting_title": "Fighters Pass",
+        "related_game_id_s": "1395713",
         "pretty_dlc_type_s": "Contenido descargable",
-        "application_id_s": "0100bee017fc0000",
+        "application_id_s": "01006a800016e000",
         "deprioritise_b": false,
         "hits_i": 300,
         "pg_s": "DLC",
-        "title_master_s": "JUST DANCE 2026 EDITION - FULL GAME",
+        "title_master_s": "Fighters Pass",
         "required_system_txt": [
           "Nintendo Switch"
         ],
-        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/1x1_JustDanceDecadesOfHits_Standard_image500w.jpg",
+        "image_url": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_SuperSmashBrosUltimate_FightersPass_enGB_image500w.jpg",
+        "price_regular_f": 24.99,
         "originally_for_t": "HAC",
         "title_extras_txt": [
-          "JUST DANCE 2026 EDITION - FULL GAME",
-          "JUST DANCE 2026 EDITION - GIOCO COMPLETO",
-          "JUST DANCE 2026 EDITION - JEU COMPLET",
-          "JUST DANCE 2026 EDITION - JOGO COMPLETO",
-          "JUST DANCE 2026 EDITION - JUEGO COMPLETO",
-          "JUST DANCE 2026 EDITION - VOLLEDIGE GAME",
-          "JUST DANCE 2026 EDITION – VOLLVERSION",
-          "Just Dance®"
+          "Fighters Pass",
+          "Super Smash Bros. Ultimate"
         ],
-        "dlc_type_s": "dlc",
-        "age_rating_descriptors_txt": [
-          "pegi_in_game_purchases"
-        ],
-        "age_rating_type": "pegi",
-        "price_sorting_f": 999999,
-        "datasize_readable_txt": [
-          "3,15 MB"
-        ],
-        "price_lowest_f": -1,
-        "publisher": "Ubisoft",
-        "related_game_title_s": "Just Dance®",
-        "age_rating_value": "3",
-        "excerpt": "Contenido descargable de Just Dance® para Nintendo Switch.",
+        "dlc_type_s": "bundleDlcOnly",
+        "price_sorting_f": 24.99,
+        "price_lowest_f": 24.99,
+        "publisher": "Nintendo",
+        "related_game_title_s": "Super Smash Bros. Ultimate",
+        "excerpt": "Contenido descargable de Super Smash Bros. Ultimate para Nintendo Switch.",
         "nsuid_txt": [
-          "70050000058722"
+          "70070000003681"
         ],
-        "date_from": "2025-10-14T00:00:00Z",
+        "date_from": "2018-12-07T00:00:00Z",
         "boost_add": 0,
         "boost_mult": 1,
-        "downloads_rank_i": 999999,
-        "_version_": 1880304439393255400
+        "downloads_rank_i": 331,
+        "_version_": 1880304440564514800
       },
       {
         "fs_id": "2706463",

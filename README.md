@@ -9,12 +9,10 @@ tenga cada persona.
 
 No vende nada: compara, recomienda y enlaza a la tienda.
 
-> **Estado de las fuentes (2026-10-28):** precios de Nintendo (eShops
-> europeas), catálogo europeo, DolarAPI, Frankfurter e Instant Gaming están
-> **verificados contra respuestas reales**. El **catálogo de América** (Algolia
-> de nintendo.com) **no**: sin él no hay precios de Argentina ni de EE. UU.
-> (ver [Limitaciones](#limitaciones-conocidas)). Detalle en
-> [`docs/fuentes.md`](docs/fuentes.md).
+> **Estado de las fuentes (2026-10-28):** todas verificadas contra respuestas
+> reales: precios de Nintendo (Argentina en pesos, EE. UU. y eShops europeas),
+> catálogos de Argentina y Europa, DolarAPI, Frankfurter e Instant Gaming.
+> Detalle y límites en [`docs/fuentes.md`](docs/fuentes.md).
 
 ## Índice
 
@@ -231,15 +229,10 @@ servicio `esquema` aplica los cambios de schema).
 
 ## Limitaciones conocidas
 
-- **Sin catálogo de América = sin Argentina ni EE. UU.** El cliente de Algolia
-  (`src/lib/sources/nintendo/americas.ts`) no coincide con el índice actual (el
-  filtro `platformCode` ya no existe) y no se pudo terminar de verificar desde
-  el entorno de desarrollo porque usa la clave de búsqueda de Nintendo. Hasta
-  resolverlo, `NINTENDO_AMERICAS_HABILITADO=0` y la comparativa cubre España y
-  Europa; la referencia de ahorro (Argentina + tarjeta argentina) no está
-  disponible. Las APIs de Nintendo no son oficiales y pueden cambiar.
-- **Moneda de la eShop argentina**: sin verificar (depende de lo anterior). El
-  código la lee de la API; si devolviera ARS no se aplica conversión.
+- **Precios de Argentina en pesos**: la eShop argentina cobra en ARS, así que
+  oficial y blue dan lo mismo para Argentina. Con tarjeta argentina se suma el
+  IVA configurado; está por confirmar si el precio publicado ya incluye algún
+  impuesto. Las APIs de Nintendo no son oficiales y pueden cambiar.
 - **Euro blue**: DolarAPI no lo publica; se deriva de dólar blue × EUR/USD y se
   marca como "Derivado".
 - **Gift cards**: de Instant Gaming (EUR, GBP y USD) y carga manual. Se asume

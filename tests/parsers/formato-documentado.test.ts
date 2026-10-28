@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { parsearPrecios } from "@/lib/sources/nintendo/precios";
 import { parsearDocumentoEuropa } from "@/lib/sources/nintendo/europa";
-import { parsearHitAmericas, urlsAmericas } from "@/lib/sources/nintendo/americas";
+import { filtroRango, filtroSinPrecio, parsearHitArgentina, urlsArgentina } from "@/lib/sources/nintendo/argentina";
 import { parsearDolarApi, parsearFrankfurter } from "@/lib/sources/cotizaciones";
 import {
   enlacesFichas,
@@ -74,20 +74,45 @@ describe("catálogos de Nintendo (formato documentado)", () => {
     expect(p?.imagenUrl).toBe("https://img.example/x.jpg");
   });
 
-  it("parsea un hit de Algolia y arma la URL argentina", () => {
-    const p = parsearHitAmericas({
-      title: "Juego de Prueba – Nintendo Switch 2 Edition",
+  it("parsea un hit de la tienda argentina y arma la URL de EE. UU.", () => {
+    const p = parsearHitArgentina({
+      title: "Juego de Prueba™ – Nintendo Switch™ 2 Edition",
       nsuid: "70010000000004",
-      url: "/us/store/products/juego-de-prueba-switch-2/",
-      platformCode: "NINTENDO_SWITCH_2",
+      url: "/es-ar/store/products/juego-de-prueba-switch-2/",
+      platform: "Nintendo Switch 2",
+      corePlatforms: ["Nintendo Switch 2"],
       softwarePublisher: "Editor",
       releaseDate: "2025-06-05T00:00:00.000Z",
+      popularityRank: 2,
     });
-    expect(p).toMatchObject({ plataforma: "SWITCH2", tipo: "SWITCH2_EDITION" });
-    expect(urlsAmericas("/us/store/products/x/")).toEqual({
-      US: "https://www.nintendo.com/us/store/products/x/",
+    expect(p).toMatchObject({ plataforma: "SWITCH2", tipo: "SWITCH2_EDITION", popularidad: 999_997 });
+    expect(urlsArgentina("/es-ar/store/products/x/")).toEqual({
       AR: "https://www.nintendo.com/es-ar/store/products/x/",
+      US: "https://www.nintendo.com/us/store/products/x/",
     });
+  });
+
+  it("arma los filtros de rango de precio y de productos sin precio", () => {
+    expect(filtroRango("Nintendo Switch 2", 0, 5000)).toBe(
+      'platform:"Nintendo Switch 2" AND price.finalPrice >= 0 AND price.finalPrice < 5000',
+    );
+    expect(filtroSinPrecio("Nintendo Switch", ["$ 10.000+", "Inicio gratuito"])).toBe(
+      'platform:"Nintendo Switch" AND NOT priceRange:"$ 10.000+" AND NOT priceRange:"Inicio gratuito"',
+    );
+  });
+
+  it("clasifica DLC, packs y pases de mejora de la tienda argentina", () => {
+    const base = { nsuid: "70050000000001", url: "/es-ar/store/products/x/", platform: "Nintendo Switch" };
+    expect(parsearHitArgentina({ ...base, title: "Oleada 3", dlcType: "Individual" })?.tipo).toBe("DLC");
+    expect(parsearHitArgentina({ ...base, title: "Juego Pase de expansión", dlcType: "Paquete" })?.tipo).toBe(
+      "PASE_EXPANSION",
+    );
+    expect(parsearHitArgentina({ ...base, title: "Paquete de Juego (Juego + DLC)", dlcType: "ROM Bundle" })?.tipo).toBe(
+      "BUNDLE",
+    );
+    expect(parsearHitArgentina({ ...base, title: "Paquete de mejora Juego", isUpgrade: true })?.tipo).toBe("UPGRADE");
+    // Las apps de celular no son de Switch.
+    expect(parsearHitArgentina({ ...base, title: "App", platform: "iOS/Android", nsuid: "MOBILE" })).toBeNull();
   });
 
   it("detecta tipos de producto por título", () => {

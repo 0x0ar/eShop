@@ -15,12 +15,12 @@ export interface ProductoRegional {
 }
 
 export interface OverrideMatcheo {
-  nsuidAmericas: string | null;
+  nsuidArgentina: string | null;
   nsuidEuropa: string | null;
 }
 
 export interface Par<A extends ProductoRegional = ProductoRegional, E extends ProductoRegional = ProductoRegional> {
-  americas: A;
+  argentina: A;
   europa: E;
   puntaje: number;
   origen: "override" | "automatico";
@@ -28,7 +28,7 @@ export interface Par<A extends ProductoRegional = ProductoRegional, E extends Pr
 
 export interface ResultadoMatcheo<A extends ProductoRegional, E extends ProductoRegional> {
   pares: Par<A, E>[];
-  sinMatchAmericas: { producto: A; motivo: string }[];
+  sinMatchArgentina: { producto: A; motivo: string }[];
   sinMatchEuropa: { producto: E; motivo: string }[];
 }
 
@@ -81,7 +81,7 @@ export function puntajeMatch(a: ProductoRegional, b: ProductoRegional): number {
 }
 
 /**
- * Matchea productos del catálogo de América (US/AR comparten nsuid) con los del
+ * Matchea productos del catálogo de Argentina (EE. UU. comparte esos nsuid) con los del
  * catálogo europeo (ES y resto de Europa comparten nsuid).
  *
  * 1. Se aplican los overrides manuales (también sirven para marcar "no matchear").
@@ -90,24 +90,24 @@ export function puntajeMatch(a: ProductoRegional, b: ProductoRegional): number {
  *    americanos quieren el mismo europeo, gana el de mayor puntaje.
  */
 export function matchearCatalogos<A extends ProductoRegional, E extends ProductoRegional>(
-  americas: A[],
+  argentina: A[],
   europa: E[],
   overrides: OverrideMatcheo[] = [],
 ): ResultadoMatcheo<A, E> {
-  const porNsuidA = new Map(americas.map((p) => [p.nsuid, p]));
+  const porNsuidA = new Map(argentina.map((p) => [p.nsuid, p]));
   const porNsuidE = new Map(europa.map((p) => [p.nsuid, p]));
   const usadosA = new Set<string>();
   const usadosE = new Set<string>();
   const pares: Par<A, E>[] = [];
-  const sinMatchAmericas: { producto: A; motivo: string }[] = [];
+  const sinMatchArgentina: { producto: A; motivo: string }[] = [];
   const sinMatchEuropa: { producto: E; motivo: string }[] = [];
 
   for (const o of overrides) {
-    if (o.nsuidAmericas) usadosA.add(o.nsuidAmericas);
+    if (o.nsuidArgentina) usadosA.add(o.nsuidArgentina);
     if (o.nsuidEuropa) usadosE.add(o.nsuidEuropa);
-    const a = o.nsuidAmericas ? porNsuidA.get(o.nsuidAmericas) : undefined;
+    const a = o.nsuidArgentina ? porNsuidA.get(o.nsuidArgentina) : undefined;
     const e = o.nsuidEuropa ? porNsuidE.get(o.nsuidEuropa) : undefined;
-    if (a && e) pares.push({ americas: a, europa: e, puntaje: 1, origen: "override" });
+    if (a && e) pares.push({ argentina: a, europa: e, puntaje: 1, origen: "override" });
   }
 
   // Índice por primera palabra significativa del título para no comparar todo contra todo.
@@ -129,7 +129,7 @@ export function matchearCatalogos<A extends ProductoRegional, E extends Producto
 
   type Candidato = { a: A; e: E; puntaje: number };
   const mejores: Candidato[] = [];
-  for (const a of americas) {
+  for (const a of argentina) {
     if (usadosA.has(a.nsuid)) continue;
     const vistos = new Set<string>();
     const puntajes: { e: E; puntaje: number }[] = [];
@@ -144,7 +144,7 @@ export function matchearCatalogos<A extends ProductoRegional, E extends Producto
     puntajes.sort((x, y) => y.puntaje - x.puntaje);
     const [primero, segundo] = puntajes;
     if (!primero || primero.puntaje < UMBRAL_MATCH) {
-      sinMatchAmericas.push({
+      sinMatchArgentina.push({
         producto: a,
         motivo: primero
           ? `Mejor candidato con puntaje bajo (${primero.puntaje.toFixed(2)}): ${primero.e.titulo}`
@@ -153,7 +153,7 @@ export function matchearCatalogos<A extends ProductoRegional, E extends Producto
       continue;
     }
     if (segundo && primero.puntaje - segundo.puntaje < MARGEN_AMBIGUEDAD) {
-      sinMatchAmericas.push({ producto: a, motivo: `Ambiguo entre "${primero.e.titulo}" y "${segundo.e.titulo}"` });
+      sinMatchArgentina.push({ producto: a, motivo: `Ambiguo entre "${primero.e.titulo}" y "${segundo.e.titulo}"` });
       continue;
     }
     mejores.push({ a, e: primero.e, puntaje: primero.puntaje });
@@ -162,7 +162,7 @@ export function matchearCatalogos<A extends ProductoRegional, E extends Producto
   mejores.sort((x, y) => y.puntaje - x.puntaje);
   for (const m of mejores) {
     if (usadosE.has(m.e.nsuid)) {
-      sinMatchAmericas.push({
+      sinMatchArgentina.push({
         producto: m.a,
         motivo: `El candidato "${m.e.titulo}" ya está matcheado con otro producto`,
       });
@@ -170,11 +170,11 @@ export function matchearCatalogos<A extends ProductoRegional, E extends Producto
     }
     usadosE.add(m.e.nsuid);
     usadosA.add(m.a.nsuid);
-    pares.push({ americas: m.a, europa: m.e, puntaje: m.puntaje, origen: "automatico" });
+    pares.push({ argentina: m.a, europa: m.e, puntaje: m.puntaje, origen: "automatico" });
   }
 
   for (const e of europa) {
-    if (!usadosE.has(e.nsuid)) sinMatchEuropa.push({ producto: e, motivo: "Sin producto equivalente en América" });
+    if (!usadosE.has(e.nsuid)) sinMatchEuropa.push({ producto: e, motivo: "Sin producto equivalente en Argentina" });
   }
-  return { pares, sinMatchAmericas, sinMatchEuropa };
+  return { pares, sinMatchArgentina, sinMatchEuropa };
 }

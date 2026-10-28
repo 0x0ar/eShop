@@ -11,7 +11,7 @@ export interface ProductoCatalogo extends ProductoRegional {
 
 /** Heurística común para detectar el tipo a partir del título. */
 export function tipoDesdeTitulo(titulo: string, base: TipoProducto): TipoProducto {
-  const t = titulo.toLowerCase();
+  const t = titulo.toLowerCase().replace(/[™®©]/g, "");
   if (/nintendo switch 2 edition/.test(t)) {
     return /upgrade|mejora|actualizaci[oó]n/.test(t) ? "UPGRADE" : "SWITCH2_EDITION";
   }

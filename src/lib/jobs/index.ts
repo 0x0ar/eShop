@@ -31,7 +31,7 @@ export interface DefinicionJob {
 
 export const JOBS: Record<string, DefinicionJob> = {
   cotizaciones: { descripcion: "Dólar/euro oficial y blue (DolarAPI) y cruzadas (Frankfurter)", fn: jobCotizaciones },
-  catalogo: { descripcion: "Catálogos de América y Europa + matcheo entre regiones", fn: jobCatalogo },
+  catalogo: { descripcion: "Catálogos de Argentina y Europa + matcheo entre regiones", fn: jobCatalogo },
   rematchear: { descripcion: "Rehace el matcheo con lo guardado (tras cargar overrides)", fn: rematchear },
   precios: { descripcion: "Precios de todas las eShops configuradas", fn: jobPrecios, despues: ["resumen", "alertas"] },
   populares: {

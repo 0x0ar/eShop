@@ -4,6 +4,7 @@ import path from "node:path";
 import { fuentes } from "@config/fuentes";
 import { pedir, pedirPagina } from "@/lib/sources/http";
 import { urlPrecios } from "@/lib/sources/nintendo/precios";
+import { headersArgentina, urlConsultaArgentina } from "@/lib/sources/nintendo/argentina";
 import { urlBusquedaEuropa } from "@/lib/sources/nintendo/europa";
 import { RUTAS, enlacesFichas, esFichaGiftCard, urlInstantGaming } from "@/lib/sources/instantGaming";
 
@@ -41,7 +42,7 @@ function json(texto: string) {
 async function main() {
   await mkdir(DIR, { recursive: true });
   const nsuidsEuropa: string[] = [];
-  const nsuidsAmericas: string[] = [];
+  const nsuidsArgentina: string[] = [];
 
   await intentar("europa-catalogo.json", async () => {
     const { cuerpo } = await pedir(urlBusquedaEuropa("es", "GAME", 0, 30));
@@ -53,29 +54,36 @@ async function main() {
     await guardar("europa-dlc.json", json(cuerpo));
   });
 
-  await intentar("americas-algolia.json", async () => {
-    const cfg = fuentes.nintendoAmericas;
-    const url = `https://${cfg.appId().toLowerCase()}-dsn.algolia.net/1/indexes/${cfg.indice()}/query`;
-    const { cuerpo } = await pedir(url, {
-      metodo: "POST",
-      cuerpo: JSON.stringify({
-        query: "",
-        hitsPerPage: 30,
-        filters: "platformCode:NINTENDO_SWITCH_2 OR platformCode:NINTENDO_SWITCH",
-      }),
-      headers: {
-        "Content-Type": "application/json",
-        "X-Algolia-Application-Id": cfg.appId(),
-        "X-Algolia-API-Key": cfg.apiKey(),
-      },
+  // Catálogo de la tienda argentina (Algolia de nintendo.com/es-ar).
+  const consultarArgentina = async (cuerpo: Record<string, unknown>) =>
+    (
+      await pedir(urlConsultaArgentina(), {
+        metodo: "POST",
+        cuerpo: JSON.stringify(cuerpo),
+        headers: headersArgentina(),
+      })
+    ).cuerpo;
+  await intentar("argentina-algolia.json", async () => {
+    const cuerpo = await consultarArgentina({
+      query: "",
+      hitsPerPage: 30,
+      filters: 'platform:"Nintendo Switch" OR platform:"Nintendo Switch 2"',
     });
-    await guardar("americas-algolia.json", json(cuerpo));
-    for (const h of JSON.parse(cuerpo).hits) if (h.nsuid) nsuidsAmericas.push(String(h.nsuid));
+    await guardar("argentina-algolia.json", json(cuerpo));
+    for (const h of JSON.parse(cuerpo).hits) if (h.nsuid) nsuidsArgentina.push(String(h.nsuid));
+  });
+  await intentar("argentina-algolia-dlc.json", async () => {
+    const cuerpo = await consultarArgentina({
+      query: "",
+      hitsPerPage: 12,
+      filters: 'dlcType:"Individual" OR dlcType:"Paquete" OR dlcType:"ROM Bundle" OR editions:"Pase de mejora"',
+    });
+    await guardar("argentina-algolia-dlc.json", json(cuerpo));
   });
 
   for (const [pais, idioma, ids] of [
-    ["AR", "es", nsuidsAmericas],
-    ["US", "en", nsuidsAmericas],
+    ["AR", "es", nsuidsArgentina],
+    ["US", "en", nsuidsArgentina],
     ["ES", "es", nsuidsEuropa],
     ["GB", "en", nsuidsEuropa],
     ["PL", "en", nsuidsEuropa],

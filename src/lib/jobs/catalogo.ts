@@ -11,12 +11,12 @@ import {
   type TipoProducto,
 } from "@/lib/domain/matcheo";
 import { normalizarTitulo, slugificar } from "@/lib/domain/texto";
-import { descargarCatalogoAmericas } from "@/lib/sources/nintendo/americas";
+import { descargarCatalogoArgentina } from "@/lib/sources/nintendo/argentina";
 import type { ProductoCatalogo } from "@/lib/sources/nintendo/catalogo";
 import { descargarCatalogoEuropa, descargarEnlacesEuropa } from "@/lib/sources/nintendo/europa";
 import { registrarError, registrarExito, type ContextoJob, type FuncionJob } from "./runner";
 
-type Catalogo = "AMERICAS" | "EUROPA";
+type Catalogo = "ARGENTINA" | "EUROPA";
 
 export function limiteCatalogo(): number | undefined {
   const n = Number(process.env.CATALOGO_LIMITE ?? 0);
@@ -67,7 +67,7 @@ async function leerOverrides(): Promise<OverrideMatcheo[]> {
   } catch {
     // archivo opcional
   }
-  return [...deArchivo, ...deBase.map((o) => ({ nsuidAmericas: o.nsuidAmericas, nsuidEuropa: o.nsuidEuropa }))];
+  return [...deArchivo, ...deBase.map((o) => ({ nsuidArgentina: o.nsuidArgentina, nsuidEuropa: o.nsuidEuropa }))];
 }
 
 type FilaProducto = Awaited<ReturnType<typeof db.productoRegional.findMany>>[number];
@@ -91,7 +91,7 @@ interface Grupo {
 }
 
 function datosJuego(g: Grupo) {
-  // Título en español si existe (catálogo europeo, núcleo ES); si no, el de América.
+  // Título en español si existe (catálogo europeo, núcleo ES); si no, el de Argentina.
   const principal = g.e ?? g.a!;
   const otro = g.e && g.a ? g.a : undefined;
   const plataforma = g.a && g.e && g.a.plataforma !== g.e.plataforma ? "AMBAS" : principal.plataforma;
@@ -190,20 +190,20 @@ async function reconciliar(grupos: Grupo[], ctx: ContextoJob) {
 /** Vuelve a matchear con lo que hay en la base (también lo usa /admin al cargar un override). */
 export async function rematchear(ctx: ContextoJob) {
   const [filasA, filasE, overrides] = await Promise.all([
-    db.productoRegional.findMany({ where: { catalogo: "AMERICAS" } }),
+    db.productoRegional.findMany({ where: { catalogo: "ARGENTINA" } }),
     db.productoRegional.findMany({ where: { catalogo: "EUROPA" } }),
     leerOverrides(),
   ]);
   const r = matchearCatalogos(filasA.map(aDominio), filasE.map(aDominio), overrides);
   ctx.log(
-    `Matcheo: ${r.pares.length} pares, ${r.sinMatchAmericas.length} solo América, ${r.sinMatchEuropa.length} solo Europa`,
+    `Matcheo: ${r.pares.length} pares, ${r.sinMatchArgentina.length} solo Argentina, ${r.sinMatchEuropa.length} solo Europa`,
   );
 
   const enPar = new Set<string>();
   const grupos: Grupo[] = r.pares.map((p) => {
-    enPar.add(p.americas.fila.id);
+    enPar.add(p.argentina.fila.id);
     enPar.add(p.europa.fila.id);
-    return { a: p.americas.fila, e: p.europa.fila };
+    return { a: p.argentina.fila, e: p.europa.fila };
   });
   for (const f of filasA) if (!enPar.has(f.id)) grupos.push({ a: f });
   for (const f of filasE) if (!enPar.has(f.id)) grupos.push({ e: f });
@@ -212,8 +212,8 @@ export async function rematchear(ctx: ContextoJob) {
   // Registro de productos sin matcheo para revisar en /admin/estado.
   await db.sinMatcheo.deleteMany({});
   const sinMatch = [
-    ...r.sinMatchAmericas.map((x) => ({
-      catalogo: "AMERICAS",
+    ...r.sinMatchArgentina.map((x) => ({
+      catalogo: "ARGENTINA",
       nsuid: x.producto.nsuid,
       titulo: x.producto.titulo,
       motivo: x.motivo,
@@ -235,17 +235,17 @@ export const jobCatalogo: FuncionJob = async (ctx) => {
   const limite = limiteCatalogo();
   const errores: string[] = [];
 
-  if (!fuentes.nintendoAmericas.habilitado()) {
-    ctx.log("Catálogo de América deshabilitado (NINTENDO_AMERICAS_HABILITADO=0): no habrá precios de AR ni US");
+  if (!fuentes.nintendoArgentina.habilitado()) {
+    ctx.log("Catálogo de Argentina deshabilitado (NINTENDO_ARGENTINA_HABILITADO=0): no habrá precios de AR ni US");
   } else {
     try {
-      const americas = await descargarCatalogoAmericas({ limite });
-      ctx.log(`América: ${americas.length} productos`);
-      await guardarProductos("AMERICAS", americas, ctx);
-      await registrarExito("nintendo-catalogo-americas", `${americas.length} productos`);
+      const argentina = await descargarCatalogoArgentina({ limite, log: ctx.log });
+      ctx.log(`Argentina: ${argentina.length} productos`);
+      await guardarProductos("ARGENTINA", argentina, ctx);
+      await registrarExito("nintendo-catalogo-argentina", `${argentina.length} productos`);
     } catch (e) {
-      errores.push(`América: ${(e as Error).message}`);
-      await registrarError("nintendo-catalogo-americas", e);
+      errores.push(`Argentina: ${(e as Error).message}`);
+      await registrarError("nintendo-catalogo-argentina", e);
     }
   }
 

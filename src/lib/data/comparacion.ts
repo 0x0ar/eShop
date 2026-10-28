@@ -59,7 +59,7 @@ export function aOfertaGiftCard(g: FilaGiftCard): OfertaGiftCard {
 
 /** Regiones cuyo catálogo está apagado por configuración. */
 export function regionesSinDatos(): RegionComparacion[] {
-  return fuentes.nintendoAmericas.habilitado() ? [] : ["AR", "US"];
+  return fuentes.nintendoArgentina.habilitado() ? [] : ["AR", "US"];
 }
 
 /** Une los enlaces por país de los productos regionales de un juego. */

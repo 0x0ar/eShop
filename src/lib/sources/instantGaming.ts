@@ -183,7 +183,7 @@ export function parsearFicha(html: string): FichaIG | null {
  */
 export function etiquetaRegion(paises: string[]): "EU" | "US" | "LATAM" | "GLOBAL" | null {
   if (paises.length === 0) return null;
-  const americanos = paises.filter((p) => PAISES[p]?.catalogo === "AMERICAS");
+  const americanos = paises.filter((p) => PAISES[p]?.catalogo === "ARGENTINA");
   if (americanos.length === 0) return "EU";
   if (americanos.length < paises.length) return "GLOBAL";
   if (americanos.every((p) => p === "US")) return "US";

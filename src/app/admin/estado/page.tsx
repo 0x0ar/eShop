@@ -49,7 +49,7 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
     );
   }
   const filtro = typeof p.q === "string" ? p.q.slice(0, 80) : "";
-  const catalogo = p.catalogo === "EUROPA" ? "EUROPA" : p.catalogo === "AMERICAS" ? "AMERICAS" : undefined;
+  const catalogo = p.catalogo === "EUROPA" ? "EUROPA" : p.catalogo === "ARGENTINA" ? "ARGENTINA" : undefined;
 
   const [fuentes, conteos, ultimasEjecuciones, sinMatch, totalSinMatch, overrides] = await Promise.all([
     db.estadoFuente.findMany({ orderBy: { fuente: "asc" } }),
@@ -229,7 +229,7 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
                 className="border-input bg-card h-10 rounded-full border-2 px-3 text-sm"
               >
                 <option value="">Ambos</option>
-                <option value="AMERICAS">América</option>
+                <option value="ARGENTINA">Argentina</option>
                 <option value="EUROPA">Europa</option>
               </select>
             </div>
@@ -250,7 +250,7 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
               <tbody>
                 {sinMatch.map((s) => (
                   <tr key={s.id} className="border-border border-t align-top">
-                    <td className="py-1">{s.catalogo === "AMERICAS" ? "América" : "Europa"}</td>
+                    <td className="py-1">{s.catalogo === "ARGENTINA" ? "Argentina" : "Europa"}</td>
                     <td className="py-1 font-mono text-xs">{s.nsuid}</td>
                     <td className="py-1">{s.titulo}</td>
                     <td className="text-muted-foreground py-1 text-xs">{s.motivo}</td>
@@ -266,15 +266,15 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
         <CardHeader>
           <CardTitle>Overrides de matcheo</CardTitle>
           <CardDescription>
-            Uní un producto de América con uno de Europa, o dejá uno de los dos vacío para forzar “sin match”. Al
+            Uní un producto de Argentina con uno de Europa, o dejá uno de los dos vacío para forzar “sin match”. Al
             guardar se rehace el matcheo. También se pueden versionar en <code>config/match-overrides.json</code>.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <form action={agregarOverride} className="grid gap-3 sm:grid-cols-4 sm:items-end">
             <div className="space-y-1">
-              <Label htmlFor="ov-a">nsuid América</Label>
-              <Input id="ov-a" name="nsuidAmericas" inputMode="numeric" pattern="\d{14}" />
+              <Label htmlFor="ov-a">nsuid Argentina</Label>
+              <Input id="ov-a" name="nsuidArgentina" inputMode="numeric" pattern="\d{14}" />
             </div>
             <div className="space-y-1">
               <Label htmlFor="ov-e">nsuid Europa</Label>
@@ -293,7 +293,7 @@ async function Contenido({ searchParams }: { searchParams: Promise<Record<string
             {overrides.map((o) => (
               <li key={o.id} className="flex flex-wrap items-center gap-2">
                 <span className="font-mono text-xs">
-                  {o.nsuidAmericas ?? "—"} ↔ {o.nsuidEuropa ?? "—"}
+                  {o.nsuidArgentina ?? "—"} ↔ {o.nsuidEuropa ?? "—"}
                 </span>
                 {o.nota && <span className="text-muted-foreground">{o.nota}</span>}
                 <form action={borrarOverride}>

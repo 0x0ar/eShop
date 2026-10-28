@@ -1,0 +1,1826 @@
+{
+  "hits": [
+    {
+      "availability": [
+        "Reserva",
+        "Próximos lanzamientos"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 10.000+",
+      "collectionPriceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Travesuras cómicas",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Violencia de fantasía",
+          "type": "CONTENT_DESCRIPTOR"
+        }
+      ],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "e10",
+        "label": "Todos +10",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "contentRatingCode": "E10",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 14999,
+        "regPrice": 14999,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 10.000+",
+      "priceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "productImage": "store/software/switch2/70050000081248/c5687664c64e87149d31ca6fadc0a3bfe97540316d06ac5aa3ea45b55fc1bf58",
+      "productGallery": [
+        {
+          "publicId": "/store/software/switch2/70050000081248/Video/a18500e2716b434e50abc5b4cf09c2c897d8bc8a3e080dd84bf68c7f9728a9bb",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "store/software/switch2/70050000081248/137df644ef89884c55808e4a001c3716974afb8c6783fc82d7886722752017e8",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000081248/c0ae5f0edf442120a640cf44272860ec98b19c68d1453935729b22c5b250a80d",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000081248/04326c511d4cd6428ab0fdd61157de38aaef79d0b8d2cb43e99b61c1c672d933",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000081248/b996acba5b80be38b8764c3be9ee88395a2589a9a74662f1f80a1ea6605c4fc4",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000081248/e9872285522859caecbef7ab0ede2ea20d0c57602ac0ca9a0ce52958d09d90c9",
+          "resourceType": "image"
+        }
+      ],
+      "productType": [
+        "Juegos"
+      ],
+      "releaseDate": "2026-11-12T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500081248",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora Pikmin™ 4 – Nintendo Switch™ 2 Edition + Academia Dandori",
+      "titleKey": "paquete-de-mejora-pikmin-4-nintendo-switch-2-edition-academia-dandori-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/pikmin-4-nintendo-switch-2-edition-plus-dandori-academy-upgrade-pack-switch-2/",
+      "urlKey": "pikmin-4-nintendo-switch-2-edition-plus-dandori-academy-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": true,
+        "isPurchasable": true,
+        "regularPrice": 14999,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenres": [],
+      "gameGenreLabels": [],
+      "gameFeatures": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsoFeaturesFilter": [],
+      "nsuid": "70050000081248",
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlay": [],
+      "waysToPlayLabels": [],
+      "objectID": "7500081248",
+      "_distinctSeqID": 0
+    },
+    {
+      "availability": [
+        "Reserva",
+        "Próximos lanzamientos"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 10.000+",
+      "collectionPriceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Lenguaje",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Bajo contenido de sangre",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Temas insinuantes",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Violencia",
+          "type": "CONTENT_DESCRIPTOR"
+        }
+      ],
+      "contentRatingCode": "T",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 14199,
+        "regPrice": 14199,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 10.000+",
+      "priceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "productImage": "store/software/switch2/70050000075214/f9c705e8b4990d25cd97239bbf8efc941fdcb39730e6fcb193b72eb3bfe38b73",
+      "productGallery": [
+        {
+          "publicId": "/store/software/switch2/70050000075214/Video/fa96e6046e83762b9927f557e657c536b76798f39ee4507eddb6605fb28be90d",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "/store/software/switch2/70050000075214/Video/e084ac27bf4480d13e9a99814e1360cbcf0e7f14773f5e836cf7926a2d361657",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075214/57b97ed3e356610ac7a1f0e3dfe5993306a7b7cb0e788ade7938eedd39fc8dc1",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075214/d24e7bc8c30c7d2efd4632871a8f48d5518dbed650962f93ae100bd4b832ddcb",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075214/11bd4a960fbd70e75250786efe4a593c69ab63cb462b05157f600f15e7f070b1",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075214/8b022ca2e8db0b26daaae2c3165613591f200299249806c4a5395bd42ea37447",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075214/631835ad19670ccd97e005b7e28d5a45b5f26b8197f5d473f9d4ed6a15f2cd73",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075214/b77dbb87572dcfeeb73624c6a523e2793fe883a7ea1895deee0890a6fadaff88",
+          "resourceType": "image"
+        }
+      ],
+      "productType": [
+        "Juegos"
+      ],
+      "releaseDate": "2026-12-03T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500075214",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora Xenoblade Chronicles™ 3 – Nintendo Switch™ 2 Edition",
+      "titleKey": "paquete-de-mejora-xenoblade-chronicles-3-nintendo-switch-2-edition-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/xenoblade-chronicles-3-nintendo-switch-2-edition-upgrade-pack-switch-2/",
+      "urlKey": "xenoblade-chronicles-3-nintendo-switch-2-edition-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": true,
+        "isPurchasable": true,
+        "regularPrice": 14199,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenres": [],
+      "gameGenreLabels": [],
+      "gameFeatures": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsoFeaturesFilter": [],
+      "nsuid": "70050000075214",
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlay": [],
+      "waysToPlayLabels": [],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "t",
+        "label": "Adolescentes",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "objectID": "7500075214",
+      "_distinctSeqID": 0
+    },
+    {
+      "availability": [
+        "Disponible ya"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 10.000+",
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Lenguaje",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Temas insinuantes",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Uso de alcohol y tabaco",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Violencia",
+          "type": "CONTENT_DESCRIPTOR"
+        }
+      ],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "t",
+        "label": "Adolescentes",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "contentRatingCode": "T",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 14999,
+        "regPrice": 14999,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 10.000+",
+      "productImage": "store/software/switch2/70050000075154/e6fd2a34d9cb9dd63889d759b540bbf622604c01ff81a12339425f49a533a446",
+      "productGallery": [
+        {
+          "publicId": "/store/software/switch2/70050000075154/Video/69509518889e0fe537437da0da031376cdb6bf6676815eee6a8c59217ae36829",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "/store/software/switch2/70050000075154/Video/e084ac27bf4480d13e9a99814e1360cbcf0e7f14773f5e836cf7926a2d361657",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075154/fae6c64f216eff7244ff5a9c2d802da5a63d734d6d3c9a77101cb9c9495c8d12",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075154/870bdc7c0928eee7d52522894cb5eeb02097957acbcad85553967cb64a5ac761",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075154/b31e0140a4c5086e9516b7aab417c3193169ce9615c2315c10030737ee32f314",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075154/f53ef66b741c844ad04b9ecacd6e4f4ee53496a891c8e0be59b30cebb7b4dae4",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075154/5dd5bbbfb53bded13bf105666954fbf156d627c7e92e0738743b007795621037",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000075154/0b5203297ed99f852939ed0b246786078b7b7330b2b582e975235c345d5d7d25",
+          "resourceType": "image"
+        }
+      ],
+      "releaseDate": "2026-07-30T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500075154",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora Xenoblade Chronicles™ 2 – Nintendo Switch™ 2 Edition",
+      "titleKey": "paquete-de-mejora-xenoblade-chronicles-2-nintendo-switch-2-edition-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/xenoblade-chronicles-2-nintendo-switch-2-edition-upgrade-pack-switch-2/",
+      "urlKey": "xenoblade-chronicles-2-nintendo-switch-2-edition-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": false,
+        "isPurchasable": true,
+        "regularPrice": 14999,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenres": [],
+      "gameGenreLabels": [],
+      "gameFeatures": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsuid": "70050000075154",
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlay": [],
+      "waysToPlayLabels": [],
+      "collectionPriceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "priceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "productType": [
+        "Juegos"
+      ],
+      "nsoFeaturesFilter": [],
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "objectID": "7500075154",
+      "_distinctSeqID": 0
+    },
+    {
+      "availability": [
+        "Disponible ya"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 10.000+",
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Sangre",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Lenguaje moderado",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Desnudez parcial",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Uso de alcohol y tabaco",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Violencia",
+          "type": "CONTENT_DESCRIPTOR"
+        }
+      ],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "t",
+        "label": "Adolescentes",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "contentRatingCode": "T",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 14999,
+        "regPrice": 14999,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 10.000+",
+      "productImage": "store/software/switch2/70050000074839/e795854482f2bb4969659c8280f6b46c4cfb3ceede1e6bab5319e8e89950c9ba",
+      "productGallery": [
+        {
+          "publicId": "/store/software/switch2/70050000074839/Video/99375de76a1baff8cad3577c202ade22899ea8fa0fc8d1e1fd34a51afb9888ed",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "store/software/switch2/70050000074839/48b08fc41b8f3c6611644601e5ca55b7ab9b490f16a3be20e06a61a0e95a1fcf",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000074839/1da7d65953454f8a1690b2d00a8a31df2cbfc39dc573e572338ae181927e0b05",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000074839/d7fcd694054ff4e88f154ba518ca5923cac30cea9d139c8eabc802f9eac5d80a",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000074839/354abe984097059ef68ff703e1169da0961692e69dd9edf9521daf3ef423325c",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000074839/337df4dabe5bae5fec9a7d4f7c2fb38af060df70f1199ca07c6dd9edcd4158bb",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000074839/ab69cf11a408c5bb7751917ac6e24ae5f7cb6897bd8dcd0542b26c4691fd8ba3",
+          "resourceType": "image"
+        }
+      ],
+      "releaseDate": "2026-06-09T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500074839",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora Xenoblade Chronicles™: Definitive Edition – Nintendo Switch™ 2 Edition",
+      "titleKey": "paquete-de-mejora-xenoblade-chronicles-definitive-edition-nintendo-switch-2-edition-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/xenoblade-chronicles-definitive-edition-nintendo-switch-2-edition-upgrade-pack-switch-2/",
+      "urlKey": "xenoblade-chronicles-definitive-edition-nintendo-switch-2-edition-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": false,
+        "isPurchasable": true,
+        "regularPrice": 14999,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenres": [],
+      "gameGenreLabels": [],
+      "gameFeatures": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsuid": "70050000074839",
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlay": [],
+      "waysToPlayLabels": [],
+      "collectionPriceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "priceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "productType": [
+        "Juegos"
+      ],
+      "nsoFeaturesFilter": [],
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "objectID": "7500074839",
+      "_distinctSeqID": 0
+    },
+    {
+      "availability": [
+        "Disponible ya"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 10.000+",
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Compras dentro del juego",
+          "type": "INTERACTIVE_ELEMENT"
+        }
+      ],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "e",
+        "label": "Todos",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "contentRatingCode": "E",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 14999,
+        "regPrice": 14999,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 10.000+",
+      "productImage": "store/software/switch2/70050000073921/6ec83542de00a10ef871eb3a3dff9238e57c1782f5453e0079dd36ed90cff665",
+      "productGallery": [
+        {
+          "publicId": "store/software/switch2/70050000073921/9e35af5b8f4d64300ade05bc7b6d888c536a2e41c74e0788ddb4063583fb268d",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000073921/d72b626eb712e0cf1f9dfcb1c9be5fa33a31291c70796a8b48a284b5c642c6cd",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000073921/c38249cd7a2dab73c83effc64269540feeedccdc8ead16d2ce39fd58d743cb65",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000073921/41da4c701b25ae4e0a87c48b95e90e406943dc3c9ecebbcb826311b276267b6f",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000073921/8425a6342a4db9ea9159dad4b681edc8a8f9636bd8f44b94314d08cacac4e588",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000073921/c8903d23334dbbbf24a946def111b8a191f71aeec3dd9fa3df94e19bcf7324e5",
+          "resourceType": "image"
+        }
+      ],
+      "releaseDate": "2026-07-16T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500073921",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora Fitness Boxing 3: Your Personal Trainer – Nintendo Switch™ 2 Edition",
+      "titleKey": "paquete-de-mejora-fitness-boxing-3-your-personal-trainer-nintendo-switch-2-edition-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/fitness-boxing-3-your-personal-trainer-nintendo-switch-2-edition-upgrade-pack-switch-2/",
+      "urlKey": "fitness-boxing-3-your-personal-trainer-nintendo-switch-2-edition-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": false,
+        "isPurchasable": true,
+        "regularPrice": 14999,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenres": [],
+      "gameGenreLabels": [],
+      "gameFeatures": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsuid": "70050000073921",
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlay": [],
+      "waysToPlayLabels": [],
+      "collectionPriceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "priceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "productType": [
+        "Juegos"
+      ],
+      "nsoFeaturesFilter": [],
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "objectID": "7500073921",
+      "_distinctSeqID": 0
+    },
+    {
+      "availability": [
+        "Disponible ya"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 5.000 - $ 9.999,99",
+      "collectionPriceRangeFilter": [
+        "$ 5.000 - $ 9.999,99"
+      ],
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Animación de sangre",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Lenguaje",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Temas insinuantes",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Uso de alcohol",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Violencia",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Compras dentro del juego",
+          "type": "INTERACTIVE_ELEMENT"
+        }
+      ],
+      "contentRatingCode": "T",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 7499,
+        "regPrice": 7499,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 5.000 - $ 9.999,99",
+      "priceRangeFilter": [
+        "$ 5.000 - $ 9.999,99"
+      ],
+      "productImage": "store/software/switch2/70050000070210/e3a47e05c84440b18532c08e6348e355c675cf2b1f4a79c8a4f074d5736aa9f9",
+      "productGallery": [
+        {
+          "publicId": "/store/software/switch2/70050000070210/Video/27dd33b2cbb86d7355515c0f1491fb1b0731fcb7ef28208769516c938ab7b193",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "store/software/switch2/70050000070210/cf89a09a2e24b67b52886809a6f5e7c0759b4dcd9e5e2c20c2f1b5de30331fc5",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000070210/f63aaa972b5ddff163934ad47da5de534ad2076828c23ad6683ed8268d4b1ba2",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000070210/e2ec24af5431e0b05b5124a13d3bb96bf84cfbc1d1d30d866b579ddd45d9a558",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000070210/935de7799fca6ca7078725c9c74919fe47c1bd0b846b7be7370f9ca9b0818552",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000070210/9eacadda2bf5924c28f63c44ece599b2de093b5fe3b0a3fc7e11ed0312f4547c",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000070210/671b340848d6424e9ae0554da1c3dfc4010afef93feacb7d5c4d93fa5513a0b6",
+          "resourceType": "image"
+        }
+      ],
+      "productType": [
+        "Juegos"
+      ],
+      "releaseDate": "2026-02-19T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500070210",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora Xenoblade Chronicles™ X: Definitive Edition – Nintendo Switch™ 2 Edition",
+      "titleKey": "paquete-de-mejora-xenoblade-chronicles-x-definitive-edition-nintendo-switch-2-edition-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/xenoblade-chronicles-x-definitive-edition-nintendo-switch-2-edition-upgrade-pack-switch-2/",
+      "urlKey": "xenoblade-chronicles-x-definitive-edition-nintendo-switch-2-edition-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": false,
+        "isPurchasable": true,
+        "regularPrice": 7499,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenres": [],
+      "gameGenreLabels": [],
+      "gameFeatures": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsoFeaturesFilter": [],
+      "nsuid": "70050000070210",
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlay": [],
+      "waysToPlayLabels": [],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "t",
+        "label": "Adolescentes",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "objectID": "7500070210",
+      "_distinctSeqID": 0
+    },
+    {
+      "availability": [
+        "Disponible ya"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 10.000+",
+      "collectionPriceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Violencia moderada de fantasía",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Compras dentro del juego",
+          "type": "INTERACTIVE_ELEMENT"
+        }
+      ],
+      "contentRatingCode": "E",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 29999,
+        "regPrice": 29999,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 10.000+",
+      "priceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "productImage": "store/software/switch2/70050000069229/901218f8b149d63c90c125a3969db5f6d06f3a7cc649300b3e788116a21a84cd",
+      "productGallery": [
+        {
+          "publicId": "/store/software/switch2/70050000069229/Video/942540d3443409ebaa7514c9da20688f9b0569350d56485877cab4f52bdcc2b5",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "/store/software/switch2/70050000069229/Video/f637465be125dd19b25011b0b605661160f60f0e1c307dd09281907336cc23ad",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "/store/software/switch2/70050000069229/Video/81378e573c19284c949d3a9441d13b2c150727a929860a51eaa871a2a74dd607",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "store/software/switch2/70050000069229/bc7687198b976e453650aa06594f121b14989245bb7bd1874d33e501e47e292a",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000069229/6b1e2332861f6739e5c0e4c437a71aae8557a4a440e2177c3b1b4d395c031257",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000069229/9d3aa72396e60e21f51a11f316ff2c40755689bd12b52589f063e47f4395a5be",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000069229/e0ad4e56306d3ccfb77eec67b429c146d711cb78949a63bcf954f7debfbca62b",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000069229/56d189526477383b7ad1b5ebb2c8678a6bfc564b7130ea70c88e6506c3d3d00e",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000069229/4aa93d49df0b303aa66ceb72089848732345a299083c3046302cd93990ef4485",
+          "resourceType": "image"
+        }
+      ],
+      "productType": [
+        "Juegos"
+      ],
+      "releaseDate": "2026-03-26T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500069229",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora Super Mario Bros.™ Wonder – Nintendo Switch™ 2 Edition + Encuentro en el Parque Belabel",
+      "titleKey": "paquete-de-mejora-super-mario-bros-wonder-nintendo-switch-2-edition-encuentro-en-el-parque-belabel-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/super-mario-bros-wonder-nintendo-switch-2-edition-plus-meetup-in-bellabel-park-upgrade-pack-switch-2/",
+      "urlKey": "super-mario-bros-wonder-nintendo-switch-2-edition-plus-meetup-in-bellabel-park-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": false,
+        "isPurchasable": true,
+        "regularPrice": 29999,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenres": [],
+      "gameGenreLabels": [],
+      "gameFeatures": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsoFeaturesFilter": [],
+      "nsuid": "70050000069229",
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlay": [],
+      "waysToPlayLabels": [],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "e",
+        "label": "Todos",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "objectID": "7500069229",
+      "_distinctSeqID": 0
+    },
+    {
+      "availability": [
+        "Disponible ya"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 5.000 - $ 9.999,99",
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Travesuras cómicas",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Violencia moderada de fantasía",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Interacción de usuarios",
+          "type": "INTERACTIVE_ELEMENT"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Compras dentro del juego",
+          "type": "INTERACTIVE_ELEMENT"
+        }
+      ],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "e",
+        "label": "Todos",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "contentRatingCode": "E",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 7499,
+        "regPrice": 7499,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 5.000 - $ 9.999,99",
+      "productImage": "store/software/switch2/70050000064914/749cb30819c96dc883bf8ac71dfe5a27469b2ea035f81775dd23ab8b8c82bc9d",
+      "productGallery": [
+        {
+          "publicId": "/store/software/switch2/70050000064914/Video/7d5d3b61cf5c0e4755ff2534242026e69a757ee9a97b704a076ccab474b419e1",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "store/software/switch2/70050000064914/ea941e232f40da16abffd0104a339c04705b8aba4a63abd5d89f0ffb21598e03",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000064914/16990de19b9c7e5b71ef5aa5e68fced248928ebfe23453045a836f364440f850",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000064914/15ac38a02a332a562a94bd9aa81368ac4cf0cb5339e2b8c7c5eabd130ee6374a",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000064914/ed4432ed02fdff6c6dd62152b22ac2080415c9f8ef32f08f0f398de5dea1a5ed",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000064914/e637e182a8dc3560bac0a127149eccb01939d1c7f05fe7f17719dd3f90a44262",
+          "resourceType": "image"
+        }
+      ],
+      "releaseDate": "2026-01-15T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500064914",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora Animal Crossing™: New Horizons – Nintendo Switch™ 2 Edition",
+      "titleKey": "paquete-de-mejora-animal-crossing-new-horizons-nintendo-switch-2-edition-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/animal-crossing-new-horizons-nintendo-switch-2-edition-upgrade-pack-switch-2/",
+      "urlKey": "animal-crossing-new-horizons-nintendo-switch-2-edition-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": false,
+        "isPurchasable": true,
+        "regularPrice": 7499,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenreLabels": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsuid": "70050000064914",
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlayLabels": [],
+      "gameGenres": [],
+      "gameFeatures": [],
+      "waysToPlay": [],
+      "collectionPriceRangeFilter": [
+        "$ 5.000 - $ 9.999,99"
+      ],
+      "priceRangeFilter": [
+        "$ 5.000 - $ 9.999,99"
+      ],
+      "productType": [
+        "Juegos"
+      ],
+      "nsoFeaturesFilter": [],
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "objectID": "7500064914",
+      "_distinctSeqID": 0
+    },
+    {
+      "availability": [
+        "Disponible ya"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 10.000+",
+      "collectionPriceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Animación de sangre",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Violencia",
+          "type": "CONTENT_DESCRIPTOR"
+        }
+      ],
+      "contentRatingCode": "T",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 14999,
+        "regPrice": 14999,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 10.000+",
+      "priceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "productImage": "store/software/switch2/70050000062489/6bc40d5d63f7139f26f29c3d0d9b82dbcbae85e2bebcd2995d39c991e665c802",
+      "productGallery": [],
+      "productType": [
+        "Juegos"
+      ],
+      "releaseDate": "2025-12-04T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500062489",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora Metroid Prime™ 4: Beyond – Nintendo Switch™ 2 Edition",
+      "titleKey": "paquete-de-mejora-metroid-prime-4-beyond-nintendo-switch-2-edition-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/metroid-prime-4-beyond-nintendo-switch-2-edition-upgrade-pack-switch-2/",
+      "urlKey": "metroid-prime-4-beyond-nintendo-switch-2-edition-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": false,
+        "isPurchasable": true,
+        "regularPrice": 14999,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenres": [],
+      "gameGenreLabels": [],
+      "gameFeatures": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsoFeaturesFilter": [],
+      "nsuid": "70050000062489",
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlay": [],
+      "waysToPlayLabels": [],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "t",
+        "label": "Adolescentes",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "objectID": "7500062489",
+      "_distinctSeqID": 0
+    },
+    {
+      "availability": [
+        "Disponible ya"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 10.000+",
+      "collectionPriceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Violencia de fantasía",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Compras dentro del juego",
+          "type": "INTERACTIVE_ELEMENT"
+        }
+      ],
+      "contentRatingCode": "E10",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 14999,
+        "regPrice": 14999,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 10.000+",
+      "priceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "productImage": "store/software/switch2/70050000058383/175f93b38bcbfd5a51071e7eb0e8f388a9ef3ffa25f21cb6c6b940b387cae3fc",
+      "productGallery": [
+        {
+          "publicId": "/store/software/switch2/70050000058383/Video/1d3dcc1e51ceea0f3918e48a290c33840653bfb2c9c0a71adf57c30003827251",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "store/software/switch2/70050000058383/802996178c8ad806e1a775a4f004f20959451e6bec4893305ab117d9f7fe484a",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000058383/faf66f1395baa0b4a9b959f72f446a5386ba2779d1e8d27a115605f089699681",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000058383/5d23a0f34b2c8f5a9c22724692d58360e6313671a949663caf10017b59cb3a05",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000058383/81b3fb17df3d4bde4419193b1d85e7ea756f2c0920a84ab3b66689947bd44f7b",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000058383/7b6801a94fd217fe4b2446f1755ca4e27449d26f8c31bba6b393a5563e031155",
+          "resourceType": "image"
+        }
+      ],
+      "productType": [
+        "Juegos"
+      ],
+      "releaseDate": "2025-10-16T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500058383",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora Leyendas Pokémon™: Z-A – Nintendo Switch™ 2 Edition",
+      "titleKey": "paquete-de-mejora-leyendas-pokemon-z-a-nintendo-switch-2-edition-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/pokemon-legends-z-a-nintendo-switch-2-edition-upgrade-pack-switch-2/",
+      "urlKey": "pokemon-legends-z-a-nintendo-switch-2-edition-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": false,
+        "isPurchasable": true,
+        "regularPrice": 14999,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenres": [],
+      "gameGenreLabels": [],
+      "gameFeatures": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsoFeaturesFilter": [],
+      "nsuid": "70050000058383",
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlay": [],
+      "waysToPlayLabels": [],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "e10",
+        "label": "Todos +10",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "objectID": "7500058383",
+      "_distinctSeqID": 0
+    },
+    {
+      "availability": [
+        "Disponible ya"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 10.000+",
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Violencia de fantasía",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Temas insinuantes moderados",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Uso de alcohol",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Compras dentro del juego",
+          "type": "INTERACTIVE_ELEMENT"
+        }
+      ],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "e10",
+        "label": "Todos +10",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "contentRatingCode": "E10",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 14999,
+        "regPrice": 14999,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 10.000+",
+      "productImage": "store/software/switch2/70050000057001/cfe9f8d674be958326d3ba11fc7598a4383e5c5d7809b6239ccac0783aac6cd8",
+      "productGallery": [
+        {
+          "publicId": "/store/software/switch2/70050000057001/Video/9a62939be14a1c6ebdc5ef24b2d05800db5504ab7b3b951866820f3e392aa30f",
+          "resourceType": "video"
+        }
+      ],
+      "releaseDate": "2025-06-05T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500057001",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora The Legend of Zelda™: Breath of the Wild – Nintendo Switch™ 2 Edition",
+      "titleKey": "paquete-de-mejora-the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-upgrade-pack-switch-2/",
+      "urlKey": "the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": false,
+        "isPurchasable": true,
+        "regularPrice": 14999,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenreLabels": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsuid": "70050000057001",
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlayLabels": [],
+      "gameGenres": [],
+      "gameFeatures": [],
+      "waysToPlay": [],
+      "collectionPriceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "priceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "productType": [
+        "Juegos"
+      ],
+      "nsoFeaturesFilter": [],
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "objectID": "7500057001",
+      "_distinctSeqID": 0
+    },
+    {
+      "availability": [
+        "Disponible ya"
+      ],
+      "categoryIds": [
+        "games",
+        "nintendo_switch",
+        "nintendo_3ds_family"
+      ],
+      "collectionPriceRange": "$ 10.000+",
+      "collectionPriceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "contentDescriptors": [
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Violencia moderada de fantasía",
+          "type": "CONTENT_DESCRIPTOR"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Interacción de usuarios",
+          "type": "INTERACTIVE_ELEMENT"
+        },
+        {
+          "__typename": "ContentDescriptor",
+          "label": "Compras dentro del juego",
+          "type": "INTERACTIVE_ELEMENT"
+        }
+      ],
+      "contentRatingCode": "E",
+      "corePlatforms": [
+        "Nintendo Switch 2"
+      ],
+      "description": null,
+      "exclusive": false,
+      "featuredProduct": true,
+      "franchises": [],
+      "isSalableQty": true,
+      "platform": "Nintendo Switch 2",
+      "platformCode": "NINTENDO_SWITCH_2",
+      "platinumPoints": null,
+      "playModes": null,
+      "price": {
+        "finalPrice": 29999,
+        "regPrice": 29999,
+        "discounted": false,
+        "salePrice": null,
+        "amountOff": null,
+        "percentOff": null
+      },
+      "priceRange": "$ 10.000+",
+      "priceRangeFilter": [
+        "$ 10.000+"
+      ],
+      "productImage": "store/software/switch2/70050000056961/1c6d36132c3f96d24ba95ebc60e6cb7534bfe9f81b0b590177adf1cf47d3cc81",
+      "productGallery": [
+        {
+          "publicId": "/store/software/switch2/70050000056961/Video/7aa64591bfb92ae4c9d244b40f78164081334cefaededa9a1d0aef175399088f",
+          "resourceType": "video"
+        },
+        {
+          "publicId": "store/software/switch2/70050000056961/77bb03afb4c31b781d7d358c0fdf80575ac396a681f8bf7e448d2d966ed19ddd",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000056961/45e8ba7b87881ac61a7597dafcbb76ae07f298290afdd1117421da91619cc3dd",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000056961/130bf5b8d9e3f7110933ef778751ff4d503a21844553159c0b3a36152d862268",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000056961/be3c087df9d43392b2affd20884b2b10035ed69aa9d585aebb991c83d867ae25",
+          "resourceType": "image"
+        },
+        {
+          "publicId": "store/software/switch2/70050000056961/811bc9af43d59e9cb6dee86391241070863972f06e709f1e79048bdab7aabea0",
+          "resourceType": "image"
+        }
+      ],
+      "productType": [
+        "Juegos"
+      ],
+      "releaseDate": "2025-07-24T00:00:00.000Z",
+      "releaseDateDisplay": null,
+      "sku": "7500056961",
+      "stockStatus": "IN_STOCK",
+      "title": "Paquete de mejora Super Mario Party™ Jamboree – Nintendo Switch™ 2 Edition + Jamboree TV",
+      "titleKey": "paquete-de-mejora-super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv-nintendo-switch-2-true",
+      "topLevelCategory": "Juegos",
+      "topLevelCategoryCode": "GAMES",
+      "topLevelFilters": [
+        "Pase de mejora"
+      ],
+      "hasDlc": false,
+      "url": "/es-ar/store/products/super-mario-party-jamboree-nintendo-switch-2-edition-plus-jamboree-tv-upgrade-pack-switch-2/",
+      "urlKey": "super-mario-party-jamboree-nintendo-switch-2-edition-plus-jamboree-tv-upgrade-pack-switch-2",
+      "visibleInSearch": true,
+      "demoNsuid": null,
+      "dlcType": null,
+      "editions": [
+        "Digital",
+        "Pase de mejora"
+      ],
+      "eshopDetails": {
+        "__typename": "EshopDetails",
+        "productType": "ADD_ON_CONTENT",
+        "isPreorderable": false,
+        "isPurchasable": true,
+        "regularPrice": 29999,
+        "discountPrice": null,
+        "discountPriceStart": null,
+        "discountPriceEnd": null,
+        "discountPriceEndTimestamp": null,
+        "goldPointOfferType": null,
+        "goldPointOfferValue": null,
+        "goldPoints": 0,
+        "baseGoldPoints": 0,
+        "currency": "ARS"
+      },
+      "productImageSquare": null,
+      "gameGenres": [],
+      "gameGenreLabels": [],
+      "gameFeatures": [],
+      "gameFeatureLabels": [],
+      "isUpgrade": true,
+      "nsoFeatures": [],
+      "nsoFeaturesFilter": [],
+      "nsuid": "70050000056961",
+      "popularityRank": null,
+      "trendingRank": null,
+      "notBadScore": null,
+      "softwareDeveloper": null,
+      "softwarePublisher": "Nintendo",
+      "waysToPlay": [],
+      "waysToPlayLabels": [],
+      "contentRating": {
+        "__typename": "ContentRating",
+        "code": "e",
+        "label": "Todos",
+        "isCompilation": false,
+        "requiresAgeGate": false,
+        "system": "ESRB"
+      },
+      "objectID": "7500056961",
+      "_distinctSeqID": 0
+    }
+  ],
+  "nbHits": 11983,
+  "page": 0,
+  "nbPages": 84,
+  "hitsPerPage": 12,
+  "exhaustiveNbHits": false,
+  "exhaustiveTypo": true,
+  "exhaustive": {
+    "nbHits": false,
+    "typo": true
+  },
+  "query": "",
+  "params": "hitsPerPage=12&filters=dlcType%3A%22Individual%22+OR+dlcType%3A%22Paquete%22+OR+dlcType%3A%22ROM+Bundle%22+OR+editions%3A%22Pase+de+mejora%22&optionalFilters=%5B%22softwarePublisher%3ANintendo%3Cscore%3D15%3E%22%5D&optionalFilters=%5B%22topLevelFilters%3A-DLC%3Cscore%3D100%3E%22%2C%22topLevelFilters%3A-Upgrade+pack%3Cscore%3D50%3E%22%2C%22categoryIds%3A-refurbished%3Cscore%3D100%3E%22%2C%22corePlatforms%3ANintendo+Switch+2%3Cscore%3D50%3E%22%2C%22productType%3AGames%3Cscore%3D45%3E%22%2C%22availability%3A-Coming+soon%3Cscore%3D5%3E%22%2C%22productType%3AMerchandise%3Cscore%3D30%3E%22%2C%22contentRatingCode%3A-M%3Cscore%3D5%3E%22%2C%22hasDlc%3A-true%3Cscore%3D100%3E%22%2C%22gameFeatureLabels%3A-Romance%3Cscore%3D100%3E%22%2C%22gameGenreLabels%3A-Narrative+adventure%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-REDDEER.GAMES%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-QubicGames%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Ratalaika+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Baltoro+Minis%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Baltoro+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-eastasiasoft%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-PQube%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Ultimate+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-BottleCube%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Ocean+Media%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-althi%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Aldora+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-EpiXR+Games%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Lightwood+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-SAT-BOX%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-YABAI.GAMES%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-17Studio%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-QUByte+Interactive%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Pix+Arts%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Secret.Games%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-MUTAN%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-MASK%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Trefl+S.A%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Afil+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Plug+In+Digital%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Red+Fables%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Sometimes+You%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Error300+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Entity3%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Voltage%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Play+Lab%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-GAME+NACIONAL%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-DEZVOLT+GAMES%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Megame%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Pakotime%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Gametry%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-404+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Downmeadowstreet%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-CGI+LAB+GAMES%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Silesia+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-TT%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-COMMANDO+PANDA%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Console+Lab+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-SUCCESS+GAMES%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-GAMETOTOP.CC%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-CFK%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Kistler+Studios%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-VRCFORGE+STUDIOS%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-JanduSoft%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Magic+Pixel%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-14Dimension%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-TROOOZE%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Happy+Player%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-RuWaMo+Games%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Sabec%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-BitToBit+Publisher%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Gamuzumi%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-SuperPowerUpGames%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Gotcha+Gotcha+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-NOSTRA+GAMES%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Testagamercreations%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-ESDigital+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Weakfish+Studio%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Silver+Lining%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Digerati%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-BoomHits%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Dolores+Ent.%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Drageus+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-ASI+GAMES+TECHNOLOGIES%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-GOGAME+CONSOLE+PUBLISHER%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-BoomBit+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-RandomSpin+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Nerd+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Fun+Games+Studio%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Big+Way%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Klabater%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Kiwi+Production%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-PlayZilla%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Play+Games%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-AGE%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-CyberStep%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-MoeNovel%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Edia%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-We+Dig+Games%3Cscore%3D25%3E%22%2C%22softwarePublisher%3A-Sticky+Rice+Games%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-DormmStudio%3Cscore%3D100%3E%22%2C%22softwarePublisher%3A-Great+Ave+Games%3Cscore%3D25%3E%22%5D",
+  "renderingContent": {},
+  "processingTimeMS": 20,
+  "processingTimingsMS": {
+    "_request": {
+      "roundTrip": 10
+    },
+    "extensions": 1,
+    "fetch": {
+      "scanning": 17,
+      "total": 18
+    },
+    "total": 20
+  },
+  "serverTimeMS": 21
+}
