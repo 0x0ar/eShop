@@ -242,14 +242,12 @@ servicio `esquema` aplica los cambios de schema).
   código la lee de la API; si devolviera ARS no se aplica conversión.
 - **Euro blue**: DolarAPI no lo publica; se deriva de dólar blue × EUR/USD y se
   marca como "Derivado".
-- **Gift cards**: Instant Gaming solo vende tarjetas de EE. UU. (USD) y Reino
-  Unido (GBP); **no hay tarjetas en EUR**, así que España y el resto de la zona
-  euro no tienen opción de gift card salvo carga manual. Se asume que no se
-  puede pagar parte con saldo y parte con tarjeta (configurable por país).
-  Eneba/Kinguin/Amazon no están implementados.
+- **Gift cards**: de Instant Gaming (EUR, GBP y USD) y carga manual. Se asume
+  que no se puede pagar parte con saldo y parte con tarjeta (configurable por
+  país). Eneba/Kinguin/Amazon no están implementados.
 - **Keys**: `robots.txt` de Instant Gaming prohíbe su búsqueda, que es el único
   listado completo. Las keys se descubren en las categorías permitidas, así que
-  la cobertura es parcial. Los países de activación salen de la ficha de cada
+  la cobertura es muy baja (una decena de juegos). Los países de activación salen de la ficha de cada
   producto (no se adivinan).
 - **Impuestos**: solo IVA 21 % sobre tarjeta argentina por defecto. Otras
   percepciones se agregan en `config/impuestos.ts`.

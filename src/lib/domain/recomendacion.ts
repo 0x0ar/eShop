@@ -91,6 +91,7 @@ function nombreRegionCuenta(paises: string[]): string {
 const NOMBRE_REGION_KEY: Record<string, string> = {
   EU: "Europa",
   US: "Estados Unidos",
+  LATAM: "Latinoamérica",
   GLOBAL: "cualquier región",
 };
 

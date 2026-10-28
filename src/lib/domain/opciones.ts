@@ -55,6 +55,8 @@ export interface EntradaComparacion {
   cotizaciones: Cotizaciones;
   impuestos?: Impuesto[];
   regiones?: readonly RegionComparacion[];
+  /** Regiones cuyo catálogo no se está consultando (no hay datos, no es que no se venda). */
+  regionesSinDatos?: readonly RegionComparacion[];
 }
 
 const fmt = (d: Decimal) => d.toFixed();
@@ -270,13 +272,18 @@ function mejorPorPais(celdas: CeldaDTO[]): CeldaDTO[] {
   return ordenarPorCosto(Array.from(porPais.values()));
 }
 
-function motivoSinDatos(region: RegionComparacion, metodo: MetodoPago, preciosRegion: PrecioTienda[]): string {
+function motivoSinDatos(
+  region: RegionComparacion,
+  metodo: MetodoPago,
+  preciosRegion: PrecioTienda[],
+  sinDatos: boolean,
+): string {
   if (metodo === "key_ig") return "No encontramos keys para esta región";
-  if (preciosRegion.length === 0) {
-    return region === "EU"
-      ? "No está a la venta en las eShops europeas configuradas"
-      : `No está a la venta en la eShop de ${nombrePais(paisesDeRegion(region)[0])}`;
-  }
+  const lugar =
+    region === "EU" ? "las eShops europeas configuradas" : `la eShop de ${nombrePais(paisesDeRegion(region)[0])}`;
+  if (sinDatos) return `Todavía no tenemos datos de ${lugar}`;
+  // No encontrarlo puede ser porque no se vende o porque no lo pudimos matchear: no afirmamos más que eso.
+  if (preciosRegion.length === 0) return `No lo encontramos en ${lugar}`;
   if (metodo === "gift_card") return "No hay gift cards compatibles con esta eShop";
   return "Sin datos";
 }
@@ -326,7 +333,10 @@ export function calcularOpciones(entrada: EntradaComparacion): OpcionDTO[] {
         region,
         metodo,
         candidatos,
-        motivoNoDisponible: vacio ? (errorMoneda ?? motivoSinDatos(region, metodo, preciosRegion)) : null,
+        motivoNoDisponible: vacio
+          ? (errorMoneda ??
+            motivoSinDatos(region, metodo, preciosRegion, entrada.regionesSinDatos?.includes(region) ?? false))
+          : null,
       });
     }
   }

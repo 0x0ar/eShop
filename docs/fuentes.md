@@ -126,10 +126,21 @@ precios en EUR).
     español). Con eso se guardan los países exactos de activación de cada
     key: no se adivina la región.
   - Gift cards: se parte de `/es/nintendo/tarjetas-regalo/` y se siguen las
-    variantes que enlaza cada ficha. **Instant Gaming vende tarjetas de EE. UU.
-    (10, 20, 35 y 50 USD) y Reino Unido (25 GBP); no vende tarjetas en EUR.**
-- **Cobertura de keys**: parcial (solo lo que aparece en categorías). Se
+    variantes que enlaza cada ficha (algunas solo aparecen dentro de datos JSON
+    de la página, por eso también se escanea el HTML crudo). Verificado:
+    **EUR 15/25/50/75/100** (se activan en 58 países europeos), **GBP
+    15/25/50/75** (Reino Unido), **USD 10/20/35/50** (EE. UU.) y BRL (Brasil,
+    se ignora). Las de EUR cuestan menos que su valor nominal (por ejemplo,
+    50 € a 45,89 €). El optimizador solo usa una tarjeta donde la moneda de la
+    tarjeta coincide con la de la eShop (EUR no sirve en Polonia ni en Reino
+    Unido aunque la tienda las liste).
+  - En preventa o sin stock la ficha trae `price: 0`: se guarda como no
+    disponible.
+- **Cobertura de keys: muy baja.** Las categorías permitidas solo muestran
+  los mismos destacados: en la verificación se descubrieron 13 fichas de
+  juegos (5 con juego equivalente, precio y stock). No hay sitemap (404). Se
   configura con `INSTANT_GAMING_CATEGORIAS` e `INSTANT_GAMING_MAX_PRODUCTOS`.
+- Hay keys "Latin America" que se activan en Argentina: se etiquetan LATAM.
 - **Buenas prácticas**: robots.txt verificado en cada host (si no se puede
   leer, no se scrapea), 4 s entre requests, User-Agent identificable y caché
   de 12 h. Las fixtures se guardan con claves y tokens embebidos redactados.
@@ -146,9 +157,6 @@ Proveedores intercambiables (`src/lib/giftcards/`, interfaz
 | Instant Gaming                                | Verificado     | Tarjetas USD y GBP                                                                 |
 | Carga manual (`config/giftcards-manual.json`) | Implementado   | Para cualquier tienda sin datos accesibles. Cada entrada declara si es marketplace |
 | Eneba, Kinguin, Amazon                        | Sin investigar | Quedan como candidatos (marketplaces / venta a valor nominal)                      |
-
-Como Instant Gaming no vende tarjetas en EUR, **España y la región Europa no
-tienen opción de gift card** salvo que se carguen ofertas a mano.
 
 ## Fixtures
 

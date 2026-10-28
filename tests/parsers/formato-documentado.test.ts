@@ -159,6 +159,8 @@ describe("Instant Gaming (funciones puras)", () => {
     expect(etiquetaRegion(["ES", "DE", "FR"])).toBe("EU");
     expect(etiquetaRegion(["US"])).toBe("US");
     expect(etiquetaRegion(["US", "ES"])).toBe("GLOBAL");
+    expect(etiquetaRegion(["AR"])).toBe("LATAM");
+    expect(etiquetaRegion(["AR", "US"])).toBe("GLOBAL");
     expect(etiquetaRegion([])).toBeNull();
   });
 

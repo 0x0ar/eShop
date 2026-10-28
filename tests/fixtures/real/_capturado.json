@@ -3,7 +3,6 @@
   "resultados": {
     "europa-catalogo.json": "ok (132823 bytes)",
     "europa-dlc.json": "ok (24674 bytes)",
-    "americas-algolia.json": "ok (617 bytes)",
     "precios-AR.json": "ERROR: sin nsuids (falló la descarga del catálogo)",
     "precios-US.json": "ERROR: sin nsuids (falló la descarga del catálogo)",
     "precios-ES.json": "ok (14158 bytes)",
@@ -17,7 +16,10 @@
     "dolarapi-cotizaciones.json": "ok (892 bytes)",
     "frankfurter.json": "ok (133 bytes)",
     "instant-gaming-robots.txt": "ok (1382 bytes)",
-    "instant-gaming-keys.html": "ok (415701 bytes)",
-    "instant-gaming-giftcards.html": "ok (313053 bytes)"
+    "americas-algolia.json": "no capturado: bloqueado (ver docs/fuentes.md, sección 3)",
+    "instant-gaming-categoria-switch.html": "ok (rutas permitidas por robots, claves/tokens redactados)",
+    "instant-gaming-tarjetas-regalo.html": "ok (rutas permitidas por robots, claves/tokens redactados)",
+    "instant-gaming-producto-key.html": "ok (rutas permitidas por robots, claves/tokens redactados)",
+    "instant-gaming-producto-giftcard.html": "ok (rutas permitidas por robots, claves/tokens redactados)"
   }
 }

@@ -152,7 +152,7 @@ function TarjetaRecomendacion({
           </p>
         ) : !rec.referencia ? (
           <p className="text-muted-foreground text-sm">
-            No está a la venta en la eShop argentina, así que no hay referencia para calcular el ahorro.
+            No tenemos el precio en la eShop argentina, así que no podemos calcular el ahorro.
           </p>
         ) : null}
         <Requisitos celda={m} />

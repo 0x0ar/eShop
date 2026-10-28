@@ -1,3 +1,5 @@
+import { fuentes } from "@config/fuentes";
+import type { RegionComparacion } from "@config/regiones";
 import { db } from "@/lib/db";
 import { dec } from "@/lib/domain/dinero";
 import { calcularOpciones, type OfertaGiftCard, type OfertaKey, type PrecioTienda } from "@/lib/domain/opciones";
@@ -55,6 +57,11 @@ export function aOfertaGiftCard(g: FilaGiftCard): OfertaGiftCard {
   };
 }
 
+/** Regiones cuyo catálogo está apagado por configuración. */
+export function regionesSinDatos(): RegionComparacion[] {
+  return fuentes.nintendoAmericas.habilitado() ? [] : ["AR", "US"];
+}
+
 /** Une los enlaces por país de los productos regionales de un juego. */
 export function unirUrls(productos: { urls: unknown }[]): Record<string, string> {
   const urls: Record<string, string> = {};
@@ -86,6 +93,7 @@ export async function opcionesDeJuego(
   ]);
   const urls = unirUrls(productos);
   return calcularOpciones({
+    regionesSinDatos: regionesSinDatos(),
     precios: precios.map((p) => aPrecioTienda(p, urls)),
     keys: keys.map(aOfertaKey),
     giftcards: gcs,

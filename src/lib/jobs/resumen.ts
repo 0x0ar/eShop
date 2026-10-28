@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
 import { cotizacionesVigentes } from "@/lib/data/cotizaciones";
-import { aOfertaKey, aPrecioTienda, giftCardsVigentes, unirUrls } from "@/lib/data/comparacion";
+import { aOfertaKey, aPrecioTienda, giftCardsVigentes, regionesSinDatos, unirUrls } from "@/lib/data/comparacion";
 import { calcularOpciones } from "@/lib/domain/opciones";
 import { recomendar } from "@/lib/domain/recomendacion";
 import { PERFIL_COMPLETO } from "@/lib/domain/tipos";
@@ -28,6 +28,7 @@ export const jobResumen: FuncionJob = async ({ contar, log }) => {
       const urls = unirUrls(productos.filter((p) => p.juegoId === id));
       const ps = precios.filter((p) => p.juegoId === id).map((p) => aPrecioTienda(p, urls));
       const opciones = calcularOpciones({
+        regionesSinDatos: regionesSinDatos(),
         precios: ps,
         keys: keys.filter((k) => k.juegoId === id).map(aOfertaKey),
         giftcards,

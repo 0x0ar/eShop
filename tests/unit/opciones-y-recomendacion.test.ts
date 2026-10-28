@@ -123,7 +123,17 @@ describe("cálculo de opciones", () => {
 
   it("explica por qué falta una región sin precio", () => {
     const o = calcularOpciones({ precios: [], keys: [], giftcards: [], cotizaciones: cotizacionesDePrueba() });
-    expect(buscar(o, "AR", "tarjeta_ar").motivoNoDisponible).toMatch(/Argentina/);
+    expect(buscar(o, "AR", "tarjeta_ar").motivoNoDisponible).toBe("No lo encontramos en la eShop de Argentina");
+    const sinDatos = calcularOpciones({
+      precios: [],
+      keys: [],
+      giftcards: [],
+      cotizaciones: cotizacionesDePrueba(),
+      regionesSinDatos: ["AR"],
+    });
+    expect(buscar(sinDatos, "AR", "tarjeta_ar").motivoNoDisponible).toBe(
+      "Todavía no tenemos datos de la eShop de Argentina",
+    );
   });
 
   it("recomienda la opción más barata y calcula el ahorro", () => {

@@ -106,6 +106,11 @@ describe("fixtures reales", () => {
     const gc = parsearTituloGiftCard(`${f!.titulo} ${f!.tituloCompleto}`);
     expect(gc).not.toBeNull();
     expect(f!.paisesActivacion.length).toBeGreaterThan(0);
-    expect(enlacesFichas(html).filter(esFichaGiftCard).length).toBeGreaterThan(1);
+    const variantes = enlacesFichas(html).filter(esFichaGiftCard);
+    expect(variantes.length).toBeGreaterThan(1);
+    // La variante de 25 GBP solo aparece dentro de datos JSON, no en un <a>.
+    expect(variantes.some((u) => u.includes("25gbp"))).toBe(true);
+    // Solo fichas del idioma de la tienda.
+    expect(variantes.every((u) => u.startsWith("https://www.instant-gaming.com/es/"))).toBe(true);
   });
 });

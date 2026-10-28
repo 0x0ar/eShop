@@ -73,6 +73,7 @@ export function proveedoresGiftCardHabilitados(): string[] {
 export const PAISES_POR_REGION_KEY: Record<string, string[] | "todos"> = {
   EU: ["ES", "DE", "FR", "IT", "PT", "NL", "PL", "GB", "BE", "AT", "IE"],
   US: ["US"],
+  LATAM: ["AR"],
   GLOBAL: "todos",
 };
 

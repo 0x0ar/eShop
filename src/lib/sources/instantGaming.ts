@@ -50,14 +50,31 @@ function absolutaIG(href: string, base: string): URL | null {
   }
 }
 
-/** Enlaces a fichas de producto presentes en una página. */
+/** Idioma de la tienda que se scrapea (las fichas en otros idiomas son el mismo producto). */
+const IDIOMA = () => process.env.INSTANT_GAMING_IDIOMA ?? "es";
+
+/**
+ * Enlaces a fichas de producto presentes en una página, solo del idioma de la
+ * tienda. Se buscan en los `<a>` y también en el HTML crudo: algunas variantes
+ * (por ejemplo la gift card de 25 GBP) solo aparecen dentro de datos JSON.
+ */
 export function enlacesFichas(html: string, base = fuentes.instantGaming.baseUrl()): string[] {
-  const $ = cheerio.load(html);
+  const idioma = IDIOMA();
+  const origen = new URL(base).origin;
   const urls = new Set<string>();
+  const agregar = (ruta: string) => {
+    if (RE_FICHA.test(ruta) && ruta.startsWith(`/${idioma}/`))
+      urls.add(`${origen}${ruta.endsWith("/") ? ruta : `${ruta}/`}`);
+  };
+  const $ = cheerio.load(html);
   $("a[href]").each((_, a) => {
     const u = absolutaIG($(a).attr("href")!, base);
-    if (u && RE_FICHA.test(u.pathname)) urls.add(`${u.origin}${u.pathname}`);
+    if (u) agregar(u.pathname);
   });
+  const crudo = html.replace(/\\\//g, "/");
+  // Solo rutas del propio sitio: URL absoluta de instant-gaming.com o ruta relativa entre comillas.
+  const re = new RegExp(`(?:instant-gaming\\.com|["'])(/${idioma}/\\d+-(?:comprar|descargar)-[a-z0-9-]+/)`, "g");
+  for (const m of crudo.matchAll(re)) agregar(m[1]);
   return Array.from(urls);
 }
 
@@ -71,7 +88,8 @@ export function enlacesGeneros(html: string, base = fuentes.instantGaming.baseUr
   const urls = new Set<string>();
   $("a[href]").each((_, a) => {
     const u = absolutaIG($(a).attr("href")!, base);
-    if (u && /^\/[a-z]{2}\/nintendo\/generos\/[a-z0-9-]+\/$/.test(u.pathname)) urls.add(`${u.origin}${u.pathname}`);
+    if (u && new RegExp(`^/${IDIOMA()}/nintendo/generos/[a-z0-9-]+/$`).test(u.pathname))
+      urls.add(`${u.origin}${u.pathname}`);
   });
   return Array.from(urls);
 }
@@ -149,7 +167,8 @@ export function parsearFicha(html: string): FichaIG | null {
     tituloCompleto: og,
     precio: dec(String(modelo.price)),
     moneda: monedaDeFormato(modelo.retail_currency_format),
-    disponible: modelo.has_stock !== false,
+    // En preventa o sin stock la ficha trae price 0: no es un precio real.
+    disponible: modelo.has_stock !== false && Number(modelo.price) > 0,
     paisesTienda,
     paisesActivacion,
     esNintendo: /\/nintendo\//.test(migas) || /nintendo-eshop/.test(url),
@@ -157,15 +176,18 @@ export function parsearFicha(html: string): FichaIG | null {
 }
 
 /**
- * Etiqueta de región a partir de los países de activación: EU si son todos
- * europeos, US si es solo Estados Unidos, GLOBAL si mezcla regiones.
+ * Etiqueta de región a partir de los países de activación (solo para mostrar;
+ * el filtro usa los países exactos): EU si son todos europeos, US si es solo
+ * Estados Unidos, LATAM si son países americanos sin Estados Unidos (por
+ * ejemplo keys "Latin America" que se activan en Argentina), GLOBAL si mezcla.
  */
-export function etiquetaRegion(paises: string[]): "EU" | "US" | "GLOBAL" | null {
+export function etiquetaRegion(paises: string[]): "EU" | "US" | "LATAM" | "GLOBAL" | null {
   if (paises.length === 0) return null;
   const americanos = paises.filter((p) => PAISES[p]?.catalogo === "AMERICAS");
   if (americanos.length === 0) return "EU";
-  if (americanos.length === paises.length) return americanos.every((p) => p === "US") ? "US" : "GLOBAL";
-  return "GLOBAL";
+  if (americanos.length < paises.length) return "GLOBAL";
+  if (americanos.every((p) => p === "US")) return "US";
+  return americanos.includes("US") ? "GLOBAL" : "LATAM";
 }
 
 const RUIDO_KEYS = [
