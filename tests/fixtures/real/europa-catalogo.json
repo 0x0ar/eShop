@@ -1,0 +1,3276 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 1,
+    "params": {
+      "q": "*",
+      "start": "0",
+      "fq": "type:GAME AND nsuid_txt:*",
+      "sort": "popularity asc",
+      "rows": "30",
+      "wt": "json"
+    }
+  },
+  "response": {
+    "numFound": 19862,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+      {
+        "fs_id": "3115652",
+        "change_date": "2026-10-08T16:21:57Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Nintendo-Switch-Sports-Resort-3115652.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-10-22T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 2,
+        "pretty_date_s": "22-10-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/nintendoswitchsportsresort/16x9_NSwitch2_NintendoSwitchSportsResort_image500w.jpg",
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/nintendoswitchsportsresort/1x1_NSwitch2_NintendoSwitchSportsResort_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "players_from_online_i": 1,
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": true,
+        "priority": "2042-10-21T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Nintendo Switch Sports Resort"
+        ],
+        "hdr_b": true,
+        "system_type": [
+          "nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 7,
+        "game_categories_txt": [
+          "party",
+          "sports"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Nintendo",
+        "players_to_system_i": 4,
+        "excerpt": "Levántate y juega en Nintendo Switch 2: más deportes y más diversión en Nintendo Switch Sports Resort.",
+        "nsuid_txt": [
+          "70010000125146"
+        ],
+        "date_from": "2026-10-22T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, dutch, portuguese, russian, korean, chinese, polish"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "Levántate y juega en Nintendo Switch 2: más deportes y más diversión en Nintendo Switch Sports Resort.",
+        "related_nsuids_txt": [
+          "70010000125146"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Nintendo Switch Sports Resort",
+        "sorting_title": "Nintendo Switch Sports Resort",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/nintendoswitchsportsresort/1x1_NSwitch2_NintendoSwitchSportsResort_square_image_wishlist.jpg",
+        "players_tbd_b": false,
+        "mii_support": true,
+        "players_to": 4,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/nintendoswitchsportsresort/16x9_NSwitch2_NintendoSwitchSportsResort_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "04008e001f098000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 1,
+        "pretty_game_categories_txt": [
+          "Deportes",
+          "Fiesta"
+        ],
+        "title_master_s": "Nintendo Switch Sports Resort",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "party,sports"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 7",
+        "price_regular_f": 49.99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "10.3 GB"
+        ],
+        "price_sorting_f": 49.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 49.99,
+        "age_rating_value": "7",
+        "surround_sound_b": true,
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/nintendoswitchsportsresort/16x9_NSwitch2_NintendoSwitchSportsResort_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 1,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3115664",
+        "change_date": "2026-10-14T13:13:14Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/The-Legend-of-Zelda-Ocarina-of-Time-3115664.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-11-05T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "game_series_txt": [
+          "the_legend_of_zelda"
+        ],
+        "pretty_date_s": "05-11-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/thelegendofzeldaocarinaoftime/banners/16x9_PDP_NSwitch2_TloZOcarinaOfTime_AnniLogo_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/thelegendofzeldaocarinaoftime/banners/1x1_NSwitch2_TloZOcarinaOfTime_UK_en_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "game_series_t": "the_legend_of_zelda",
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": true,
+        "priority": "2042-11-04T23:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "The Legend of Zelda: Ocarina of Time"
+        ],
+        "hdr_b": true,
+        "system_type": [
+          "nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 12,
+        "game_categories_txt": [
+          "adventure"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Nintendo",
+        "players_to_system_i": 1,
+        "excerpt": "Descubre una aventura que trasciende el tiempo en The Legend of Zelda: Ocarina of Time para Nintendo Switch 2, un clásico rediseñado para una nueva era.",
+        "nsuid_txt": [
+          "70010000130793"
+        ],
+        "date_from": "2026-11-05T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, dutch, portuguese, russian, korean, chinese, polish"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "Descubre una aventura que trasciende el tiempo en The Legend of Zelda: Ocarina of Time para Nintendo Switch 2, un clásico rediseñado para una nueva era.",
+        "related_nsuids_txt": [
+          "70010000130793"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "The Legend of Zelda: Ocarina of Time",
+        "sorting_title": "The Legend of Zelda: Ocarina of Time",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/thelegendofzeldaocarinaoftime/banners/1x1_NSwitch2_TloZOcarinaOfTime_UK_en_square_image_wishlist.jpg",
+        "players_to": 1,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/thelegendofzeldaocarinaoftime/banners/16x9_PDP_NSwitch2_TloZOcarinaOfTime_AnniLogo_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "application_id_s": "0400486024dec000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 1,
+        "pretty_game_categories_txt": [
+          "Aventura"
+        ],
+        "title_master_s": "The Legend of Zelda: Ocarina of Time",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "adventure"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 12",
+        "price_regular_f": 59.99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "24.5 GB"
+        ],
+        "price_sorting_f": 59.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 59.99,
+        "age_rating_value": "12",
+        "surround_sound_b": true,
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/thelegendofzeldaocarinaoftime/banners/16x9_PDP_NSwitch2_TloZOcarinaOfTime_AnniLogo_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 999999,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3108128",
+        "change_date": "2026-10-26T07:39:53Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Call-of-Duty-Modern-Warfare-4-3108128.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-10-16T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 12,
+        "pretty_date_s": "16-10-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/callofdutymodernwarfare4/16x9_CallOfDutyModernWarfare4_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "BEEYAA8KA"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/callofdutymodernwarfare4/1x1_CallOfDutyModernWarfare4_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": true,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 1,
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": true,
+        "priority": "2038-10-15T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Call of Duty®: Modern Warfare® 4"
+        ],
+        "hdr_b": true,
+        "system_type": [
+          "nintendoswitch2,nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 18,
+        "game_categories_txt": [
+          "shooter"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Activision",
+        "players_to_system_i": 1,
+        "product_code_ss": [
+          "BEEYAA8KA"
+        ],
+        "excerpt": "GUERRA SIN LÍMITES",
+        "nsuid_txt": [
+          "70070000038713",
+          "70070000038707"
+        ],
+        "date_from": "2026-10-16T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, russian, korean, chinese, polish"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "GUERRA SIN LÍMITES",
+        "related_nsuids_txt": [
+          "70070000038713",
+          "70070000038707"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Call of Duty®: Modern Warfare® 4",
+        "sorting_title": "Call of Duty®: Modern Warfare® 4",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/callofdutymodernwarfare4/1x1_CallOfDutyModernWarfare4_square_image_wishlist.jpg",
+        "players_tbd_b": false,
+        "players_to": 12,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/callofdutymodernwarfare4/16x9_CallOfDutyModernWarfare4_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "040051b024c46000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Disparos (Shooter)"
+        ],
+        "title_master_s": "Call of Duty®: Modern Warfare® 4",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "shooter"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 18",
+        "price_regular_f": 79.99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence",
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 79.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 79.99,
+        "age_rating_value": "18",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/callofdutymodernwarfare4/16x9_CallOfDutyModernWarfare4_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 9,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2791954",
+        "change_date": "2026-03-12T09:34:36Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Cyberpunk-2077-Ultimate-Edition-2791954.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2025-06-05T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "05-06-2025",
+        "play_mode_tv_mode_b": true,
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/cyberpunk2077ultimateedition/1x1_NSwitch2_Cyberpunk2077UE_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": true,
+        "priority": "2037-06-04T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Cyberpunk 2077: Ultimate Edition"
+        ],
+        "price_discounted_f": 27.99,
+        "image_url_h2x1_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/cyberpunk2077ultimateedition/2x1_NSwitch2_Cyberpunk2077UE_image500w.jpg",
+        "system_type": [
+          "nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 18,
+        "game_categories_txt": [
+          "action",
+          "rpg"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "CD PROJEKT RED",
+        "players_to_system_i": 1,
+        "excerpt": "Conviértete en una leyenda del ciberpunk en Night City.",
+        "nsuid_txt": [
+          "70010000095548"
+        ],
+        "date_from": "2025-06-05T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "english, spanish, french, german, italian, portuguese, russian, korean, chinese"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "Conviértete en una leyenda del ciberpunk en Night City.",
+        "related_nsuids_txt": [
+          "70010000095548"
+        ],
+        "price_discount_percentage_f": 60,
+        "title": "Cyberpunk 2077: Ultimate Edition",
+        "sorting_title": "Cyberpunk 2077: Ultimate Edition",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/cyberpunk2077ultimateedition/1x1_NSwitch2_Cyberpunk2077UE_square_image_wishlist.jpg",
+        "players_to": 1,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/cyberpunk2077ultimateedition/2x1_NSwitch2_Cyberpunk2077UE_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "application_id_s": "0400ddb020648000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Rol (RPG)"
+        ],
+        "title_master_s": "Cyberpunk 2077: Ultimate Edition",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,rpg"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 18",
+        "price_regular_f": 69.99,
+        "touch_screen_b": true,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence",
+          "pegi_sexual",
+          "pegi_language"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "65.2 GB"
+        ],
+        "price_sorting_f": 27.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 27.99,
+        "age_rating_value": "18",
+        "surround_sound_b": true,
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/cyberpunk2077ultimateedition/2x1_NSwitch2_Cyberpunk2077UE_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2466200",
+        "change_date": "2026-09-17T08:45:59Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch/Hogwarts-Legacy-2466200.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2023-11-14T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "14-11-2023",
+        "play_mode_tv_mode_b": true,
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "HACYAR3XE"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_NSwitch_HogwartsLegacy_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": true,
+        "priority": "2033-11-13T23:00:00Z",
+        "digital_version_b": true,
+        "title_extras_txt": [
+          "Hogwarts Legacy",
+          "Hogwarts Legacy : L'Héritage de Poudlard"
+        ],
+        "price_discounted_f": 5.99,
+        "image_url_h2x1_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_HogwartsLegacy_image500w.jpg",
+        "system_type": [
+          "nintendoswitch_digitaldistribution,nintendoswitch_downloadsoftware,nintendoswitch_gamecard"
+        ],
+        "age_rating_sorting_i": 12,
+        "game_categories_txt": [
+          "rpg"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "WB Games",
+        "players_to_system_i": 1,
+        "product_code_ss": [
+          "HACYAR3XE"
+        ],
+        "excerpt": "Hogwarts Legacy es un RPG inmersivo de acción en mundo abierto ambientado en el universo de los libros de Harry Potter.",
+        "nsuid_txt": [
+          "70010000062277",
+          "70070000019472"
+        ],
+        "date_from": "2023-11-14T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, russian, korean, chinese"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "Hogwarts Legacy es un RPG inmersivo de acción en mundo abierto ambientado en el universo de los libros de Harry Potter.",
+        "related_nsuids_txt": [
+          "70010000062277",
+          "70070000019472"
+        ],
+        "price_discount_percentage_f": 91.4,
+        "title": "Hogwarts Legacy",
+        "sorting_title": "Hogwarts Legacy",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_NSwitch_HogwartsLegacy_square_image_wishlist.jpg",
+        "players_to": 1,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_HogwartsLegacy_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "application_id_s": "0100f7e00c70e000",
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Rol (RPG)"
+        ],
+        "title_master_s": "Hogwarts Legacy",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "rpg"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 12",
+        "price_regular_f": 69.99,
+        "touch_screen_b": true,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence",
+          "pegi_in_game_purchases",
+          "pegi_language"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "17.1 GB"
+        ],
+        "price_sorting_f": 5.99,
+        "ns2_compatibility_status_i": 1,
+        "players_from_system_i": 1,
+        "price_lowest_f": 5.99,
+        "age_rating_value": "12",
+        "surround_sound_b": true,
+        "physical_version_b": true,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_HogwartsLegacy_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 46,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2232608",
+        "change_date": "2026-09-17T08:46:31Z",
+        "url": "/es-es/Juegos/Programas-descargables-Nintendo-Switch/Disney-Dreamlight-Valley-2232608.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2022-09-06T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 4,
+        "pretty_date_s": "06-09-2022",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/1x1_DisneyDreamlightValley16_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 1,
+        "image_url": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_download_software/1x1_NSwitchDS_DisneyDreamlightValley_Winter_image500w.jpg",
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": false,
+        "priority": "2032-09-05T22:00:00Z",
+        "digital_version_b": true,
+        "title_extras_txt": [
+          "Disney Dreamlight Valley"
+        ],
+        "system_type": [
+          "nintendoswitch_downloadsoftware"
+        ],
+        "age_rating_sorting_i": 3,
+        "game_categories_txt": [
+          "adventure",
+          "simulation"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Gameloft",
+        "players_to_system_i": 1,
+        "excerpt": "Explora un mundo lleno de la magia de Disney. Descubre historias intensas mientras construyes el barrio perfecto junto a los héroes y villanos de Disney y Pixar.",
+        "nsuid_txt": [
+          "70010000033557"
+        ],
+        "date_from": "2022-09-06T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, chinese"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "Explora un mundo lleno de la magia de Disney. Descubre historias intensas mientras construyes el barrio perfecto junto a los héroes y villanos de Disney y Pixar.",
+        "related_nsuids_txt": [
+          "70010000033557"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Disney Dreamlight Valley",
+        "sorting_title": "Disney Dreamlight Valley",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/1x1_DisneyDreamlightValley16_square_image_wishlist.jpg",
+        "players_to": 4,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "0100d39012c1a000",
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Aventura",
+          "Simulación"
+        ],
+        "title_master_s": "Disney Dreamlight Valley",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "adventure,simulation"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 3",
+        "price_regular_f": 39.99,
+        "touch_screen_b": true,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "9.9 GB"
+        ],
+        "price_sorting_f": 39.99,
+        "ns2_compatibility_status_i": 1,
+        "players_from_system_i": 1,
+        "price_lowest_f": 39.99,
+        "age_rating_value": "3",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 65,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2977386",
+        "change_date": "2025-12-02T09:24:34Z",
+        "url": "/es-es/Juegos/Nintendo-Switch-2-Edition/Red-Dead-Redemption-Nintendo-Switch-2-Edition-2977386.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2025-12-02T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "02-12-2025",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/reddeadredemptionnintendoswitch2edition/16x9_RedDeadRedemptionNintendoSwitch2Edition_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/reddeadredemptionnintendoswitch2edition/1x1_RedDeadRedemptionNintendoSwitch2Edition_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": true,
+        "priority": "2037-12-01T23:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Red Dead Redemption - Nintendo Switch 2™ Edition ",
+          "Red Dead Redemption: Nintendo Switch 2™ Edition "
+        ],
+        "hdr_b": true,
+        "price_discounted_f": 24.99,
+        "system_type": [
+          "nintendoswitch2,nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 18,
+        "game_categories_txt": [
+          "action",
+          "adventure"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "ROCKSTAR GAMES",
+        "players_to_system_i": 1,
+        "excerpt": "Al adquirir este producto, podrás descargar la versión digital de este juego para Nintendo Switch™ 2. Vive las épicas aventuras del Oeste que definieron una generación.",
+        "nsuid_txt": [
+          "70010000112775",
+          "70050000065745"
+        ],
+        "date_from": "2025-12-02T00:00:00Z",
+        "language_availability": [
+          "english, spanish, french, german, italian, portuguese, russian, korean, chinese, polish"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "Al adquirir este producto, podrás descargar la versión digital de este juego para Nintendo Switch™ 2. Vive las épicas aventuras del Oeste que definieron una generación.",
+        "related_nsuids_txt": [
+          "70010000112775",
+          "70050000065745"
+        ],
+        "price_discount_percentage_f": 50,
+        "title": "Red Dead Redemption: Nintendo Switch 2™ Edition ",
+        "sorting_title": "Red Dead Redemption: Nintendo Switch 2™ Edition ",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/reddeadredemptionnintendoswitch2edition/1x1_RedDeadRedemptionNintendoSwitch2Edition_square_image_wishlist.jpg",
+        "players_to": 1,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/reddeadredemptionnintendoswitch2edition/16x9_RedDeadRedemptionNintendoSwitch2Edition_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "application_id_s": "01007820196a6000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Aventura"
+        ],
+        "title_master_s": "Red Dead Redemption: Nintendo Switch 2™ Edition ",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,adventure"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 18",
+        "price_regular_f": 0,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence",
+          "pegi_language",
+          "pegi_gambling"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "11.6 GB"
+        ],
+        "price_sorting_f": 24.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 24.99,
+        "age_rating_value": "18",
+        "surround_sound_b": true,
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/reddeadredemptionnintendoswitch2edition/16x9_RedDeadRedemptionNintendoSwitch2Edition_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 338,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3112375",
+        "change_date": "2026-09-16T07:03:20Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/FINAL-FANTASY-RESONANCE-3112375.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-10-22T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "22-10-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/finalfantasyresonance/16x9_FinalFantasyResonance_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "BEEYABV7A"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/finalfantasyresonance/1x1_FinalFantasyResonance_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": true,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": false,
+        "priority": "2038-10-21T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "FINAL FANTASY RESONANCE"
+        ],
+        "system_type": [
+          "nintendoswitch2,nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 12,
+        "game_categories_txt": [
+          "adventure",
+          "rpg"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "SQUARE ENIX",
+        "players_to_system_i": 1,
+        "product_code_ss": [
+          "BEEYABV7A"
+        ],
+        "excerpt": "La esperanza resuena en el interior de los cristales",
+        "nsuid_txt": [
+          "70070000035974",
+          "70010000117101"
+        ],
+        "date_from": "2026-10-22T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "japanese, english, spanish, french, german"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "La esperanza resuena en el interior de los cristales",
+        "related_nsuids_txt": [
+          "70070000035974",
+          "70010000117101"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "FINAL FANTASY RESONANCE",
+        "sorting_title": "FINAL FANTASY RESONANCE",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/finalfantasyresonance/1x1_FinalFantasyResonance_square_image_wishlist.jpg",
+        "players_to": 1,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/finalfantasyresonance/16x9_FinalFantasyResonance_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "application_id_s": "0400532026f18000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Aventura",
+          "Rol (RPG)"
+        ],
+        "title_master_s": "FINAL FANTASY RESONANCE",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "adventure,rpg"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 12",
+        "price_regular_f": 59.99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence",
+          "pegi_in_game_purchases",
+          "pegi_language"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "11.9 GB"
+        ],
+        "price_sorting_f": 59.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 59.99,
+        "age_rating_value": "12",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/finalfantasyresonance/16x9_FinalFantasyResonance_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 20,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3226241",
+        "change_date": "2026-10-23T08:17:35Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Tomb-Raider-Definitive-Survivor-Trilogy-3226241.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-10-22T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 8,
+        "pretty_date_s": "22-10-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/tombraiderdefinitivesurvivortrilogy/16x9_TombRaiderDefinitiveSurvivorTrilogy_01_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "BEEYAC8VA"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/tombraiderdefinitivesurvivortrilogy/1x1_TombRaiderDefinitiveSurvivorTrilogy_01_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 4,
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": true,
+        "priority": "2038-10-21T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Tomb Raider: Definitive Survivor Trilogy"
+        ],
+        "price_discounted_f": 62.99,
+        "system_type": [
+          "nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 18,
+        "game_categories_txt": [
+          "action",
+          "adventure"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Aspyr",
+        "players_to_system_i": 1,
+        "product_code_ss": [
+          "BEEYAC8VA"
+        ],
+        "excerpt": "Tres aclamados juegos reunidos en una misma colección, ya disponible en Nintendo Switch™ 2",
+        "nsuid_txt": [
+          "70070000040668"
+        ],
+        "date_from": "2026-10-22T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, dutch, portuguese, russian, korean, chinese"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "Tres aclamados juegos reunidos en una misma colección, ya disponible en Nintendo Switch™ 2",
+        "related_nsuids_txt": [
+          "70070000040668"
+        ],
+        "price_discount_percentage_f": 10,
+        "title": "Tomb Raider: Definitive Survivor Trilogy",
+        "sorting_title": "Tomb Raider: Definitive Survivor Trilogy",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/tombraiderdefinitivesurvivortrilogy/1x1_TombRaiderDefinitiveSurvivorTrilogy_01_square_image_wishlist.jpg",
+        "players_to": 8,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/tombraiderdefinitivesurvivortrilogy/16x9_TombRaiderDefinitiveSurvivorTrilogy_01_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": true,
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Aventura"
+        ],
+        "title_master_s": "Tomb Raider: Definitive Survivor Trilogy",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,adventure"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 18",
+        "price_regular_f": 69.99,
+        "touch_screen_b": true,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "iarc_pegi_interactive_users_interact",
+          "iarc_pegi_strong_language",
+          "iarc_pegi_extreme_violence"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 62.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 62.99,
+        "age_rating_value": "18",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/tombraiderdefinitivesurvivortrilogy/16x9_TombRaiderDefinitiveSurvivorTrilogy_01_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 250,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2403686",
+        "change_date": "2026-10-15T14:48:50Z",
+        "url": "/es-es/Juegos/Programas-descargables-Nintendo-Switch/Just-Dance--2403686.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2022-11-22T00:00:00Z",
+          "2023-10-24T00:00:00Z",
+          "2025-10-14T00:00:00Z",
+          "2026-10-13T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 6,
+        "pretty_date_s": "22-11-2022",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/16x9_JustDanceDecadesOfHits_Standard_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "HACPA8FZA",
+          "HACYA8FZ4",
+          "HACYBQ2SG",
+          " HAC-Y-A8FZA"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/1x1_JustDanceDecadesOfHits_Standard_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "players_from_online_i": 1,
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": true,
+        "priority": "2032-11-21T23:00:00Z",
+        "digital_version_b": true,
+        "title_extras_txt": [
+          "Just Dance®"
+        ],
+        "system_type": [
+          "nintendoswitch_downloadsoftware,nintendoswitch_downloadsoftware,nintendoswitch_downloadsoftware,nintendoswitch_downloadsoftware"
+        ],
+        "age_rating_sorting_i": 3,
+        "game_categories_txt": [
+          "music"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Ubisoft",
+        "players_to_system_i": 6,
+        "product_code_ss": [
+          "HACPA8FZA",
+          "HACYA8FZ4",
+          "HACYBQ2SG",
+          " HAC-Y-A8FZA"
+        ],
+        "excerpt": "¡Baila y comparte momentos emocionantes durante todo el año con la plataforma de videojuegos musicales número uno de todos los tiempos!",
+        "nsuid_txt": [
+          "70010000052340",
+          "70070000017835",
+          "70070000028982",
+          "70070000037244"
+        ],
+        "date_from": "2022-11-22T00:00:00Z",
+        "dlc_shown_b": false,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, dutch, portuguese, russian, korean, chinese"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "¡Baila y comparte momentos emocionantes durante todo el año con la plataforma de videojuegos musicales número uno de todos los tiempos!",
+        "related_nsuids_txt": [
+          "70010000052340",
+          "70070000017835",
+          "70070000028982",
+          "70070000037244"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Just Dance®",
+        "sorting_title": "Just Dance®",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/1x1_JustDanceDecadesOfHits_Standard_square_image_wishlist.jpg",
+        "players_to": 6,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/16x9_JustDanceDecadesOfHits_Standard_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "0100bee017fc0000",
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Música"
+        ],
+        "title_master_s": "Just Dance®",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "music"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 3",
+        "price_regular_f": 39.99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "1.3 GB"
+        ],
+        "price_sorting_f": 0,
+        "ns2_compatibility_status_i": 1,
+        "players_from_system_i": 1,
+        "price_lowest_f": 0,
+        "age_rating_value": "3",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/16x9_JustDanceDecadesOfHits_Standard_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 84,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2915161",
+        "change_date": "2026-09-17T08:33:26Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Pokemon-Pokopia-2915161.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-03-05T00:00:00Z",
+          "2026-06-09T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "game_series_txt": [
+          "pokemon"
+        ],
+        "pretty_date_s": "05-03-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/pokemonpokopia/16x9_NSwitch2_PokemonPokopia_image500w.png",
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/pokemonpokopia/1x1_NSwitch2_PokemonPokopia_image500w.png",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "game_series_t": "pokemon",
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": true,
+        "priority": "2042-06-09T15:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Pokémon Pokopia"
+        ],
+        "system_type": [
+          "nintendoswitch2,nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 3,
+        "game_categories_txt": [
+          "simulation"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Nintendo",
+        "excerpt": "Construye tu paraíso Pokémon en Pokémon Pokopia para Nintendo Switch 2.",
+        "nsuid_txt": [
+          "70010000107422"
+        ],
+        "date_from": "2026-03-05T00:00:00Z",
+        "dlc_shown_b": false,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, korean, chinese"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "Construye tu paraíso Pokémon en Pokémon Pokopia para Nintendo Switch 2.",
+        "related_nsuids_txt": [
+          "70010000107422",
+          "70070000036751"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Pokémon Pokopia",
+        "sorting_title": "Pokémon Pokopia",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/pokemonpokopia/1x1_NSwitch2_PokemonPokopia_square_image_wishlist.png",
+        "players_to": 4,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/pokemonpokopia/16x9_NSwitch2_PokemonPokopia_banner_image_wishlist_640w.png",
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "0400a3a01ee4c000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 1,
+        "pretty_game_categories_txt": [
+          "Simulación"
+        ],
+        "title_master_s": "Pokémon Pokopia",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "simulation"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 3",
+        "price_regular_f": 34.99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "6.8 GB"
+        ],
+        "price_sorting_f": 34.99,
+        "price_lowest_f": 34.99,
+        "age_rating_value": "3",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/pokemonpokopia/16x9_NSwitch2_PokemonPokopia_banner_image_wishlist_460w.png",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 31,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "1370376",
+        "change_date": "2022-09-22T14:35:38Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch/Street-Fighter-30th-Anniversary-Collection-1370376.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2018-05-29T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 4,
+        "multiplayer_mode": "simultaneous",
+        "pretty_date_s": "29-05-2018",
+        "play_mode_tv_mode_b": true,
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "HACPAK6JA"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_StreetFighter30thAnniversaryCollection_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 2,
+        "image_url": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_StreetFighter30thAnniversaryCollection_PEGI_image500w.jpg",
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": true,
+        "priority": "2028-05-28T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Street Fighter™ 30th Anniversary Collection"
+        ],
+        "price_discounted_f": 4.49,
+        "image_url_h2x1_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_StreetFighter30thAnniversaryCollection_image500w.jpg",
+        "system_type": [
+          "nintendoswitch_digitaldistribution,nintendoswitch_gamecard"
+        ],
+        "age_rating_sorting_i": 12,
+        "game_categories_txt": [
+          "fighting"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "CAPCOM",
+        "players_to_system_i": 2,
+        "product_code_ss": [
+          "HACPAK6JA"
+        ],
+        "excerpt": "¡12 clásicos de arcade en una colección!",
+        "internet": true,
+        "nsuid_txt": [
+          "70010000003621"
+        ],
+        "date_from": "2018-05-29T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, korean, chinese"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "¡12 clásicos de arcade en una colección!",
+        "related_nsuids_txt": [
+          "70010000003621"
+        ],
+        "price_discount_percentage_f": 85,
+        "title": "Street Fighter™ 30th Anniversary Collection",
+        "sorting_title": "Street Fighter™ 30th Anniversary Collection",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_StreetFighter30thAnniversaryCollection_square_image_wishlist.jpg",
+        "ns2_compatibility_details_txt": [
+          "Cuando los usuarios de Nintendo Switch 2 se enfrentan en línea a usuarios de Nintendo Switch, los personajes de estos últimos presentan texturas distorsionadas."
+        ],
+        "players_to": 8,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_StreetFighter30thAnniversaryCollection_banner_image_wishlist_640w.jpg",
+        "players_to_local_i": 8,
+        "paid_subscription_online_play_b": true,
+        "voice_chat_b": false,
+        "application_id_s": "0100024008310000",
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Lucha"
+        ],
+        "title_master_s": "Street Fighter™ 30th Anniversary Collection",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "fighting"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 12",
+        "price_regular_f": 29.99,
+        "eshop_removed_b": false,
+        "players_from": 1,
+        "age_rating_descriptors_txt": [
+          "pegi_violence"
+        ],
+        "age_rating_type": "pegi",
+        "players_from_local_i": 2,
+        "datasize_readable_txt": [
+          "5.0 GB"
+        ],
+        "price_sorting_f": 4.49,
+        "ns2_compatibility_status_i": 1,
+        "players_from_system_i": 1,
+        "price_lowest_f": 4.49,
+        "age_rating_value": "12",
+        "physical_version_b": true,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_StreetFighter30thAnniversaryCollection_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 111,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3017490",
+        "change_date": "2026-10-08T09:39:24Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Orbitals-3017490.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-09-03T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 2,
+        "pretty_date_s": "03-09-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/orbitals/16x9_Orbitals_new_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/orbitals/1x1_Orbitals_new_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 2,
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": false,
+        "priority": "2038-09-02T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Orbitals"
+        ],
+        "price_discounted_f": 39.99,
+        "system_type": [
+          "nintendoswitch2,nintendoswitch2,nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 12,
+        "game_categories_txt": [
+          "action",
+          "adventure",
+          "puzzle"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Kepler Interactive",
+        "players_to_system_i": 2,
+        "excerpt": "Pon rumbo al cosmos con una de tus amistades en Orbitals para Nintendo Switch 2, una aventura cooperativa inspirada en las series de anime de antaño.",
+        "nsuid_txt": [
+          "70010000119631",
+          "70010000098974"
+        ],
+        "date_from": "2026-09-03T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, russian, korean, chinese, polish"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "Pon rumbo al cosmos con una de tus amistades en Orbitals para Nintendo Switch 2, una aventura cooperativa inspirada en las series de anime de antaño.",
+        "related_nsuids_txt": [
+          "70070000036528",
+          "70010000119631",
+          "70010000098974"
+        ],
+        "price_discount_percentage_f": 20,
+        "title": "Orbitals",
+        "sorting_title": "Orbitals",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/orbitals/1x1_Orbitals_new_square_image_wishlist.jpg",
+        "players_to": 2,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/orbitals/16x9_Orbitals_new_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "040004f027560000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Aventura",
+          "Puzle"
+        ],
+        "title_master_s": "Orbitals",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,puzzle,adventure"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 12",
+        "price_regular_f": 39.99,
+        "touch_screen_b": true,
+        "eshop_removed_b": false,
+        "players_from": 2,
+        "age_rating_descriptors_txt": [
+          "pegi_violence"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "13.4 GB"
+        ],
+        "price_sorting_f": 39.99,
+        "players_from_system_i": 2,
+        "price_lowest_f": 39.99,
+        "age_rating_value": "12",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/orbitals/16x9_Orbitals_new_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 80,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2210770",
+        "change_date": "2026-09-17T08:45:09Z",
+        "url": "/es-es/Juegos/Programas-descargables-Nintendo-Switch/Cult-of-the-Lamb-2210770.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2022-08-11T00:00:00Z",
+          "2022-08-23T00:00:00Z",
+          "2024-10-31T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "11-08-2022",
+        "play_mode_tv_mode_b": true,
+        "indie_b": true,
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "HACPA6YYA",
+          "HACYA6YYC",
+          "HACYA6YYT"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_download_software/1x1_NSwitchDS_CultOfTheLamb_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_download_software/1x1_NSwitchDS_CultOfTheLamb_image500w.jpg",
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": true,
+        "priority": "2032-08-10T22:00:00Z",
+        "digital_version_b": true,
+        "title_extras_txt": [
+          "Cult of the Lamb"
+        ],
+        "price_discounted_f": 9.99,
+        "image_url_h2x1_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_CultOfTheLamb_image500w.jpg",
+        "system_type": [
+          "nintendoswitch_downloadsoftware,nintendoswitch_downloadsoftware,nintendoswitch_gamecard,nintendoswitch_downloadsoftware"
+        ],
+        "age_rating_sorting_i": 12,
+        "game_categories_txt": [
+          "action",
+          "adventure",
+          "strategy"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Devolver Digital",
+        "players_to_system_i": 1,
+        "product_code_ss": [
+          "HACPA6YYA",
+          "HACYA6YYC",
+          "HACYA6YYT"
+        ],
+        "excerpt": "Cult of the Lamb mete a los jugadores en el papel de un cordero poseído, salvado de la aniquilación por un ominoso desconocido, que debe pagar su deuda creando un grupo de fieles seguidores en su nombre.",
+        "nsuid_txt": [
+          "70010000047974",
+          "70070000015086",
+          "70070000025276"
+        ],
+        "date_from": "2022-08-11T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, dutch, portuguese, russian, korean, chinese"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "Cult of the Lamb mete a los jugadores en el papel de un cordero poseído, salvado de la aniquilación por un ominoso desconocido, que debe pagar su deuda creando un grupo de fieles seguidores en su nombre.",
+        "related_nsuids_txt": [
+          "70010000047974",
+          "70070000015086",
+          "70070000025276"
+        ],
+        "price_discount_percentage_f": 78,
+        "title": "Cult of the Lamb",
+        "sorting_title": "Cult of the Lamb",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_download_software/1x1_NSwitchDS_CultOfTheLamb_square_image_wishlist.jpg",
+        "players_to": 1,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_CultOfTheLamb_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "application_id_s": "01002e7016c46000",
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Aventura",
+          "Estrategia"
+        ],
+        "title_master_s": "Cult of the Lamb",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,adventure,strategy"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 12",
+        "price_regular_f": 44.99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "1.8 GB"
+        ],
+        "price_sorting_f": 9.99,
+        "ns2_compatibility_status_i": 1,
+        "players_from_system_i": 1,
+        "price_lowest_f": 9.99,
+        "age_rating_value": "12",
+        "physical_version_b": true,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_CultOfTheLamb_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 204,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3110869",
+        "change_date": "2026-06-11T12:52:31Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/ONE-PIECE-Grand-Gourmet-3110869.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-10-23T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "23-10-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/onepiecegrandgourmet/16x9_OnePieceGrandGourmet_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/onepiecegrandgourmet/1x1_OnePieceGrandGourmet_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": false,
+        "priority": "2038-10-22T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "ONE PIECE: Grand Gourmet"
+        ],
+        "system_type": [
+          "nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 7,
+        "game_categories_txt": [
+          "simulation"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Bandai Namco Entertainment",
+        "players_to_system_i": 1,
+        "excerpt": "¡ONE PIECE cobra vida en un juego de simulación de gestión de restaurantes!",
+        "nsuid_txt": [
+          "70010000110984"
+        ],
+        "date_from": "2026-10-23T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, korean, chinese"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "¡ONE PIECE cobra vida en un juego de simulación de gestión de restaurantes!",
+        "related_nsuids_txt": [
+          "70010000110984"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "ONE PIECE: Grand Gourmet",
+        "sorting_title": "ONE PIECE: Grand Gourmet",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/onepiecegrandgourmet/1x1_OnePieceGrandGourmet_square_image_wishlist.jpg",
+        "players_to": 1,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/onepiecegrandgourmet/16x9_OnePieceGrandGourmet_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "application_id_s": "0400773025f36000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Simulación"
+        ],
+        "title_master_s": "ONE PIECE: Grand Gourmet",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "simulation"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 7",
+        "price_regular_f": 19.99,
+        "touch_screen_b": true,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "292.0 MB"
+        ],
+        "price_sorting_f": 19.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 19.99,
+        "age_rating_value": "7",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/onepiecegrandgourmet/16x9_OnePieceGrandGourmet_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 155,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2786386",
+        "change_date": "2026-09-17T08:35:06Z",
+        "url": "/es-es/Juegos/Programas-descargables-Nintendo-Switch/Tomodachi-Life-Una-vida-de-ensuenio-2786386.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-04-16T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "16-04-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/tomodachilifelivingthedream/16x9_NSwitch_TomodachiLiveLTD_BASE_ES_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/tomodachilifelivingthedream/1x1_NSwitch_TomodachiLiveLTD_BASE_ES_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": true,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": true,
+        "priority": "2040-04-15T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Tomodachi Life : Une vie de rêve",
+          "Tomodachi Life: Living the Dream",
+          "Tomodachi Life: Una vida de ensueño",
+          "Tomodachi Life: Una vita da sogno",
+          "Tomodachi Life: Waar dromen uitkomen",
+          "Tomodachi Life: Wo Träume wahr werden"
+        ],
+        "system_type": [
+          "nintendoswitch_digitaldistribution"
+        ],
+        "age_rating_sorting_i": 3,
+        "game_categories_txt": [
+          "lifestyle",
+          "simulation"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Nintendo",
+        "players_to_system_i": 1,
+        "excerpt": "En Tomodachi Life: Una vida de ensueño para Nintendo Switch, ¡toma las riendas de una isla donde el drama, el amor, las bobadas y otras sorpresas están a la orden del día! ",
+        "nsuid_txt": [
+          "70010000116664"
+        ],
+        "date_from": "2026-04-16T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, dutch, korean, chinese"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "En Tomodachi Life: Una vida de ensueño para Nintendo Switch, ¡toma las riendas de una isla donde el drama, el amor, las bobadas y otras sorpresas están a la orden del día! ",
+        "related_nsuids_txt": [
+          "70010000116664"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Tomodachi Life: Una vida de ensueño",
+        "sorting_title": "Tomodachi Life: Una vida de ensueño",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/tomodachilifelivingthedream/1x1_NSwitch_TomodachiLiveLTD_BASE_ES_square_image_wishlist.jpg",
+        "players_tbd_b": false,
+        "mii_support": true,
+        "players_to": 2,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/tomodachilifelivingthedream/16x9_NSwitch_TomodachiLiveLTD_BASE_ES_banner_image_wishlist_640w.jpg",
+        "players_to_local_i": 2,
+        "paid_subscription_online_play_b": false,
+        "application_id_s": "010051f0207b2000",
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 1,
+        "pretty_game_categories_txt": [
+          "Estilo de vida",
+          "Simulación"
+        ],
+        "title_master_s": "Tomodachi Life: Living the Dream",
+        "switch_game_voucher_b": true,
+        "game_category": [
+          "simulation,lifestyle"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 3",
+        "price_regular_f": 59.99,
+        "eshop_removed_b": false,
+        "age_rating_type": "pegi",
+        "players_from_local_i": 2,
+        "datasize_readable_txt": [
+          "6.3 GB"
+        ],
+        "price_sorting_f": 59.99,
+        "ns2_compatibility_status_i": 1,
+        "players_from_system_i": 1,
+        "price_lowest_f": 59.99,
+        "age_rating_value": "3",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/tomodachilifelivingthedream/16x9_NSwitch_TomodachiLiveLTD_BASE_ES_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 23,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2838110",
+        "change_date": "2026-09-17T08:36:28Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Nintendo-GameCube-Nintendo-Classics-2838110.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2025-06-05T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 4,
+        "pretty_date_s": "05-06-2025",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/services/nintendo_switch_online_2/classic_games/gamecube_8/gamepage_1/16x9_HP_NSOClassics_GameCube_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/services/nintendo_switch_online_2/classic_games/gamecube_8/gamepage_1/1x1_HP_NSOClasscis_GameCube_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 1,
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": true,
+        "priority": "2037-06-04T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Nintendo GameCube – Nintendo Classics"
+        ],
+        "image_url_h2x1_s": "https://www.nintendo.com/eu/media/images/services/nintendo_switch_online_2/classic_games/gamecube_8/gamepage_1/2x1_HP_NSOClasscis_GameCube_image500w.jpg",
+        "system_type": [
+          "nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 12,
+        "game_categories_txt": [
+          "other"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Nintendo",
+        "players_to_system_i": 4,
+        "excerpt": "Juega a títulos clásicos de Nintendo GameCube cuando y donde quieras",
+        "nsuid_txt": [
+          "70010000096800"
+        ],
+        "date_from": "2025-06-05T00:00:00Z",
+        "language_availability": [
+          "english, spanish, french, german, italian, dutch, portuguese, russian"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "Juega a títulos clásicos de Nintendo GameCube cuando y donde quieras",
+        "related_nsuids_txt": [
+          "70010000096800"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Nintendo GameCube – Nintendo Classics",
+        "sorting_title": "Nintendo GameCube – Nintendo Classics",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/services/nintendo_switch_online_2/classic_games/gamecube_8/gamepage_1/1x1_HP_NSOClasscis_GameCube_square_image_wishlist.jpg",
+        "players_to": 4,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/services/nintendo_switch_online_2/classic_games/gamecube_8/gamepage_1/16x9_HP_NSOClassics_GameCube_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "040029a01d3e0000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 1,
+        "pretty_game_categories_txt": [
+          "Otros"
+        ],
+        "title_master_s": "Nintendo GameCube – Nintendo Classics",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "other"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 12",
+        "price_regular_f": 0,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "iarc_pegi_mild_swearing",
+          "iarc_pegi_moderate_violence"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "13.0 GB"
+        ],
+        "price_sorting_f": 0,
+        "players_from_system_i": 1,
+        "price_lowest_f": 0,
+        "age_rating_value": "12",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/services/nintendo_switch_online_2/classic_games/gamecube_8/gamepage_1/16x9_HP_NSOClassics_GameCube_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 999999,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3033987",
+        "change_date": "2026-02-24T11:53:17Z",
+        "url": "/es-es/Juegos/Programas-descargables-Nintendo-Switch/ULTIMATE-20-GAME-BUNDLE-3033987.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-02-21T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "21-02-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/ultimate20gamebundle/16x9_Ultimate20GameBundle_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "HACYBNZYA"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/ultimate20gamebundle/1x1_Ultimate20GameBundle_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": true,
+        "priority": "2036-02-20T23:00:00Z",
+        "digital_version_b": true,
+        "title_extras_txt": [
+          "ULTIMATE 20-GAME BUNDLE"
+        ],
+        "system_type": [
+          "nintendoswitch_downloadsoftware"
+        ],
+        "age_rating_sorting_i": 12,
+        "game_categories_txt": [
+          "action",
+          "adventure",
+          "first_person_shooter",
+          "platformer"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "GAME NACIONAL",
+        "players_to_system_i": 1,
+        "product_code_ss": [
+          "HACYBNZYA"
+        ],
+        "excerpt": "Más juegos. Más diversión. Un solo paquete.",
+        "nsuid_txt": [
+          "70070000026749"
+        ],
+        "date_from": "2026-02-21T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, russian, chinese"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "Más juegos. Más diversión. Un solo paquete.",
+        "related_nsuids_txt": [
+          "70070000026749"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "ULTIMATE 20-GAME BUNDLE",
+        "sorting_title": "ULTIMATE 20-GAME BUNDLE",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/ultimate20gamebundle/1x1_Ultimate20GameBundle_square_image_wishlist.jpg",
+        "players_to": 1,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/ultimate20gamebundle/16x9_Ultimate20GameBundle_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Acción en primera persona (FPS)",
+          "Aventura",
+          "Plataformas"
+        ],
+        "title_master_s": "ULTIMATE 20-GAME BUNDLE",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,platformer,first_person_shooter,adventure"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 12",
+        "price_regular_f": 39.99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "iarc_pegi_moderate_violence"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 39.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 39.99,
+        "age_rating_value": "12",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/ultimate20gamebundle/16x9_Ultimate20GameBundle_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 2381,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3060035",
+        "change_date": "2026-09-17T08:33:48Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/eFootball-Kick-Off--3060035.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-06-03T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 2,
+        "pretty_date_s": "03-06-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/efootballkickoff/16x9_EfootballKickOff_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/efootballkickoff/1x1_EfootballKickOff_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 2,
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": true,
+        "priority": "2038-06-02T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "eFootball™ Kick-Off!"
+        ],
+        "system_type": [
+          "nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 3,
+        "game_categories_txt": [
+          "sports"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "KONAMI",
+        "players_to_system_i": 4,
+        "excerpt": "Disfruta de la emoción de cada gol por tu cuenta o con todo el mundo. Inicia tu aventura futbolística en eFootball™ Kick-Off!",
+        "nsuid_txt": [
+          "70010000113744"
+        ],
+        "date_from": "2026-06-03T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, korean, chinese"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "Disfruta de la emoción de cada gol por tu cuenta o con todo el mundo. Inicia tu aventura futbolística en eFootball™ Kick-Off!",
+        "related_nsuids_txt": [
+          "70010000113744"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "eFootball™ Kick-Off!",
+        "sorting_title": "eFootball™ Kick-Off!",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/efootballkickoff/1x1_EfootballKickOff_square_image_wishlist.jpg",
+        "players_to": 4,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/efootballkickoff/16x9_EfootballKickOff_banner_image_wishlist_640w.jpg",
+        "players_to_local_i": 2,
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "0400984020be8000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Deportes"
+        ],
+        "title_master_s": "eFootball™ Kick-Off!",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "sports"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 3",
+        "price_regular_f": 19.99,
+        "eshop_removed_b": false,
+        "age_rating_type": "pegi",
+        "players_from_local_i": 2,
+        "datasize_readable_txt": [
+          "26.6 GB"
+        ],
+        "price_sorting_f": 19.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 19.99,
+        "age_rating_value": "3",
+        "surround_sound_b": true,
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/efootballkickoff/16x9_EfootballKickOff_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 316,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "1388372",
+        "change_date": "2026-10-01T08:58:50Z",
+        "url": "/es-es/Juegos/Programas-descargables-Nintendo-Switch/Fortnite-1388372.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2018-06-12T00:00:00Z",
+          "2023-12-07T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 100,
+        "pretty_date_s": "12-06-2018",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/fortnite/16x9_Fortnite_20261001_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "HACPAP3CA",
+          "HACYAP3CF"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/fortnite/1x1_Fortnite_20261001_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": true,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 1,
+        "image_url": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_download_software/1x1_NSwitchDS_Fortnite_image500w.jpg",
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": false,
+        "priority": "2028-06-11T22:00:00Z",
+        "digital_version_b": true,
+        "title_extras_txt": [
+          "Fortnite"
+        ],
+        "system_type": [
+          "nintendoswitch_downloadsoftware,nintendoswitch_downloadsoftware"
+        ],
+        "age_rating_sorting_i": 12,
+        "game_categories_txt": [
+          "action",
+          "shooter",
+          "strategy"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Epic Games",
+        "players_to_system_i": 1,
+        "product_code_ss": [
+          "HACPAP3CA",
+          "HACYAP3CF"
+        ],
+        "excerpt": "¡Prepara un buen equipo y lánzate a una Battle Royale de infarto en Nintendo Switch!",
+        "internet": true,
+        "nsuid_txt": [
+          "70010000010190",
+          "70070000020304"
+        ],
+        "date_from": "2018-06-12T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, russian, korean"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "¡Prepara un buen equipo y lánzate a una Battle Royale de infarto en Nintendo Switch!",
+        "related_nsuids_txt": [
+          "70010000010190",
+          "70070000020304"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Fortnite",
+        "sorting_title": "Fortnite",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/fortnite/1x1_Fortnite_20261001_square_image_wishlist.jpg",
+        "ns2_compatibility_details_txt": [
+          "Se ha publicado una versión específica para Nintendo Switch 2."
+        ],
+        "players_to": 100,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/fortnite/16x9_Fortnite_20261001_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "voice_chat_b": false,
+        "application_id_s": "010025400aece000",
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Disparos (Shooter)",
+          "Estrategia"
+        ],
+        "title_master_s": "Fortnite",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,strategy,shooter"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "Supervisión parental recomendada",
+        "price_regular_f": 0,
+        "touch_screen_b": true,
+        "eshop_removed_b": false,
+        "players_from": 1,
+        "age_rating_descriptors_txt": [
+          "iarc_pegi_interactive_paid_random_items",
+          "iarc_pegi_parental_guidance_recommended",
+          "iarc_pegi_interactive_users_interact"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "19.3 GB"
+        ],
+        "price_sorting_f": 0,
+        "ns2_compatibility_status_i": 3,
+        "players_from_system_i": 1,
+        "price_lowest_f": 0,
+        "age_rating_value": "pg",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/fortnite/16x9_Fortnite_20261001_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 999999,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "1386505",
+        "change_date": "2024-07-02T12:00:21Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch/Minecraft-1386505.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2018-06-21T00:00:00Z",
+          "2023-01-31T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 8,
+        "multiplayer_mode": "simultaneous",
+        "pretty_date_s": "21-06-2018",
+        "play_mode_tv_mode_b": true,
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "HACPAEUCA",
+          "HACYAEUCE"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_Minecraft_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 2,
+        "image_url": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_Minecraft_EAP_image500w.jpg",
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": false,
+        "priority": "2028-06-20T22:00:00Z",
+        "digital_version_b": true,
+        "title_extras_txt": [
+          "Minecraft"
+        ],
+        "image_url_h2x1_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_Minecraft_image500w.jpg",
+        "system_type": [
+          "nintendoswitch_digitaldistribution,nintendoswitch_gamecard,nintendoswitch_downloadsoftware"
+        ],
+        "age_rating_sorting_i": 7,
+        "game_categories_txt": [
+          "action",
+          "adventure"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Mojang",
+        "players_to_system_i": 4,
+        "product_code_ss": [
+          "HACPAEUCA",
+          "HACYAEUCE"
+        ],
+        "excerpt": "Explora mundos generados aleatoriamente y construye cosas increíbles.",
+        "internet": true,
+        "nsuid_txt": [
+          "70010000000963",
+          "70070000016615"
+        ],
+        "date_from": "2018-06-21T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, dutch, portuguese, russian, korean, chinese"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "Explora mundos generados aleatoriamente y construye cosas increíbles.",
+        "related_nsuids_txt": [
+          "70010000000963",
+          "70070000016615"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Minecraft",
+        "sorting_title": "Minecraft",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_Minecraft_square_image_wishlist.jpg",
+        "players_to": 8,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_Minecraft_banner_image_wishlist_640w.jpg",
+        "players_to_local_i": 8,
+        "paid_subscription_online_play_b": true,
+        "voice_chat_b": false,
+        "application_id_s": "0100d71004694000",
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Aventura"
+        ],
+        "title_master_s": "Minecraft",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,adventure"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 7",
+        "price_regular_f": 39.99,
+        "touch_screen_b": true,
+        "eshop_removed_b": false,
+        "players_from": 1,
+        "age_rating_descriptors_txt": [
+          "pegi_fear",
+          "pegi_violence"
+        ],
+        "age_rating_type": "pegi",
+        "players_from_local_i": 2,
+        "datasize_readable_txt": [
+          "1.8 GB"
+        ],
+        "price_sorting_f": 29.99,
+        "ns2_compatibility_status_i": 1,
+        "players_from_system_i": 1,
+        "price_lowest_f": 29.99,
+        "age_rating_value": "7",
+        "physical_version_b": true,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_Minecraft_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3183709",
+        "change_date": "2026-10-20T13:07:53Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Monster-Hunter-Wilds-3183709.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-12-04T00:00:00Z",
+          "2050-12-31T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 4,
+        "pretty_date_s": "04-12-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/monsterhunterwilds/16x9_MonsterHunterWilds_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "BEEYAA6YA"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/monsterhunterwilds/1x1_MonsterHunterWilds_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": true,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 1,
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": true,
+        "priority": "2038-12-03T23:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Monster Hunter Wilds"
+        ],
+        "hdr_b": true,
+        "price_discounted_f": 29.99,
+        "system_type": [
+          "nintendoswitch2,nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 16,
+        "game_categories_txt": [
+          "action",
+          "rpg"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "CAPCOM",
+        "players_to_system_i": 1,
+        "product_code_ss": [
+          "BEEYAA6YA"
+        ],
+        "excerpt": "Vive en tu propia piel el próximo paso en la evolución de Monster Hunter en Nintendo Switch 2.",
+        "nsuid_txt": [
+          "70010000102603",
+          "70070000039609"
+        ],
+        "date_from": "2026-12-04T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, russian, korean, chinese, polish"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "Vive en tu propia piel el próximo paso en la evolución de Monster Hunter en Nintendo Switch 2.",
+        "related_nsuids_txt": [
+          "70010000102603",
+          "70070000039609"
+        ],
+        "price_discount_percentage_f": 63,
+        "title": "Monster Hunter Wilds",
+        "sorting_title": "Monster Hunter Wilds",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/monsterhunterwilds/1x1_MonsterHunterWilds_square_image_wishlist.jpg",
+        "players_to": 4,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/monsterhunterwilds/16x9_MonsterHunterWilds_banner_image_wishlist_640w.jpg",
+        "players_to_local_i": 4,
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "04000d2024a7c000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Rol (RPG)"
+        ],
+        "title_master_s": "Monster Hunter Wilds",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,rpg"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 16",
+        "price_regular_f": 79.99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence",
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "players_from_local_i": 1,
+        "datasize_readable_txt": [
+          "242.0 MB"
+        ],
+        "price_sorting_f": 29.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 29.99,
+        "age_rating_value": "16",
+        "surround_sound_b": true,
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/monsterhunterwilds/16x9_MonsterHunterWilds_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 999999,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3039100",
+        "change_date": "2026-09-17T08:43:18Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Pokemon-Oleaje-3039100.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2027-12-31T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "game_series_txt": [
+          "pokemon"
+        ],
+        "pretty_date_s": "2027",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/pokemonwindswaves/16x9_NSwitch2_PokemonWaves_ESes_image500w.jpg",
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/pokemonwindswaves/1x1_NSwitch2_PokemonWaves_ES_es_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "game_series_t": "pokemon",
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": false,
+        "priority": "2039-12-31T07:10:17Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Pokémon Oleaje",
+          "Pokémon Onda",
+          "Pokémon Vagues",
+          "Pokémon Waves",
+          "Pokémon Welle"
+        ],
+        "system_type": [
+          "nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 7,
+        "game_categories_txt": [
+          "rpg"
+        ],
+        "publisher": "Nintendo",
+        "excerpt": "¡Pokémon Oleaje llegará en 2027 a Nintendo Switch 2!",
+        "nsuid_txt": [
+          "70010000122029"
+        ],
+        "date_from": "2027-12-31T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, korean, chinese"
+        ],
+        "product_catalog_description_s": "¡Pokémon Oleaje llegará en 2027 a Nintendo Switch 2!",
+        "related_nsuids_txt": [
+          "70010000122029"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Pokémon Oleaje",
+        "sorting_title": "Pokémon Oleaje",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/pokemonwindswaves/1x1_NSwitch2_PokemonWaves_ES_es_square_image_wishlist.jpg",
+        "players_to": 1,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/pokemonwindswaves/16x9_NSwitch2_PokemonWaves_ESes_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "application_id_s": "040046201d3e8000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 1,
+        "pretty_game_categories_txt": [
+          "Rol (RPG)"
+        ],
+        "title_master_s": "Pokémon Waves",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "rpg"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 7 Provisional",
+        "eshop_removed_b": false,
+        "age_rating_type": "pegi",
+        "price_sorting_f": 999999,
+        "price_lowest_f": -1,
+        "age_rating_value": "7_provisional",
+        "developer": "GAME FREAK",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/pokemonwindswaves/16x9_NSwitch2_PokemonWaves_ESes_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 999999,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3028409",
+        "change_date": "2026-02-16T08:05:42Z",
+        "url": "/es-es/Juegos/Programas-descargables-Nintendo-Switch/30-in-1-Family-Games-Mega-Collection-3028409.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-02-21T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "21-02-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/30in1familygamesmegacollection/16x9_30In1FamilyGamesMegaCollection_EN_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "HACYBUPHA"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/30in1familygamesmegacollection/1x1_30In1FamilyGamesMegaCollection_EN_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": true,
+        "priority": "2036-02-20T23:00:00Z",
+        "digital_version_b": true,
+        "title_extras_txt": [
+          "30 in 1 Family Games Mega Collection",
+          "Méga Collection 30 jeux familiaux en 1"
+        ],
+        "price_discounted_f": 3.99,
+        "system_type": [
+          "nintendoswitch_downloadsoftware"
+        ],
+        "age_rating_sorting_i": 7,
+        "game_categories_txt": [
+          "action",
+          "arcade",
+          "puzzle",
+          "sports"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Baltoro Minis",
+        "players_to_system_i": 1,
+        "product_code_ss": [
+          "HACYBUPHA"
+        ],
+        "excerpt": "30 juegos. Sonrisas sin fin. ¡Diversión familiar pura!",
+        "nsuid_txt": [
+          "70070000033664"
+        ],
+        "date_from": "2026-02-21T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "english, spanish, french, german, italian, portuguese"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "30 juegos. Sonrisas sin fin. ¡Diversión familiar pura!",
+        "related_nsuids_txt": [
+          "70070000033664"
+        ],
+        "price_discount_percentage_f": 96,
+        "title": "30 in 1 Family Games Mega Collection",
+        "sorting_title": "30 in 1 Family Games Mega Collection",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/30in1familygamesmegacollection/1x1_30In1FamilyGamesMegaCollection_EN_square_image_wishlist.jpg",
+        "players_to": 1,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/30in1familygamesmegacollection/16x9_30In1FamilyGamesMegaCollection_EN_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Arcade",
+          "Deportes",
+          "Puzle"
+        ],
+        "title_master_s": "30 in 1 Family Games Mega Collection",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,puzzle,sports,arcade"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 7",
+        "price_regular_f": 99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "iarc_pegi_implied_violence",
+          "iarc_pegi_mild_violence",
+          "iarc_pegi_interactive_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 3.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 3.99,
+        "age_rating_value": "7",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/30in1familygamesmegacollection/16x9_30In1FamilyGamesMegaCollection_EN_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 410,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2792834",
+        "change_date": "2026-03-12T09:40:07Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Street-Fighter-6-2792834.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2025-06-05T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "05-06-2025",
+        "play_mode_tv_mode_b": true,
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/streetfighter6/1x1_StreetFighter6_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": true,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": true,
+        "priority": "2037-06-04T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Street Fighter™ 6"
+        ],
+        "price_discounted_f": 38.99,
+        "image_url_h2x1_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/streetfighter6/2x1_StreetFighter6_image500w.jpg",
+        "system_type": [
+          "nintendoswitch2,nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 12,
+        "game_categories_txt": [
+          "fighting"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "CAPCOM",
+        "excerpt": "Vive en tu propia piel el próximo paso en la evolución de Street Fighter en Nintendo Switch 2.",
+        "nsuid_txt": [
+          "70010000095204",
+          "70070000027363"
+        ],
+        "date_from": "2025-06-05T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, russian, korean, chinese"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "Vive en tu propia piel el próximo paso en la evolución de Street Fighter en Nintendo Switch 2.",
+        "related_nsuids_txt": [
+          "70010000095204",
+          "70070000027363"
+        ],
+        "price_discount_percentage_f": 35,
+        "title": "Street Fighter™ 6",
+        "sorting_title": "Street Fighter™ 6",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/streetfighter6/1x1_StreetFighter6_square_image_wishlist.jpg",
+        "players_to": 16,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/streetfighter6/2x1_StreetFighter6_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "040078001ccf6000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Lucha"
+        ],
+        "title_master_s": "Street Fighter™ 6",
+        "120_hz_b": true,
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "fighting"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 12",
+        "price_regular_f": 59.99,
+        "touch_screen_b": true,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence",
+          "pegi_in_game_purchases",
+          "pegi_sexual",
+          "pegi_language"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "63.3 GB"
+        ],
+        "price_sorting_f": 15.99,
+        "price_lowest_f": 15.99,
+        "age_rating_value": "12",
+        "surround_sound_b": true,
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/streetfighter6/2x1_StreetFighter6_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 127,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2064540",
+        "change_date": "2025-05-14T09:06:02Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch/Grand-Theft-Auto-The-Trilogy-The-Definitive-Edition-2064540.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2021-11-11T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "11-11-2021",
+        "play_mode_tv_mode_b": true,
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "HACYA6SQA"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_GrandTheftAutoTheTrilogyTheDefinitiveEdition_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "pg_s": "GAME",
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_GrandTheftAutoTheTrilogyTheDefinitiveEdition_image500w.jpg",
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": true,
+        "priority": "2031-11-10T23:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Grand Theft Auto: The Trilogy – The Definitive Edition"
+        ],
+        "price_discounted_f": 19.79,
+        "image_url_h2x1_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_GrandTheftAutoTheTrilogyTheDefinitiveEdition_image500w.jpg",
+        "system_type": [
+          "nintendoswitch_digitaldistribution,nintendoswitch_gamecard"
+        ],
+        "age_rating_sorting_i": 18,
+        "game_categories_txt": [
+          "action",
+          "adventure"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "ROCKSTAR GAMES",
+        "players_to_system_i": 1,
+        "product_code_ss": [
+          "HACYA6SQA"
+        ],
+        "excerpt": "Tres ciudades famosas, tres historias épicas.",
+        "nsuid_txt": [
+          "70070000013132"
+        ],
+        "date_from": "2021-11-11T00:00:00Z",
+        "language_availability": [
+          "english, spanish, french, german, italian, russian, korean, chinese"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "Tres ciudades famosas, tres historias épicas.",
+        "related_nsuids_txt": [
+          "70070000013132"
+        ],
+        "price_discount_percentage_f": 67,
+        "title": "Grand Theft Auto: The Trilogy – The Definitive Edition",
+        "sorting_title": "Grand Theft Auto: The Trilogy – The Definitive Edition",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_GrandTheftAutoTheTrilogyTheDefinitiveEdition_square_image_wishlist.jpg",
+        "players_to": 1,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_GrandTheftAutoTheTrilogyTheDefinitiveEdition_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Aventura"
+        ],
+        "title_master_s": "Grand Theft Auto: The Trilogy – The Definitive Edition",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,adventure"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 18",
+        "price_regular_f": 59.99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_language",
+          "pegi_gambling",
+          "pegi_violence"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 19.79,
+        "players_from_system_i": 1,
+        "price_lowest_f": 19.79,
+        "age_rating_value": "18",
+        "physical_version_b": true,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_GrandTheftAutoTheTrilogyTheDefinitiveEdition_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 109,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "3147152",
+        "change_date": "2026-09-25T13:58:46Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch/EA-SPORTS-FC-27-3147152.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-09-25T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 8,
+        "pretty_date_s": "25-09-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/easportsfc27_1/16x9_EASPORTSFC27_202608_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "HACYBSYBA"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/easportsfc27_1/1x1_EASPORTSFC27_202608_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 2,
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": false,
+        "priority": "2036-09-24T22:00:00Z",
+        "digital_version_b": true,
+        "title_extras_txt": [
+          "EA SPORTS FC™ 27",
+          "EA SPORTS FC™ 27"
+        ],
+        "price_discounted_f": 67.49,
+        "system_type": [
+          "nintendoswitch_downloadsoftware,nintendoswitch_downloadsoftware"
+        ],
+        "age_rating_sorting_i": 16,
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Electronic Arts",
+        "players_to_system_i": 4,
+        "product_code_ss": [
+          "HACYBSYBA"
+        ],
+        "excerpt": "The World's Game\n",
+        "nsuid_txt": [
+          "70010000110118",
+          "70070000036466"
+        ],
+        "date_from": "2026-09-25T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, dutch, portuguese, russian, korean, chinese, polish"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "The World's Game\n",
+        "related_nsuids_txt": [
+          "70010000110118",
+          "70070000036466"
+        ],
+        "price_discount_percentage_f": 25,
+        "title": "EA SPORTS FC™ 27",
+        "sorting_title": "EA SPORTS FC™ 27",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/easportsfc27_1/1x1_EASPORTSFC27_202608_square_image_wishlist.jpg",
+        "players_tbd_b": false,
+        "players_to": 8,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/easportsfc27_1/16x9_EASPORTSFC27_202608_banner_image_wishlist_640w.jpg",
+        "players_to_local_i": 2,
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "0100c49025d3e000",
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "title_master_s": "EA SPORTS FC™ 27",
+        "switch_game_voucher_b": false,
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 16",
+        "price_regular_f": 89.99,
+        "touch_screen_b": true,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_paid_random_items",
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "players_from_local_i": 2,
+        "datasize_readable_txt": [
+          "32.4 GB"
+        ],
+        "price_sorting_f": 59.99,
+        "ns2_compatibility_status_i": 1,
+        "players_from_system_i": 1,
+        "price_lowest_f": 59.99,
+        "age_rating_value": "16",
+        "surround_sound_b": true,
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/easportsfc27_1/16x9_EASPORTSFC27_202608_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "_version_": 1880304439382769700
+      },
+      {
+        "fs_id": "2915498",
+        "change_date": "2026-10-15T15:04:53Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Fire-Emblem-Fortune-s-Weave-2915498.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-09-17T00:00:00Z",
+          "2026-10-15T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "game_series_txt": [
+          "fire_emblem"
+        ],
+        "pretty_date_s": "17-09-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/fireemblemfortunesweave/16x9_NSwitch2_FireEmblemFortunesWeave_image500w.jpg",
+        "play_mode_handheld_mode_b": true,
+        "product_code_txt": [
+          "BEEYAACSA"
+        ],
+        "image_url_sq_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/fireemblemfortunesweave/1x1_NSwitch2_FireEmblemFortunesWeave_image500w.jpg",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "game_series_t": "fire_emblem",
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": true,
+        "priority": "2042-10-14T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Fire Emblem: Fortune's Weave",
+          "Fire Emblem: Fortune's Weave "
+        ],
+        "hdr_b": true,
+        "system_type": [
+          "nintendoswitch2,nintendoswitch2,nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 12,
+        "game_categories_txt": [
+          "rpg",
+          "simulation"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Nintendo",
+        "players_to_system_i": 1,
+        "product_code_ss": [
+          "BEEYAACSA"
+        ],
+        "excerpt": "Lucha por la victoria y cumple tu deseo más ansiado en Fire Emblem: Fortune's Weave para Nintendo Switch 2.",
+        "nsuid_txt": [
+          "70010000126930",
+          "70070000040993"
+        ],
+        "date_from": "2026-09-17T00:00:00Z",
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, korean, chinese"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "Lucha por la victoria y cumple tu deseo más ansiado en Fire Emblem: Fortune's Weave para Nintendo Switch 2.",
+        "related_nsuids_txt": [
+          "70010000126930",
+          "70070000040950",
+          "70070000040993"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Fire Emblem: Fortune's Weave",
+        "sorting_title": "Fire Emblem: Fortune's Weave",
+        "wishlist_email_square_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/fireemblemfortunesweave/1x1_NSwitch2_FireEmblemFortunesWeave_square_image_wishlist.jpg",
+        "players_to": 1,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/fireemblemfortunesweave/16x9_NSwitch2_FireEmblemFortunesWeave_banner_image_wishlist_640w.jpg",
+        "paid_subscription_online_play_b": false,
+        "application_id_s": "04007ef01f8ae000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 1,
+        "pretty_game_categories_txt": [
+          "Rol (RPG)",
+          "Simulación"
+        ],
+        "title_master_s": "Fire Emblem: Fortune's Weave",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "simulation,rpg"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 12",
+        "price_regular_f": 104.98,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence",
+          "pegi_in_game_purchases",
+          "pegi_language"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "27.5 GB"
+        ],
+        "price_sorting_f": 34.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 34.99,
+        "age_rating_value": "12",
+        "developer": "",
+        "surround_sound_b": true,
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/fireemblemfortunesweave/16x9_NSwitch2_FireEmblemFortunesWeave_banner_image_wishlist_460w.jpg",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 19,
+        "_version_": 1880304439383818200
+      },
+      {
+        "fs_id": "3196404",
+        "change_date": "2026-09-14T14:37:23Z",
+        "url": "/es-es/Juegos/Juegos-de-Nintendo-Switch-2/Diablo-IV-Age-of-Hatred-Collection-3196404.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-09-15T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "players_to_online_i": 4,
+        "pretty_date_s": "15-09-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://assets.nintendo.eu/image/private/f_auto,q_auto,w_500/g0c8hovypvhodxhgjnei",
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://assets.nintendo.eu/image/private/f_auto,q_auto,w_500/zne8g74zy0mg5wtdwulo",
+        "deprioritise_b": false,
+        "demo_availability": false,
+        "internet_required_b": true,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "players_from_online_i": 1,
+        "originally_for_t": "BEE",
+        "paid_subscription_required_b": true,
+        "cloud_saves_b": true,
+        "priority": "2038-09-14T22:00:00Z",
+        "digital_version_b": false,
+        "title_extras_txt": [
+          "Diablo® IV: Age of Hatred Collection",
+          "Diablo® IV : collection Age of Hatred"
+        ],
+        "hdr_b": true,
+        "price_discounted_f": 62.99,
+        "system_type": [
+          "nintendoswitch2"
+        ],
+        "age_rating_sorting_i": 18,
+        "game_categories_txt": [
+          "action",
+          "adventure",
+          "party",
+          "rpg"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "Blizzard Entertainment",
+        "players_to_system_i": 2,
+        "excerpt": "Embárcate en una amplia campaña de fantasía oscura en la que emergen héroes inesperados y enemigos antiguos y en la que ni un alma está a salvo.",
+        "nsuid_txt": [
+          "70010000104365"
+        ],
+        "date_from": "2026-09-15T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, russian, korean, chinese, polish"
+        ],
+        "price_has_discount_b": true,
+        "product_catalog_description_s": "Embárcate en una amplia campaña de fantasía oscura en la que emergen héroes inesperados y enemigos antiguos y en la que ni un alma está a salvo.",
+        "related_nsuids_txt": [
+          "70010000104365"
+        ],
+        "price_discount_percentage_f": 10,
+        "title": "Diablo® IV: Age of Hatred Collection",
+        "sorting_title": "Diablo® IV: Age of Hatred Collection",
+        "wishlist_email_square_image_url_s": "https://assets.nintendo.eu/image/private/f_auto,q_auto,w_220/zne8g74zy0mg5wtdwulo",
+        "players_to": 4,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://assets.nintendo.eu/image/private/f_auto,q_auto,w_640/g0c8hovypvhodxhgjnei",
+        "paid_subscription_online_play_b": true,
+        "application_id_s": "0400083024ff0000",
+        "playable_on_txt": [
+          "BEE"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Aventura",
+          "Fiesta",
+          "Rol (RPG)"
+        ],
+        "title_master_s": "Diablo® IV: Age of Hatred Collection",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,party,adventure,rpg"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch 2"
+        ],
+        "pretty_agerating_s": "PEGI 18",
+        "price_regular_f": 69.99,
+        "touch_screen_b": true,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence",
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "62.1 GB"
+        ],
+        "price_sorting_f": 62.99,
+        "players_from_system_i": 1,
+        "price_lowest_f": 62.99,
+        "age_rating_value": "18",
+        "surround_sound_b": true,
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://assets.nintendo.eu/image/private/f_auto,q_auto/g0c8hovypvhodxhgjnei",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 38,
+        "_version_": 1880304439383818200
+      },
+      {
+        "fs_id": "3147431",
+        "change_date": "2026-10-01T10:56:04Z",
+        "url": "/es-es/Juegos/Programas-descargables-Nintendo-Switch/Castlevania-Belmont-s-Curse-3147431.html",
+        "type": "GAME",
+        "dates_released_dts": [
+          "2026-10-15T00:00:00Z"
+        ],
+        "club_nintendo": false,
+        "pretty_date_s": "15-10-2026",
+        "play_mode_tv_mode_b": true,
+        "image_url_h16x9_s": "https://assets.nintendo.eu/image/private/f_auto,q_auto,w_500/bt0sclfzgtc9k3nwuk79",
+        "play_mode_handheld_mode_b": true,
+        "image_url_sq_s": "https://assets.nintendo.eu/image/private/f_auto,q_auto,w_500/wgfvbnhxegimaihxuhsq",
+        "deprioritise_b": false,
+        "demo_availability": true,
+        "internet_required_b": false,
+        "pg_s": "GAME",
+        "add_on_content_b": true,
+        "compatible_controller": [
+          "nintendoswitch_pro_controller"
+        ],
+        "originally_for_t": "HAC",
+        "paid_subscription_required_b": false,
+        "cloud_saves_b": true,
+        "priority": "2036-10-14T22:00:00Z",
+        "digital_version_b": true,
+        "title_extras_txt": [
+          "Castlevania: Belmont's Curse"
+        ],
+        "system_type": [
+          "nintendoswitch_downloadsoftware,nintendoswitch_downloadsoftware"
+        ],
+        "age_rating_sorting_i": 16,
+        "game_categories_txt": [
+          "action",
+          "rpg"
+        ],
+        "play_mode_tabletop_mode_b": true,
+        "publisher": "KONAMI",
+        "players_to_system_i": 1,
+        "excerpt": "La maldición carmesí: ¿un futuro negro o brillante?",
+        "nsuid_txt": [
+          "70010000116852",
+          "70070000037344"
+        ],
+        "date_from": "2026-10-15T00:00:00Z",
+        "dlc_shown_b": true,
+        "language_availability": [
+          "japanese, english, spanish, french, german, italian, portuguese, russian, korean, chinese"
+        ],
+        "price_has_discount_b": false,
+        "product_catalog_description_s": "La maldición carmesí: ¿un futuro negro o brillante?",
+        "related_nsuids_txt": [
+          "70010000116852",
+          "70070000037344"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Castlevania: Belmont's Curse",
+        "sorting_title": "Castlevania: Belmont's Curse",
+        "wishlist_email_square_image_url_s": "https://assets.nintendo.eu/image/private/f_auto,q_auto,w_220/wgfvbnhxegimaihxuhsq",
+        "players_to": 1,
+        "nfc_required_b": false,
+        "wishlist_email_banner640w_image_url_s": "https://assets.nintendo.eu/image/private/f_auto,q_auto,w_640/bt0sclfzgtc9k3nwuk79",
+        "paid_subscription_online_play_b": false,
+        "application_id_s": "0100ba4026e94000",
+        "playable_on_txt": [
+          "HAC"
+        ],
+        "hits_i": 300,
+        "pretty_game_categories_txt": [
+          "Acción",
+          "Rol (RPG)"
+        ],
+        "title_master_s": "Castlevania: Belmont's Curse",
+        "switch_game_voucher_b": false,
+        "game_category": [
+          "action,rpg"
+        ],
+        "system_names_txt": [
+          "Nintendo Switch"
+        ],
+        "pretty_agerating_s": "PEGI 16",
+        "price_regular_f": 39.99,
+        "eshop_removed_b": false,
+        "age_rating_descriptors_txt": [
+          "pegi_violence"
+        ],
+        "age_rating_type": "pegi",
+        "datasize_readable_txt": [
+          "3.5 GB"
+        ],
+        "price_sorting_f": 29.99,
+        "ns2_compatibility_status_i": 1,
+        "players_from_system_i": 1,
+        "price_lowest_f": 29.99,
+        "age_rating_value": "16",
+        "physical_version_b": false,
+        "wishlist_email_banner460w_image_url_s": "https://assets.nintendo.eu/image/private/f_auto,q_auto/bt0sclfzgtc9k3nwuk79",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 34,
+        "_version_": 1880304439383818200
+      }
+    ]
+  }
+}

@@ -3,7 +3,15 @@ import { parsearPrecios } from "@/lib/sources/nintendo/precios";
 import { parsearDocumentoEuropa } from "@/lib/sources/nintendo/europa";
 import { parsearHitAmericas, urlsAmericas } from "@/lib/sources/nintendo/americas";
 import { parsearDolarApi, parsearFrankfurter } from "@/lib/sources/cotizaciones";
-import { limpiarTituloKey, parsearListado, parsearTituloGiftCard, regionActivacion } from "@/lib/sources/instantGaming";
+import {
+  enlacesFichas,
+  enlacesGeneros,
+  esFichaGiftCard,
+  etiquetaRegion,
+  limpiarTituloKey,
+  parsearTituloGiftCard,
+  plataformaDeTitulo,
+} from "@/lib/sources/instantGaming";
 import { parsearRobots, permitidoPorRobots } from "@/lib/sources/robots";
 import { tipoDesdeTitulo } from "@/lib/sources/nintendo/catalogo";
 
@@ -113,20 +121,24 @@ describe("cotizaciones (formato documentado)", () => {
   });
 });
 
-describe("Instant Gaming (HTML de ejemplo)", () => {
-  const html = `
-    <div class="item"><a class="cover" href="/es/123-comprar-juego-switch/"><img alt="Juego"></a>
-      <span class="title">Juego de Prueba (Switch) - Europe</span><div class="price">39,99 €</div></div>
-    <div class="item"><a class="cover" href="/es/456-comprar-otro/"></a>
-      <span class="title">Otro</span><div class="price">12,50 €</div><span class="nostock"></span></div>
-    <a class="next" href="?page=2">›</a>`;
-
-  it("extrae título, precio, URL y stock", () => {
-    const r = parsearListado(html, "https://ig.example");
-    expect(r.haySiguiente).toBe(true);
-    expect(r.items.map((i) => [i.titulo, i.precio.toFixed(), i.moneda, i.url, i.disponible])).toEqual([
-      ["Juego de Prueba (Switch) - Europe", "39.99", "EUR", "https://ig.example/es/123-comprar-juego-switch/", true],
-      ["Otro", "12.5", "EUR", "https://ig.example/es/456-comprar-otro/", false],
+describe("Instant Gaming (funciones puras)", () => {
+  it("encuentra enlaces a fichas y géneros", () => {
+    const html = `
+      <a href="/es/123-comprar-juego-switch-nintendo-eshop/">Juego</a>
+      <a href="https://www.instant-gaming.com/es/456-descargar-otro-switch-2-nintendo-eshop/?utm=x">Otro</a>
+      <a href="/es/10559-comprar-tarjeta-nintendo-eshop-20-20-card-estados-unidos/">Gift</a>
+      <a href="/es/busquedas/?q=zelda">Búsqueda</a>
+      <a href="/es/nintendo/generos/rpg/">RPG</a>
+      <a href="https://otro-sitio.example/es/1-comprar-x/">Afuera</a>`;
+    const fichas = enlacesFichas(html, "https://www.instant-gaming.com");
+    expect(fichas).toEqual([
+      "https://www.instant-gaming.com/es/123-comprar-juego-switch-nintendo-eshop/",
+      "https://www.instant-gaming.com/es/456-descargar-otro-switch-2-nintendo-eshop/",
+      "https://www.instant-gaming.com/es/10559-comprar-tarjeta-nintendo-eshop-20-20-card-estados-unidos/",
+    ]);
+    expect(fichas.filter(esFichaGiftCard)).toHaveLength(1);
+    expect(enlacesGeneros(html, "https://www.instant-gaming.com")).toEqual([
+      "https://www.instant-gaming.com/es/nintendo/generos/rpg/",
     ]);
   });
 
@@ -135,18 +147,27 @@ describe("Instant Gaming (HTML de ejemplo)", () => {
       const r = parsearTituloGiftCard(s);
       return r && `${r.valor.toFixed()} ${r.moneda} ${r.region}`;
     };
+    expect(t("Tarjeta Nintendo eShop 20$")).toBe("20 USD US");
+    expect(t("Tarjeta Nintendo eShop 25GBP")).toBe("25 GBP GB");
     expect(t("Nintendo eShop Card 25 EUR")).toBe("25 EUR EU");
     expect(t("Tarjeta Nintendo eShop 50€")).toBe("50 EUR EU");
     expect(t("Nintendo eShop Card £15 UK")).toBe("15 GBP GB");
-    expect(t("Nintendo eShop Gift Card $20 USD")).toBe("20 USD US");
     expect(t("Zelda (Switch)")).toBeNull();
   });
 
-  it("detecta región de activación y limpia títulos de keys", () => {
-    expect(regionActivacion("Juego (Switch) - Europe")).toBe("EU");
-    expect(regionActivacion("Juego Nintendo Switch Key NORTH AMERICA")).toBe("US");
-    expect(regionActivacion("Juego")).toBeNull();
+  it("deduce la región a partir de los países de activación", () => {
+    expect(etiquetaRegion(["ES", "DE", "FR"])).toBe("EU");
+    expect(etiquetaRegion(["US"])).toBe("US");
+    expect(etiquetaRegion(["US", "ES"])).toBe("GLOBAL");
+    expect(etiquetaRegion([])).toBeNull();
+  });
+
+  it("limpia títulos de keys y detecta la plataforma", () => {
+    expect(limpiarTituloKey("Sonic Origins Plus - Switch")).toBe("sonic origins plus");
     expect(limpiarTituloKey("Hollow Knight (Switch) - Nintendo eShop Key EUROPE")).toBe("hollow knight");
+    expect(plataformaDeTitulo("Palia - Switch 2")).toBe("SWITCH2");
+    expect(plataformaDeTitulo("Sonic Origins Plus - Switch")).toBe("SWITCH");
+    expect(plataformaDeTitulo("Tarjeta Nintendo eShop 20$")).toBeNull();
   });
 });
 

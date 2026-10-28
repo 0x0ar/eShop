@@ -27,6 +27,8 @@ export interface OfertaKey {
   precio: Decimal;
   moneda: string;
   regionActivacion: string;
+  /** Países exactos donde se activa (si la tienda los informa). Tiene prioridad sobre la región. */
+  paisesActivacion?: string[] | null;
   url: string;
   disponible: boolean;
   actualizado: Date;
@@ -205,7 +207,7 @@ function celdaKey(
   const celdas: CeldaDTO[] = [];
   for (const k of keys) {
     if (!k.disponible) continue;
-    const validos = paisesDeRegionKey(k.regionActivacion);
+    const validos = k.paisesActivacion?.length ? k.paisesActivacion : paisesDeRegionKey(k.regionActivacion);
     const paises = validos === "todos" ? paisesRegion : paisesRegion.filter((p) => validos.includes(p));
     if (paises.length === 0) continue;
     let conv;

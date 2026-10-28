@@ -1,115 +1,179 @@
 import * as cheerio from "cheerio";
 import type Decimal from "decimal.js";
 import { fuentes } from "@config/fuentes";
-import { parsearPrecio } from "@/lib/domain/dinero";
+import { PAISES } from "@config/regiones";
+import { dec, parsearPrecio } from "@/lib/domain/dinero";
 import { normalizarTitulo } from "@/lib/domain/texto";
 
 /**
- * Scraping de Instant Gaming (no tiene API pública). Todo lo que depende del
- * HTML está concentrado en `SELECTORES` y en las rutas de listado, para
- * ajustarlo en un solo lugar si cambia el sitio. Ver docs/fuentes.md.
+ * Scraping de Instant Gaming (no tiene API pública). Verificado el 2026-10-28
+ * con páginas reales (tests/fixtures/real/instant-gaming-*.html):
+ *
+ * - robots.txt PROHÍBE la búsqueda (/es/busquedas/). El listado completo de la
+ *   tienda solo existe ahí (lo arma el navegador consultando Algolia), así que
+ *   no se usa.
+ * - Las categorías (/es/nintendo/…) y las fichas de producto están permitidas.
+ *   Las categorías traen en el HTML solo productos destacados; de ahí salen los
+ *   enlaces a fichas.
+ * - Cada ficha trae `window.productModel` (precio, stock) y
+ *   `window.countriesAvailability` (países donde se activa). Con eso no hace
+ *   falta adivinar la región de activación.
  */
 
-export const SELECTORES = {
-  item: ".item, .search-item, article.product",
-  titulo: ".title, .name, .product-title",
-  precio: ".price, .final-price, [itemprop=price]",
-  enlace: "a.cover, a[href*='-comprar-'], a[href*='-buy-'], a",
-  agotado: ".nostock, .out-of-stock, .sold-out",
-  siguiente: "a.next, .pagination a[rel=next]",
-};
-
 export const RUTAS = {
-  /** Listado de productos de Nintendo Switch (keys). `{pagina}` se reemplaza. */
-  keys: () => process.env.INSTANT_GAMING_RUTA_KEYS ?? "/es/busquedas/?platform%5B%5D=nintendo-switch&page={pagina}",
-  /** Búsqueda de gift cards de eShop. */
-  giftcards: () => process.env.INSTANT_GAMING_RUTA_GIFTCARDS ?? "/es/busquedas/?q=nintendo+eshop+card&page={pagina}",
+  /** Categorías permitidas de donde se sacan enlaces a fichas de juegos. */
+  categoriasKeys: (): string[] =>
+    (
+      process.env.INSTANT_GAMING_CATEGORIAS ??
+      "/es/nintendo/switch/,/es/nintendo/switch2/,/es/nintendo/tendencias/,/es/nintendo/mas-vendidos/"
+    )
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean),
+  /** Punto de partida para gift cards; desde cada ficha se siguen sus variantes. */
+  giftcards: () => process.env.INSTANT_GAMING_RUTA_GIFTCARDS ?? "/es/nintendo/tarjetas-regalo/",
 };
 
-export function urlListado(tipo: keyof typeof RUTAS, pagina: number): string {
-  return fuentes.instantGaming.baseUrl() + RUTAS[tipo]().replace("{pagina}", String(pagina));
+export function urlInstantGaming(ruta: string): string {
+  return new URL(ruta, fuentes.instantGaming.baseUrl()).toString();
 }
 
-export interface ItemListado {
+const RE_FICHA = /^\/[a-z]{2}\/\d+-(?:comprar|descargar)-[a-z0-9-]+\/?$/;
+const RE_GIFTCARD = /tarjeta-nintendo-eshop|nintendo-eshop-card|eshop-card/;
+
+function absolutaIG(href: string, base: string): URL | null {
+  try {
+    const u = new URL(href, base);
+    return u.hostname.endsWith("instant-gaming.com") ? u : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Enlaces a fichas de producto presentes en una página. */
+export function enlacesFichas(html: string, base = fuentes.instantGaming.baseUrl()): string[] {
+  const $ = cheerio.load(html);
+  const urls = new Set<string>();
+  $("a[href]").each((_, a) => {
+    const u = absolutaIG($(a).attr("href")!, base);
+    if (u && RE_FICHA.test(u.pathname)) urls.add(`${u.origin}${u.pathname}`);
+  });
+  return Array.from(urls);
+}
+
+export function esFichaGiftCard(url: string): boolean {
+  return RE_GIFTCARD.test(url);
+}
+
+/** Subcategorías de géneros de Nintendo (también permitidas) para ampliar el descubrimiento. */
+export function enlacesGeneros(html: string, base = fuentes.instantGaming.baseUrl()): string[] {
+  const $ = cheerio.load(html);
+  const urls = new Set<string>();
+  $("a[href]").each((_, a) => {
+    const u = absolutaIG($(a).attr("href")!, base);
+    if (u && /^\/[a-z]{2}\/nintendo\/generos\/[a-z0-9-]+\/$/.test(u.pathname)) urls.add(`${u.origin}${u.pathname}`);
+  });
+  return Array.from(urls);
+}
+
+/** Nombre de país en español (como lo muestra Instant Gaming) → código de las eShops configuradas. */
+const CODIGO_POR_NOMBRE = new Map(Object.values(PAISES).map((p) => [p.nombre.toLowerCase(), p.codigo]));
+
+export interface FichaIG {
+  prodId: number;
+  url: string;
+  /** Título del producto (h1), por ejemplo "Sonic Origins Plus - Switch". */
   titulo: string;
+  /** Título con región, por ejemplo "Sonic Origins Plus - Switch - Europe". */
+  tituloCompleto: string;
   precio: Decimal;
   moneda: string;
-  url: string;
   disponible: boolean;
+  /** Países donde se activa, tal como los lista la tienda. */
+  paisesTienda: string[];
+  /** Códigos de las eShops configuradas donde se activa (subconjunto de paisesTienda). */
+  paisesActivacion: string[];
+  esNintendo: boolean;
 }
 
-function monedaDeTexto(texto: string): string {
-  if (/€|EUR/i.test(texto)) return "EUR";
-  if (/£|GBP/i.test(texto)) return "GBP";
-  if (/US\$|USD|\$/i.test(texto)) return "USD";
-  return "EUR";
-}
-
-/** Extrae los productos de una página de listado/búsqueda. */
-export function parsearListado(
-  html: string,
-  base = fuentes.instantGaming.baseUrl(),
-): { items: ItemListado[]; haySiguiente: boolean } {
-  const $ = cheerio.load(html);
-  const items: ItemListado[] = [];
-  const vistos = new Set<string>();
-  $(SELECTORES.item).each((_, el) => {
-    const nodo = $(el);
-    const titulo =
-      nodo.find(SELECTORES.titulo).first().text().trim() || nodo.find("img").first().attr("alt")?.trim() || "";
-    const precioNodo = nodo.find(SELECTORES.precio).first();
-    const textoPrecio = (precioNodo.attr("content") ?? precioNodo.text()).trim();
-    const href = nodo.find(SELECTORES.enlace).first().attr("href");
-    if (!titulo || !textoPrecio || !href) return;
-    const precio = parsearPrecio(textoPrecio);
-    if (!precio || precio.lte(0)) return;
-    const url = new URL(href, base).toString();
-    if (vistos.has(url)) return;
-    vistos.add(url);
-    items.push({
-      titulo,
-      precio,
-      moneda: monedaDeTexto(precioNodo.text() + " " + (precioNodo.attr("content") ? "EUR" : "")),
-      url,
-      disponible: nodo.find(SELECTORES.agotado).length === 0,
-    });
-  });
-  return { items, haySiguiente: $(SELECTORES.siguiente).length > 0 };
-}
-
-/** Región de activación declarada en el título o en el texto de la página del producto. */
-export function regionActivacion(texto: string): "EU" | "US" | "GLOBAL" | null {
-  const t = texto.toUpperCase();
-  if (/\b(GLOBAL|WORLDWIDE|MUNDIAL)\b/.test(t)) return "GLOBAL";
-  if (/\b(EUROPE|EUROPA|EU|EUR)\b/.test(t)) return "EU";
-  if (/\b(NORTH AMERICA|NORTEAM[EÉ]RICA|USA|US|NA)\b/.test(t)) return "US";
-  return null;
-}
-
-/** Busca la región de activación en la página de un producto. */
-export function parsearRegionProducto(html: string): "EU" | "US" | "GLOBAL" | null {
-  const $ = cheerio.load(html);
-  const candidatos = [
-    $("[class*=region]").text(),
-    $("[class*=activation]").text(),
-    $("body")
-      .text()
-      .match(/(?:regi[oó]n|region|activaci[oó]n)[^.\n]{0,80}/gi)
-      ?.join(" ") ?? "",
-  ];
-  for (const c of candidatos) {
-    const r = regionActivacion(c);
-    if (r) return r;
+function extraerJson<T>(html: string, variable: string): T | null {
+  // window.x = {...}; window.y = …  → se toma hasta el próximo "; window." o fin de script.
+  const inicio = html.indexOf(`window.${variable} = `);
+  if (inicio < 0) return null;
+  const desde = inicio + `window.${variable} = `.length;
+  const fin = html.indexOf(";", desde);
+  for (let corte = fin; corte > 0 && corte < html.length; corte = html.indexOf(";", corte + 1)) {
+    try {
+      return JSON.parse(html.slice(desde, corte)) as T;
+    } catch {
+      if (corte - desde > 2_000_000) return null;
+    }
   }
   return null;
 }
 
+function monedaDeFormato(formato: string | undefined): string {
+  if (!formato) return "EUR";
+  if (/€|\\u20ac/i.test(formato)) return "EUR";
+  if (/£|\\u00a3/i.test(formato)) return "GBP";
+  if (/\$/.test(formato)) return "USD";
+  return "EUR";
+}
+
+/** Parsea una ficha de producto. Devuelve null si la página no tiene los datos esperados. */
+export function parsearFicha(html: string): FichaIG | null {
+  const modelo = extraerJson<{
+    prod_id?: number;
+    price?: number | string;
+    has_stock?: boolean;
+    retail_currency_format?: string;
+  }>(html, "productModel");
+  if (!modelo?.prod_id || modelo.price == null) return null;
+  const $ = cheerio.load(html);
+  const titulo = $("h1").first().text().replace(/\s+/g, " ").trim();
+  const og =
+    $('meta[property="og:title"]')
+      .attr("content")
+      ?.replace(/^Comprar\s+/i, "")
+      .trim() ?? titulo;
+  const url = $('link[rel="canonical"]').attr("href") ?? "";
+  const paisesTienda = extraerJson<string[]>(html, "countriesAvailability") ?? [];
+  const paisesActivacion = Array.from(
+    new Set(paisesTienda.map((n) => CODIGO_POR_NOMBRE.get(n.toLowerCase())).filter((c): c is string => Boolean(c))),
+  );
+  const migas = $('script[type="application/ld+json"]').text();
+  return {
+    prodId: modelo.prod_id,
+    url,
+    titulo: titulo || og,
+    tituloCompleto: og,
+    precio: dec(String(modelo.price)),
+    moneda: monedaDeFormato(modelo.retail_currency_format),
+    disponible: modelo.has_stock !== false,
+    paisesTienda,
+    paisesActivacion,
+    esNintendo: /\/nintendo\//.test(migas) || /nintendo-eshop/.test(url),
+  };
+}
+
+/**
+ * Etiqueta de región a partir de los países de activación: EU si son todos
+ * europeos, US si es solo Estados Unidos, GLOBAL si mezcla regiones.
+ */
+export function etiquetaRegion(paises: string[]): "EU" | "US" | "GLOBAL" | null {
+  if (paises.length === 0) return null;
+  const americanos = paises.filter((p) => PAISES[p]?.catalogo === "AMERICAS");
+  if (americanos.length === 0) return "EU";
+  if (americanos.length === paises.length) return americanos.every((p) => p === "US") ? "US" : "GLOBAL";
+  return "GLOBAL";
+}
+
 const RUIDO_KEYS = [
   /\(\s*(nintendo\s+)?switch( 2)?\s*\)/gi,
-  /-\s*nintendo switch( 2)?\b.*$/gi,
+  /\s[-–]\s*(nintendo\s+)?switch( 2)?\b.*$/gi,
   /\bnintendo e-?shop\b/gi,
   /\b(key|clave|code|c[oó]digo|digital|download)\b/gi,
-  /\b(europe|europa|eu|north america|usa|us|global)\b/gi,
+  /\b(europe|europa|north america|usa|global)\b/gi,
 ];
 
 /** Título de la key → título comparable con el del catálogo. */
@@ -119,13 +183,23 @@ export function limpiarTituloKey(titulo: string): string {
   return normalizarTitulo(t);
 }
 
+/** "Sonic Origins Plus - Switch 2" → SWITCH2; "- Switch" → SWITCH; sin dato → null. */
+export function plataformaDeTitulo(titulo: string): "SWITCH" | "SWITCH2" | null {
+  if (/switch\s*2\b/i.test(titulo)) return "SWITCH2";
+  if (/\bswitch\b/i.test(titulo)) return "SWITCH";
+  return null;
+}
+
 export interface GiftCardParseada {
   valor: Decimal;
   moneda: "EUR" | "GBP" | "USD";
   region: "EU" | "GB" | "US";
 }
 
-/** Interpreta "Nintendo eShop Card 25 EUR", "Tarjeta Nintendo eShop 50€", "Nintendo eShop £15 UK", "$20 USD". */
+/**
+ * Interpreta "Tarjeta Nintendo eShop 20$", "Tarjeta Nintendo eShop 25GBP",
+ * "Nintendo eShop Card 25 EUR", "£15", "$20 USD".
+ */
 export function parsearTituloGiftCard(titulo: string): GiftCardParseada | null {
   if (!/e-?shop|nintendo/i.test(titulo) || !/card|tarjeta|gift|saldo|cr[eé]dito|prepaid|prepago/i.test(titulo))
     return null;

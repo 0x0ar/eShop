@@ -1,0 +1,620 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 1,
+    "params": {
+      "q": "*",
+      "start": "0",
+      "fq": "type:DLC AND nsuid_txt:*",
+      "sort": "popularity asc",
+      "rows": "10",
+      "wt": "json"
+    }
+  },
+  "response": {
+    "numFound": 10424,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+      {
+        "fs_id": "2968760",
+        "change_date": "2025-11-20T04:48:28Z",
+        "url": "/es-es/Contenido-descargable/Disney-Dreamlight-Valley-Wishblossom-Ranch-Edicion-deluxe-2968760.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2025-11-19T00:00:00Z"
+        ],
+        "price_has_discount_b": false,
+        "pretty_date_s": "19-11-2025",
+        "related_nsuids_txt": [
+          "70050000060973"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Disney Dreamlight Valley: Wishblossom Ranch - Edición deluxe",
+        "sorting_title": "Disney Dreamlight Valley: Wishblossom Ranch - Edición deluxe",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_image500w.jpg",
+        "related_game_id_s": "2232608",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "0100d39012c1a000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Disney Dreamlight Valley: Wishblossom Ranch — Deluxe Edition",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/1x1_DisneyDreamlightValley16_image500w.jpg",
+        "price_regular_f": 49.99,
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Disney Dreamlight Valley: Wishblossom Ranch - Deluxe Edition",
+          "Disney Dreamlight Valley: Wishblossom Ranch - Edición deluxe",
+          "Disney Dreamlight Valley: Wishblossom Ranch – Deluxe Edition",
+          "Disney Dreamlight Valley: Wishblossom Ranch — Deluxe Edition",
+          "Disney Dreamlight Valley: Wishblossom Ranch—Deluxe Edition",
+          "Disney Dreamlight Valley: Wishblossom Ranch—Édition Deluxe",
+          "Disney Dreamlight Valley"
+        ],
+        "dlc_type_s": "dlc",
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 49.99,
+        "datasize_readable_txt": [
+          "3,15 MB"
+        ],
+        "price_lowest_f": 49.99,
+        "publisher": "Gameloft",
+        "related_game_title_s": "Disney Dreamlight Valley",
+        "age_rating_value": "3",
+        "excerpt": "¡Reconstruye el rancho de tus sueños, forja vínculos con tus caballos y entabla amistad con nuevos vecinos mientras cabalgas hacia una nueva aventura Disney!",
+        "nsuid_txt": [
+          "70050000060973"
+        ],
+        "date_from": "2025-11-19T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 148,
+        "_version_": 1880304439386964000
+      },
+      {
+        "fs_id": "3135528",
+        "change_date": "2026-07-08T05:31:06Z",
+        "url": "/es-es/Contenido-descargable/Disney-Dreamlight-Valley-Honeyglow-Woods-3135528.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2026-07-08T00:00:00Z"
+        ],
+        "price_has_discount_b": false,
+        "pretty_date_s": "08-07-2026",
+        "related_nsuids_txt": [
+          "70050000071465"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Disney Dreamlight Valley: Honeyglow Woods",
+        "sorting_title": "Disney Dreamlight Valley: Honeyglow Woods",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_image500w.jpg",
+        "related_game_id_s": "2232608",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "0100d39012c1a000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Disney Dreamlight Valley: Honeyglow Woods",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/1x1_DisneyDreamlightValley16_image500w.jpg",
+        "price_regular_f": 16.99,
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Disney Dreamlight Valley: Honeyglow Woods",
+          "Disney Dreamlight Valley"
+        ],
+        "dlc_type_s": "dlc",
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 16.99,
+        "datasize_readable_txt": [
+          "3,15 MB"
+        ],
+        "price_lowest_f": 16.99,
+        "publisher": "Gameloft",
+        "related_game_title_s": "Disney Dreamlight Valley",
+        "age_rating_value": "3",
+        "excerpt": "¡Explora el Bosque de Luz Melífera y reúnete con Winnie the Pooh, Ígor y Piglet de Disney en un nuevo paquete de aventuras!",
+        "nsuid_txt": [
+          "70050000071465"
+        ],
+        "date_from": "2026-07-08T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 90,
+        "_version_": 1880304439386964000
+      },
+      {
+        "fs_id": "2968756",
+        "change_date": "2025-11-20T04:48:25Z",
+        "url": "/es-es/Contenido-descargable/Disney-Dreamlight-Valley-Wishblossom-Ranch-2968756.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2025-11-19T00:00:00Z"
+        ],
+        "price_has_discount_b": false,
+        "pretty_date_s": "19-11-2025",
+        "related_nsuids_txt": [
+          "70050000060969"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Disney Dreamlight Valley: Wishblossom Ranch",
+        "sorting_title": "Disney Dreamlight Valley: Wishblossom Ranch",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_image500w.jpg",
+        "related_game_id_s": "2232608",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "0100d39012c1a000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Disney Dreamlight Valley: Wishblossom Ranch",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/1x1_DisneyDreamlightValley16_image500w.jpg",
+        "price_regular_f": 29.99,
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Disney Dreamlight Valley: Wishblossom Ranch",
+          "Disney Dreamlight Valley"
+        ],
+        "dlc_type_s": "dlc",
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 29.99,
+        "datasize_readable_txt": [
+          "3,15 MB"
+        ],
+        "price_lowest_f": 29.99,
+        "publisher": "Gameloft",
+        "related_game_title_s": "Disney Dreamlight Valley",
+        "age_rating_value": "3",
+        "excerpt": "¡Construye de nuevo el rancho de tus sueños, crea vínculos con tus caballos y entabla amistad con nuevos vecinos mientras cabalgas en una nueva aventura de Disney!",
+        "nsuid_txt": [
+          "70050000060969"
+        ],
+        "date_from": "2025-11-19T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 208,
+        "_version_": 1880304439386964000
+      },
+      {
+        "fs_id": "3213533",
+        "change_date": "2026-10-02T07:38:10Z",
+        "url": "/es-es/Contenido-descargable/Just-Dance-Decades-of-Hits-3213533.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2026-10-13T00:00:00Z"
+        ],
+        "pretty_date_s": "13-10-2026",
+        "related_nsuids_txt": [
+          "70050000074841"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Just Dance: Decades of Hits",
+        "sorting_title": "Just Dance: Decades of Hits",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/16x9_JustDanceDecadesOfHits_Standard_image500w.jpg",
+        "related_game_id_s": "2403686",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "0100bee017fc0000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Just Dance: Decades of Hits",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/1x1_JustDanceDecadesOfHits_Standard_image500w.jpg",
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Just Dance: Decades of Hits",
+          "Just Dance: Decades of Hits",
+          "Just Dance : Decades of Hits",
+          "Just Dance®"
+        ],
+        "dlc_type_s": "dlc",
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 999999,
+        "datasize_readable_txt": [
+          "3,15 MB"
+        ],
+        "price_lowest_f": -1,
+        "publisher": "Ubisoft",
+        "related_game_title_s": "Just Dance®",
+        "age_rating_value": "3",
+        "excerpt": "UNA EXPERIENCIA INMERSIVA QUE ABARCA 6 DÉCADAS",
+        "nsuid_txt": [
+          "70050000074841"
+        ],
+        "date_from": "2026-10-13T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "_version_": 1880304439386964000
+      },
+      {
+        "fs_id": "2491770",
+        "change_date": "2024-11-27T14:24:42Z",
+        "url": "/es-es/Contenido-descargable/Disney-Dreamlight-Valley-A-Rift-in-Time-2491770.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2023-12-05T00:00:00Z"
+        ],
+        "price_has_discount_b": false,
+        "pretty_date_s": "05-12-2023",
+        "related_nsuids_txt": [
+          "70050000044334"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Disney Dreamlight Valley: A Rift in Time",
+        "sorting_title": "Disney Dreamlight Valley: A Rift in Time",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_image500w.jpg",
+        "related_game_id_s": "2232608",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "0100d39012c1a000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Disney Dreamlight Valley: A Rift in Time",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/1x1_DisneyDreamlightValley16_image500w.jpg",
+        "price_regular_f": 29.99,
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Disney Dreamlight Valley: A Rift in Time",
+          "Disney Dreamlight Valley"
+        ],
+        "dlc_type_s": "dlc",
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 29.99,
+        "datasize_readable_txt": [
+          "3,15 MB"
+        ],
+        "price_lowest_f": 29.99,
+        "publisher": "Gameloft",
+        "related_game_title_s": "Disney Dreamlight Valley",
+        "age_rating_value": "3",
+        "excerpt": "Expande tu viaje a la Isla de la Eternidad, ¡donde te esperan más aventuras!",
+        "nsuid_txt": [
+          "70050000044334"
+        ],
+        "date_from": "2023-12-05T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 170,
+        "_version_": 1880304439390109700
+      },
+      {
+        "fs_id": "2825888",
+        "change_date": "2025-05-12T15:07:35Z",
+        "url": "/es-es/Contenido-descargable/Hogwarts-Legacy-Pack-de-las-Artes-Oscuras-2825888.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2025-06-05T00:00:00Z"
+        ],
+        "price_has_discount_b": true,
+        "pretty_date_s": "05-06-2025",
+        "related_nsuids_txt": [
+          "70050000057045"
+        ],
+        "price_discount_percentage_f": 60,
+        "title": "Hogwarts Legacy: Pack de las Artes Oscuras",
+        "sorting_title": "Hogwarts Legacy: Pack de las Artes Oscuras",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/hogwartslegacy/2x1_NSwitch2_HogwartsLegacy_image500w.jpg",
+        "related_game_id_s": "2797135",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "04009570209f8000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Hogwarts Legacy: Dark Arts Pack",
+        "required_system_txt": [
+          "Nintendo Switch 2"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/hogwartslegacy/1x1_NSwitch2_HogwartsLegacy_image500w.jpg",
+        "price_regular_f": 19.99,
+        "originally_for_t": "BEE",
+        "title_extras_txt": [
+          "Hogwarts Legacy: Dark Arts Pack",
+          "Hogwarts Legacy: Pacchetto delle Arti Oscure",
+          "Hogwarts Legacy: Pack de las Artes Oscuras",
+          "Hogwarts Legacy: Pacote Artes das Trevas",
+          "Hogwarts Legacy: Paket der Dunklen Künste",
+          "Hogwarts Legacy: Zwarte-Kunstenpakket",
+          "Hogwarts Legacy : L'Héritage de Poudlard : Pack Magie noire",
+          "Hogwarts Legacy"
+        ],
+        "dlc_type_s": "dlc",
+        "price_discounted_f": 7.99,
+        "age_rating_descriptors_txt": [
+          "pegi_violence",
+          "pegi_language",
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 7.99,
+        "datasize_readable_txt": [
+          "3,15 MB"
+        ],
+        "price_lowest_f": 7.99,
+        "publisher": "WB Games",
+        "related_game_title_s": "Hogwarts Legacy",
+        "age_rating_value": "12",
+        "excerpt": "Contenido descargable de Hogwarts Legacy para Nintendo Switch 2.",
+        "nsuid_txt": [
+          "70050000057045"
+        ],
+        "date_from": "2025-06-05T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 1607,
+        "_version_": 1880304439391158300
+      },
+      {
+        "fs_id": "2467013",
+        "change_date": "2023-10-17T12:50:03Z",
+        "url": "/es-es/Contenido-descargable/Hogwarts-Legacy-Pack-de-las-Artes-Oscuras-2467013.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2023-11-14T00:00:00Z"
+        ],
+        "price_has_discount_b": true,
+        "pretty_date_s": "14-11-2023",
+        "related_nsuids_txt": [
+          "70050000044036"
+        ],
+        "price_discount_percentage_f": 90,
+        "title": "Hogwarts Legacy: Pack de las Artes Oscuras",
+        "sorting_title": "Hogwarts Legacy: Pack de las Artes Oscuras",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_HogwartsLegacy_image500w.jpg",
+        "related_game_id_s": "2466200",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "0100f7e00c70e000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Hogwarts Legacy: Dark Arts Pack",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_NSwitch_HogwartsLegacy_image500w.jpg",
+        "price_regular_f": 19.99,
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Hogwarts Legacy: Dark Arts Pack",
+          "Hogwarts Legacy: Pacchetto Arti Oscure",
+          "Hogwarts Legacy: Pack de las Artes Oscuras",
+          "Hogwarts Legacy: Pacote Artes das Trevas",
+          "Hogwarts Legacy: Paket der Dunklen Künste",
+          "Hogwarts Legacy: Zwarte-Kunstenpakket",
+          "Hogwarts Legacy : L'Héritage de Poudlard : Pack Magie noire",
+          "Hogwarts Legacy"
+        ],
+        "dlc_type_s": "dlc",
+        "price_discounted_f": 1.99,
+        "age_rating_descriptors_txt": [
+          "pegi_violence",
+          "pegi_in_game_purchases",
+          "pegi_language"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 1.99,
+        "datasize_readable_txt": [
+          "3,15 MB"
+        ],
+        "price_lowest_f": 1.99,
+        "publisher": "WB Games",
+        "related_game_title_s": "Hogwarts Legacy",
+        "age_rating_value": "12",
+        "excerpt": "Contenido descargable de Hogwarts Legacy para Nintendo Switch.",
+        "nsuid_txt": [
+          "70050000044036"
+        ],
+        "date_from": "2023-11-14T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 1485,
+        "_version_": 1880304439392206800
+      },
+      {
+        "fs_id": "2706459",
+        "change_date": "2024-11-21T01:01:08Z",
+        "url": "/es-es/Contenido-descargable/Disney-Dreamlight-Valley-The-Storybook-Vale-2706459.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2024-11-20T00:00:00Z"
+        ],
+        "price_has_discount_b": false,
+        "pretty_date_s": "20-11-2024",
+        "related_nsuids_txt": [
+          "70050000052283"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Disney Dreamlight Valley: The Storybook Vale",
+        "sorting_title": "Disney Dreamlight Valley: The Storybook Vale",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_image500w.jpg",
+        "related_game_id_s": "2232608",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "0100d39012c1a000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Disney Dreamlight Valley: The Storybook Vale",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/1x1_DisneyDreamlightValley16_image500w.jpg",
+        "price_regular_f": 29.99,
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Disney Dreamlight Valley: The Storybook Vale",
+          "Disney Dreamlight Valley"
+        ],
+        "dlc_type_s": "dlc",
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 29.99,
+        "datasize_readable_txt": [
+          "3,15 MB"
+        ],
+        "price_lowest_f": 29.99,
+        "publisher": "Gameloft",
+        "related_game_title_s": "Disney Dreamlight Valley",
+        "age_rating_value": "3",
+        "excerpt": "¡Viaja a un nuevo mundo y atrapa valiosos cuentos para descubrir historias muy queridas de Disney y Pixar!",
+        "nsuid_txt": [
+          "70050000052283"
+        ],
+        "date_from": "2024-11-20T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 217,
+        "_version_": 1880304439393255400
+      },
+      {
+        "fs_id": "2936312",
+        "change_date": "2025-10-11T02:38:11Z",
+        "url": "/es-es/Contenido-descargable/JUST-DANCE-2026-EDITION-JUEGO-COMPLETO-2936312.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2025-10-14T00:00:00Z"
+        ],
+        "pretty_date_s": "14-10-2025",
+        "related_nsuids_txt": [
+          "70050000058722"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "JUST DANCE 2026 EDITION - JUEGO COMPLETO",
+        "sorting_title": "JUST DANCE 2026 EDITION - JUEGO COMPLETO",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/16x9_JustDanceDecadesOfHits_Standard_image500w.jpg",
+        "related_game_id_s": "2403686",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "0100bee017fc0000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "JUST DANCE 2026 EDITION - FULL GAME",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/justdancedecadesofhits/1x1_JustDanceDecadesOfHits_Standard_image500w.jpg",
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "JUST DANCE 2026 EDITION - FULL GAME",
+          "JUST DANCE 2026 EDITION - GIOCO COMPLETO",
+          "JUST DANCE 2026 EDITION - JEU COMPLET",
+          "JUST DANCE 2026 EDITION - JOGO COMPLETO",
+          "JUST DANCE 2026 EDITION - JUEGO COMPLETO",
+          "JUST DANCE 2026 EDITION - VOLLEDIGE GAME",
+          "JUST DANCE 2026 EDITION – VOLLVERSION",
+          "Just Dance®"
+        ],
+        "dlc_type_s": "dlc",
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 999999,
+        "datasize_readable_txt": [
+          "3,15 MB"
+        ],
+        "price_lowest_f": -1,
+        "publisher": "Ubisoft",
+        "related_game_title_s": "Just Dance®",
+        "age_rating_value": "3",
+        "excerpt": "Contenido descargable de Just Dance® para Nintendo Switch.",
+        "nsuid_txt": [
+          "70050000058722"
+        ],
+        "date_from": "2025-10-14T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 999999,
+        "_version_": 1880304439393255400
+      },
+      {
+        "fs_id": "2706463",
+        "change_date": "2024-11-21T01:01:09Z",
+        "url": "/es-es/Contenido-descargable/Disney-Dreamlight-Valley-The-Storybook-Vale-Edicion-magica-2706463.html",
+        "type": "DLC",
+        "dates_released_dts": [
+          "2024-11-20T00:00:00Z"
+        ],
+        "price_has_discount_b": false,
+        "pretty_date_s": "20-11-2024",
+        "related_nsuids_txt": [
+          "70050000052284"
+        ],
+        "price_discount_percentage_f": 0,
+        "title": "Disney Dreamlight Valley: The Storybook Vale - Edición mágica",
+        "sorting_title": "Disney Dreamlight Valley: The Storybook Vale - Edición mágica",
+        "image_url_h16x9_s": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/16x9_DisneyDreamlightValley16_image500w.jpg",
+        "related_game_id_s": "2232608",
+        "pretty_dlc_type_s": "Contenido descargable",
+        "application_id_s": "0100d39012c1a000",
+        "deprioritise_b": false,
+        "hits_i": 300,
+        "pg_s": "DLC",
+        "title_master_s": "Disney Dreamlight Valley: The Storybook Vale – Magical Edition",
+        "required_system_txt": [
+          "Nintendo Switch"
+        ],
+        "image_url": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/disneydreamlightvalley/1x1_DisneyDreamlightValley16_image500w.jpg",
+        "price_regular_f": 49.99,
+        "originally_for_t": "HAC",
+        "title_extras_txt": [
+          "Disney Dreamlight Valley: The Storybook Vale - Edición mágica",
+          "Disney Dreamlight Valley: The Storybook Vale - Magical Edition",
+          "Disney Dreamlight Valley: The Storybook Vale - Édition Magique",
+          "Disney Dreamlight Valley: The Storybook Vale – Magical Edition",
+          "Disney Dreamlight Valley"
+        ],
+        "dlc_type_s": "dlc",
+        "age_rating_descriptors_txt": [
+          "pegi_in_game_purchases"
+        ],
+        "age_rating_type": "pegi",
+        "price_sorting_f": 49.99,
+        "datasize_readable_txt": [
+          "3,15 MB"
+        ],
+        "price_lowest_f": 49.99,
+        "publisher": "Gameloft",
+        "related_game_title_s": "Disney Dreamlight Valley",
+        "age_rating_value": "3",
+        "excerpt": "¡Viaja a un nuevo mundo y atrapa valiosos cuentos para descubrir historias muy queridas de Disney y Pixar!",
+        "nsuid_txt": [
+          "70050000052284"
+        ],
+        "date_from": "2024-11-20T00:00:00Z",
+        "boost_add": 0,
+        "boost_mult": 1,
+        "downloads_rank_i": 369,
+        "_version_": 1880304439394304000
+      }
+    ]
+  }
+}

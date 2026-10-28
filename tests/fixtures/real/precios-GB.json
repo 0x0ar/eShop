@@ -1,0 +1,582 @@
+{
+  "personalized": false,
+  "country": "GB",
+  "prices": [
+    {
+      "title_id": 70010000125146,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£41.99",
+        "currency": "GBP",
+        "raw_value": "41.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000130793,
+      "sales_status": "preorder",
+      "is_download_ready": false,
+      "regular_price": {
+        "amount": "£49.99",
+        "currency": "GBP",
+        "raw_value": "49.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000038713,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£99.99",
+        "currency": "GBP",
+        "raw_value": "99.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000095548,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£59.99",
+        "currency": "GBP",
+        "raw_value": "59.99"
+      },
+      "discount_price": {
+        "amount": "£23.99",
+        "currency": "GBP",
+        "raw_value": "23.99",
+        "start_datetime": "2026-10-19T13:00:00Z",
+        "end_datetime": "2026-11-02T23:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000062277,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£49.99",
+        "currency": "GBP",
+        "raw_value": "49.99"
+      },
+      "discount_price": {
+        "amount": "£4.99",
+        "currency": "GBP",
+        "raw_value": "4.99",
+        "start_datetime": "2026-10-23T13:00:00Z",
+        "end_datetime": "2026-11-11T23:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000033557,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£33.49",
+        "currency": "GBP",
+        "raw_value": "33.49"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000112775,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£49.99",
+        "currency": "GBP",
+        "raw_value": "49.99"
+      },
+      "discount_price": {
+        "amount": "£24.99",
+        "currency": "GBP",
+        "raw_value": "24.99",
+        "start_datetime": "2026-10-21T13:00:00Z",
+        "end_datetime": "2026-11-16T23:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000035974,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£54.99",
+        "currency": "GBP",
+        "raw_value": "54.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000040668,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£62.99",
+        "currency": "GBP",
+        "raw_value": "62.99"
+      },
+      "discount_price": {
+        "amount": "£56.69",
+        "currency": "GBP",
+        "raw_value": "56.69",
+        "start_datetime": "2026-10-22T16:00:00Z",
+        "end_datetime": "2026-11-04T23:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000052340,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£0.00",
+        "currency": "GBP",
+        "raw_value": "0"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000107422,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£58.99",
+        "currency": "GBP",
+        "raw_value": "58.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000003621,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£24.99",
+        "currency": "GBP",
+        "raw_value": "24.99"
+      },
+      "discount_price": {
+        "amount": "£3.74",
+        "currency": "GBP",
+        "raw_value": "3.74",
+        "start_datetime": "2026-10-02T13:00:00Z",
+        "end_datetime": "2026-10-30T23:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000119631,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£0.00",
+        "currency": "GBP",
+        "raw_value": "0"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000047974,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£22.49",
+        "currency": "GBP",
+        "raw_value": "22.49"
+      },
+      "discount_price": {
+        "amount": "£8.99",
+        "currency": "GBP",
+        "raw_value": "8.99",
+        "start_datetime": "2026-10-22T13:00:00Z",
+        "end_datetime": "2026-11-01T23:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000110984,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£15.99",
+        "currency": "GBP",
+        "raw_value": "15.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000116664,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£49.99",
+        "currency": "GBP",
+        "raw_value": "49.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000096800,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£0.00",
+        "currency": "GBP",
+        "raw_value": "0"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000026749,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£35.99",
+        "currency": "GBP",
+        "raw_value": "35.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000113744,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£15.98",
+        "currency": "GBP",
+        "raw_value": "15.98"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000010190,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£0.00",
+        "currency": "GBP",
+        "raw_value": "0"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000000963,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£29.99",
+        "currency": "GBP",
+        "raw_value": "29.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000102603,
+      "sales_status": "preorder",
+      "is_download_ready": false,
+      "regular_price": {
+        "amount": "£34.99",
+        "currency": "GBP",
+        "raw_value": "34.99"
+      },
+      "discount_price": {
+        "amount": "£26.24",
+        "currency": "GBP",
+        "raw_value": "26.24",
+        "start_datetime": "2026-10-20T00:00:00Z",
+        "end_datetime": "2026-12-03T23:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000122029,
+      "sales_status": "unreleased"
+    },
+    {
+      "title_id": 70070000033664,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£89.09",
+        "currency": "GBP",
+        "raw_value": "89.09"
+      },
+      "discount_price": {
+        "amount": "£3.51",
+        "currency": "GBP",
+        "raw_value": "3.51",
+        "start_datetime": "2026-10-01T23:00:00Z",
+        "end_datetime": "2026-10-30T23:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000095204,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£34.99",
+        "currency": "GBP",
+        "raw_value": "34.99"
+      },
+      "discount_price": {
+        "amount": "£13.99",
+        "currency": "GBP",
+        "raw_value": "13.99",
+        "start_datetime": "2026-10-02T13:00:00Z",
+        "end_datetime": "2026-10-30T23:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000013132,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£49.99",
+        "currency": "GBP",
+        "raw_value": "49.99"
+      },
+      "discount_price": {
+        "amount": "£16.49",
+        "currency": "GBP",
+        "raw_value": "16.49",
+        "start_datetime": "2026-10-21T13:00:00Z",
+        "end_datetime": "2026-11-16T23:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000110118,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£49.99",
+        "currency": "GBP",
+        "raw_value": "49.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000126930,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£58.99",
+        "currency": "GBP",
+        "raw_value": "58.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000104365,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£62.99",
+        "currency": "GBP",
+        "raw_value": "62.99"
+      },
+      "discount_price": {
+        "amount": "£56.69",
+        "currency": "GBP",
+        "raw_value": "56.69",
+        "start_datetime": "2026-10-22T13:00:00Z",
+        "end_datetime": "2026-11-01T23:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000116852,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "£24.98",
+        "currency": "GBP",
+        "raw_value": "24.98"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    }
+  ]
+}

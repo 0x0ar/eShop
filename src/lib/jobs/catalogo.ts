@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { fuentes } from "@config/fuentes";
 import { PAISES, paisesEuropa } from "@config/regiones";
 import { db } from "@/lib/db";
 import {
@@ -234,14 +235,18 @@ export const jobCatalogo: FuncionJob = async (ctx) => {
   const limite = limiteCatalogo();
   const errores: string[] = [];
 
-  try {
-    const americas = await descargarCatalogoAmericas({ limite });
-    ctx.log(`América: ${americas.length} productos`);
-    await guardarProductos("AMERICAS", americas, ctx);
-    await registrarExito("nintendo-catalogo-americas", `${americas.length} productos`);
-  } catch (e) {
-    errores.push(`América: ${(e as Error).message}`);
-    await registrarError("nintendo-catalogo-americas", e);
+  if (!fuentes.nintendoAmericas.habilitado()) {
+    ctx.log("Catálogo de América deshabilitado (NINTENDO_AMERICAS_HABILITADO=0): no habrá precios de AR ni US");
+  } else {
+    try {
+      const americas = await descargarCatalogoAmericas({ limite });
+      ctx.log(`América: ${americas.length} productos`);
+      await guardarProductos("AMERICAS", americas, ctx);
+      await registrarExito("nintendo-catalogo-americas", `${americas.length} productos`);
+    } catch (e) {
+      errores.push(`América: ${(e as Error).message}`);
+      await registrarError("nintendo-catalogo-americas", e);
+    }
   }
 
   try {

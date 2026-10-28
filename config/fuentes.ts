@@ -19,6 +19,8 @@ export const fuentes = {
     filasPorPagina: () => Number(env("NINTENDO_EU_ROWS", "1000")),
   },
   nintendoAmericas: {
+    /** Permite apagar el catálogo de América (por ejemplo, si la fuente no está disponible). */
+    habilitado: () => env("NINTENDO_AMERICAS_HABILITADO", "1") !== "0",
     appId: () => env("NINTENDO_ALGOLIA_APP_ID", "U3B6GR4UA3"),
     apiKey: () => env("NINTENDO_ALGOLIA_API_KEY", "a29c6927638bfd8cee23993e51e721c9"),
     indice: () => env("NINTENDO_ALGOLIA_INDEX", "store_game_en_us"),
@@ -36,7 +38,7 @@ export const fuentes = {
     },
   },
   frankfurter: {
-    baseUrl: () => env("FRANKFURTER_URL", "https://api.frankfurter.app"),
+    baseUrl: () => env("FRANKFURTER_URL", "https://api.frankfurter.dev/v1"),
   },
   instantGaming: {
     baseUrl: () => env("INSTANT_GAMING_URL", "https://www.instant-gaming.com"),

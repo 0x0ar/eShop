@@ -30,6 +30,9 @@ export function aOfertaKey(k: FilaKey): OfertaKey {
     precio: dec(k.precio.toString()),
     moneda: k.moneda,
     regionActivacion: k.regionActivacion,
+    paisesActivacion: Array.isArray(k.paisesActivacion)
+      ? k.paisesActivacion.filter((x): x is string => typeof x === "string")
+      : null,
     url: k.url,
     disponible: k.disponible,
     actualizado: k.actualizado,

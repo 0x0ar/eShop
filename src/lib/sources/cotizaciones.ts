@@ -8,7 +8,7 @@ import { ErrorHttp, pedir, pedirJson } from "./http";
 
 /**
  * DolarAPI (https://dolarapi.com): dólar y euro, oficial y blue.
- * Frankfurter (https://api.frankfurter.app): cruzadas con base EUR.
+ * Frankfurter (https://api.frankfurter.dev/v1): cruzadas con base EUR.
  */
 
 export const cotizacionDolarApiSchema = z

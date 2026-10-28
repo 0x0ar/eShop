@@ -1,0 +1,582 @@
+{
+  "personalized": false,
+  "country": "PL",
+  "prices": [
+    {
+      "title_id": 70010000125146,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "212,80 zł",
+        "currency": "PLN",
+        "raw_value": "212.8"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000130793,
+      "sales_status": "preorder",
+      "is_download_ready": false,
+      "regular_price": {
+        "amount": "254,80 zł",
+        "currency": "PLN",
+        "raw_value": "254.8"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000038713,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "479,00 zł",
+        "currency": "PLN",
+        "raw_value": "479"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000095548,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "269,99 zł",
+        "currency": "PLN",
+        "raw_value": "269.99"
+      },
+      "discount_price": {
+        "amount": "107,99 zł",
+        "currency": "PLN",
+        "raw_value": "107.99",
+        "start_datetime": "2026-10-19T13:00:00Z",
+        "end_datetime": "2026-11-02T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000062277,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "269,00 zł",
+        "currency": "PLN",
+        "raw_value": "269"
+      },
+      "discount_price": {
+        "amount": "26,90 zł",
+        "currency": "PLN",
+        "raw_value": "26.90",
+        "start_datetime": "2026-10-23T13:00:00Z",
+        "end_datetime": "2026-11-11T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000033557,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "169,00 zł",
+        "currency": "PLN",
+        "raw_value": "169"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000112775,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "219,00 zł",
+        "currency": "PLN",
+        "raw_value": "219"
+      },
+      "discount_price": {
+        "amount": "109,50 zł",
+        "currency": "PLN",
+        "raw_value": "109.50",
+        "start_datetime": "2026-10-21T13:00:00Z",
+        "end_datetime": "2026-11-16T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000035974,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "299,00 zł",
+        "currency": "PLN",
+        "raw_value": "299"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000040668,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "280,00 zł",
+        "currency": "PLN",
+        "raw_value": "280"
+      },
+      "discount_price": {
+        "amount": "252,00 zł",
+        "currency": "PLN",
+        "raw_value": "252",
+        "start_datetime": "2026-10-22T16:00:00Z",
+        "end_datetime": "2026-11-04T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000052340,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "0,00 zł",
+        "currency": "PLN",
+        "raw_value": "0"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000107422,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "297,80 zł",
+        "currency": "PLN",
+        "raw_value": "297.8"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000003621,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "124,00 zł",
+        "currency": "PLN",
+        "raw_value": "124"
+      },
+      "discount_price": {
+        "amount": "18,60 zł",
+        "currency": "PLN",
+        "raw_value": "18.60",
+        "start_datetime": "2026-10-02T13:00:00Z",
+        "end_datetime": "2026-10-30T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000119631,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "0,00 zł",
+        "currency": "PLN",
+        "raw_value": "0"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000047974,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "100,00 zł",
+        "currency": "PLN",
+        "raw_value": "100"
+      },
+      "discount_price": {
+        "amount": "40,00 zł",
+        "currency": "PLN",
+        "raw_value": "40",
+        "start_datetime": "2026-10-22T13:00:00Z",
+        "end_datetime": "2026-11-01T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000110984,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "89,00 zł",
+        "currency": "PLN",
+        "raw_value": "89"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000116664,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "254,80 zł",
+        "currency": "PLN",
+        "raw_value": "254.8"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000096800,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "0,00 zł",
+        "currency": "PLN",
+        "raw_value": "0"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000026749,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "160,00 zł",
+        "currency": "PLN",
+        "raw_value": "160"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000113744,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "89,00 zł",
+        "currency": "PLN",
+        "raw_value": "89"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000010190,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "0,00 zł",
+        "currency": "PLN",
+        "raw_value": "0"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000000963,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "129,99 zł",
+        "currency": "PLN",
+        "raw_value": "129.99"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000102603,
+      "sales_status": "preorder",
+      "is_download_ready": false,
+      "regular_price": {
+        "amount": "169,00 zł",
+        "currency": "PLN",
+        "raw_value": "169"
+      },
+      "discount_price": {
+        "amount": "126,75 zł",
+        "currency": "PLN",
+        "raw_value": "126.75",
+        "start_datetime": "2026-10-20T00:00:00Z",
+        "end_datetime": "2026-12-03T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000122029,
+      "sales_status": "unreleased"
+    },
+    {
+      "title_id": 70070000033664,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "396,00 zł",
+        "currency": "PLN",
+        "raw_value": "396"
+      },
+      "discount_price": {
+        "amount": "16,88 zł",
+        "currency": "PLN",
+        "raw_value": "16.88",
+        "start_datetime": "2026-10-01T22:00:00Z",
+        "end_datetime": "2026-10-30T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000095204,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "169,00 zł",
+        "currency": "PLN",
+        "raw_value": "169"
+      },
+      "discount_price": {
+        "amount": "67,60 zł",
+        "currency": "PLN",
+        "raw_value": "67.60",
+        "start_datetime": "2026-10-02T13:00:00Z",
+        "end_datetime": "2026-10-30T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70070000013132,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "249,80 zł",
+        "currency": "PLN",
+        "raw_value": "249.8"
+      },
+      "discount_price": {
+        "amount": "82,43 zł",
+        "currency": "PLN",
+        "raw_value": "82.43",
+        "start_datetime": "2026-10-21T13:00:00Z",
+        "end_datetime": "2026-11-16T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000110118,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "269,90 zł",
+        "currency": "PLN",
+        "raw_value": "269.9"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000126930,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "297,80 zł",
+        "currency": "PLN",
+        "raw_value": "297.8"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000104365,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "309,00 zł",
+        "currency": "PLN",
+        "raw_value": "309"
+      },
+      "discount_price": {
+        "amount": "278,10 zł",
+        "currency": "PLN",
+        "raw_value": "278.10",
+        "start_datetime": "2026-10-22T13:00:00Z",
+        "end_datetime": "2026-11-01T22:59:59Z"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    },
+    {
+      "title_id": 70010000116852,
+      "sales_status": "onsale",
+      "regular_price": {
+        "amount": "129,01 zł",
+        "currency": "PLN",
+        "raw_value": "129.01"
+      },
+      "gold_point": {
+        "basic_gift_gp": "0",
+        "basic_gift_rate": "0",
+        "consume_gp": "0",
+        "extra_gold_points": [],
+        "gift_gp": "0",
+        "gift_rate": "0"
+      }
+    }
+  ]
+}

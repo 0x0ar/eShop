@@ -2,10 +2,10 @@ import "dotenv/config";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fuentes } from "@config/fuentes";
-import { pedir } from "@/lib/sources/http";
+import { pedir, pedirPagina } from "@/lib/sources/http";
 import { urlPrecios } from "@/lib/sources/nintendo/precios";
 import { urlBusquedaEuropa } from "@/lib/sources/nintendo/europa";
-import { urlListado } from "@/lib/sources/instantGaming";
+import { RUTAS, enlacesFichas, esFichaGiftCard, urlInstantGaming } from "@/lib/sources/instantGaming";
 
 /**
  * Baja respuestas reales de cada fuente y las guarda en tests/fixtures/real/
@@ -118,14 +118,29 @@ async function main() {
     const { cuerpo } = await pedir(`${ig}/robots.txt`);
     await guardar("instant-gaming-robots.txt", cuerpo);
   });
-  await intentar("instant-gaming-keys.html", async () => {
-    const { cuerpo } = await pedir(urlListado("keys", 1), { intervaloMs: fuentes.scraping.intervaloMinimoMs() });
-    await guardar("instant-gaming-keys.html", cuerpo);
-  });
-  await intentar("instant-gaming-giftcards.html", async () => {
-    const { cuerpo } = await pedir(urlListado("giftcards", 1), { intervaloMs: fuentes.scraping.intervaloMinimoMs() });
-    await guardar("instant-gaming-giftcards.html", cuerpo);
-  });
+  // Solo rutas que robots.txt permite (pedirPagina lo verifica). Se redactan
+  // claves y tokens embebidos en el HTML antes de guardar.
+  const redactar = (html: string) =>
+    html.replace(/(algolia_(?:key|appid): *')[^']+/g, "$1REDACTADO").replace(/(_TOKEN = ")[^"]+/g, "$1REDACTADO");
+  const paginas: [string, string][] = [
+    ["instant-gaming-categoria-switch.html", urlInstantGaming(RUTAS.categoriasKeys()[0])],
+    ["instant-gaming-tarjetas-regalo.html", urlInstantGaming(RUTAS.giftcards())],
+  ];
+  for (const [nombre, url] of paginas) {
+    await intentar(nombre, async () => {
+      const html = await pedirPagina(url, null);
+      await guardar(nombre, redactar(html));
+      const fichas = enlacesFichas(html);
+      const ficha = nombre.includes("tarjetas")
+        ? fichas.find(esFichaGiftCard)
+        : fichas.find((f) => !esFichaGiftCard(f));
+      if (!ficha) throw new Error("sin fichas enlazadas");
+      const destino = nombre.includes("tarjetas")
+        ? "instant-gaming-producto-giftcard.html"
+        : "instant-gaming-producto-key.html";
+      await guardar(destino, redactar(await pedirPagina(ficha, null)));
+    });
+  }
 
   await writeFile(
     path.join(DIR, "_capturado.json"),

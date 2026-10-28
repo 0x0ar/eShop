@@ -13,17 +13,18 @@ import { fechaSegura, plataformaDesdeCodigos, tipoDesdeTitulo, type ProductoCata
 const docSchema = z
   .object({
     title: z.string(),
-    type: z.string().optional(),
-    nsuid_txt: z.array(z.string()).optional(),
-    publisher: z.string().optional(),
-    system_names_txt: z.array(z.string()).optional(),
-    playable_on_txt: z.array(z.string()).optional(),
-    dates_released_dts: z.array(z.string()).optional(),
-    image_url: z.string().optional(),
-    image_url_sq_s: z.string().optional(),
-    excerpt: z.string().optional(),
-    url: z.string().optional(),
-    popularity: z.number().optional(),
+    type: z.string().nullish(),
+    nsuid_txt: z.array(z.string()).nullish(),
+    publisher: z.string().nullish(),
+    system_names_txt: z.array(z.string()).nullish(),
+    playable_on_txt: z.array(z.string()).nullish(),
+    dates_released_dts: z.array(z.string()).nullish(),
+    image_url: z.string().nullish(),
+    image_url_sq_s: z.string().nullish(),
+    excerpt: z.string().nullish(),
+    url: z.string().nullish(),
+    /** Ranking de descargas: 1 = el más descargado; 999999 = sin ranking. */
+    downloads_rank_i: z.number().nullish(),
   })
   .passthrough();
 
@@ -39,11 +40,19 @@ export const respuestaEuropaSchema = z
 
 const TIPOS_EUROPA: Record<string, "JUEGO" | "DLC"> = { GAME: "JUEGO", DLC: "DLC" };
 
-function absoluta(url: string | undefined, base = "https://www.nintendo.com"): string | null {
+function absoluta(url: string | null | undefined, base = "https://www.nintendo.com"): string | null {
   if (!url) return null;
   if (url.startsWith("//")) return `https:${url}`;
   if (/^https?:\/\//.test(url)) return url;
   return `${base}${url.startsWith("/") ? "" : "/"}${url}`;
+}
+
+const SIN_RANKING = 999_999;
+
+/** Ranking de descargas (1 = más popular) → puntaje creciente; sin ranking = 0. */
+export function popularidadDesdeRanking(rank: number | null | undefined): number {
+  if (!rank || rank <= 0 || rank >= SIN_RANKING) return 0;
+  return SIN_RANKING - rank;
 }
 
 /**
@@ -67,7 +76,7 @@ export function parsearDocumentoEuropa(doc: z.infer<typeof docSchema>, pais: str
     lanzamiento: fechaSegura(doc.dates_released_dts?.[0]),
     imagenUrl: absoluta(doc.image_url_sq_s ?? doc.image_url, "https:"),
     descripcion: doc.excerpt?.trim() || null,
-    popularidad: Math.round(doc.popularity ?? 0),
+    popularidad: popularidadDesdeRanking(doc.downloads_rank_i),
     urls: url ? { [pais]: url } : {},
   };
 }
@@ -90,7 +99,8 @@ export function urlBusquedaEuropa(
   const u = new URL(`${fuentes.nintendoEuropa.baseUrl()}/${nucleo}/select`);
   u.searchParams.set("q", "*");
   u.searchParams.set("fq", `type:${tipo} AND nsuid_txt:*`);
-  u.searchParams.set("sort", "popularity asc");
+  // Más descargados primero; los que no tienen ranking van al final.
+  u.searchParams.set("sort", "def(downloads_rank_i,999999) asc");
   u.searchParams.set("rows", String(filas));
   u.searchParams.set("start", String(start));
   u.searchParams.set("wt", "json");

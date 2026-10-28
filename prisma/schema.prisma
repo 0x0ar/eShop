@@ -133,8 +133,10 @@ model OfertaKey {
   url              String
   precio           Decimal
   moneda           String
-  /// EU | US | GLOBAL
+  /// EU | US | GLOBAL (etiqueta para mostrar)
   regionActivacion String
+  /// Códigos de las eShops donde se activa, según la tienda: ["ES","DE",…]. null = usar la etiqueta.
+  paisesActivacion Json?
   disponible       Boolean  @default(true)
   actualizado      DateTime
 

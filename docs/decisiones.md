@@ -96,12 +96,23 @@ Decisiones tomadas ante ambigüedades del pedido. Cada una indica cómo cambiarl
 - **Reaviso de alertas**: se avisa al cruzar el objetivo y de nuevo solo si
   pasan 7 días o el precio baja más de 2 % respecto del último aviso.
 
-## Pendiente de verificar (bloqueado)
+## Verificación de fuentes (2026-10-28)
 
-El 2026-10-28 la red del entorno de desarrollo rechazó (403 de la política de
-salida) todas las fuentes: `api.ec.nintendo.com`,
-`searching.nintendo-europe.com`, `dolarapi.com`, `api.frankfurter.app`,
-`www.instant-gaming.com` y el Algolia de nintendo.com. Los clientes y parsers
-están escritos según el formato documentado públicamente por la comunidad y
-validan la respuesta con zod; hay que confirmarlos con fixtures reales
-(`docs/plan.md`, etapa 5).
+- **Instant Gaming respetando robots.txt**: la búsqueda (`/es/busquedas/`) está
+  prohibida y es el único listado completo. No se usa ni la búsqueda ni el
+  Algolia propio de la tienda (lo que hace su buscador en el navegador). Se
+  descubren fichas en categorías permitidas y se lee cada ficha. Cobertura de
+  keys parcial a cambio de respetar las reglas del sitio. Durante la primera
+  captura se bajaron por error dos páginas de búsqueda; se borraron y el
+  script de captura ahora pasa por el chequeo de robots.
+- **Países de activación exactos** en `OfertaKey.paisesActivacion` (de
+  `window.countriesAvailability`), en lugar de una región deducida del título.
+- **Popularidad europea** con `downloads_rank_i` (el campo `popularity` viene
+  vacío).
+- **Catálogo de América deshabilitable** (`NINTENDO_AMERICAS_HABILITADO`): el
+  sistema de permisos del entorno de desarrollo bloqueó el uso de la clave de
+  búsqueda de Algolia de Nintendo, y nintendo.com bloquea a los agentes de
+  Claude en robots.txt, así que no se desarrolló una alternativa por scraping
+  desde acá. Queda como decisión del dueño del proyecto.
+- **Juegos gratuitos**: la API devuelve precio 0; se muestran con costo 0 y sin
+  opción de gift card.

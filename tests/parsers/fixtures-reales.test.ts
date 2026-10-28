@@ -5,8 +5,15 @@ import { parsearPrecios } from "@/lib/sources/nintendo/precios";
 import { parsearPaginaEuropa } from "@/lib/sources/nintendo/europa";
 import { parsearPaginaAmericas } from "@/lib/sources/nintendo/americas";
 import { parsearDolarApi, parsearFrankfurter } from "@/lib/sources/cotizaciones";
-import { parsearListado, parsearTituloGiftCard } from "@/lib/sources/instantGaming";
-import { parsearRobots } from "@/lib/sources/robots";
+import {
+  enlacesFichas,
+  enlacesGeneros,
+  esFichaGiftCard,
+  parsearFicha,
+  parsearTituloGiftCard,
+  plataformaDeTitulo,
+} from "@/lib/sources/instantGaming";
+import { parsearRobots, permitidoPorRobots } from "@/lib/sources/robots";
 
 /**
  * Tests contra respuestas REALES guardadas con `npm run fixtures:capturar`.
@@ -43,7 +50,8 @@ describe("fixtures reales", () => {
       for (const p of precios) {
         expect(p.pais).toBe(pais);
         expect(p.moneda).toMatch(/^[A-Z]{3}$/);
-        expect(p.regular.gt(0)).toBe(true);
+        // Hay juegos gratuitos (precio 0) en las respuestas reales.
+        expect(p.regular.gte(0)).toBe(true);
       }
     });
   }
@@ -62,13 +70,42 @@ describe("fixtures reales", () => {
     expect(parsearRobots(leer("instant-gaming-robots.txt")).grupos.length).toBeGreaterThan(0);
   });
 
-  it.skipIf(!hay("instant-gaming-keys.html"))("parsea el listado de keys de Instant Gaming", () => {
-    const { items } = parsearListado(leer("instant-gaming-keys.html"));
-    expect(items.length).toBeGreaterThan(0);
+  it.skipIf(!hay("instant-gaming-robots.txt"))(
+    "robots.txt de Instant Gaming: búsqueda prohibida, categorías permitidas",
+    () => {
+      const reglas = parsearRobots(leer("instant-gaming-robots.txt"));
+      expect(permitidoPorRobots(reglas, "PixelPesoBot/1.0", "/es/busquedas/?q=zelda")).toBe(false);
+      expect(permitidoPorRobots(reglas, "PixelPesoBot/1.0", "/es/nintendo/switch/")).toBe(true);
+      expect(
+        permitidoPorRobots(reglas, "PixelPesoBot/1.0", "/es/23251-comprar-sonic-origins-plus-switch-nintendo-eshop/"),
+      ).toBe(true);
+    },
+  );
+
+  it.skipIf(!hay("instant-gaming-categoria-switch.html"))("encuentra fichas en la categoría Switch", () => {
+    const fichas = enlacesFichas(leer("instant-gaming-categoria-switch.html"));
+    expect(fichas.filter((f) => !esFichaGiftCard(f)).length).toBeGreaterThan(0);
+    expect(enlacesGeneros(leer("instant-gaming-categoria-switch.html")).length).toBeGreaterThan(0);
   });
 
-  it.skipIf(!hay("instant-gaming-giftcards.html"))("encuentra gift cards en Instant Gaming", () => {
-    const { items } = parsearListado(leer("instant-gaming-giftcards.html"));
-    expect(items.map((i) => parsearTituloGiftCard(i.titulo)).filter(Boolean).length).toBeGreaterThan(0);
+  it.skipIf(!hay("instant-gaming-producto-key.html"))("parsea la ficha de una key", () => {
+    const f = parsearFicha(leer("instant-gaming-producto-key.html"));
+    expect(f).not.toBeNull();
+    expect(f!.esNintendo).toBe(true);
+    expect(f!.moneda).toBe("EUR");
+    expect(f!.precio.gt(0)).toBe(true);
+    expect(f!.paisesTienda.length).toBeGreaterThan(0);
+    expect(f!.titulo).toMatch(/Switch/);
+    expect(plataformaDeTitulo(f!.titulo)).not.toBeNull();
+  });
+
+  it.skipIf(!hay("instant-gaming-producto-giftcard.html"))("parsea la ficha de una gift card y sus variantes", () => {
+    const html = leer("instant-gaming-producto-giftcard.html");
+    const f = parsearFicha(html);
+    expect(f).not.toBeNull();
+    const gc = parsearTituloGiftCard(`${f!.titulo} ${f!.tituloCompleto}`);
+    expect(gc).not.toBeNull();
+    expect(f!.paisesActivacion.length).toBeGreaterThan(0);
+    expect(enlacesFichas(html).filter(esFichaGiftCard).length).toBeGreaterThan(1);
   });
 });

@@ -9,11 +9,11 @@ tenga cada persona.
 
 No vende nada: compara, recomienda y enlaza a la tienda.
 
-> **Estado de las fuentes de datos:** los clientes de Nintendo, DolarAPI,
-> Frankfurter e Instant Gaming están implementados pero **no pudieron
-> verificarse contra las APIs reales** desde el entorno donde se desarrolló (la
-> red bloqueaba esos dominios). Antes de publicar, seguí
-> [Verificar las fuentes](#verificar-las-fuentes). Detalle en
+> **Estado de las fuentes (2026-10-28):** precios de Nintendo (eShops
+> europeas), catálogo europeo, DolarAPI, Frankfurter e Instant Gaming están
+> **verificados contra respuestas reales**. El **catálogo de América** (Algolia
+> de nintendo.com) **no**: sin él no hay precios de Argentina ni de EE. UU.
+> (ver [Limitaciones](#limitaciones-conocidas)). Detalle en
 > [`docs/fuentes.md`](docs/fuentes.md).
 
 ## Índice
@@ -231,17 +231,26 @@ servicio `esquema` aplica los cambios de schema).
 
 ## Limitaciones conocidas
 
-- **Fuentes sin verificar** contra respuestas reales (ver arriba). Las APIs de
-  Nintendo no son oficiales y pueden cambiar o bloquearse sin aviso.
-- **Moneda de la eShop argentina**: el código la lee de la API; si devolviera
-  ARS no se aplica conversión. Hay que confirmarlo con las fixtures.
-- **Euro blue**: si DolarAPI no lo publica, se deriva de dólar blue × EUR/USD y
-  se marca como "Derivado".
-- **Gift cards**: se asume que no se puede pagar parte con saldo y parte con
-  tarjeta (configurable por país). Validez regional de las tarjetas según
-  `config/giftcards.ts`, a confirmar. Solo Instant Gaming + carga manual;
-  Eneba/Kinguin/Amazon quedaron documentados pero no implementados.
-- **Keys**: solo se publican si se pudo confirmar la región de activación.
+- **Sin catálogo de América = sin Argentina ni EE. UU.** El cliente de Algolia
+  (`src/lib/sources/nintendo/americas.ts`) no coincide con el índice actual (el
+  filtro `platformCode` ya no existe) y no se pudo terminar de verificar desde
+  el entorno de desarrollo porque usa la clave de búsqueda de Nintendo. Hasta
+  resolverlo, `NINTENDO_AMERICAS_HABILITADO=0` y la comparativa cubre España y
+  Europa; la referencia de ahorro (Argentina + tarjeta argentina) no está
+  disponible. Las APIs de Nintendo no son oficiales y pueden cambiar.
+- **Moneda de la eShop argentina**: sin verificar (depende de lo anterior). El
+  código la lee de la API; si devolviera ARS no se aplica conversión.
+- **Euro blue**: DolarAPI no lo publica; se deriva de dólar blue × EUR/USD y se
+  marca como "Derivado".
+- **Gift cards**: Instant Gaming solo vende tarjetas de EE. UU. (USD) y Reino
+  Unido (GBP); **no hay tarjetas en EUR**, así que España y el resto de la zona
+  euro no tienen opción de gift card salvo carga manual. Se asume que no se
+  puede pagar parte con saldo y parte con tarjeta (configurable por país).
+  Eneba/Kinguin/Amazon no están implementados.
+- **Keys**: `robots.txt` de Instant Gaming prohíbe su búsqueda, que es el único
+  listado completo. Las keys se descubren en las categorías permitidas, así que
+  la cobertura es parcial. Los países de activación salen de la ficha de cada
+  producto (no se adivinan).
 - **Impuestos**: solo IVA 21 % sobre tarjeta argentina por defecto. Otras
   percepciones se agregan en `config/impuestos.ts`.
 - **Matcheo entre regiones** heurístico: revisar `/admin/estado` y cargar

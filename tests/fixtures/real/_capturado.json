@@ -1,0 +1,23 @@
+{
+  "fecha": "2026-10-28T15:02:46.794Z",
+  "resultados": {
+    "europa-catalogo.json": "ok (132823 bytes)",
+    "europa-dlc.json": "ok (24674 bytes)",
+    "americas-algolia.json": "ok (617 bytes)",
+    "precios-AR.json": "ERROR: sin nsuids (falló la descarga del catálogo)",
+    "precios-US.json": "ERROR: sin nsuids (falló la descarga del catálogo)",
+    "precios-ES.json": "ok (14158 bytes)",
+    "precios-GB.json": "ok (14119 bytes)",
+    "precios-PL.json": "ok (14205 bytes)",
+    "precios-max-ids.txt": "ok (88 bytes)",
+    "dolarapi-dolar-oficial.json": "ok (152 bytes)",
+    "dolarapi-dolar-blue.json": "ok (146 bytes)",
+    "dolarapi-euro-oficial.json": "ok (159 bytes)",
+    "dolarapi-euro-blue.json": "ok (26 bytes)",
+    "dolarapi-cotizaciones.json": "ok (892 bytes)",
+    "frankfurter.json": "ok (133 bytes)",
+    "instant-gaming-robots.txt": "ok (1382 bytes)",
+    "instant-gaming-keys.html": "ok (415701 bytes)",
+    "instant-gaming-giftcards.html": "ok (313053 bytes)"
+  }
+}
