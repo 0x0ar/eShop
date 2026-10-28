@@ -56,6 +56,8 @@ model ProductoRegional {
   catalogo    String
   nsuid       String
   titulo      String
+  /// Otros títulos del producto (por ejemplo, el título en inglés de la tienda europea). Se usan para matchear.
+  titulosAlternativos Json?
   editor      String?
   plataforma  String
   tipo        String

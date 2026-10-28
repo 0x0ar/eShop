@@ -12,6 +12,8 @@ export interface ProductoRegional {
   plataforma: Plataforma;
   tipo: TipoProducto;
   lanzamiento: Date | null;
+  /** Otros títulos del mismo producto (por ejemplo, el título en inglés de la tienda europea). */
+  titulosAlternativos?: string[] | null;
 }
 
 export interface OverrideMatcheo {
@@ -59,12 +61,32 @@ function tiposCompatibles(a: TipoProducto, b: TipoProducto): boolean {
  * 65 % título, 20 % editor, 15 % fecha de lanzamiento.
  * Devuelve 0 si la plataforma o el tipo son incompatibles.
  */
+function titulos(p: ProductoRegional): string[] {
+  return Array.from(new Set([p.titulo, ...(p.titulosAlternativos ?? [])].map(normalizarTitulo).filter(Boolean)));
+}
+
+/** Números del título ("galaxy 2" → "2"): si difieren, son juegos distintos (secuelas, ediciones anuales). */
+function numeros(titulo: string): string {
+  return (titulo.match(/\d+/g) ?? []).join(" ");
+}
+
+/** Mejor similitud de título entre todas las variantes, o 0 si los números no coinciden. */
+export function similitudTitulos(a: ProductoRegional, b: ProductoRegional): { s: number; exacto: boolean } {
+  let mejor = { s: 0, exacto: false };
+  for (const ta of titulos(a)) {
+    for (const tb of titulos(b)) {
+      if (numeros(ta) !== numeros(tb)) continue;
+      const s = similitud(ta, tb);
+      if (s > mejor.s) mejor = { s, exacto: ta === tb };
+    }
+  }
+  return mejor;
+}
+
 export function puntajeMatch(a: ProductoRegional, b: ProductoRegional): number {
   if (!plataformasCompatibles(a.plataforma, b.plataforma)) return 0;
   if (!tiposCompatibles(a.tipo, b.tipo)) return 0;
-  const ta = normalizarTitulo(a.titulo);
-  const tb = normalizarTitulo(b.titulo);
-  const sTitulo = similitud(ta, tb);
+  const sTitulo = similitudTitulos(a, b).s;
   if (sTitulo < 0.6) return 0;
 
   const ea = normalizarEditor(a.editor);
@@ -118,9 +140,11 @@ export function matchearCatalogos<A extends ProductoRegional, E extends Producto
       .filter((p) => p.length > 2 && p !== "the");
     return palabras.slice(0, 2);
   };
+  const clavesProducto = (p: ProductoRegional) =>
+    Array.from(new Set([p.titulo, ...(p.titulosAlternativos ?? [])].flatMap(claves)));
   for (const e of europa) {
     if (usadosE.has(e.nsuid)) continue;
-    for (const k of claves(e.titulo)) {
+    for (const k of clavesProducto(e)) {
       const lista = indice.get(k) ?? [];
       lista.push(e);
       indice.set(k, lista);
@@ -133,7 +157,7 @@ export function matchearCatalogos<A extends ProductoRegional, E extends Producto
     if (usadosA.has(a.nsuid)) continue;
     const vistos = new Set<string>();
     const puntajes: { e: E; puntaje: number }[] = [];
-    for (const k of claves(a.titulo)) {
+    for (const k of clavesProducto(a)) {
       for (const e of indice.get(k) ?? []) {
         if (vistos.has(e.nsuid)) continue;
         vistos.add(e.nsuid);
@@ -152,7 +176,10 @@ export function matchearCatalogos<A extends ProductoRegional, E extends Producto
       });
       continue;
     }
-    if (segundo && primero.puntaje - segundo.puntaje < MARGEN_AMBIGUEDAD) {
+    // Un título idéntico le gana a uno solo parecido aunque el puntaje esté parejo.
+    const exactoPrimero = similitudTitulos(a, primero.e).exacto;
+    const exactoSegundo = segundo ? similitudTitulos(a, segundo.e).exacto : false;
+    if (segundo && primero.puntaje - segundo.puntaje < MARGEN_AMBIGUEDAD && !(exactoPrimero && !exactoSegundo)) {
       sinMatchArgentina.push({ producto: a, motivo: `Ambiguo entre "${primero.e.titulo}" y "${segundo.e.titulo}"` });
       continue;
     }

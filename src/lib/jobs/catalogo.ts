@@ -40,6 +40,7 @@ async function guardarProductos(catalogo: Catalogo, productos: ProductoCatalogo[
     const urlsPrevias = (existentes.get(p.nsuid) as Record<string, string> | null | undefined) ?? {};
     const datos = {
       titulo: p.titulo,
+      titulosAlternativos: p.titulosAlternativos?.length ? p.titulosAlternativos : undefined,
       editor: p.editor,
       plataforma: p.plataforma,
       tipo: p.tipo,
@@ -77,6 +78,9 @@ function aDominio(f: FilaProducto): ProductoConFila {
   return {
     nsuid: f.nsuid,
     titulo: f.titulo,
+    titulosAlternativos: Array.isArray(f.titulosAlternativos)
+      ? f.titulosAlternativos.filter((t): t is string => typeof t === "string")
+      : null,
     editor: f.editor,
     plataforma: f.plataforma as Plataforma,
     tipo: f.tipo as TipoProducto,
@@ -251,12 +255,19 @@ export const jobCatalogo: FuncionJob = async (ctx) => {
 
   try {
     const europa = await descargarCatalogoEuropa({ limite, alPaginar: (n, t) => ctx.log(`Europa: ${n}/${t}`) });
-    for (const pais of paisesEuropa()) {
+    // Enlaces por país. El núcleo en inglés (Reino Unido) además da el título en
+    // inglés, que se guarda como alternativo para matchear con la tienda argentina.
+    const paises = paisesEuropa().includes("GB") ? paisesEuropa() : [...paisesEuropa(), "GB"];
+    for (const pais of paises) {
       try {
         const enlaces = await descargarEnlacesEuropa(pais, limite);
         for (const p of europa) {
-          const url = enlaces.get(p.nsuid);
-          if (url) p.urls[pais] = url;
+          const enlace = enlaces.get(p.nsuid);
+          if (!enlace) continue;
+          if (enlace.url && paisesEuropa().includes(pais)) p.urls[pais] = enlace.url;
+          if (PAISES[pais]?.nucleoBusquedaEuropa === "en" && enlace.titulo !== p.titulo) {
+            p.titulosAlternativos = [enlace.titulo];
+          }
         }
       } catch (e) {
         ctx.log(`No se pudieron bajar enlaces de ${pais}: ${(e as Error).message}`);

@@ -137,14 +137,18 @@ export async function descargarCatalogoEuropa(
 }
 
 /**
- * Solo enlaces (nsuid → url) desde el núcleo de otro país europeo, para que el
- * botón "ir a la tienda" lleve a la eShop correcta.
+ * Enlace y título (nsuid → {url, titulo}) desde el núcleo de otro país europeo:
+ * el enlace lleva a la eShop correcta y el título en inglés ayuda a matchear
+ * con la tienda argentina cuando la española usa un título traducido.
  */
-export async function descargarEnlacesEuropa(pais: string, limite?: number): Promise<Map<string, string>> {
+export async function descargarEnlacesEuropa(
+  pais: string,
+  limite?: number,
+): Promise<Map<string, { url: string | null; titulo: string }>> {
   const nucleo = PAISES[pais]?.nucleoBusquedaEuropa;
   if (!nucleo) return new Map();
   const filas = fuentes.nintendoEuropa.filasPorPagina();
-  const enlaces = new Map<string, string>();
+  const enlaces = new Map<string, { url: string | null; titulo: string }>();
   for (const tipo of ["GAME", "DLC"] as const) {
     let start = 0;
     let total = Infinity;
@@ -154,7 +158,7 @@ export async function descargarEnlacesEuropa(pais: string, limite?: number): Pro
       total = r.response.numFound;
       for (const d of r.response.docs) {
         const p = parsearDocumentoEuropa(d, pais);
-        if (p?.urls[pais]) enlaces.set(p.nsuid, p.urls[pais]);
+        if (p) enlaces.set(p.nsuid, { url: p.urls[pais] ?? null, titulo: p.titulo });
       }
       start += filas;
       if (r.response.docs.length === 0) break;

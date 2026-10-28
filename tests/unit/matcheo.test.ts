@@ -105,6 +105,24 @@ describe("matcheo entre catálogos", () => {
     expect(r.sinMatchEuropa.map((x) => x.producto.nsuid)).toEqual(["E2"]);
   });
 
+  it("no confunde secuelas por el número del título", () => {
+    const argentina = [p("A1", "Super Mario Galaxy"), p("A2", "Super Mario Galaxy 2")];
+    const europa = [p("E1", "Super Mario Galaxy 2"), p("E2", "Super Mario Galaxy")];
+    const r = matchearCatalogos(argentina, europa);
+    expect(r.pares.map((x) => [x.argentina.nsuid, x.europa.nsuid]).sort()).toEqual([
+      ["A1", "E2"],
+      ["A2", "E1"],
+    ]);
+  });
+
+  it("usa títulos alternativos (inglés) cuando la tienda española traduce", () => {
+    const argentina = [p("A1", "Tomodachi Life™: Living the Dream")];
+    const europa = [
+      p("E1", "Tomodachi Life: Una vida de ensueño", { titulosAlternativos: ["Tomodachi Life: Living the Dream"] }),
+    ];
+    expect(matchearCatalogos(argentina, europa).pares).toHaveLength(1);
+  });
+
   it("no asigna el mismo producto europeo a dos americanos", () => {
     const argentina = [
       p("A1", "Tetris 99"),
