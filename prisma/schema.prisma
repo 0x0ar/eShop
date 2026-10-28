@@ -1,0 +1,235 @@
+// Schema único para SQLite (local) y PostgreSQL (producción).
+// prisma.config.ts genera prisma/postgres/schema.prisma cambiando el provider
+// cuando DATABASE_URL apunta a Postgres. No usar atributos nativos (@db.*).
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+/// Producto canónico que ve el usuario (une el producto de América y el de Europa).
+model Juego {
+  id                 String    @id @default(cuid())
+  slug               String    @unique
+  titulo             String
+  tituloNormalizado  String
+  editor             String?
+  /// SWITCH | SWITCH2 | AMBAS
+  plataforma         String
+  /// JUEGO | DLC | PASE_EXPANSION | EDICION_ESPECIAL | SWITCH2_EDITION | UPGRADE | BUNDLE
+  tipo               String
+  lanzamiento        DateTime?
+  imagenUrl          String?
+  descripcion        String?
+  popularidad        Int       @default(0)
+  /// nintendo | demo
+  origen             String    @default("nintendo")
+  // Resumen precalculado por el worker (perfil completo) para filtrar y ordenar.
+  mejorArsOficial    Decimal?
+  mejorArsBlue       Decimal?
+  referenciaArsOficial Decimal?
+  enOferta           Boolean   @default(false)
+  descuentoMax       Int       @default(0)
+  resumenActualizado DateTime?
+  creado             DateTime  @default(now())
+  actualizado        DateTime  @updatedAt
+
+  productos ProductoRegional[]
+  precios   PrecioActual[]
+  historial PrecioHistorico[]
+  keys      OfertaKey[]
+  alertas   Alerta[]
+
+  @@index([tituloNormalizado])
+  @@index([enOferta, descuentoMax])
+  @@index([popularidad])
+}
+
+/// Producto tal como figura en un catálogo regional (AMERICAS o EUROPA).
+model ProductoRegional {
+  id          String    @id @default(cuid())
+  /// AMERICAS | EUROPA
+  catalogo    String
+  nsuid       String
+  titulo      String
+  editor      String?
+  plataforma  String
+  tipo        String
+  lanzamiento DateTime?
+  imagenUrl   String?
+  descripcion String?
+  popularidad Int       @default(0)
+  /// Enlaces a la tienda por país: { "ES": "https://…", "DE": "https://…" }
+  urls        Json?
+  juegoId     String?
+  juego       Juego?    @relation(fields: [juegoId], references: [id], onDelete: SetNull)
+  actualizado DateTime  @updatedAt
+
+  @@unique([catalogo, nsuid])
+  @@index([juegoId])
+}
+
+model PrecioActual {
+  id          String    @id @default(cuid())
+  juegoId     String
+  juego       Juego     @relation(fields: [juegoId], references: [id], onDelete: Cascade)
+  pais        String
+  moneda      String
+  regular     Decimal
+  oferta      Decimal?
+  ofertaDesde DateTime?
+  ofertaHasta DateTime?
+  /// sales_status de la API (onsale, preorder, …)
+  estado      String
+  actualizado DateTime
+
+  @@unique([juegoId, pais])
+}
+
+/// Un snapshot por juego, país y día (YYYY-MM-DD, hora de Buenos Aires).
+model PrecioHistorico {
+  id         String   @id @default(cuid())
+  juegoId    String
+  juego      Juego    @relation(fields: [juegoId], references: [id], onDelete: Cascade)
+  pais       String
+  dia        String
+  moneda     String
+  regular    Decimal
+  oferta     Decimal?
+  registrado DateTime @default(now())
+
+  @@unique([juegoId, pais, dia])
+  @@index([juegoId, dia])
+}
+
+/// Cotizaciones. clave: "USD:oficial", "USD:blue", "EUR:oficial", "EUR:blue", "FX:GBP" (unidades por EUR).
+model Cotizacion {
+  id          String    @id @default(cuid())
+  /// dolarapi | frankfurter | derivado | demo
+  fuente      String
+  clave       String
+  compra      Decimal?
+  venta       Decimal
+  fechaFuente DateTime?
+  dia         String
+  registrado  DateTime  @default(now())
+
+  @@index([clave, registrado])
+  @@index([dia])
+}
+
+model OfertaKey {
+  id               String   @id @default(cuid())
+  proveedor        String
+  nombreProveedor  String
+  esMarketplace    Boolean  @default(false)
+  juegoId          String
+  juego            Juego    @relation(fields: [juegoId], references: [id], onDelete: Cascade)
+  titulo           String
+  url              String
+  precio           Decimal
+  moneda           String
+  /// EU | US | GLOBAL
+  regionActivacion String
+  disponible       Boolean  @default(true)
+  actualizado      DateTime
+
+  @@unique([proveedor, url])
+  @@index([juegoId])
+}
+
+model OfertaGiftCard {
+  id              String   @id @default(cuid())
+  proveedor       String
+  nombreProveedor String
+  esMarketplace   Boolean  @default(false)
+  /// Clave de REGIONES_GIFTCARD (EU, GB, US…)
+  regionTarjeta   String
+  monedaTarjeta   String
+  valor           Decimal
+  precio          Decimal
+  monedaPrecio    String
+  url             String?
+  titulo          String?
+  disponible      Boolean  @default(true)
+  actualizado     DateTime
+
+  @@unique([proveedor, regionTarjeta, monedaTarjeta, valor])
+}
+
+model Alerta {
+  id                  String    @id @default(cuid())
+  email               String
+  juegoId             String
+  juego               Juego     @relation(fields: [juegoId], references: [id], onDelete: Cascade)
+  precioObjetivo      Decimal
+  /// oficial | blue
+  tipoCotizacion      String
+  /// PerfilUsuario serializado (qué cuentas/tarjetas tiene)
+  perfil              Json?
+  /// pendiente | activa | baja
+  estado              String    @default("pendiente")
+  tokenConfirmacion   String    @unique
+  tokenBaja           String    @unique
+  creada              DateTime  @default(now())
+  confirmada          DateTime?
+  ultimoAviso         DateTime?
+  ultimoPrecioAvisado Decimal?
+
+  @@index([juegoId, estado])
+  @@index([email])
+}
+
+model EjecucionJob {
+  id      String    @id @default(cuid())
+  job     String
+  inicio  DateTime  @default(now())
+  fin     DateTime?
+  /// corriendo | ok | error
+  estado  String
+  items   Int       @default(0)
+  mensaje String?
+
+  @@index([job, inicio])
+}
+
+model EstadoFuente {
+  fuente      String    @id
+  ultimoExito DateTime?
+  ultimoError DateTime?
+  error       String?
+  detalle     String?
+}
+
+/// Corrección manual del matcheo. nsuidEuropa = null fuerza "sin match" para ese producto americano (y viceversa).
+model MatchOverride {
+  id            String   @id @default(cuid())
+  nsuidAmericas String?
+  nsuidEuropa   String?
+  nota          String?
+  creado        DateTime @default(now())
+
+  @@unique([nsuidAmericas, nsuidEuropa])
+}
+
+model SinMatcheo {
+  id       String   @id @default(cuid())
+  catalogo String
+  nsuid    String
+  titulo   String
+  motivo   String
+  visto    DateTime @default(now())
+
+  @@unique([catalogo, nsuid])
+}
+
+model HttpCache {
+  url      String   @id
+  estado   Int
+  cuerpo   String
+  obtenido DateTime
+}

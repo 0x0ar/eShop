@@ -1,0 +1,4 @@
+{
+  "$comentario": "Correcciones manuales del matcheo entre catálogos. nsuidEuropa: null fuerza 'sin match' para el producto americano (y viceversa). También se pueden cargar desde /admin/estado.",
+  "overrides": []
+}

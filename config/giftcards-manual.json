@@ -1,0 +1,4 @@
+{
+  "$comentario": "Ofertas de gift cards cargadas a mano (proveedor 'manual'). Ejemplo de entrada: {\"tienda\": \"Tienda X\", \"esMarketplace\": true, \"regionTarjeta\": \"EU\", \"monedaTarjeta\": \"EUR\", \"valor\": \"25\", \"precio\": \"24.10\", \"monedaPrecio\": \"EUR\", \"url\": \"https://…\", \"disponible\": true}",
+  "ofertas": []
+}
